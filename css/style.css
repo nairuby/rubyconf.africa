@@ -26,7 +26,7 @@ Last Change:    11/3/2020
 17. Features Section / Two / Three
 18. Fluid Section One
 19. Speakers Section / Two / Three
-20. Speker Detail
+20. Speaker Detail
 21. schedule Section / Two / Three
 22. Event Detail
 23. Pricing Section / Two / Three
@@ -4176,7 +4176,7 @@ img{
 /***
 
 ====================================================================
-	Speker Detail
+	Speaker Detail
 ====================================================================
 
 ***/
@@ -4682,7 +4682,7 @@ img{
 	border-color: #e6275a;
 }
 
-/* Backgroud */
+/* Background */
 
 .schedule-block:nth-child(4n + 1) .btn-box a{
 	background-color:#ffc20b;
