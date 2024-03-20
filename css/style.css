@@ -2482,6 +2482,12 @@ img{
 	padding: 120px 0 70px;
 }
 
+.about-section .col-full-width {
+    width: calc(100% - 20px); /* Adjust the padding value as needed */
+    padding: 0 10px; /* Adjust the padding value as needed */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
 .about-section .content-column{
 	position: relative;
 	margin-bottom: 50px;
@@ -6188,7 +6194,7 @@ img{
 
 .event-info-section{
 	position: relative;
-	padding: 120px 0 120px;
+	padding: 20px 0 20px;
 }
 
 .event-info-section .info-column{
@@ -8039,7 +8045,7 @@ img{
 
 .clients-section{
 	position: relative;
-	padding: 120px 0 90px;
+	padding: 80px 0 20px;
 }
 
 .clients-section:before{
@@ -11107,4 +11113,125 @@ img{
     width: 100%;
     height: 540px;
     margin-bottom: -10px;	
+}
+
+/***
+
+====================================================================
+		About Section
+====================================================================
+
+***/
+
+.about-section{
+	position: relative;
+	padding: 120px 0 70px;
+}
+
+.about-section .content-column{
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column{
+	position: relative;
+	padding-right: 80px;
+}
+
+.about-section .content-column .sec-title{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.about-section .content-column .sec-title .text{
+	margin-top: 20px;
+}
+
+.about-section .content-column .sec-title h2{
+	font-size: 40px;
+}
+
+.about-section .content-column .list-style-one{
+	margin-bottom: 30px;
+}
+
+.about-section .content-column .btn-box{
+	position: relative;
+}
+
+.about-section .content-column .btn-box a{
+	padding: 15px 30px;
+	line-height: 20px;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.about-section .image-column{
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.about-section .image-column .image-box{
+	position: relative;
+	padding-left: 80px;
+}
+
+/*.about-section .image-column .image-box img{
+	position: relative;
+	z-index: 1;
+	border-radius: 50%;
+	border: 15px solid #ffffff;
+	box-shadow: 0 0 20px rgba(0,0,0,0.10);
+}*/
+
+.about-section .image-column .image{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.about-section .image-column .image:before{
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    height: 120%;
+    width: 120%;
+    background-image: url(../images/icons/shape-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    -webkit-animation: dizzling 10s infinite;
+    -moz-animation: dizzling 10s infinite;
+    -ms-animation: dizzling 10s infinite;
+    -o-animation: dizzling 10s infinite;
+    animation: dizzling 10s infinite;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    content: "";
+}
+
+@keyframes dizzling{
+	0%{
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50%{
+		-webkit-transform: rotate(5deg);
+		-moz-transform: rotate(5deg);
+		-ms-transform: rotate(5deg);
+		-o-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+		transform: rotate(0);
+	}
 }
