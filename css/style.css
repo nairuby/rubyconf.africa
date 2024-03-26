@@ -8275,6 +8275,15 @@ img{
 	position: relative;
 }
 
+.client-block img {
+	width: 40%;
+	padding: 5px;
+}
+
+.client-block figure {
+	margin: 5px;
+}
+
 .clients-section-three .sponsors-outer .image-box{
 	position:relative;
 	text-align:center;
