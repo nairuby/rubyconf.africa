@@ -117,6 +117,22 @@ Last Change:    11/3/2020
 
  ***/
 
+/* Skeleton loading */
+.skeleton {
+	opacity: .7;
+	animation: skeleton-loading 1s linear infinit alternate
+}
+
+@keyframes skeleton-loading {
+	0% {
+		background-color: hsl(200, 20%, 70%);
+	}
+
+	100% {
+		background-color: hsl(200, 20%, 95%);
+	}
+}
+
 body {
 	font-size:14px;
 	color:#0D0D0D;
@@ -699,7 +715,7 @@ color:#F2F2F2;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	content: "loading..";
+	content: "Just a moment..";
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
