@@ -165,9 +165,9 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Ubuntu', sans-serif;
 }
 
-input,button,select,textarea{
+/* input,button,select,textarea{
 
-}
+} */
 
 textarea{
 	overflow:hidden;
@@ -895,6 +895,7 @@ img{
 	background: linear-gradient(to left, #D90447 0%,rgba(68,16,102,1) 25%,#D90447 75%,rgba(68,16,102,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F70068', endColorstr='#441066',GradientType=1 );
 	color: transparent;
+	background-clip: text;
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 	text-transform: uppercase;
@@ -1321,9 +1322,9 @@ img{
     transition: all 300ms ease;
 }
 
-.main-header .search-box-btn:hover{
+/* .main-header .search-box-btn:hover{
 
-}
+} */
 
 .dropdown-toggle::after{
 	display: none;
@@ -2284,6 +2285,7 @@ img{
 	background: linear-gradient(to left, #D90447 0%,rgba(68,16,102,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F70068', endColorstr='#441066',GradientType=1 );
 	color: transparent;
+	background-clip: text;
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -3691,10 +3693,10 @@ img{
 	-o-transition: all 300ms ease;
 	transition: all 300ms ease;
 }
-
+/* 
 .speaker-block .info-box .name a:hover{
 
-}
+} */
 
 .speaker-block .info-box .designation{
 	position: relative;
@@ -5534,9 +5536,9 @@ img{
 	transition: all 500ms ease;
 }
 
-.pricing-block-three .inner-box:hover{
+/* .pricing-block-three .inner-box:hover{
 
-}
+} */
 
 .pricing-block-three .title{
 	position: relative;
@@ -6367,8 +6369,8 @@ img{
 	height: auto;
 }
 
-.event-info-section .map-column{
-}
+/* .event-info-section .map-column{
+} */
 
 .event-info-section .map-outer .map-canvas,
 .event-info-section .map-outer{
@@ -8046,10 +8048,10 @@ img{
 	cursor: pointer;
 }
 
-.subscribe-form .form-group input[type="submit"]:hover,
+/* .subscribe-form .form-group input[type="submit"]:hover,
 .subscribe-form .form-group button:hover{
 
-}
+} */
 
 /***
 
@@ -11258,5 +11260,22 @@ img{
 		-ms-transform: rotate(0);
 		-o-transform: rotate(0);
 		transform: rotate(0);
+	}
+}
+
+@media (max-width: 767px) { 
+	.content-column, .top-pd-mobile {
+	  padding: 20px; 
+	}
+  }
+  
+@media (min-width: 992px) {
+	.btn-align {
+		display: flex;
+		justify-content: center;
+	}
+	.btn-align .btn-box {
+		margin-bottom: 0;
+		margin-right: 10px;
 	}
 }
