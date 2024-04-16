@@ -118,10 +118,101 @@ Last Change:    11/3/2020
  ***/
 
 /* Skeleton loading */
-.skeleton {
-	opacity: .7;
-	animation: skeleton-loading 1s linear infinit alternate
+.skeleton-loader {
+    background-color: #f3f3f3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.skeleton-banner-card {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+
+}
+
+.skeleton-date {
+	width: 50%;
+	height: 20px;
+	background-color: #ccc;
+	margin-bottom: 20px;
+}
+
+.skeleton-header {
+	width: 50%;
+	height: 40px;
+	background-color: #ccc;
+	margin-bottom: 20px;
+}
+
+.skeleton-details {
+	width: 50%;
+	height: 20px;
+	background-color: #ccc;
+	margin-bottom: 20px;
+}
+
+.skeleton-loader > div {
+    margin: 5px 0;
+    width: 50;
+    height: 20px;
+    background-color: #fff;
+}
+
+/* Default styles for skeleton speakers card */
+.skeleton-speakers-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+}
+
+/* Default styles for skeleton circles */
+.skeleton-circle {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .skeleton-speakers-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .skeleton-circle {
+        /* No changes to width and height */
+        margin-bottom: 20px;
+    }
+}
+
+
+.skeleton-circle:not(:last-child) {
+    margin-right: 50px;
+}
+
 
 @keyframes skeleton-loading {
 	0% {

@@ -1,458 +1,661 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9NL9QCYZR"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-K9NL9QCYZR"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-K9NL9QCYZR');
+      gtag("config", "G-K9NL9QCYZR");
     </script>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>About Us - Ruby Conf Africa 2024</title>
-    <meta name="description" content="Learn about Ruby Conf Africa 2024, our mission to connect Ruby developers in Africa, our team, and how to get involved in this vibrant community.">
+    <meta
+      name="description"
+      content="Learn about Ruby Conf Africa 2024, our mission to connect Ruby developers in Africa, our team, and how to get involved in this vibrant community."
+    />
 
     <!-- Favicon -->
     <!-- <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon"> -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- For browsers requiring 16x16 px favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicons/favicon-16x16.png"
+    />
     <!-- For browsers requiring 32x32 px favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicons/favicon-32x32.png"
+    />
     <!-- <link rel="icon" href="images/logo/ruby.svg" type="image/x-icon"> -->
 
     <!-- For Apple devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="apple-mobile-web-app-title" content="About Ruby Conf Africa 2024">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="About Ruby Conf Africa 2024"
+    />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
     <!-- For Android devices -->
-    <meta name="theme-color" content="#ffffff">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="About Ruby Conf Africa 2024">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="images/favicons/android-chrome-512x512.png">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="About Ruby Conf Africa 2024" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicons/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="images/favicons/android-chrome-512x512.png"
+    />
 
     <!-- Stylesheets -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
     <!--Color Switcher Mockup-->
-    <link href="css/color-switcher-design.css" rel="stylesheet">
+    <link href="css/color-switcher-design.css" rel="stylesheet" />
 
     <!-- Meta Tags for Responsive Design -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
 
     <!-- Open Graph and Twitter meta tags -->
-    <meta property="og:title" content="About Ruby Conf Africa 2024">
-    <meta property="og:description" content="Join us on the 26th to 27th July 2024, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn.">
-    <meta property="og:image" content="images/logo/arc_logo_coloured.png">
-    <meta property="og:url" content="https://rubyconf.africa/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="About Ruby Conf Africa 2024">
-    
-    <!-- Twitter OG tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Ruby Conf Africa 2024"> 
-    <meta name="twitter:description" content="Get to know the mission, team, and community behind the leading Ruby developers conference in Nairobi, Kenya.">
-    <meta name="twitter:image" content="images/logo/arc_logo_coloured.png">
+    <meta property="og:title" content="About Ruby Conf Africa 2024" />
+    <meta
+      property="og:description"
+      content="Join us on the 26th to 27th July 2024, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn."
+    />
+    <meta property="og:image" content="images/logo/arc_logo_coloured.png" />
+    <meta property="og:url" content="https://rubyconf.africa/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="About Ruby Conf Africa 2024" />
 
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!-- Twitter OG tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Ruby Conf Africa 2024" />
+    <meta
+      name="twitter:description"
+      content="Get to know the mission, team, and community behind the leading Ruby developers conference in Nairobi, Kenya."
+    />
+    <meta name="twitter:image" content="images/logo/arc_logo_coloured.png" />
+
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Event",
-          "name": "About Ruby Conf Africa 2024",
-          "description": "Join us on the 26th to 27th July 2024, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn.",
-          "image": "https://rubyconf.africa/images/logo/arc_logo_coloured.png",
-          "startDate": "2024-07-26T09:00",
-          "endDate": "2024-07-27",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "location": {		
-            "@type": "Place",
-            "name": "Argyle Grand Hotel",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "",
-              "addressLocality": "Nairobi",
-              "postalCode": "JWW4+R5W",
-              "addressCountry": "KE"
-            }
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "About Ruby Conf Africa 2024",
+        "description": "Join us on the 26th to 27th July 2024, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn.",
+        "image": "https://rubyconf.africa/images/logo/arc_logo_coloured.png",
+        "startDate": "2024-07-26T09:00",
+        "endDate": "2024-07-27",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Argyle Grand Hotel",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Nairobi",
+            "postalCode": "JWW4+R5W",
+            "addressCountry": "KE"
           }
         }
+      }
     </script>
+  </head>
 
-</head>
+  <body>
+    <!-- Skeleton loader -->
+    <div class="skeleton-loader">
+      <div class="skeleton-date"></div>
+      <div class="skeleton-header"></div>
+      <div class="skeleton-details"></div>
+      <!-- <div class="skeleton-"></div> -->
 
-<body>
+      <div class="skeleton-footer"></div>
+    </div>
     <div class="page-wrapper">
+      <!-- Preloader -->
+      <!-- <div class="preloader"></div> -->
 
-    <!-- Preloader -->
-    <div class="preloader"></div>
+      <!-- Header Span -->
+      <span class="header-span"></span>
 
-    <!-- Header Span -->
-    <span class="header-span"></span>
-
-    <!-- Main Header-->
-    <header class="main-header header-style-two">
+      <!-- Main Header-->
+      <header class="main-header header-style-two">
         <div class="main-box">
-            <div class="auto-container clearfix">
-                <div class="logo-box">
-                    <div class="logo"><a href="index.html"><img src="images/logo/arc_logo_coloured.png" alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa" title=""></a></div>
-                </div>
-
-                <!--Nav Box-->
-                <div class="nav-outer clearfix">
-                    <!--Mobile Navigation Toggler-->
-                    <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-                    <!-- Main Menu -->
-                    <nav class="main-menu navbar-expand-md navbar-light">
-                        <div class="navbar-header">
-                            <!-- Toggle Button -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon flaticon-menu-button"></span>
-                            </button>
-                        </div>
-
-                        <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                            <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="current"><a href="about-us.html">About</a></li>
-                                <li><a href="speakers.html">Speakers</a></li>
-                                <li><a href="tickets.html">Tickets</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <!-- Main Menu End-->
-
-                    <!-- Outer box -->
-                    <div class="outer-box">
-                        <!-- Button Box -->
-                        <div class="btn-box">
-                            <!-- [Insert New Registration Link] -->
-                            <a href="tickets.html"
-                               target="_blank"
-                               class="theme-btn btn-style-one">
-                                <span class="btn-title">Get Tickets</span></a>
-                        </div>
-                    </div>
-                </div>
+          <div class="auto-container clearfix">
+            <div class="logo-box">
+              <div class="logo">
+                <a href="index.html"
+                  ><img
+                    src="images/logo/arc_logo_coloured.png"
+                    loading="lazy"
+                    alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"
+                    title=""
+                /></a>
+              </div>
             </div>
+
+            <!--Nav Box-->
+            <div class="nav-outer clearfix">
+              <!--Mobile Navigation Toggler-->
+              <div class="mobile-nav-toggler">
+                <span class="icon flaticon-menu"></span>
+              </div>
+              <!-- Main Menu -->
+              <nav class="main-menu navbar-expand-md navbar-light">
+                <div class="navbar-header">
+                  <!-- Toggle Button -->
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="icon flaticon-menu-button"></span>
+                  </button>
+                </div>
+
+                <div
+                  class="collapse navbar-collapse clearfix"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navigation clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="about-us.html">About</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+
+              <!-- Outer box -->
+              <div class="outer-box">
+                <!-- Button Box -->
+                <div class="btn-box">
+                  <!-- [Insert New Registration Link] -->
+                  <a
+                    href="tickets.html"
+                    target="_blank"
+                    class="theme-btn btn-style-one"
+                  >
+                    <span class="btn-title">Get Tickets</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon flaticon-cancel-1"></span></div>
+          <div class="menu-backdrop"></div>
+          <div class="close-btn">
+            <span class="icon flaticon-cancel-1"></span>
+          </div>
 
-            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="images/logo/arc_logo_coloured.png" alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"" title=""></a></div>
+          <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+          <nav class="menu-box">
+            <div class="nav-logo">
+              <a href="index.html"
+                ><img src="images/logo/arc_logo_coloured.png" loading="lazy"
+                alt="Africa Ruby Community Logo - Building a vibrant Ruby
+                community in Africa"" title=""></a
+              >
+            </div>
 
-                <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
-            </nav>
-        </div><!-- End Mobile Menu -->
-    </header>
-    <!--End Main Header -->
+            <ul class="navigation clearfix">
+              <!--Keep This Empty / Menu will come through Javascript-->
+            </ul>
+          </nav>
+        </div>
+        <!-- End Mobile Menu -->
+      </header>
+      <!--End Main Header -->
 
+      <!-- Disable page title banner -->
 
-    <!-- Disable page title banner -->
-    
-    <!--Page Title Banner-->
-    
-    
-    <!-- <section class="page-title" style="background-image:url(images/logo/nairobi.jpg);">
+      <!--Page Title Banner-->
+
+      <!-- <section class="page-title" style="background-image:url(images/logo/nairobi.jpg);">
         <div class="auto-container">
             <h1>About Ruby Conf, Africa 2024</h1>
         </div>
     </section> -->
-   
-    
-    <!--End Page Title Banner-->
 
-    <!-- About Section -->
-    <section class="about-section">
+      <!--End Page Title Banner-->
+
+      <!-- About Section -->
+      <section class="about-section">
         <div class="anim-icons full-width">
-            <span class="icon icon-circle-blue wow fadeIn"></span>
-            <span class="icon icon-dots wow fadeInleft"></span>
-            <span class="icon icon-circle-1 wow zoomIn"></span>
+          <span class="icon icon-circle-blue wow fadeIn"></span>
+          <span class="icon icon-dots wow fadeInleft"></span>
+          <span class="icon icon-circle-1 wow zoomIn"></span>
         </div>
         <div class="auto-container">
-            <div class="row">
-                <!-- Content Column -->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="title">RUBYCONF AFRICA 2024</span>
-                            <h2>Agile, Open Source & Entrepreneurship</h2>
-                            <div class="text">Join us on the 26th to 27th July 2024, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn.</div>
-                        </div>
-                        <ul class="list-style-one">
-                            <li>Explore the latest in Agile methodologies.</li>
-                            <li>Deep dive into the world of Open Source development.</li>
-                            <li>Gain insights into Entrepreneurship in the Ruby community.</li>
-                            <li>Engage in discussions about the future of Ruby development.</li>
-                        </ul>
-                        <!-- [Insert New Registration Link] -->
-                        <div class="btn-box"><a href="tickets.html" class="theme-btn btn-style-three"><span class="btn-title">Register Now</span></a></div>
-                    </div>
+          <div class="row">
+            <!-- Content Column -->
+            <div class="content-column col-lg-6 col-md-12 col-sm-12">
+              <div class="inner-column">
+                <div class="sec-title">
+                  <span class="title">RUBYCONF AFRICA 2024</span>
+                  <h2>Agile, Open Source & Entrepreneurship</h2>
+                  <div class="text">
+                    Join us on the 26th to 27th July 2024, as leading Ruby
+                    developers from around the world come together in Nairobi,
+                    Kenya, to share, inspire, and learn.
+                  </div>
                 </div>
+                <ul class="list-style-one">
+                  <li>Explore the latest in Agile methodologies.</li>
+                  <li>Deep dive into the world of Open Source development.</li>
+                  <li>
+                    Gain insights into Entrepreneurship in the Ruby community.
+                  </li>
+                  <li>
+                    Engage in discussions about the future of Ruby development.
+                  </li>
+                </ul>
+                <!-- [Insert New Registration Link] -->
+                <div class="btn-box">
+                  <a href="tickets.html" class="theme-btn btn-style-three"
+                    ><span class="btn-title">Register Now</span></a
+                  >
+                </div>
+              </div>
+            </div>
 
-                <!-- Image Column -->
-                <!-- <div class="image-column col-lg-6 col-md-12 col-sm-12">
+            <!-- Image Column -->
+            <!-- <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="image-box">
                         <figure class="image wow fadeIn"><img src="images/logo/nairobi.jpg" alt="image of the city of Nairobi, Kenya"></figure>
                     </div>
                 </div> -->
-            </div>
+          </div>
         </div>
-    </section>
-    <!--End About Section -->
+      </section>
+      <!--End About Section -->
 
-    
-     <!-- Event Info Section -->
-    <section class="event-info-section">
+      <!-- Event Info Section -->
+      <section class="event-info-section">
         <div class="auto-container">
-            <div class="row">
-                <!-- Info Column -->
-                <div class="info-column col-lg-6 col-md-12 col-sm-12 order-2">
-                    <div class="inner-column">
-                        <div class="sec-title style-two">
-                            <span class="title">Directions</span>
-                            <h2>Direction for the <br>Conference</h2>
-                        </div>
+          <div class="row">
+            <!-- Info Column -->
+            <div class="info-column col-lg-6 col-md-12 col-sm-12 order-2">
+              <div class="inner-column">
+                <div class="sec-title style-two">
+                  <span class="title">Directions</span>
+                  <h2>Direction for the <br />Conference</h2>
+                </div>
 
-                        <div class="event-info-tabs tabs-box">
-                            <!--Tabs Box-->
-                            <ul class="tab-buttons clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab1">Time</li>
-                                <li class="tab-btn" data-tab="#tab2">Venue</li>
-                                <li class="tab-btn" data-tab="#tab3">How to get there</li>
-                            </ul>
+                <div class="event-info-tabs tabs-box">
+                  <!--Tabs Box-->
+                  <ul class="tab-buttons clearfix">
+                    <li class="tab-btn active-btn" data-tab="#tab1">Time</li>
+                    <li class="tab-btn" data-tab="#tab2">Venue</li>
+                    <li class="tab-btn" data-tab="#tab3">How to get there</li>
+                  </ul>
 
-                            <div class="tabs-content">
-                                <!--Tab-->
-                                <div class="tab active-tab" id="tab1">
-                                    <h4><span class="icon far fa-calendar"></span> July 26 & 27, 2024</h4>
-                                    <div class="text">9.00 AM - 04.00 PM</div>
-                                    <!-- <ul class="info-list">
+                  <div class="tabs-content">
+                    <!--Tab-->
+                    <div class="tab active-tab" id="tab1">
+                      <h4>
+                        <span class="icon far fa-calendar"></span> July 26 & 27,
+                        2024
+                      </h4>
+                      <div class="text">9.00 AM - 04.00 PM</div>
+                      <!-- <ul class="info-list">
                                         <li><span class="icon icon_profile"></span> Dianne Ameter</li>
                                         <li><span class="icon icon_phone"></span> <a href="tel:+690-147-265-345">+123 456 7890</a></li>
                                         <li><span class="icon icon_mail"></span> <a href="mailto:sopport@Eventrox.com">sopport@Eventrox.com</a></li>
                                     </ul> -->
-                                </div>
-
-                                <!--Tab-->
-                                <div class="tab" id="tab2">
-                                    <h4><span class="icon fa fa-map-marker-alt"></span>Argyle Grand Hotel, Nairobi, Kenya</h4>
-                                    <div class="text">Located in Nairobi, 8.5 miles from Kenyatta International Conference Centre, Argyle Grand Hotel Nairobi Airport provides accommodations with an outdoor swimming pool, free private parking, a garden and a shared lounge; With free WiFi. This 5-star hotel offers room service and a 24-hour front desk. 
-                                        <br>
-                                        <br>
-                                        The restaurant serves African and American cuisine, as well as Chinese and British dishes.
-                                        <br>
-                                        <br>
-                                        The hotel will provide guests with air-conditioned rooms with a desk, an electric tea pot, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a shower. 
-                                        <br>
-                                        <br>
-                                        At Argyle Grand Hotel Nairobi Airport each room includes bed linen and towels; and breakfast is available daily, including buffet, continental and American options.
-                                        <br>
-                                        <br>
-                                        The accommodation has a terrace and Nairobi National Museum is 10 miles from Argyle Grand Hotel Nairobi Airport, while Nairobi SGR Terminus is a 9-minute walk away. The nearest airport is Jomo Kenyatta International Airport, 2.5 miles from the hotel.
-                                        <br>
-                                        <br>
-                                        </div>
-                                </div>
-
-                                <!--Tab-->
-                                <div class="tab" id="tab3">
-                                    <h4><span class="icon fa fa-directions"></span> How to get there</h4>
-                                    <div class="text">Directions to Argyle Grand Hotel Nairobi Airport are provided in the map section.</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
 
-                <!-- Image Column -->
-                <div class="map-column col-lg-6 col-md-12 col-sm-12">
-                    <!--Map Outer-->
-                    <div class="map-outer">
-                        <!--Map Canvas-->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.823455177731!2d36.905458!3d-1.3530464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0d168d84ca43%3A0xe64edee22e300ea0!2sArgyle%20Grand%20Hotel%20Nairobi%20Airport!5e0!3m2!1sen!2ske!4v1709760046656!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!--Tab-->
+                    <div class="tab" id="tab2">
+                      <h4>
+                        <span class="icon fa fa-map-marker-alt"></span>Argyle
+                        Grand Hotel, Nairobi, Kenya
+                      </h4>
+                      <div class="text">
+                        Located in Nairobi, 8.5 miles from Kenyatta
+                        International Conference Centre, Argyle Grand Hotel
+                        Nairobi Airport provides accommodations with an outdoor
+                        swimming pool, free private parking, a garden and a
+                        shared lounge; With free WiFi. This 5-star hotel offers
+                        room service and a 24-hour front desk.
+                        <br />
+                        <br />
+                        The restaurant serves African and American cuisine, as
+                        well as Chinese and British dishes.
+                        <br />
+                        <br />
+                        The hotel will provide guests with air-conditioned rooms
+                        with a desk, an electric tea pot, a fridge, a minibar, a
+                        safety deposit box, a flat-screen TV and a private
+                        bathroom with a shower.
+                        <br />
+                        <br />
+                        At Argyle Grand Hotel Nairobi Airport each room includes
+                        bed linen and towels; and breakfast is available daily,
+                        including buffet, continental and American options.
+                        <br />
+                        <br />
+                        The accommodation has a terrace and Nairobi National
+                        Museum is 10 miles from Argyle Grand Hotel Nairobi
+                        Airport, while Nairobi SGR Terminus is a 9-minute walk
+                        away. The nearest airport is Jomo Kenyatta International
+                        Airport, 2.5 miles from the hotel.
+                        <br />
+                        <br />
+                      </div>
                     </div>
+
+                    <!--Tab-->
+                    <div class="tab" id="tab3">
+                      <h4>
+                        <span class="icon fa fa-directions"></span> How to get
+                        there
+                      </h4>
+                      <div class="text">
+                        Directions to Argyle Grand Hotel Nairobi Airport are
+                        provided in the map section.
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+
+            <!-- Image Column -->
+            <div class="map-column col-lg-6 col-md-12 col-sm-12">
+              <!--Map Outer-->
+              <div class="map-outer">
+                <!--Map Canvas-->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.823455177731!2d36.905458!3d-1.3530464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0d168d84ca43%3A0xe64edee22e300ea0!2sArgyle%20Grand%20Hotel%20Nairobi%20Airport!5e0!3m2!1sen!2ske!4v1709760046656!5m2!1sen!2ske"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <!--End Event Info Section -->
+      </section>
+      <!--End Event Info Section -->
 
-    
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
+      <!-- Main Footer -->
+      <footer class="main-footer">
         <!--Widgets Section-->
         <div class="widgets-section">
-            <div class="auto-container">
+          <div class="auto-container">
+            <div class="row">
+              <!--Big Column-->
+              <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                 <div class="row">
-                    <!--Big Column-->
-                    <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
-                            <!--Footer Column-->
-                            <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget about-widget">
-                                    <div class="logo">
-                                        <a href="index.html"><img src="images/logo/arclogo.png" alt="" /></a>
-                                    </div>
-                                    <div class="text">
-                                        <p>Join us on the 26th to 27th July 2024, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn.</p>
-                                    </div>
-                                    <ul class="social-icon-one social-icon-colored">
-                                        <li><a href="https://web.facebook.com/rubycommunity.africa"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/ruby_african"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/company/83046693"><i class="fab fa-linkedin"></i></a></li>
-                                        <li><a href="https://www.youtube.com/@nairubyorg7626"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!--Footer Column-->
-                            <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget useful-links">
-                                    <h2 class="widget-title">Useful Links</h2>
-                                    <ul class="user-links">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="speakers.html">Speakers</a></li>
-                                        <li><a href="tickets.html">Tickets</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                  <!--Footer Column-->
+                  <div
+                    class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12"
+                  >
+                    <div class="footer-widget about-widget">
+                      <div class="logo">
+                        <a href="index.html"
+                          ><img
+                            src="images/logo/arclogo.png"
+                            loading="lazy"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div class="text">
+                        <p>
+                          Join us on the 26th to 27th July 2024, as leading Ruby
+                          developers from around the world come together in
+                          Nairobi, Kenya, to share, inspire, and learn.
+                        </p>
+                      </div>
+                      <ul class="social-icon-one social-icon-colored">
+                        <li>
+                          <a
+                            href="https://web.facebook.com/rubycommunity.africa"
+                            ><i class="fab fa-facebook-f"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/ruby_african"
+                            ><i class="fab fa-twitter"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/company/83046693"
+                            ><i class="fab fa-linkedin"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="https://www.youtube.com/@nairubyorg7626"
+                            ><i class="fab fa-youtube"></i
+                          ></a>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
 
-                    <!--Big Column-->
-                    <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
-                            <!--Footer Column-->
-                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                                <!--Footer Column-->
-                                <div class="footer-widget contact-widget">
-                                    <h2 class="widget-title">Contact Us</h2>
-                                     <!--Footer Column-->
-                                    <div class="widget-content">
-                                        <ul class="contact-list">
-
-                                            <li>
-                                                <span class="icon flaticon-paper-plane"></span>
-                                                <div class="text"><a href="mailto:support@example.com">organisers@rubyconf.africa</a></div>
-                                            </li>
-                                            <li>
-                                                <span class="icon flaticon-paper-plane"></span>
-                                                <div class="text"><a href="mailto:support@example.com">sponsors@rubyconf.africa</a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                  <!--Footer Column-->
+                  <div
+                    class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12"
+                  >
+                    <div class="footer-widget useful-links">
+                      <h2 class="widget-title">Useful Links</h2>
+                      <ul class="user-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li>
+                          <a href="code-of-conduct.html">Code of Conduct</a>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </div>
+              </div>
+
+              <!--Big Column-->
+              <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="row">
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                    <!--Footer Column-->
+                    <div class="footer-widget contact-widget">
+                      <h2 class="widget-title">Contact Us</h2>
+                      <!--Footer Column-->
+                      <div class="widget-content">
+                        <ul class="contact-list">
+                          <li>
+                            <span class="icon flaticon-paper-plane"></span>
+                            <div class="text">
+                              <a href="mailto:support@example.com"
+                                >organisers@rubyconf.africa</a
+                              >
+                            </div>
+                          </li>
+                          <li>
+                            <span class="icon flaticon-paper-plane"></span>
+                            <div class="text">
+                              <a href="mailto:support@example.com"
+                                >sponsors@rubyconf.africa</a
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
 
         <!--Footer Bottom-->
         <div class="footer-bottom">
-            <div class="auto-container">
-                <div class="inner-container clearfix">
-                    <div class="copyright-text">
-                        <p>© Copyright 2024 All Rights Reserved by <a href="https://rubycommunity.africa/"> Africa Ruby Community</a></p>
-
-                    </div>
-                </div>
+          <div class="auto-container">
+            <div class="inner-container clearfix">
+              <div class="copyright-text">
+                <p>
+                  © Copyright 2024 All Rights Reserved by
+                  <a href="https://rubycommunity.africa/">
+                    Africa Ruby Community</a
+                  >
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
-    <!-- End Footer -->
+      </footer>
+      <!-- End Footer -->
+    </div>
+    <!--End pagewrapper-->
 
-</div>
-<!--End pagewrapper-->
-
-<!-- Color Palate / Color Switcher -->
-<div class="color-palate">
-    <div class="color-trigger">
+    <!-- Color Palate / Color Switcher -->
+    <div class="color-palate">
+      <div class="color-trigger">
         <i class="fa fa-cog"></i>
-    </div>
-    <div class="color-palate-head">
+      </div>
+      <div class="color-palate-head">
         <h6>Choose Your Demo</h6>
+      </div>
+      <ul class="box-version option-box">
+        <li>Full width</li>
+        <li class="box">Boxed</li>
+      </ul>
+      <ul class="rtl-version option-box">
+        <li>LTR Version</li>
+        <li class="rtl">RTL Version</li>
+      </ul>
+      <div class="palate-foo">
+        <span
+          >You will find much more options for colors and styling in admin
+          panel. This color picker is used only for demonstration
+          purposes.</span
+        >
+      </div>
+      <a href="#" class="purchase-btn">Purchase now</a>
     </div>
-    <ul class="box-version option-box"> <li>Full width</li> <li class="box">Boxed</li> </ul>
-    <ul class="rtl-version option-box"> <li>LTR Version</li> <li class="rtl">RTL Version</li> </ul>
-    <div class="palate-foo">
-        <span>You will find much more options for colors and styling in admin panel. This color picker is used only for demonstration purposes.</span>
-    </div>
-    <a href="#" class="purchase-btn">Purchase now</a>
-</div><!-- End Color Switcher -->
+    <!-- End Color Switcher -->
 
-<!--Search Popup-->
-<div id="search-popup" class="search-popup">
-	<div class="close-search theme-btn"><span class="fas fa-window-close"></span></div>
-	<div class="popup-inner">
-		<div class="overlay-layer"></div>
-    	<div class="search-form">
-        	<form method="post" action="index.html">
-            	<div class="form-group">
-                	<fieldset>
-                        <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
-                        <input type="submit" value="Search Now!" class="theme-btn">
-                    </fieldset>
-                </div>
-            </form>
+    <!--Search Popup-->
+    <div id="search-popup" class="search-popup">
+      <div class="close-search theme-btn">
+        <span class="fas fa-window-close"></span>
+      </div>
+      <div class="popup-inner">
+        <div class="overlay-layer"></div>
+        <div class="search-form">
+          <form method="post" action="index.html">
+            <div class="form-group">
+              <fieldset>
+                <input
+                  type="search"
+                  class="form-control"
+                  name="search-input"
+                  value=""
+                  placeholder="Search Here"
+                  required
+                />
+                <input type="submit" value="Search Now!" class="theme-btn" />
+              </fieldset>
+            </div>
+          </form>
 
-            <br>
-            <h3>Recent Search Keywords</h3>
-            <ul class="recent-searches">
-                <li><a href="#">Seo</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Digital</a></li>
-                <li><a href="#">Conference</a></li>
-            </ul>
-
+          <br />
+          <h3>Recent Search Keywords</h3>
+          <ul class="recent-searches">
+            <li><a href="#">Seo</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Digital</a></li>
+            <li><a href="#">Conference</a></li>
+          </ul>
         </div>
-
+      </div>
     </div>
-</div>
 
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/script.js"></script>
-<!-- Color Setting -->
-<script src="js/color-settings.js"></script>
-
-</body>
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html">
+      <span class="fa fa-angle-double-up"></span>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Color Setting -->
+    <script src="js/color-settings.js"></script>
+    <script src="js/skeleton-loader.js"></script>
+  </body>
 </html>
