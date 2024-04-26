@@ -6,7 +6,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-K9NL9QCYZR"
     ></script>
-    <script>
+    <script async>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -155,13 +155,18 @@
 
   <body>
     <!-- Skeleton loader -->
-    <!-- <div class="skeleton-loader">
-      <div class="skeleton-date"></div>
-      <div class="skeleton-header"></div>
-      <div class="skeleton-details"></div>
+    <div class="skeleton-loader">
+      <div class="skeleton-speakers">
+        <div class="skeleton-speakers-card">
+          <div class="skeleton-circle"></div>
+          <div class="skeleton-circle"></div>
+          <div class="skeleton-circle"></div>
+          <div class="skeleton-circle"></div>
+        </div>
+      </div>
 
       <div class="skeleton-footer"></div>
-    </div> -->
+    </div>
     <div class="page-wrapper">
       <!-- Preloader -->
       <!-- <div class="preloader"></div> -->
@@ -618,18 +623,20 @@
     <div class="scroll-to-top scroll-to-target" data-target="html">
       <span class="fa fa-angle-double-up"></span>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/appear.js"></script>
-    <script src="js/owl.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/jquery.js defer"></script>
+    <script src="js/popper.min.js defer"></script>
+    <script src="js/bootstrap.min.js defer"></script>
+    <script src="js/jquery-ui.js defer"></script>
+    <script src="js/jquery.fancybox.js defer"></script>
+    <script src="js/appear.js defer"></script>
+    <script src="js/owl.js defer"></script>
+    <script src="js/wow.js defer"></script>
+    <script src="js/script.js defer"></script>
     <!-- Color Setting -->
-    <script src="js/color-settings.js"></script>
+    <script src="js/color-settings.js defer"></script>
     <!-- Skeleton Loading  -->
-    <script src="js/skeleton-loader.js"></script>
+    <!-- <script src="js/skeleton-loader.js"></script> -->
+    <!-- Lazy Loading  -->
+    <script src="js/lazysizes.min.js" async=""></script>
   </body>
 </html>
