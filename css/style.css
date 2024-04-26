@@ -130,6 +130,7 @@ Last Change:    11/3/2020
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	transition: opacity 0.5s ease-in-out; 
 }
 
 .skeleton-banner-card {
@@ -143,6 +144,18 @@ Last Change:    11/3/2020
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
 
+}
+
+.skeleton-card {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
 }
 
 .skeleton-date {
@@ -8179,7 +8192,7 @@ img{
 
 .clients-section .sponsors-outer{
 	position:relative;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 .clients-section .sponsors-outer .owl-dots,
@@ -8189,7 +8202,7 @@ img{
 
 .clients-section .sponsors-outer .client-block{
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .clients-section .sponsors-outer .image-box{

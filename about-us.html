@@ -6,7 +6,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-K9NL9QCYZR"
     ></script>
-    <script>
+    <script async>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -159,8 +159,6 @@
       <div class="skeleton-date"></div>
       <div class="skeleton-header"></div>
       <div class="skeleton-details"></div>
-     
-
       <div class="skeleton-footer"></div>
     </div> -->
     <div class="page-wrapper">
@@ -656,6 +654,9 @@
     <script src="js/script.js"></script>
     <!-- Color Setting -->
     <script src="js/color-settings.js"></script>
-    <script src="js/skeleton-loader.js"></script>
+    <!-- Skeleton Loading  -->
+    <!-- <script src="js/skeleton-loader.js"></script> -->
+    <!-- Lazy Loading  -->
+    <script src="js/lazysizes.min.js" async=""></script>
   </body>
 </html>
