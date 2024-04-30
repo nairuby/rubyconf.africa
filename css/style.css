@@ -5140,6 +5140,13 @@ img{
 
 ***/
 
+.price-strikethrough {
+	text-decoration: line-through;
+	text-decoration-color: rgb(153, 71, 71);
+	text-decoration-thickness: 4px
+  }
+  
+
 .pricing-section{
 	position: relative;
 	padding: 120px 0 80px;
