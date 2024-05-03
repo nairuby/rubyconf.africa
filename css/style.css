@@ -811,7 +811,7 @@ color:#F2F2F2;
 	background-color: #F2F2F2;
 	background-position:center center;
 	background-repeat:no-repeat;
-	background-image:url(../images/logo/arc_logo_coloured.png);
+	background-image:url(../images/logo/ruby_conf_logo.png);
 	background-size:200px;
 	margin-bottom: 5px;
 }
@@ -820,7 +820,7 @@ color:#F2F2F2;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	content: "Just a moment..";
+	content: "Loading..";
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
