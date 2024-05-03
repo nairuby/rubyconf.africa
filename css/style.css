@@ -811,8 +811,9 @@ color:#F2F2F2;
 	background-color: #F2F2F2;
 	background-position:center center;
 	background-repeat:no-repeat;
-	background-image:url(../images/icons/preloader.svg);
-	background-size:100px;
+	background-image:url(../images/logo/arc_logo_coloured.png);
+	background-size:200px;
+	margin-bottom: 5px;
 }
 
 .preloader:after{
@@ -826,7 +827,7 @@ color:#F2F2F2;
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
 	margin-top: 45px;
-	font-size: 24px;
+	font-size: 15px;
 	line-height: 1em;
 	color: #D90447;
 	text-decoration: underline;
