@@ -292,6 +292,13 @@ p,.text{
 	margin:0 auto;
 }
 
+.support-container{
+	position:static;
+	max-width:1200px;
+	padding:0px 15px;
+	margin:0 auto;
+}
+
 .large-container{
 	position:static;
 	max-width:1550px;
@@ -5433,7 +5440,7 @@ img{
 
 .pricing-section-two{
 	position: relative;
-	padding: 120px 0 70px;
+	padding: 70px 0 30px;
 	overflow: hidden;
 }
 
