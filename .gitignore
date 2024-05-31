@@ -59,3 +59,20 @@ _testmain.go
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+_site
+.asset-cache
+.sass-cache
+.jekyll-metadata
+
+# Ignore Gemfile.lock to avoid contributors pushing different versions
+Gemfile.lock
+
+# Ignore ruby version files
+.ruby-*
+
+# This is where the artifacts will be created when building in production
+public
+
+# Gems will be installed here. This is used by Gitlab CI/CD
+vendor
