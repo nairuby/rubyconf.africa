@@ -4,93 +4,64 @@ permalink: speakers
 title: Speakers
 ---
 
-<body>
-  <div class="page-wrapper">
-    <!-- Preloader -->
-    <!--    <div class="preloader"></div>-->
+<!-- Preloader -->
+<div class="preloader"></div>
 
-    <!-- Header span -->
+<section class="speakers-section-two">
+	<!-- <div class="anim-icons">
+			<span class="icon icon-circle-4 wow zoomIn"></span>
+			<span class="icon icon-circle-3 wow zoomIn"></span>
+		</div> -->
 
-    <span class="header-span"></span>
+	<div class="auto-container">
+		<div class="row top-pd-mobile">
+			<!-- Speaker Block -->
+			{% for speaker in site.speakers %}
+			<div
+					class="speaker-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+			>
+				<div class="inner-box">
+					<div class="info-box">
+						<h4 class="name">
+							<a href="{{ speaker.url }}">{{ speaker.name}}</a>
+						</h4>
+						<span class="designation">{{ speaker.bio }}</span>
+					</div>
+					<div class="image-box">
+						<figure class="image">
+							<a href="{{ speaker.url }}"
+							><img
+									src="{{ speaker.image }}"
+									alt="{{ speaker.name }}"
+									style="width: 200px; height: 145px"
+							/></a>
+						</figure>
+					</div>
+					<div class="social-box">
+						<ul class="social-links social-icon-colored">
+							<li>
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href="{{ speaker.twitter }}"
+								><i class="fab fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a href="#"><i class="fab fa-pinterest"></i></a>
+							</li>
+							<li>
+								<a href="{{ speaker.website }}"
+								><i class="fab fa-sistrix"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- End Speakers Section -->
 
-    <!-- Disable page title banner -->
-
-    <!--Page Title Banner-->
-
-    <!--
-  <section class="page-title" style="background-image:url(images/logo/nairobi.jpg);">
-      <div class="auto-container">
-          <h1>About Ruby Conf, Africa 2024</h1>
-      </div>
-  </section>
-  -->
-
-    <!--End Page Title Banner-->
-
-    <!-- Speakers Section -->
-
-    <section class="speakers-section-two">
-      <!-- <div class="anim-icons">
-          <span class="icon icon-circle-4 wow zoomIn"></span>
-          <span class="icon icon-circle-3 wow zoomIn"></span>
-        </div> -->
-
-      <div class="auto-container">
-        <div class="row top-pd-mobile">
-          <!-- Speaker Block -->
-          {% for speaker in site.speakers %}
-          <div
-            class="speaker-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
-          >
-            <div class="inner-box">
-              <div class="info-box">
-                <h4 class="name">
-                  <a href="{{ speaker.url }}">{{ speaker.name}}</a>
-                </h4>
-                <span class="designation">{{ speaker.bio }}</span>
-              </div>
-              <div class="image-box">
-                <figure class="image">
-                  <a href="{{ speaker.url }}"
-                    ><img
-                      src="{{ speaker.image }}"
-                      alt="{{ speaker.name }}"
-                      style="width: 200px; height: 145px"
-                  /></a>
-                </figure>
-              </div>
-              <div class="social-box">
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="{{ speaker.twitter }}"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="{{ speaker.website }}"
-                      ><i class="fab fa-sistrix"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-    <!-- End Speakers Section -->
-  </div>
-  <!--End pagewrapper-->
-
-  <!--Scroll to top-->
-  <div class="scroll-to-top scroll-to-target" data-target="html">
-    <span class="fa fa-angle-double-up"></span>
-  </div>
-</body>

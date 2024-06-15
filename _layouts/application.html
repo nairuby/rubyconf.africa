@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body class="cms-index-index cms-home-page">
-<div id="page">
+<body>
+<div class="page-wrapper">
     <!-- Header and Navigation-->
     {% include navigation.html %}
 
     <!-- Content -->
-    {{ content }}
+    <div class="content-wrapper">
+        {{ content }}
+    </div>
 
     <!-- Footer -->
     {% include footer.html %}
 </div>
 
 
+<!--<script src="{{ site.baesurl }}/assets/javascripts/application.js"></script>-->
 
-<script src="{{ site.baesurl }}/assets/javascripts/application.js"></script>
-
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+{% include js.html %}
 </body>
 </html>
