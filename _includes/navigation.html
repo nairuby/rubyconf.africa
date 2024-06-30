@@ -42,12 +42,20 @@
                     >
                         <ul class="navigation clearfix">
                             <li><a href="/index">Home</a></li>
-                            <li><a href="/about-us">About</a></li>
-                            <li><a href="/speakers.html">Speakers</a></li>
-                            <li><a href="/tickets">Tickets</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/code-of-conduct">Code of Conduct</a></li>
-                            <li><a href="/practicalities">Practicalities</a></li>
+                            <li {% if page.url==
+                            "/about-us" %}class="current"{%endif%}><a href="/about-us">About</a></li>
+                            <li {% if page.url==
+                            "/speakers" %}class="current"{%endif%}><a href="/speakers.html">Speakers</a></li>
+                            <li {% if page.url==
+                            "/tickets" %}class="current"{%endif%}><a href="/tickets">Tickets</a></li>
+                            <li {% if page.url==
+                            "/contact" %}class="current"{%endif%}><a href="/contact">Contact</a></li>
+                            <li {% if page.url==
+                            "/code-of-conduct" %}class="current"{%endif%}><a href="/code-of-conduct">Code of
+                            Conduct</a></li>
+                            <li {% if page.url==
+                            "/practicalities" %}class="current"{% endif %}><a
+                                href="/practicalities">Attendee Guide</a></li>
                         </ul>
                     </div>
                 </nav>

@@ -1,0 +1,80 @@
+- name: KCA University
+  alt: KCA University, a Platinum sponsor, offering quality education and research opportunities.
+  image: ./images/logo/kca_university.png
+  url: https:// https://www.kcau.ac.ke/
+  categories: [platinum]
+
+- name: KopoKopo
+  image: ./images/logo/kopokopo_logo.png
+  url: https://kopokopo.co.ke/
+  categories: [silver, previous]
+
+- name: Nairobits
+  image: ./images/logo/nairobits_logo.png
+  url: https://www.nairobits.com/
+  categories: [partner, previous]
+
+- name: Planet Argon
+  image: ./images/logo/planet_argon_logo.png
+  url: https://www.planetargon.com/
+  categories: [silver]
+
+- name: Solutech
+  image: ./images/logo/solutech_flat_logo.png
+  url: https://www.solutech.co.ke
+  categories: [silver]
+
+- name: AppSignal
+  image: ./images/logo/app_signal_logo.png
+  url: https://www.appsignal.com/
+  categories: [silver]
+
+- name: Finplus Group
+  image: ./images/logo/finplus_group_logo.png
+  url: https://finplusgroup.com/
+  categories: [silver]
+
+- name: Microverse
+  image: ./images/logo/microverse_logo.png
+  url: https://www.microverse.org/
+  categories: [partner]
+
+- name: Ruby Central
+  image: ./images/logo/ruby_central.png
+  url: https://rubycentral.org/
+  categories: [partner]
+
+- name: Friendly Ruby
+  image: ./images/logo/friendly-rb.webp
+  url: https://friendlyrb.com/
+  categories: [partner]
+
+- name: WNB
+  image: ./images/logo/wnb_rb_logo.png
+  url: https://www.wnb-rb.dev/
+  categories: [ticket]
+
+- name: Shopify
+  image: ./images/logo/Shopify_logo_2018.svg.png
+  url: https://www.shopify.com/
+  categories: [previous]
+
+- name: Kwara
+  image: ./images/logo/Kwara.png
+  url: https://kwara.com/
+  categories: [previous]
+
+- name: Andela
+  image: ./images/logo/Andela_logo.png
+  url: https://andela.com/
+  categories: [previous]
+
+- name: IHub
+  image: ./images/logo/IHub_logo.png
+  url: https://ihub.co.ke/
+  categories: [previous]
+
+- name: Turing
+  image: ./images/logo/turing_logo.svg
+  url: https://www.turing.com/
+  categories: [previous]

@@ -9,25 +9,28 @@ layout: application
             <div class="image-column col-lg-4 col-md-12 col-sm-12">
                 <div class="image-box">
                     <figure class="image">
-                        <img src="{{ page.image }}" alt=" page.name " />
+                        <img src="{{ page.image }}" alt=" page.name "/>
                     </figure>
                     <ul class="social-icon-two social-icon-colored text-center">
+                        {% if page.twitter and page.twitter != "" %}
                         <li>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ page.twitter }}"
+                            <a href="//{{ page.twitter }}"
                             ><i class="fab fa-twitter"></i
                             ></a>
                         </li>
+                        {% endif %}
+                        {% if page.linkedin and page.linkedin != "" %}
                         <li>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="//{{page.linkedin}}"><i class="fab fa-linkedin"></i></a>
                         </li>
+                        {% endif %}
+                        {% if page.website and page.website != "" %}
                         <li>
-                            <a href="{{page.website}}"
+                            <a href="//{{page.website}}"
                             ><i class="fab fa-sistrix"></i
                             ></a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
