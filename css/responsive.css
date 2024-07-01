@@ -1,5 +1,3 @@
-/* Eventrox - Digital Conference HTML Template */
-
 @media only screen and (max-width: 1139px){
 	.buy-ticket .form-column .inner-column,
 	.about-section .content-column .inner-column{
@@ -48,18 +46,18 @@
 	}
 }
 
-@media only screen and (max-width: 1023px){
+@media only screen and (max-width: 1123px){
 	
 	.main-header,
 	.main-header.fixed-header,
 	.main-header .main-box{
 		/* position: relative !important; */
-		background-color: #1e1f36;
+		background-color: #0f0f0f;
 	}
 
 	.main-header .main-box{
 		padding: 10px 0;
-		background-color: #1e1f36;
+		background-color: #0f0f0f;
 	}
 
 	.header-style-two,
