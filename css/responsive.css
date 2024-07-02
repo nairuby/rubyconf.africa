@@ -54,12 +54,12 @@
 	.main-header.fixed-header,
 	.main-header .main-box{
 		/* position: relative !important; */
-		background-color: #1e1f36;
+		background-color: #0f0f0f;
 	}
 
 	.main-header .main-box{
 		padding: 10px 0;
-		background-color: #1e1f36;
+		background-color: #0f0f0f;
 	}
 
 	.header-style-two,
