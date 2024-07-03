@@ -1041,7 +1041,7 @@ img {
 	-webkit-text-fill-color: transparent;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .sec-title h2 {
@@ -1058,7 +1058,7 @@ img {
 	font-size: 16px;
 	line-height: 28px;
 	color: #484848;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .sec-title.light h2,
@@ -2051,6 +2051,40 @@ img {
 	/*background-color: #F2F2F2;*/
 	color: #FAAC1D;
 }
+
+/***
+
+====================================================================
+		Banner Cfp
+====================================================================
+
+***/
+
+.banner-cfp {
+	background-color: #dc3545; 
+	color: white; 
+	text-align: center; 
+	padding: 25px 0; 
+	font-size: 1.25rem; 
+  }
+  .banner-cfp a {
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s ease;
+  }
+  .banner-cfp a:hover {
+	font-size: 2rem;
+	text-decoration: underline;
+	background-color: #db4251;
+	color: #dc3535; /* Change text color */
+      padding: 10px 20px; /* Add padding */
+      border-radius: 5px; /* Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  .banner-content {
+	padding-top: 20px;
+  }
+
 
 /***
 
@@ -3947,13 +3981,13 @@ img {
 
 .speakers-section-two {
 	position: relative;
-	padding: 120px 0 70px;
+	padding: 100px 0 70px;
 	overflow: hidden;
 }
 
 .speaker-block-two {
 	position: relative;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 .speaker-block-two .inner-box {
