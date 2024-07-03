@@ -16,7 +16,7 @@
 		padding: 0;
 	}
 
-	.banner-conference .icon-circle-3{
+	.banner-conference .banner-cfp .icon-circle-3{
 		left: -200px;
 		top: -200px;
 	}
@@ -156,31 +156,31 @@
 		order: 0;
 	}
 
-	.banner-conference .content-box h2{
+	.banner-conference .banner-cfp .content-box h2{
 		font-size: 42px;
 	}
 
-	.banner-conference .images-outer{
+	.banner-conference .banner-cfp .images-outer{
 		width: 40%;
 	}
 
-	.banner-conference .time-countdown .counter-column{
+	.banner-conference .banner-cfp .time-countdown .counter-column{
 		margin-right: 20px;
 	}
 
-	.banner-conference .time-countdown .counter-column:last-child{
+	.banner-conference .banner-cfp .time-countdown .counter-column:last-child{
 		margin-right: 0;
 	}
 
-	.banner-conference .time-countdown .counter-column:before{
+	.banner-conference .banner-cfp .time-countdown .counter-column:before{
 		right: -15px;
 	}
 
-	.banner-conference{
+	.banner-conference .banner-cfp{
 		padding: 200px 0 100px;
 	}
 
-	.banner-conference .icon-dots{
+	.banner-conference .banner-cfp .icon-dots{
 		bottom: 50px;
 	}
 
@@ -223,12 +223,12 @@
 	.subscribe-form .sec-title .text br,
 	.about-section-two .icon-circle-blue,
 	.about-section-two .icon-dots,
-	.banner-conference-two .images-outer .speaker-img,
+	.banner-conference .banner-cfp-two .images-outer .speaker-img,
 	.coming-soon-section-two .time-countdown .counter-column:before{
 		display: none;
 	}
 	
-	.banner-conference-two{
+	.banner-conference .banner-cfp-two{
 		padding-top:140px;
 		padding-bottom:280px;
 	}
@@ -281,7 +281,7 @@
 	
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 867px){
 	.main-header .nav-outer .main-menu{
 		display: none !important;
 	}
@@ -430,22 +430,22 @@
 		padding-top: 10px;
 	}
 
-	.banner-conference{
+	.banner-conference .banner-cfp{
 		padding-top: 150px;
 	}
 
 	.features-section-two .twist-line-2,
 	.call-to-action .content-box h2 br,
-	.banner-conference .layer-outer,
-	.banner-conference .images-outer{
+	.banner-conference .banner-cfp .layer-outer,
+	.banner-conference .banner-cfp .images-outer{
 		display: none;
 	}
 
-	.banner-conference .content-box{
+	.banner-conference .banner-cfp .content-box{
 		text-align: center;
 	}
 
-	.banner-conference .icon-dots{
+	.banner-conference .banner-cfp .icon-dots{
 		bottom: 0;
 		left: 80%;
 	}
@@ -557,7 +557,7 @@
 		float:none;
 	}
 	
-	.banner-conference-two{
+	.banner-conference .banner-cfp-two{
 		padding-bottom:120px;
 	}
 	
@@ -568,7 +568,7 @@
 
 	.page-title h1,
 	.banner-meetup h2,
-	.banner-conference .content-box h2,
+	.banner-conference .banner-cfp .content-box h2,
 	.error-section h4,
 	.event-info-section .info-column .sec-title h2,
 	.about-section .content-column .sec-title h2,
@@ -577,11 +577,11 @@
 		line-height: 1.2em;
 	}
 
-	.banner-conference-two .content-box h2{
+	.banner-conference .banner-cfp-two .content-box h2{
 		font-size:40px;
 	}
 	
-	.banner-conference-two .time-countdown .counter-column{
+	.banner-conference .banner-cfp-two .time-countdown .counter-column{
 		margin-bottom:60px;
 	}
 	
@@ -619,7 +619,7 @@
 
 	.video-section .content-box h2 br,
 	.coming-soon .icon-line-1,
-	.banner-conference-two .time-countdown .counter-column:before,
+	.banner-conference .banner-cfp-two .time-countdown .counter-column:before,
 	.about-section-two .content-column .sec-title h2 br,
 	.event-info-section .info-column .sec-title h2 br,
 	.banner-carousel .content-box .info-list li:before{
@@ -702,26 +702,26 @@
 		text-align: center;
 	}
 
-	.banner-conference .time-countdown .counter-column{
+	.banner-conference .banner-cfp .time-countdown .counter-column{
 		margin-right: 0px;
 		width: 60px;
 		text-align: center;
 		font-size: 12px;
 	}
 
-	.banner-conference .time-countdown .counter-column:last-child{
+	.banner-conference .banner-cfp .time-countdown .counter-column:last-child{
 		margin-right: 0;
 	}
 
-	.banner-conference .time-countdown .counter-column .count{
+	.banner-conference .banner-cfp .time-countdown .counter-column .count{
 		font-size: 28px;
 	}
 
-	.banner-conference .time-countdown .counter-column:after{
+	.banner-conference .banner-cfp .time-countdown .counter-column:after{
 		width: 60px;
 	}
 
-	.banner-conference .time-countdown .counter-column:before{
+	.banner-conference .banner-cfp .time-countdown .counter-column:before{
 		right: -5px;
 		font-size: 28px;
 		display: none;
@@ -826,7 +826,7 @@
 }
 
 @media only screen and (max-width: 479px) {
-	.banner-conference-two .content-box h2{
+	.banner-conference .banner-cfp-two .content-box h2{
 		font-size:34px;
 	}
 }
@@ -856,7 +856,7 @@
 		padding: 0;
 	}
 
-	.rtl .banner-conference .icon-circle-3{
+	.rtl .banner-conference .banner-cfp .icon-circle-3{
 		left: auto;
 		right: -200px;
 	}
@@ -890,7 +890,7 @@
 		text-align: center;
 	}
 
-	.rtl .banner-conference .time-countdown .counter-column:before{
+	.rtl .banner-conference .banner-cfp .time-countdown .counter-column:before{
 		left: -15px;
 	}
 
@@ -1007,11 +1007,11 @@
 		padding-right: 0;
 	}
 
-	.rtl .banner-conference .time-countdown .counter-column{
+	.rtl .banner-conference .banner-cfp .time-countdown .counter-column{
 		margin-left: 0px;
 	}
 
-	.rtl .banner-conference .time-countdown .counter-column:last-child{
+	.rtl .banner-conference .banner-cfp .time-countdown .counter-column:last-child{
 		margin-left: 0;
 	}
 
