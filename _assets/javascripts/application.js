@@ -18,4 +18,3 @@
 //= require skeleton-loader
 //= require swiper.min
 //= require wow
-

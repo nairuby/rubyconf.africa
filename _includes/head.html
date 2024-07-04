@@ -73,9 +73,16 @@
 
 
 	<!-- CSS Style -->
-	{% include styles.html %}
-	{% include google_analytics.html %}
+	<!-- Stylesheets -->
+	<link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet" />
+	<link href="{{ site.baseurl }}/css/bootstrapV5.css" rel="stylesheet" />
+	<link href="{{ site.baseurl }}/css/style.css" rel="stylesheet" />
+	<link href="{{ site.baseurl }}/css/responsive.css" rel="stylesheet" />
+	<!--Color Switcher Mockup-->
+	<link href="{{ site.baseurl }}css/color-switcher-design.css" rel="stylesheet" />
 
+	{% include google_analytics.html %}
+	<link type="text/css" rel="stylesheet" href="{{ site.baesurl }}/assets/stylesheets/application.css">
 	<!-- Meta Tags for Responsive Design -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta
