@@ -3728,7 +3728,7 @@ img {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(28, 139, 210, .50);
+	background-color: rgb(236, 26, 26);
 	content: "";
 }
 
@@ -4481,7 +4481,7 @@ img {
 
 .speaker-detail .speaker-session-info p {
 	margin-bottom: 0;
-	color: rgb(247, 0, 104);
+	color: rgb(247, 0, 0);
 }
 
 
@@ -11598,7 +11598,7 @@ img {
 
 .about-section .content-column {
 	position: relative;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 }
 
 .about-section .content-column .inner-column {
