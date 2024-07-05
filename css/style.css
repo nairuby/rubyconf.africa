@@ -9874,7 +9874,7 @@ img {
 }
 
 .social-icon-colored .fa-dribbble {
-	border-radius: 15px;
+	border-radius: 8px;
 	color: #F46899;
 }
 
@@ -9885,6 +9885,7 @@ img {
 .social-icon-colored .fa-facebook,
 .social-icon-colored .fa-facebook-f,
 .social-icon-colored .fa-facebook-square {
+	border-radius: 8px;
 	color: #3C599F;
 }
 
@@ -9919,7 +9920,7 @@ img {
 .social-icon-colored .fa-linkedin,
 .social-icon-colored .fa-linkedin-in,
 .social-icon-colored .fa-linkedin-square {
-	border-radius: 15px;
+	border-radius: 8px;
 	color: #0085AE;
 }
 
@@ -9969,14 +9970,13 @@ img {
 
 .social-icon-colored .fa-twitter,
 .social-icon-colored .fa-twitter-square {
-	border-radius: 15px;
+	border-radius: 8px;
 	color: #32CCFE;
 }
 
 .social-icon-colored .fa-sistrix,
 .social-icon-colored .fa-sistrix-square {
-	border-radius: 15px;
-	/* color: #32CCFE; */
+	border-radius: 8px;
 }
 
 .social-icon-colored .fa-vimeo-square {
@@ -10003,6 +10003,7 @@ img {
 .social-icon-colored .fa-youtube,
 .social-icon-colored .fa-youtube-play,
 .social-icon-colored .fa-youtube-square {
+	border-radius: 8px;
 	color: #C52F30;
 }
 
