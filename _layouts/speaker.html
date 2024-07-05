@@ -14,19 +14,19 @@ layout: application_speaker
                     <ul class="social-icon-two social-icon-colored text-center">
                         {% if page.twitter and page.twitter != "" %}
                         <li>
-                            <a href="//{{ page.twitter }}"
+                            <a href="//{{ page.twitter }}" target="_blank"
                             ><i class="fab fa-twitter"></i
                             ></a>
                         </li>
                         {% endif %}
                         {% if page.linkedin and page.linkedin != "" %}
                         <li>
-                            <a href="//{{page.linkedin}}"><i class="fab fa-linkedin"></i></a>
+                            <a href="//{{page.linkedin}}" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </li>
                         {% endif %}
                         {% if page.website and page.website != "" %}
                         <li>
-                            <a href="//{{page.website}}"
+                            <a href="//{{page.website}}" target="_blank"
                             ><i class="fab fa-sistrix"></i
                             ></a>
                         </li>
@@ -39,30 +39,32 @@ layout: application_speaker
                 <div class="inner-column">
                     <div class="text-box">
                         <h3>{{ page.name }}</h3>
+                        <h4 class="text-danger">{{ page.bio }}</h4>
                         <p>
-                            {{ page.description }}
+                            {{ page.details }}
                         </p>
-                        <h4>Sessions by {{ page.short_name }}</h4>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="speaker-session-info">
-                                    <h5>Day 1</h5>
-                                    <span> 10.30 - 11.30 am </span>
-                                    <p>Session 1</p>
-                                </div>
-                            </div>
+                        <h4>Talks by {{ page.name }}</h4>
+                        <p>TBA</p>
+<!--                        <div class="row">-->
+<!--                            <div class="col-lg-4">-->
+<!--                                <div class="speaker-session-info">-->
+<!--                                    <h5>Day 1</h5>-->
+<!--                                    <span> 10.30 - 11.30 am </span>-->
+<!--                                    <p>Session 1</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <div class="col-lg-4">
-                                <div class="speaker-session-info">
-                                    <h5>Day 2</h5>
-                                    <span> 12.30 - 11.30 am </span>
-                                    <p>Session 2</p>
-                                </div>
-                            </div>
+<!--                            <div class="col-lg-4">-->
+<!--                                <div class="speaker-session-info">-->
+<!--                                    <h5>Day 2</h5>-->
+<!--                                    <span> 12.30 - 11.30 am </span>-->
+<!--                                    <p>Session 2</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <p></p>
+<!--                            <p></p>-->
 
-                        </div>
+<!--                        </div>-->
                     </div>
                 </div>
             </div>

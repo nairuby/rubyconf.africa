@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+{% include head.liquid %}
 <body>
 <div class="page-wrapper">
     <!-- Header and Navigation-->
-    {% include navigation.html %}
+    {% include navigation.liquid %}
 
     <!-- Content -->
     <div class="content-wrapper">
@@ -12,12 +12,12 @@
     </div>
 
     <!-- Footer -->
-    {% include footer.html %}
+    {% include footer.liquid %}
 </div>
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
-{% include js.html %}
+{% include js.liquid %}
 <!--<script src="{{ site.basesurl }}/assets/javascripts/application.js"></script>-->
 </body>
 </html>
