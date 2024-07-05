@@ -1,0 +1,38 @@
+name: Deploy site
+
+on:
+  push:
+    branches:
+      - Ft/Jekyll-build
+    paths:
+      - "assets/**"
+      - "css/**"
+      - "documents/**"
+      - "fonts/**"
+      - "images/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "!README.md"
+  pull_request:
+    branches:
+      - Ft/Jekyll-build
+    paths:
+      - "assets/**"
+      - "css/**"
+      - "documents/**"
+      - "fonts/**"
+      - "images/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "!README.md"
+  workflow_dispatch:
