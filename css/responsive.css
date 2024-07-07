@@ -4,7 +4,7 @@
 	.buy-ticket .form-column .inner-column,
 	.about-section .content-column .inner-column{
 		padding-right: 0;
-	}	
+	}
 
 	.event-info-section .info-column .inner-column,
 	.useful-links{
@@ -49,7 +49,7 @@
 }
 
 @media only screen and (max-width: 1023px){
-	
+
 	.main-header,
 	.main-header.fixed-header,
 	.main-header .main-box{
@@ -69,8 +69,8 @@
 		padding: 0;
 	}
 
-	.header-style-two .outer-box, 
-	.header-style-two .logo-box, 
+	.header-style-two .outer-box,
+	.header-style-two .logo-box,
 	.header-style-two .main-menu .navigation > li{
 		padding: 10px 0;
 	}
@@ -227,7 +227,7 @@
 	.coming-soon-section-two .time-countdown .counter-column:before{
 		display: none;
 	}
-	
+
 	.banner-conference .banner-cfp-two{
 		padding-top:140px;
 		padding-bottom:280px;
@@ -259,29 +259,29 @@
 	.subscribe-section .content-box .sec-title{
 		text-align: center;
 	}
-	
+
 	.header-top-two .top-left .links li a{
 		font-size:14px;
 	}
-	
+
 	.header-top-two .top-left,
 	.header-top-two .top-right{
 		width:100%;
 	}
-	
+
 	.header-top-two .top-right .social-icons li{
 		margin-left:0px;
 		margin-right:15px;
 	}
-	
+
 	.main-header.header-style-two.alternate-two .main-box,
 	.main-header.header-style-two.alternate-two{
 		background-color:#000000;
 	}
-	
+
 }
 
-@media only screen and (max-width: 867px){
+@media only screen and (max-width: 880px){
 	.main-header .nav-outer .main-menu{
 		display: none !important;
 	}
@@ -317,7 +317,7 @@
 	.sec-title h2{
 		font-size: 42px;
 	}
-	
+
 	.banner-carousel .content-box h2{
 		font-size: 40px;
 		line-height: 1.2em;
@@ -381,7 +381,7 @@
 	.features-section{
 		padding: 70px 0 30px;
 	}
-	
+
 	.event-detail,
 	.buy-ticket,
 	.features-section-three,
@@ -507,60 +507,60 @@
 	.clients-section{
 		text-align: center;
 	}
-	
+
 	.header-top .pull-right{
 		display:none;
 	}
-	
+
 	.header-top .top-left{
 		width:100%;
 		display:block;
 		text-align:center;
 	}
-	
+
 	.banner-section-two .outer-container .content h1{
 		font-size:58px;
 	}
-	
+
 	.banner-section-two .outer-container .content h2{
 		font-size:28px;
 	}
-	
+
 	.banner-section-two .outer-container .content h2 span{
 		font-size:24px;
 	}
-	
+
 	.coming-soon-section-two .outer-box{
 		padding-left:0px;
 		padding-right:0px;
 	}
-	
+
 	.coming-soon-section-two .outer-box{
 		margin-top:90px;
 	}
-	
+
 	.banner-section-two{
 		padding-bottom:150px;
 	}
-	
+
 	.header-top-two .top-left{
 		display:none;
 	}
-	
+
 	.header-top-two .top-right{
 		text-align:center;
 	}
-	
+
 	.header-top-two .top-right .cart-box,
 	.header-top-two .top-right .social-icons{
 		display:inline-block;
 		float:none;
 	}
-	
+
 	.banner-conference .banner-cfp-two{
 		padding-bottom:120px;
 	}
-	
+
 }
 
 
@@ -580,11 +580,11 @@
 	.banner-conference .banner-cfp-two .content-box h2{
 		font-size:40px;
 	}
-	
+
 	.banner-conference .banner-cfp-two .time-countdown .counter-column{
 		margin-bottom:60px;
 	}
-	
+
 	.call-to-action .content-box h2,
 	.about-section-two .content-column .sec-title h2,
 	.fluid-section-one .content-column h3,
@@ -638,7 +638,7 @@
 
 	.schedule-block.even .inner-box .inner,
 	.schedule-block .inner-box .inner {
-	    margin: 0;
+		margin: 0;
 	}
 
 	.schedule-block .date{
@@ -748,14 +748,14 @@
 		font-size: 10px;
 		margin: 0 0 20px;
 	}
-	
+
 	.banner-meetup .countdown .counter-column .count{
 		font-size: 24px;
 	}
 
 	.feature-block-three .inner-box{
 		padding: 40px 20px;
-		text-align: center;	
+		text-align: center;
 	}
 
 	.feature-block-three .icon-box{
@@ -832,7 +832,7 @@
 }
 
 
-/*** 
+/***
 
 ====================================================================
 		Right To Left Responsive
@@ -845,7 +845,7 @@
 	.rtl .buy-ticket .form-column .inner-column,
 	.rtl .about-section .content-column .inner-column{
 		padding-left: 0;
-	}	
+	}
 
 	.rtl .event-info-section .info-column .inner-column,
 	.rtl .useful-links{
@@ -868,7 +868,7 @@
 	.rtl .instagram-widget .outer .image{
 		float: right;
 	}
-	
+
 	.rtl .main-menu .navigation > li{
 		margin-right: 35px;
 	}
@@ -1063,17 +1063,17 @@
 		left: auto;
 		right: 0;
 	}
-	
+
 	.search-popup .search-form fieldset input[type="search"]{
 		padding:20px 20px;
 	}
-	
+
 	.search-popup .search-form fieldset input[type="submit"]{
 		position:relative;
 		width:100%;
 		display:block;
 	}
-	
+
 }
 
 @media only screen and (max-width: 479px) {
