@@ -78,3 +78,8 @@
   image: ./images/logo/turing_logo.svg
   url: https://www.turing.com/
   categories: [previous]
+
+- name: Andpad
+  image: ./images/logo/andpad.png
+  url: https://andpad.co.jp/
+  categories: [partner]

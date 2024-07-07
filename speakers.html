@@ -46,7 +46,7 @@ image: "/images/logo/arc_logo_coloured.png"
         <div class="row top-pd-mobile">
             {% for speaker in site.speakers %}
             {% if speaker.is_keynote == true %}
-            {% include speaker-block.liquid speaker=speaker designation="Keynote Speaker" %}
+            {% include speaker-block.liquid speaker=speaker designation="Keynote Speaker " %}
             {% endif %}
             {% endfor %}
         </div>

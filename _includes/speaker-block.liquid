@@ -4,7 +4,11 @@
             <h4 class="name">
                 <a href="{{ include.speaker.url }}">{{ include.speaker.name }}</a>
             </h4>
-            <span class="designation">{{ include.designation }}</span>
+            <span class="designation">{{ include.designation }}
+                {% if include.speaker.is_keynote == true %}
+                    <i class="fas fa-video"></i>
+                {% endif %}
+            </span>
         </div>
         <div class="image-box">
             <figure class="image">
@@ -20,19 +24,19 @@
                 <!--                    <a href="#"><i class="fab fa-facebook-f"></i></a>-->
                 <!--                </li>-->
                 {% if include.speaker.twitter and include.speaker.twitter != "" %}
-                <li>
-                    <a href="{{ include.speaker.twitter }}"><i class="fab fa-twitter"></i></a>
-                </li>
+                    <li>
+                        <a href="{{ include.speaker.twitter }}"><i class="fab fa-twitter"></i></a>
+                    </li>
                 {% endif %}
                 {% if include.speaker.linkedin and include.speaker.linkedin != "" %}
-                <li>
-                    <a href="{{ include.speaker.linkedin }}"><i class="fab fa-linkedin"></i></a>
-                </li>
+                    <li>
+                        <a href="{{ include.speaker.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                    </li>
                 {% endif %}
                 {% if include.speaker.website and include.speaker.website != "" %}
-                <li>
-                    <a href="{{ include.speaker.website }}"><i class="fab fa-sistrix"></i></a>
-                </li>
+                    <li>
+                        <a href="{{ include.speaker.website }}"><i class="fab fa-sistrix"></i></a>
+                    </li>
                 {% endif %}
             </ul>
         </div>
