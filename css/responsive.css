@@ -281,7 +281,7 @@
 
 }
 
-@media only screen and (max-width: 867px){
+@media only screen and (max-width: 880px){
 	.main-header .nav-outer .main-menu{
 		display: none !important;
 	}
