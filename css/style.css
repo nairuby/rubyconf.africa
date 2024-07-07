@@ -856,7 +856,7 @@ img {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	content: "Loading..";
+	content: "Almost Ready...";
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
@@ -864,8 +864,8 @@ img {
 	transform: translateX(-50%);
 	margin-top: 45px;
 	font-size: 15px;
-	line-height: 1em;
-	color: #d90404;
+	line-height: 2em;
+	color: #ae0303;
 	text-decoration: underline;
 	font-family: "Ubuntu", sans-serif;
 	font-weight: 400;
