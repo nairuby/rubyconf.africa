@@ -57,8 +57,6 @@
 
                             <li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>
                             </li>
-                            <li {% if page.url=="/contact" %}class="current" {%endif%}><a href="/contact">Contact</a>
-                            </li>
 
 <!--                            <li class="dropdown" {% if page.url=="/practicalities" %} current {% endif %}" ><a href="/practicalities">Attendee Guide</a>-->
                             <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Attendee Guide</a>
@@ -71,6 +69,7 @@
                                 </li>
                             </ul>
                             </li>
+                            <li {% if page.url=="/contact" %}class="current" {%endif%}><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
