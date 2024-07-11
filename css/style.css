@@ -5340,7 +5340,7 @@ img {
 	margin: 0 auto 20px;
 }
 
-.pricing-block .features li {
+.pricing-block .features li p{
 	position: relative;
 	display: block;
 	font-size: 14px;
@@ -5364,11 +5364,11 @@ img {
 }
 
 .pricing-block .features li.false:before {
-	color: #e1137b;
+	color: #e11313;
 	content: "\51";
 }
 
-.pricing-block .features li a {
+.pricing-block .features li a p{
 	color: #848484;
 }
 
