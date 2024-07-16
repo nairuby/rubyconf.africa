@@ -215,80 +215,118 @@
 
     <!-- Content -->
     <div class="content-wrapper">
-        <section class="contact-page-section">
-	<div class="auto-container">
-		<div class="row clearfix">
-			<div class="contact-column col-lg-4 col-md-12 col-sm-12 order-2">
-				<div class="inner-column">
-					<div class="sec-title top-pd-mobile">
-						<h2>Contact Info</h2>
-					</div>
-					<ul class="contact-info">
-						<li>
-							<span class="icon fa fa-envelope"></span>
-							<div class="text">
-								<a href="mailto:organisers@rubyconf.africa"
-								>organisers@rubyconf.africa</a
-								>
-							</div>
-							<div class="text">
-								<a href="mailto:sponsors@rubyconf.africa"
-								>sponsors@rubyconf.africa</a
-								>
-							</div>
-						</li>
-					</ul>
+        <style>
+    .contact-page-section .inner-column {
+        margin: 0 auto;
+        max-width: 500px;
+        /* text-align: center; */
+    }
 
-					<ul class="social-icon-one social-icon-colored">
-						<li>
-							<a href="https://web.facebook.com/rubycommunity.africa"
-							><i class="fab fa-facebook-f"></i
-							></a>
-						</li>
-						<li>
-							<a href="https://twitter.com/ruby_african"
-							><i class="fab fa-twitter"></i
-							></a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/company/83046693"
-							><i class="fab fa-linkedin"></i
-							></a>
-						</li>
-						<li>
-							<a href="https://www.youtube.com/@nairubyorg7626"
-							><i class="fab fa-youtube"></i
-							></a>
-						</li>
-					</ul>
-				</div>
-			</div>
+    .contact-info .text a {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
 
-			<!-- Form Column -->
-			<div class="form-column col-lg-8 col-md-12 col-sm-12">
-				<div class="inner-column">
-					<div class="contact-form">
-						<div class="sec-title">
-							<h2>Get in Touch</h2>
-						</div>
-						<div class="auto-container">
-							<div class="map-outer">
-								<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.863608869563!2d36.856877776387456!3d-1.2534464987346106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17eb1d447363%3A0x17a2d29bdcf01fda!2sKCA%20University!5e0!3m2!1sen!2ske!4v1717111382662!5m2!1sen!2ske"
-										width="600"
-										height="450"
-										style="border: 0"
-										allowfullscreen=""
-										loading="lazy"
-										referrerpolicy="no-referrer-when-downgrade"
-								></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    .contact-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"] {
+        width: 80%;
+        border-radius: 8px;
+        padding: 5px;
+        margin: 0 auto; 
+        display: block;
+		border: 1px solid black;
+    }
+
+    .contact-form .theme-btn {
+        width: 80%;
+        /* margin: 0 auto;*/
+        display: block;
+    }
+</style>
+
+<section class="contact-page-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!-- Contact Info Column -->
+            <div class="contact-column col-lg-4 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="sec-title top-pd-mobile">
+                        <h2>Contact Info</h2>
+                    </div>
+                    <ul class="contact-info">
+                        <li>
+                            <span class="icon fa fa-envelope"></span>
+                            <div class="text">
+                                <a href="mailto:organisers@rubyconf.africa">organisers@rubyconf.africa</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-envelope"></span>
+                            <div class="text">
+                                <a href="mailto:sponsors@rubyconf.africa">sponsors@rubyconf.africa</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="social-icon-one social-icon-colored">
+                        <li>
+                            <a href="https://web.facebook.com/rubycommunity.africa"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/ruby_african"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/83046693"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@nairubyorg7626"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Form Column -->
+            <div class="form-column col-lg-8 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="contact-form">
+                        <div class="sec-title">
+                            <h2>Newsletter</h2>
+                        </div>
+                        <form method="post" action="subscribe.php" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">Subscribe</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="map-outer" style="margin-top: 30px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.863608869563!2d36.856877776387456!3d-1.2534464987346106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17eb1d447363%3A0x17a2d29bdcf01fda!2sKCA%20University!5e0!3m2!1sen!2ske!4v1717111382662!5m2!1sen!2ske"
+                        width="100%"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!--End Contact Page Section -->
 
