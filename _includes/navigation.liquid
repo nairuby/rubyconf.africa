@@ -41,7 +41,10 @@
                             id="navbarSupportedContent"
                     >
                         <ul class="navigation clearfix">
-                            <li><a href="/index">Home</a></li>
+                            {% comment %}<li><a href="/index">Home</a></li>{% endcomment %}
+                            <li {% if page.url=="/schedule" %}class="current" {%endif%}>
+                                <a href="schedule.html">Schedule</a>
+                            </li>
                             <li {% if page.url=="/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
                             </li>
                             <li class="dropdown {% if page.url == "/speakers" %} current {% endif %}"><a href="/speakers.html">Speakers</a>
