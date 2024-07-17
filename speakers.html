@@ -49,10 +49,10 @@ image: "/images/logo/arc_logo_coloured.png"
             {% include speaker-block.liquid speaker=speaker designation="Keynote Speaker " %}
             {% endif %}
             {% endfor %}
-        </div>
+<!--        </div>-->
 
 <!--        Display Female Speakers-->
-        <div class="row top-pd-mobile">
+<!--        <div class="row top-pd-mobile">-->
             {% assign female_speakers = site.speakers | where: "gender", "female" %}
             {% for speaker in female_speakers %}
             {% if speaker.is_keynote == false %}

@@ -44,27 +44,18 @@ layout: application_speaker
                             {{ page.details }}
                         </p>
                         <h4>Talks by {{ page.name }}</h4>
-                        <p>TBA</p>
-<!--                        <div class="row">-->
-<!--                            <div class="col-lg-4">-->
-<!--                                <div class="speaker-session-info">-->
-<!--                                    <h5>Day 1</h5>-->
-<!--                                    <span> 10.30 - 11.30 am </span>-->
-<!--                                    <p>Session 1</p>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                        <div class="row">
+                            {% for session in page.sessions %}
+                                <div class="col-lg-4">
+                                    <div class="speaker-session-info">
+                                        <h5>Day {{ session.day }}</h5>
+                                        <span>{{ session.time }}</span>
+                                        <p>{{ session.title }}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
 
-<!--                            <div class="col-lg-4">-->
-<!--                                <div class="speaker-session-info">-->
-<!--                                    <h5>Day 2</h5>-->
-<!--                                    <span> 12.30 - 11.30 am </span>-->
-<!--                                    <p>Session 2</p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-<!--                            <p></p>-->
-
-<!--                        </div>-->
+                        </div>
                     </div>
                 </div>
             </div>
