@@ -739,7 +739,8 @@ img {
 	margin-right: 0;
 }
 
-.social-icon-one li a .fab {
+.social-icon-one li a .fab,
+.social-icon-one li a .fa-x-twitter {
 	position: relative;
 	display: block;
 	height: 40px;
@@ -756,15 +757,18 @@ img {
 	-o-transition: all 900ms ease;
 }
 
-.social-icon-one li a:hover .fab {
+.social-icon-one li a:hover .fab,
+.social-icon-one li a:hover .fa-x-twitter{
 	transform: rotate(360deg);
 }
 
-.social-icon-one li a:hover .fab {
+.social-icon-one li a:hover .fab,
+.social-icon-one li a:hover .fa-x-twitter {
 	background-color: #d90404;
 	border-color: #d90404;
 	color: #F2F2F2;
 }
+
 
 /*Social Icon Two*/
 
@@ -780,7 +784,9 @@ img {
 	margin-bottom: 10px;
 }
 
-.social-icon-two li a .fab {
+.social-icon-two li a .fab,
+.social-icon-two li a .fa-x-twitter
+{
 	position: relative;
 	display: block;
 	height: 40px;
@@ -789,7 +795,7 @@ img {
 	text-align: center;
 	font-size: 16px;
 	border: 1px solid #F2F2F2;
-	background-color: #F2F2F2;
+	background-color: #edeaea;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -797,9 +803,10 @@ img {
 	transition: all 300ms ease;
 }
 
-.social-icon-two li a:hover .fab {
-	color: #F2F2F2;
-	background-color: #d90404;
+.social-icon-two li a:hover .fab,
+.social-icon-two li a:hover .fa-x-twitter  {
+	color: #e60707;
+	background-color: #fa0202;
 }
 
 /*Social Icon Three*/
@@ -3970,6 +3977,7 @@ img {
 
 .speaker-block .social-links li a:hover i {
 	color: #ffffff;
+	background-color: #0D0D0D;
 }
 
 /***
@@ -4134,6 +4142,7 @@ img {
 
 .speaker-block-two .social-links li a:hover i {
 	color: #ffffff;
+	background: #0D0D0D;
 }
 
 .speakers-section-two .anim-icons {
@@ -9874,7 +9883,7 @@ img {
 }
 
 .social-icon-colored .fa-dribbble {
-	color: #F46899;
+	color: #934242;
 }
 
 .social-icon-colored .fa-dropbox {
@@ -9888,7 +9897,7 @@ img {
 }
 
 .social-icon-colored .fa-flickr {
-	color: #FF0084;
+	color: #eae3e6;
 }
 
 .social-icon-colored .fa-foursquare {
@@ -9896,6 +9905,7 @@ img {
 }
 
 .social-icon-colored .fa-github,
+.social-icon-colored .fa-x-twitter,
 .social-icon-colored .fa-github-alt,
 .social-icon-colored .fa-github-square {
 	color: #070709;
@@ -9965,8 +9975,8 @@ img {
 	color: #314E6C;
 }
 
-.social-icon-colored .fa-twitter,
-.social-icon-colored .fa-twitter-square {
+.social-icon-colored ,
+.social-icon-colored -square {
 	color: #32CCFE;
 }
 
@@ -9986,8 +9996,8 @@ img {
 	color: #12B6F3;
 }
 
-.social-icon-colored .fa-xing,
-.social-icon-colored .fa-xing-square {
+.social-icon-colored .faing,
+.social-icon-colored .faing-square {
 	color: #00555C;
 }
 
@@ -10039,7 +10049,7 @@ img {
 }
 
 .social-icon-colored li a:hover .fa-flickr {
-	background-color: #FF0084;
+	background-color: #ff0000;
 }
 
 .social-icon-colored li a:hover .fa-foursquare {
@@ -10049,7 +10059,7 @@ img {
 .social-icon-colored li a:hover .fa-github,
 .social-icon-colored li a:hover .fa-github-alt,
 .social-icon-colored li a:hover .fa-github-square {
-	background-color: #070709;
+	background-color: #f4efef;
 }
 
 .social-icon-colored li a:hover .fa-google-plus,
@@ -10116,8 +10126,8 @@ img {
 	background-color: #314E6C;
 }
 
-.social-icon-colored li a:hover .fa-twitter,
-.social-icon-colored li a:hover .fa-twitter-square {
+.social-icon-colored li a:hover ,
+.social-icon-colored li a:hover -square {
 	background-color: #32CCFE;
 }
 
@@ -10137,8 +10147,8 @@ img {
 	background-color: #12B6F3;
 }
 
-.social-icon-colored li a:hover .fa-xing,
-.social-icon-colored li a:hover .fa-xing-square {
+.social-icon-colored li a:hover .faing,
+.social-icon-colored li a:hover .faing-square {
 	background-color: #00555C;
 }
 
@@ -10148,8 +10158,13 @@ img {
 	background-color: #C52F30;
 }
 
-.social-icon-colored li a:hover .fab {
-	color: #ffffff;
+.social-icon-colored li a:hover .fab  {
+	color: #121111;
+}
+
+.social-icon-colored li a:hover .fa-x-twitter  {
+	color: #121111;
+	background-color: #ffffff;
 }
 
 /***
