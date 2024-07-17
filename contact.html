@@ -218,39 +218,53 @@
         <style>
     .contact-page-section .inner-column {
         margin: 0 auto;
-        max-width: 500px;
-        /* text-align: center; */
+        max-width: 800px;
     }
 
+    .contact-page-section .contact-column {
+        position: relative;
+        margin-bottom: 330px;
+    }
     .contact-info .text a {
         display: inline-block;
         margin-bottom: 10px;
     }
 
-    .contact-form .form-group {
-        margin-bottom: 15px;
+    .discord-iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+        margin: 0 auto;
+        display: block;
     }
 
-    .contact-form input[type="text"],
-    .contact-form input[type="email"] {
-        width: 80%;
-        border-radius: 8px;
-        padding: 5px;
-        margin: 0 auto; 
-        display: block;
-		border: 1px solid black;
-    }
-
-    .contact-form .theme-btn {
-        width: 80%;
-        /* margin: 0 auto;*/
-        display: block;
+    .contact-page-section .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 
 <section class="contact-page-section">
     <div class="auto-container">
         <div class="row clearfix">
+            <!-- Discord Iframe Column -->
+            <div class="form-column col-lg-8 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="contact-form">
+                        <div class="sec-title">
+                            <h2>Join Our Discord</h2>
+                        </div>
+                        <iframe 
+                            src="https://discord.com/widget?id=1252184100668833885&theme=dark"
+                            class="discord-iframe"
+                            allowtransparency="true"
+                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
             <!-- Contact Info Column -->
             <div class="contact-column col-lg-4 col-md-12 col-sm-12">
                 <div class="inner-column">
@@ -277,7 +291,7 @@
                             <a href="https://web.facebook.com/rubycommunity.africa"><i class="fab fa-facebook-f"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/ruby_african"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://twitter.com/ruby_african"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/company/83046693"><i class="fab fa-linkedin"></i></a>
@@ -288,32 +302,12 @@
                     </ul>
                 </div>
             </div>
+        </div>
 
-            <!-- Newsletter Form Column -->
-            <div class="form-column col-lg-8 col-md-12 col-sm-12">
-                <div class="inner-column">
-                    <div class="contact-form">
-                        <div class="sec-title">
-                            <h2>Newsletter</h2>
-                        </div>
-                        <form method="post" action="subscribe.php" id="contact-form">
-                            <div class="form-group">
-                                <input type="text" name="name" placeholder="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">Subscribe</span></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Map -->
+        <!-- Full Width Map -->
+        <div class="row clearfix" style="margin-top: 30px;">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="map-outer" style="margin-top: 30px;">
+                <div class="map-outer">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.863608869563!2d36.856877776387456!3d-1.2534464987346106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17eb1d447363%3A0x17a2d29bdcf01fda!2sKCA%20University!5e0!3m2!1sen!2ske!4v1717111382662!5m2!1sen!2ske"
                         width="100%"
