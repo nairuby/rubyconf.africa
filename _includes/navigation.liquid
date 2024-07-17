@@ -48,14 +48,14 @@
                             <li {% if page.url=="/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
                             </li>
                             <li class="dropdown {% if page.url == "/speakers" %} current {% endif %}"><a href="/speakers.html">Speakers</a>
-                            <ul>
+                            {% comment %}<ul>
                                 <li><a href="speakers.html">Speakers</a></li>
                                 <li><a
                                         href="https://www.papercall.io/rubyconfafrica2024"
                                         target="_blank"
                                 >CFP</a
                                 ></li>
-                            </ul>
+                            </ul>{% endcomment %}
                             </li>
 
                             <li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>
