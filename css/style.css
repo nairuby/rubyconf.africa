@@ -4511,6 +4511,39 @@ img {
 
 ***/
 
+/*Schedule-table start*/
+
+.custom-table thead {
+	display: none;
+}
+
+.custom-table td, .custom-table th {
+	height: 70px;
+}
+
+.custom-table .col-1 {
+	width: 25%;
+}
+
+.custom-table .col-2 {
+	width: 60%;
+}
+
+.custom-table .col-3 {
+	width: 15%;
+}
+
+.custom-table tbody tr td:nth-child(1) {
+	width: 20%;
+}
+.custom-table tbody tr td:nth-child(2) {
+	width: 65%;
+}
+.custom-table tbody tr td:nth-child(3) {
+	width: 15%;
+}
+
+/*Schedule table end*/
 
 .schedule-section {
 	position: relative;
