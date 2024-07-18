@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 1139px){
 	.buy-ticket .form-column .inner-column,
-	.about-section .content-column .inner-column{
+	.about-section .content-column .custom-class .inner-column{
 		padding-right: 0;
 	}
 
@@ -377,6 +377,7 @@
 	.speakers-section-three,
 	.about-section-two,
 	.pricing-section-two,
+	.custom-table,
 	.speakers-section-two,
 	.features-section{
 		padding: 70px 0 30px;
@@ -561,6 +562,23 @@
 		padding-bottom:120px;
 	}
 
+	.custom-table {
+		font-size: 12px;
+		padding-right: 10px;
+	}
+
+	.thumb {
+
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.thumb img {
+		margin-right: 5px;
+		margin-bottom: 10px;
+
+	}
+
 }
 
 
@@ -689,7 +707,7 @@
 		padding: 30px 20px;
 	}
 
-	.schedule-section.style-two .schedule-block .speaker-info .thumb{
+	.schedule-section.style-two .schedule-block .speaker-info {
 		position: relative;
 		display: inline-block;
 		left: 0;
@@ -963,6 +981,27 @@
 		text-align: center;
 	}
 
+	.custom-table {
+		font-size: 15px;
+		padding-right: 10px;
+	}
+
+	.thumb {
+		/*position: relative;*/
+		/*display: inline-block;*/
+		/*left: 0;*/
+		/*top: 0;*/
+		/*margin-bottom: 5px;*/
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.thumb img {
+		margin-right: 5px;
+		margin-bottom: 10px;
+
+	}
+
 }
 
 
@@ -1072,6 +1111,27 @@
 		position:relative;
 		width:100%;
 		display:block;
+	}
+
+	.custom-table {
+		font-size: 10px;
+		padding-right: 10px;
+	}
+
+	.thumb {
+		/*position: relative;*/
+		/*display: inline-block;*/
+		/*left: 0;*/
+		/*top: 0;*/
+		/*margin-bottom: 5px;*/
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.thumb img {
+		margin-right: 5px;
+		margin-bottom: 10px;
+
 	}
 
 }
