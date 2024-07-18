@@ -41,7 +41,7 @@
                             id="navbarSupportedContent"
                     >
                         <ul class="navigation clearfix">
-                            {% comment %}<li><a href="/index">Home</a></li>{% endcomment %}
+                            <li><a href="/index">Home</a></li>
                             <li {% if page.url=="/schedule" %}class="current" {%endif%}>
                                 <a href="/schedule">Schedule</a>
                             </li>
@@ -62,7 +62,7 @@
                             </li>
 
 <!--                            <li class="dropdown" {% if page.url=="/practicalities" %} current {% endif %}" ><a href="/practicalities">Attendee Guide</a>-->
-                            <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Attendee Guide</a>
+                            <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Resources</a>
                             <ul>
                                 <li {% if page.url=="/code-of-conduct" %}class="current" {%endif%}>
                                     <a href="code-of-conduct.html">Code of Conduct</a>
