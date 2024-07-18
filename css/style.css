@@ -4522,7 +4522,7 @@ img {
 }
 
 .custom-table .col-1 {
-	width: 25%;
+	width: 20%;
 }
 
 .custom-table .col-2 {
@@ -4530,17 +4530,17 @@ img {
 }
 
 .custom-table .col-3 {
-	width: 15%;
+	width: 20%;
 }
 
 .custom-table tbody tr td:nth-child(1) {
 	width: 20%;
 }
 .custom-table tbody tr td:nth-child(2) {
-	width: 65%;
+	width: 60%;
 }
 .custom-table tbody tr td:nth-child(3) {
-	width: 15%;
+	width: 20%;
 }
 
 /*Schedule table end*/
