@@ -4513,6 +4513,10 @@ img {
 
 /*Schedule-table start*/
 
+.schedule-pdf-btn-responsive {
+	font-size: 1rem;
+}
+
 .custom-table thead {
 	display: none;
 }
