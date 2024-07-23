@@ -6491,8 +6491,8 @@ img {
 	padding: 10px 25px;
 	font-size: 14px;
 	line-height: 20px;
-	color: #ffffff;
-	background-color: #dc2c2c;
+	background-color: #ffffff;
+	color: #dc2c2c;
 	font-weight: 600;
 	cursor: pointer;
 	margin-right: 5px;
@@ -6509,8 +6509,8 @@ img {
 
 .event-info-tabs .tab-btn:hover,
 .event-info-tabs .tab-btn.active-btn {
-	color: #dc2c2c;
-	background-color: #ffffff;
+	background-color: #dc2c2c;
+	color: #ffffff;
 }
 
 .event-info-tabs .tabs-content {
