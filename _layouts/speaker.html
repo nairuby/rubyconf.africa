@@ -36,28 +36,43 @@ layout: application_speaker
             </div>
 
             <div class="info-column col-lg-8 col-md-12 col-sm-12">
-                <div class="inner-column">
-                    <div class="text-box">
-                        <h3>{{ page.name }}</h3>
-                        <h4 class="text-danger">{{ page.bio }}</h4>
-                        <p>
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-info-emphasis">{{ page.name }}</h3>
+                        <h5 class="text-secondary font-weight-bold">{{ page.bio }}</h5>
+                        <p class="card-text text-black">
                             {{ page.details }}
                         </p>
-                        <h4>Talks by {{ page.name }}</h4>
+                        <h4 class="mt-4 text-info-emphasis">Talks by {{ page.name }}</h4>
                         <div class="row">
                             {% for session in page.sessions %}
-                                <div class="col-lg-4">
-                                    <div class="speaker-session-info">
-                                        <h5>Day {{ session.day }}</h5>
-                                        <span>{{ session.time }}</span>
-                                        <p>{{ session.title }}</p>
+                            <div class="col-lg-6 col-md-6 mb-3">
+                                <div class="border p-3 bg-white rounded shadow-sm">
+                                    <h5 class="text-danger-emphasis font-weight-bold">Day {{ session.day }}</h5>
+                                    <span class="text-muted">{{ session.full_day }}</span>
+                                    <span class="d-block">{{ session.time }}</span>
+                                    <p class="mt-2 font-weight-bold text-info-emphasis">{{ session.title }}</p>
+                                    {% if session.talk_description != "TBA" %}
+                                    <div class="text-info-emphasis ">
+                                        {{ session.talk_description }}
                                     </div>
+                                    {% endif %}
+                                    {% if session.panelists %}
+                                    <h6 class="text-secondary">Panelists:</h6>
+                                    <ul class="list-unstyled">
+                                        {% for panelist in session.panelists %}
+                                        <li class="mb-2">
+                                            <a href="{{ panelist.permalink }}" class="text-dark d-flex align-items-center">
+                                                <img src="{{ panelist.image }}" class="rounded-circle mr-2" alt="{{ panelist.name }}" style="width: 30px; height: 30px;" />
+                                                {{ panelist.name }}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
                                 </div>
+                            </div>
                             {% endfor %}
-
-                        </div>
-                        <div class="text">
-                            {{ page.talk_description }}
                         </div>
                     </div>
                 </div>
