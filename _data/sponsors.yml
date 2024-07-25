@@ -7,22 +7,18 @@
 - name: KopoKopo
   image: ./images/logo/kopokopo_logo.png
   url: https://kopokopo.co.ke/
-  categories: [silver, previous]
+  categories: [platinum, previous]
+
+- name: African Ruby Community
+  image: ./images/logo/arc_logo_coloured.png
+  url: https://rubycommunity.africa/
+  categories: [platinum]
+
 
 - name: Nairobits
   image: ./images/logo/nairobits_logo.png
   url: https://www.nairobits.com/
   categories: [partner, previous]
-
-- name: Planet Argon
-  image: ./images/logo/planet_argon_logo.png
-  url: https://www.planetargon.com/
-  categories: [silver]
-
-- name: Solutech
-  image: ./images/logo/solutech_flat_logo.png
-  url: https://www.solutech.co.ke
-  categories: [silver]
 
 - name: AppSignal
   image: ./images/logo/app_signal_logo.png
@@ -33,6 +29,22 @@
   image: ./images/logo/finplus_group_logo.png
   url: https://finplusgroup.com/
   categories: [silver]
+
+- name: Africa Data School
+  image: ./images/logo/ads.svg
+  url: https://www.africadataschool.com/
+  categories: [silver]
+
+- name: Planet Argon
+  image: ./images/logo/planet_argon_logo.png
+  url: https://www.planetargon.com/
+  categories: [partner]
+
+
+- name: Solutech
+  image: ./images/logo/solutech_flat_logo.png
+  url: https://www.solutech.co.ke
+  categories: [partner]
 
 - name: Microverse
   image: ./images/logo/microverse_logo.png
@@ -52,7 +64,22 @@
 - name: WNB
   image: ./images/logo/wnb_rb_logo.png
   url: https://www.wnb-rb.dev/
-  categories: [ticket]
+  categories: [partner, ticket]
+
+- name: Quikk API
+  image: ./images/logo/quikk_api.jpg
+  url: https://quikk.dev/
+  categories: [partner]
+
+- name: Zote App
+  image: ./images/logo/zote_app.webp
+  url: https://www.zoteapp.com/
+  categories: [partner]
+
+- name: Andpad
+  image: ./images/logo/andpad.png
+  url: https://andpad.co.jp/
+  categories: [partner]
 
 - name: Shopify
   image: ./images/logo/Shopify_logo_2018.svg.png
@@ -78,8 +105,3 @@
   image: ./images/logo/turing_logo.svg
   url: https://www.turing.com/
   categories: [previous]
-
-- name: Andpad
-  image: ./images/logo/andpad.png
-  url: https://andpad.co.jp/
-  categories: [partner]
