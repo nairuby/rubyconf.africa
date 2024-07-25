@@ -1,6 +1,6 @@
 - name: KCA University
   alt: KCA University, a Platinum sponsor, offering quality education and research opportunities.
-  image: ./images/logo/kca_university.png
+  image: ./images/logo/kca_university.svg
   url: https:// https://www.kcau.ac.ke/
   categories: [platinum]
 
