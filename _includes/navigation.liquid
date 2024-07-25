@@ -58,8 +58,8 @@
                             </ul>{% endcomment %}
                             </li>
 
-                            <li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>
-                            </li>
+                            {% comment %}<li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>{% endcomment %}
+                            {% comment %}</li>{% endcomment %}
 
 <!--                            <li class="dropdown" {% if page.url=="/practicalities" %} current {% endif %}" ><a href="/practicalities">Attendee Guide</a>-->
                             <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Essentials</a>
