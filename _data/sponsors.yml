@@ -72,7 +72,7 @@
   categories: [partner]
 
 - name: Zote App
-  image: ./images/logo/zote_app.webp
+  image: ./images/logo/zote_app.jpg
   url: https://www.zoteapp.com/
   categories: [partner]
 
@@ -102,6 +102,6 @@
   categories: [previous]
 
 - name: Turing
-  image: ./images/logo/turing_logo.svg
+  image: ./images/logo/turing_logo.jpg
   url: https://www.turing.com/
   categories: [previous]
