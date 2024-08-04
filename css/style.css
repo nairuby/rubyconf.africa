@@ -4956,14 +4956,14 @@ img {
 }
 
 .schedule-block:nth-child(4n + 2) .btn-box a {
-	background-color: #40cbb4;
+	background-color: #ec1616;
 }
 
 .schedule-block:nth-child(4n + 2) .btn-box a:hover {
 	border-radius: 0;
-	color: #40cbb4;
+	color: #ec1616;
 	background: none;
-	border-color: #40cbb4;
+	border-color: #ec1616;
 }
 
 
@@ -6902,9 +6902,9 @@ img {
 	line-height: 20px;
 	color: #ffffff;
 	padding: 4px 15px;
-	background-color: #1d95d2;
+	background-color: #ec1616;
 	border-radius: 2px;
-	border: 1px solid #1d95d2;
+	border: 1px solid #ec1616;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -6914,8 +6914,8 @@ img {
 
 .news-block .btn-box a:hover {
 	background: none;
-	color: #1d95d2;
-	border-color: #1d95d2;
+	color: #ec1616;
+	border-color: #ec1616;
 }
 
 .news-section .icon-circle-blue {
