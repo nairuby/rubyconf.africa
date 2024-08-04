@@ -1,0 +1,15 @@
+<div class="news-block wow fadeInRight">
+    <div class="inner-box">
+        <div class="image-box">
+            <figure class="image"><a href="{{ blog.url }}" target="_blank"><img src="{{ blog.image }}" alt="{{ blog.author }}"></a></figure>
+        </div>
+        <div class="lower-content">
+            <ul class="post-info">
+                <li><span class="far fa-user"></span> {{ blog.author }}</li>
+            </ul>
+            <h4><a href="{{ blog.url }}" target="_blank">{{ blog.title }}</a></h4>
+            {% comment %}<div class="text">{{ blog.description }}</div>{% endcomment %}
+            <div class="btn-box"><a href="{{ blog.url }}" target="_blank" class="read-more">Read More</a></div>
+        </div>
+    </div>
+</div>
