@@ -1,4 +1,3 @@
-```markdown
 # RubyConf Africa
 
 ## Setup

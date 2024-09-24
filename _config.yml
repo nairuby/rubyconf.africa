@@ -64,6 +64,10 @@ collections:
   speakers:
     output: true
     permalink: /speakers/:name/
+  year-2015:
+    output: true
+    permalink: /2015/:path/
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
