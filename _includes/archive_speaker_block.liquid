@@ -1,0 +1,44 @@
+<div class="speaker-block-two col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+    <div class="inner-box">
+        <div class="info-box">
+            <h4 class="name">
+                <a href="{{ include.speaker.2015.url }}">{{ include.speaker.2015.name }}</a>
+            </h4>
+            <span class="designation">{{ include.designation }}
+                {% if include.speaker.2015.is_keynote == true %}
+                    <i class="fas fa-video"></i>
+                {% endif %}
+            </span>
+        </div>
+        <div class="image-box">
+            <figure class="image">
+                <a href="{{ include.speaker.2015.url }}">
+                    <img src="{{ include.speaker.2015.image }}" alt="{{ include.speaker.2015.name }}"
+                         style="width: 200px; height: 145px"/>
+                </a>
+            </figure>
+        </div>
+        <div class="social-box">
+            <ul class="social-links social-icon-colored">
+                <!--                <li>-->
+                <!--                    <a href="#"><i class="fab fa-facebook-f"></i></a>-->
+                <!--                </li>-->
+                {% if include.speaker.2015.twitter and include.speaker.2015.twitter != "" %}
+                    <li>
+                        <a href="{{ include.speaker.2015.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                {% endif %}
+                {% if include.speaker.2015.linkedin and include.speaker.2015.linkedin != "" %}
+                    <li>
+                        <a href="{{ include.speaker.2015.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                {% endif %}
+                {% if include.speaker.2015.website and include.speaker.2015.website != "" %}
+                    <li>
+                        <a href="{{ include.speaker.2015.website }}"><i class="fab fa-sistrix"></i></a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>

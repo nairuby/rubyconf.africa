@@ -1,0 +1,104 @@
+{% comment %}Assign conference year{% endcomment %}
+{% assign url_parts = page.url | split: '/' %}
+{% assign year = url_parts[1] %}
+<!-- Main Header-->
+<header class="main-header header-style-two">
+    <div class="main-box">
+        <div class="auto-container clearfix">
+            <div class="logo-box">
+                <div class="logo">
+                    <a href="/"
+                    ><img
+                                src="{{'/images/logo/arc_logo_coloured.png' | prepend:site.baseurl}}"
+                                alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"
+                                title=""
+                        /></a>
+                </div>
+            </div>
+
+            <!--Nav Box-->
+            <div class="nav-outer clearfix">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler">
+                    <span class="icon flaticon-menu"></span>
+                </div>
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md navbar-light">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->
+                        <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                        >
+                            <span class="icon flaticon-menu-button"></span>
+                        </button>
+                    </div>
+
+                    <div
+                            class="collapse navbar-collapse clearfix"
+                            id="navbarSupportedContent"
+                    >
+                        <ul class="navigation clearfix">
+                            <li {% if page.url contains "{{ year }}/index" %}class="current" {%endif%}><a href="/{{ year }}/index">Home</a>
+                            </li>
+                            <li {% if page.url contains "/schedule" %}class="current" {%endif%}>
+                                <a href="../documents/schedule/2015/RubyConf15EventSchedule.pdf" class="text-info-emphasis text-decoration-none d-flex align-items-center" target="_blank">
+                                    Schedule <i class="bi bi-download ms-2"></i>
+                                </a>
+                            </li>
+                            <li {% if page.url contains "{{ year }}/about" %}class="current" {%endif%}><a href="/{{ year }}/about-us">About</a>
+                            </li>
+                            <li {% if page.url contains "/speakers" %}class="current" {%endif%}><a href="/{{ year }}/speakers">Speakers</a>
+                            </li>
+                            <li {% if page.url contains "/contact" %}class="current" {%endif%}><a href="/{{ year }}/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Main Menu End-->
+
+                <!-- Outer box -->
+                <!-- <div class="outer-box">
+                  <div class="btn-box">
+                    <a
+                      href="tickets.html"
+                      target="_blank"
+                      class="theme-btn btn-style-one"
+                    >
+                      <span class="btn-title">Get Tickets</span></a
+                    >
+                  </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn">
+            <span class="icon flaticon-cancel-1"></span>
+        </div>
+
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+            <div class="nav-logo">
+                <a href="index.html"
+                ><img src="{{'/images/logo/arc_logo_coloured.png' | prepend: site.baseurl}}" alt="Africa Ruby
+            Community Logo - Building a vibrant Ruby community in Africa"
+                      title=""></a
+                >
+            </div>
+
+            <ul class="navigation clearfix">
+                <!--Keep This Empty / Menu will come through Javascript-->
+            </ul>
+        </nav>
+    </div>
+    <!-- End Mobile Menu -->
+</header>

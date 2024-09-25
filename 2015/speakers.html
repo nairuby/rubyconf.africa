@@ -1,10 +1,15 @@
 ---
-layout: application
+layout: archive_application
 permalink: /2015/speakers
-title: "Speakers for Ruby Conf Africa 2024"
-description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2024.  Browse speaker profiles, session topics, and more."
+title: "Speakers for Ruby Conf Africa 2015"
+description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2015.  Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
 ---
+
+{% assign url_parts = page.url | split: '/' %}
+{% assign year = url_parts[1] %}
+{% assign speakers = site.data.archive_speakers[year].speakers %}
+
 
 <!-- Preloader -->
 <div class="preloader"></div>
@@ -24,19 +29,22 @@ image: "/images/logo/arc_logo_coloured.png"
 <section class="speakers-section-two" style="margin-top: 0;">
     <div class="auto-container">
         <div class="sec-title text-center my-4">
-            <span class="display-4 text-danger font-weight-bold">Speakers</span>
+            <span class="display-4 text-danger font-weight-bold">Speakers for {{ year }}</span>
         </div>
+
+
+
         <div class="row top-pd-mobile">
-            {% for speaker in site.speakers %}
+            {% for speaker in site.data.archive_speakers.2015.speakers %}
             {% if speaker.is_keynote == true %}
-            {% include speaker-block.liquid speaker=speaker designation="Keynote Speaker " %}
+            {% include archive_speaker_block.liquid speaker=speaker designation="Keynote Speaker " %}
             {% endif %}
             {% endfor %}
 <!--        </div>-->
 
 <!--        Display Female Speakers-->
 <!--        <div class="row top-pd-mobile">-->
-            {% assign female_speakers = site.speakers | where: "gender", "female" %}
+            {% assign female_speakers = site.data.archive_speakers.2015.speakers | where: "gender", "female" %}
             {% for speaker in female_speakers %}
             {% if speaker.is_keynote == false %}
             {% include speaker-block.liquid speaker=speaker designation="Speaker" %}
@@ -46,7 +54,7 @@ image: "/images/logo/arc_logo_coloured.png"
 
 <!--        Display Male Speakers-->
         <div class="row top-pd-mobile">
-            {% assign male_speakers = site.speakers | where: "gender", "male" %}
+            {% assign male_speakers = site.data.archive_speakers.2015.speakers | where: "gender", "male" %}
             {% for speaker in male_speakers %}
             {% if speaker.is_keynote == false %}
             {% include speaker-block.liquid speaker=speaker designation="Speaker" %}

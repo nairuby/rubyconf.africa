@@ -1,0 +1,103 @@
+
+- name: Alvin Kato
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Introduced to programming by a close friend, Alvin abandoned an academic career as an Economist/Statistician for a keyboard and a black screen where he fell in love with ruby and the wonders of rails. His current mission is to transfer this same joy and enthusiasm for coding into the hearts of others."
+  image: "../images/2015/speakers/alvin_kato.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/alvinkatojr"
+  url: "alvin_kato"
+
+- name: Aaron Cruz
+  is_keynote: false
+  gender: male
+  bio: "Ruby Developer"
+  details: "Aaron lives in Vienna, Austria where he builds MVPs for small startups using Ruby, JavaScript and Go. He also organizes 4 meetups, and most recently, co-organizes ROSSConf - A Ruby Open Source Conference in Vienna where people who work on open source projects get to share their experience."
+  image: "../images/2015/speakers/aaron_cruz.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/mraaroncruz"
+  website: "https://github.com/pferdefleisch"
+  url: "aaron_cruz"
+
+- name: Audrey Cheng
+  is_keynote: false
+  gender: female
+  bio: "Co-founder of Moringa School"
+  details: "Audrey is the co-founder of Moringa School, which currently offers a 12-week, immersive program training world-class web and mobile developers. She's passionate about providing education and access so people can reach their human potential, and she sees tech as one of the most powerful outlets to impact."
+  image: "../images/2015/speakers/audrey.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/audreypcheng"
+  url: "audrey_cheng"
+
+- name: Eugene Mutai
+  is_keynote: false
+  gender: male
+  bio: "Softare Engineer"
+  details: "Eugene perceives the day he became curious with how Facebook works a calling to greatness. Since then he has self-developed skills by challenging himself with global standards set by guys like Paul Irish and the rest. Eugene has worked in tonnes of project from data analysis, hybrid html5 apps ranging from Android to Blackberry, and finally his favorite web apps. He has expansive knowledge in what it takes to build/powerful web application from architecture, technologies and tools. He is the Nairobi JavaScript Community(user-group) Lead and a consultant at iHub. Also an enthusiast in what they offer the community, thus happy in contributing all what he can."
+  image: "../images/2015/speakers/eugene.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/JheneKnights"
+  url: "eugene_mutai"
+
+- name: Dennis Ondeng
+  is_keynote: false
+  gender: male
+  bio: "CTO at Kopo Kopo"
+  details: "Dennis Ondeng is the CTO of Kopo Kopo, Inc., which offers a platform for SME's giving them a 'Business Operating System' which on top of helping them digitize their payments, offers various value adds to help their businesses grow and prosper. He has over 15 years in software development building CRM solutions and mobile and financial applications integrations. <br> Prior to Kopo Kopo, he was the Founder and President of Invigor Solutions, LLC (USA), a mobile applications software development company and before that the IT manager at United Souvenir & Apparel, Baltimore USA. He holds a MS degree in Computer Science from University of Maryland Baltimore County."
+  image: "../images/2015/speakers/dennis_ondeng.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/donden1"
+  website: "kopokopo.com"
+  url: "dennis_ondeng"
+
+- name: Christian Reuterwall
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Christian is a ruby scrub - he joined the Nairuby community after its relaunch last year. He started his career as a java developer. Before coming to Nairobi he was working as a project manager. Christian was also responsible for Continuous Integration, Change and Incident managament."
+  image: "../images/2015/speakers/chris.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/Creutis"
+  url: "chris"
+
+- name: Nabihah Rishad
+  is_keynote: false
+  gender: female
+  bio: "InfoSec, Rubyist, RoR"
+  details: "A tech enthusiast who is passionate about all technology-related things. Driven by the motivation to learn more and explore new fields which are constantly coming up. Developed an interest in programming while studying Computer Science at the University of Nairobi and can program in quite a few languages inclusive of Ruby. Believes that a challenge is an opportunity to learn more and if you can dream it, you can do it."
+  image: "../images/2015/speakers/nabihah.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/hahiban"
+  url: "nabihah"
+
+- name: Sawo
+  is_keynote: false
+  gender: male
+  bio: "Developer,UI/UX designer"
+  details: "A tech enthusiast who is passionate about all technology-related things. Driven by the motivation to learn more and explore new fields which are constantly coming up. Developed an interest in programming while studying Computer Science at the University of Nairobi and can program in quite a few languages inclusive of Ruby. Believes that a challenge is an opportunity to learn more and if you can dream it, you can do it."
+  image: "../images/2015/speakers/sawo.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/SawoFilush"
+  url: "sawo"
+
+- name: Diana Wanjuhi
+  is_keynote: false
+  gender: female
+  bio: "Software Developer at MaraMoja Transport"
+  details: "Diana Wanjuhi is a Software Developer at MaraMoja Transport. She is excited by all things technology, with a
+
+bias toward software development. She developed her skills in Ruby and Rails during a programming bootcamp at Moringa School. While not writing code, she enjoys reading avidly and thinking about the tech ecosystem in Nairobi."
+  image: "../images/2015/speakers/diana.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/DianaWanjuhi"
+  url: "diana"
