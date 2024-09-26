@@ -2,18 +2,18 @@
     <div class="inner-box">
         <div class="info-box">
             <h4 class="name">
-                <a href="{{ include.speaker.2015.url }}">{{ include.speaker.2015.name }}</a>
+                <a href="{{ include.speaker.url }}">{{ include.speaker.name }}</a>
             </h4>
             <span class="designation">{{ include.designation }}
-                {% if include.speaker.2015.is_keynote == true %}
+                {% if include.speaker.is_keynote == true %}
                     <i class="fas fa-video"></i>
                 {% endif %}
             </span>
         </div>
         <div class="image-box">
             <figure class="image">
-                <a href="{{ include.speaker.2015.url }}">
-                    <img src="{{ include.speaker.2015.image }}" alt="{{ include.speaker.2015.name }}"
+                <a href="{{ include.speaker.url }}">
+                    <img src="{{ include.speaker.image }}" alt="{{ include.speaker.name }}"
                          style="width: 200px; height: 145px"/>
                 </a>
             </figure>
@@ -23,19 +23,19 @@
                 <!--                <li>-->
                 <!--                    <a href="#"><i class="fab fa-facebook-f"></i></a>-->
                 <!--                </li>-->
-                {% if include.speaker.2015.twitter and include.speaker.2015.twitter != "" %}
+                {% if include.speaker.twitter and include.speaker.twitter != "" %}
                     <li>
-                        <a href="{{ include.speaker.2015.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="{{ include.speaker.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>
                     </li>
                 {% endif %}
-                {% if include.speaker.2015.linkedin and include.speaker.2015.linkedin != "" %}
+                {% if include.speaker.linkedin and include.speaker.linkedin != "" %}
                     <li>
-                        <a href="{{ include.speaker.2015.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                        <a href="{{ include.speaker.linkedin }}"><i class="fab fa-linkedin"></i></a>
                     </li>
                 {% endif %}
-                {% if include.speaker.2015.website and include.speaker.2015.website != "" %}
+                {% if include.speaker.website and include.speaker.website != "" %}
                     <li>
-                        <a href="{{ include.speaker.2015.website }}"><i class="fab fa-sistrix"></i></a>
+                        <a href="{{ include.speaker.website }}"><i class="fab fa-sistrix"></i></a>
                     </li>
                 {% endif %}
             </ul>

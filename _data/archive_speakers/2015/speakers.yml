@@ -93,9 +93,7 @@
   is_keynote: false
   gender: female
   bio: "Software Developer at MaraMoja Transport"
-  details: "Diana Wanjuhi is a Software Developer at MaraMoja Transport. She is excited by all things technology, with a
-
-bias toward software development. She developed her skills in Ruby and Rails during a programming bootcamp at Moringa School. While not writing code, she enjoys reading avidly and thinking about the tech ecosystem in Nairobi."
+  details: "Diana Wanjuhi is a Software Developer at MaraMoja Transport. She is excited by all things technology, with a bias toward software development. She developed her skills in Ruby and Rails during a programming bootcamp at Moringa School. While not writing code, she enjoys reading avidly and thinking about the tech ecosystem in Nairobi."
   image: "../images/2015/speakers/diana.jpg"
   talk_title: ""
   talk_description: ""

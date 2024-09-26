@@ -63,10 +63,16 @@ assets:
 collections:
   speakers:
     output: true
-    permalink: /speakers/:name/
+    permalink: /speaker/:name/
   year-2015:
     output: true
     permalink: /2015/:path/
+  speakers_2015:
+    output: true
+    permalink: /2015/speaker/:name/
+  speakers_2024:
+    output: true
+    permalink: /2024/speaker/:name/
 
 
 # Exclude from processing.

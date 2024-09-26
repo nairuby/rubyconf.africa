@@ -29,7 +29,7 @@ image: "/images/logo/arc_logo_coloured.png"
         <div class="row top-pd-mobile">
             {% for speaker in site.speakers %}
             {% if speaker.is_keynote == true %}
-            {% include speaker-block.liquid speaker=speaker designation="Keynote Speaker " %}
+            {% include speaker_block.liquid speaker=speaker designation="Keynote Speaker " %}
             {% endif %}
             {% endfor %}
 <!--        </div>-->
@@ -39,7 +39,7 @@ image: "/images/logo/arc_logo_coloured.png"
             {% assign female_speakers = site.speakers | where: "gender", "female" %}
             {% for speaker in female_speakers %}
             {% if speaker.is_keynote == false %}
-            {% include speaker-block.liquid speaker=speaker designation="Speaker" %}
+            {% include speaker_block.liquid speaker=speaker designation="Speaker" %}
             {% endif %}
             {% endfor %}
         </div>
@@ -49,7 +49,7 @@ image: "/images/logo/arc_logo_coloured.png"
             {% assign male_speakers = site.speakers | where: "gender", "male" %}
             {% for speaker in male_speakers %}
             {% if speaker.is_keynote == false %}
-            {% include speaker-block.liquid speaker=speaker designation="Speaker" %}
+            {% include speaker_block.liquid speaker=speaker designation="Speaker" %}
             {% endif %}
             {% endfor %}
         </div>

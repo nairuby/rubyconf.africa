@@ -6,9 +6,9 @@ description: "Meet the incredible lineup of Ruby experts sharing their knowledge
 image: "/images/logo/arc_logo_coloured.png"
 ---
 
-{% assign url_parts = page.url | split: '/' %}
-{% assign year = url_parts[1] %}
-{% assign speakers = site.data.archive_speakers[year].speakers %}
+<!--{% assign url_parts = page.url | split: '/' %}-->
+<!--{% assign year = url_parts[1] %}-->
+<!--{% assign speakers = site.data.archive_speakers[year].speakers %}-->
 
 
 <!-- Preloader -->
@@ -35,29 +35,29 @@ image: "/images/logo/arc_logo_coloured.png"
 
 
         <div class="row top-pd-mobile">
-            {% for speaker in site.data.archive_speakers.2015.speakers %}
+            {% for speaker in site.speakers_2015 %}
             {% if speaker.is_keynote == true %}
             {% include archive_speaker_block.liquid speaker=speaker designation="Keynote Speaker " %}
             {% endif %}
             {% endfor %}
 <!--        </div>-->
 
-<!--        Display Female Speakers-->
-<!--        <div class="row top-pd-mobile">-->
-            {% assign female_speakers = site.data.archive_speakers.2015.speakers | where: "gender", "female" %}
+            <!--        Display Female Speakers-->
+            <!--        <div class="row top-pd-mobile">-->
+            {% assign female_speakers = site.speakers_2015 | where: "gender", "female" %}
             {% for speaker in female_speakers %}
             {% if speaker.is_keynote == false %}
-            {% include speaker-block.liquid speaker=speaker designation="Speaker" %}
+            {% include archive_speaker_block.liquid speaker=speaker designation="Speaker" %}
             {% endif %}
             {% endfor %}
         </div>
 
-<!--        Display Male Speakers-->
+        <!--        Display Male Speakers-->
         <div class="row top-pd-mobile">
-            {% assign male_speakers = site.data.archive_speakers.2015.speakers | where: "gender", "male" %}
+            {% assign male_speakers = site.speakers_2015 | where: "gender", "male" %}
             {% for speaker in male_speakers %}
             {% if speaker.is_keynote == false %}
-            {% include speaker-block.liquid speaker=speaker designation="Speaker" %}
+            {% include archive_speaker_block.liquid speaker=speaker designation="Speaker" %}
             {% endif %}
             {% endfor %}
         </div>

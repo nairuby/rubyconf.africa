@@ -1,0 +1,81 @@
+{% assign year=page.url | split: '/' | second %}
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ page.title | default: "Ruby Conf Africa {{ year }} - Leading Ruby Developers Conference in Nairobi, Kenya" }}</title>
+    <meta name="description" content="{{ page.description | default: "Join us for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby developers, learn from insightful sessions, and explore the latest trends in Ruby development." }}"/>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/images/favicon.ico' | prepend: site.baseurl }}" type="image/x-icon"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicons/favicon-16x16.png' | prepend: site.baseurl }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicons/favicon-32x32.png' | prepend: site.baseurl }}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicons/apple-touch-icon.png' | prepend: site.baseurl }}"/>
+    <link rel="manifest" href="{{ '/site.webmanifest' | prepend: site.baseurl }}"/>
+    <meta name="apple-mobile-web-app-title" content="Ruby Conf Africa {{ year }}"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <!-- For Android devices -->
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="application-name" content="Ruby Conf Africa {{ year }}"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ '/images/favicons/android-chrome-192x192.png' | prepend: site.baseurl }}"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ '/images/favicons/android-chrome-512x512.png' | prepend: site.baseurl }}"/>
+
+    <!-- CSS Style -->
+    <link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/css/bootstrapV5.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/css/responsive.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/css/color-switcher-design.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    {% include google_analytics.liquid %}
+
+    <!-- Meta Tags for Responsive Design -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <!-- Open Graph and Twitter meta tags -->
+    <meta property="og:title" content="{{ page.title | default: "Ruby Conf Africa {{year}}" }}"/>
+    <meta property="og:description" content="{{ page.description | default: "Join us on the 26th to 27th July {{year}}, as leading Ruby developers from around the world come together in Nairobi, Kenya, to share, inspire, and learn." }}"/>
+    <meta property="og:image" content="{{ page.image | prepend: site.baseurl | default: '/images/logo/arc_logo_coloured.png' }}"/>
+    <meta property="og:url" content="{{ page.url | absolute_url }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Ruby Conf Africa {{ year }}"/>
+
+    <!-- Twitter OG tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ page.title | default: "Ruby Conf Africa {{year}}: Connect, Learn, & Grow with Ruby" }}"/>
+    <meta name="twitter:description" content="{{ page.description | default: "Join leading Ruby developers in Nairobi, Kenya on July 26-27, {{year}} for Ruby Conf Africa. Share knowledge, gain inspiration, and network within the vibrant Ruby community." }}"/>
+    <meta name="twitter:image" content="{{ page.image | prepend: site.baseurl | default: '/images/logo/arc_logo_coloured.png' }}"/>
+
+    {% comment %}HTLM to PDF CDN{% endcomment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Ruby Conf Africa {{year}}",
+            "description": "{{ page.description | default: "Join us on for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby developers, learn from insightful sessions, and explore the latest trends in Ruby development." }}",
+			"image": "{{ page.image | prepend: site.baseurl | default: 'https://rubyconf.africa/images/logo/arc_logo_coloured.png' }}",
+			"startDate": "year-07-26T09:00",
+			"endDate": "year-07-27",
+			"eventStatus": "https://schema.org/EventScheduled",
+			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+			"location": {
+				"@type": "Place",
+				"name": "KCA University",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Nairobi",
+					"postalCode": "JWW4+R5W",
+					"addressCountry": "KE"
+				}
+			}
+		}
+    </script>
+</head>
