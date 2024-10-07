@@ -35,3 +35,5 @@ bundle update
 bundle exec jekyll serve # development
 bundle exec jekyll build -d public # deployment
 ```
+
+Docker local development: `docker-compose up`
