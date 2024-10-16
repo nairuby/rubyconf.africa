@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/nairuby/rubyconf.africa/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/nairuby/rubyconf.africa/actions/workflows/pages/pages-build-deployment) [![Deploy site](https://github.com/nairuby/rubyconf.africa/actions/workflows/deploy.yml/badge.svg)](https://github.com/nairuby/rubyconf.africa/actions/workflows/deploy.yml)
+
 Setup:
 
 [//]: # ()
