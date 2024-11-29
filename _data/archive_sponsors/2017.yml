@@ -1,0 +1,19 @@
+- name: Gitlab
+  image: ../images/2017/sponsors/gitlab.png
+  url: https://www.gitlab.com/
+  categories: [supporters]
+
+- name: Andela
+  image: ../images/2017/sponsors/andela.png
+  url: https://www.andela.com/
+  categories: [supporters]
+
+- name: Riara University
+  image: ../images/2017/sponsors/riara.jpg
+  url: https://www.riarauniversity.ac.ke
+  categories: [supporters]
+
+- name: Github
+  image: ../images/2017/sponsors/github.png
+  url: https://www.github.com
+  categories: [supporters]

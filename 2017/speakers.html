@@ -1,8 +1,8 @@
 ---
 layout: archive_application
-permalink: /2015/speakers
-title: "Speakers for Ruby Conf Africa 2015"
-description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2015.  Browse speaker profiles, session topics, and more."
+permalink: /2017/speakers
+title: "Speakers for Ruby Conf Africa 2017"
+description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2017.  Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
 ---
 
@@ -35,7 +35,7 @@ image: "/images/logo/arc_logo_coloured.png"
 
 
         <div class="row top-pd-mobile">
-            {% for speaker in site.speakers_2015 %}
+            {% for speaker in site.speakers_2017 %}
             {% if speaker.is_keynote == true %}
             {% include archive_speaker_block.liquid speaker=speaker designation="Keynote Speaker " %}
             {% endif %}
@@ -44,7 +44,7 @@ image: "/images/logo/arc_logo_coloured.png"
 
             <!--        Display Female Speakers-->
             <!--        <div class="row top-pd-mobile">-->
-            {% assign female_speakers = site.speakers_2015 | where: "gender", "female" %}
+            {% assign female_speakers = site.speakers_2017 | where: "gender", "female" %}
             {% for speaker in female_speakers %}
             {% if speaker.is_keynote == false %}
             {% include archive_speaker_block.liquid speaker=speaker designation="Speaker" %}
@@ -54,7 +54,7 @@ image: "/images/logo/arc_logo_coloured.png"
 
         <!--        Display Male Speakers-->
         <div class="row top-pd-mobile">
-            {% assign male_speakers = site.speakers_2015 | where: "gender", "male" %}
+            {% assign male_speakers = site.speakers_2017 | where: "gender", "male" %}
             {% for speaker in male_speakers %}
             {% if speaker.is_keynote == false %}
             {% include archive_speaker_block.liquid speaker=speaker designation="Speaker" %}
