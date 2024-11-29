@@ -1,0 +1,49 @@
+- name: Github
+  image: ../images/2015/sponsors/github.png
+  url: https://www.github.com/
+  categories: [ruby]
+
+- name: BantaMik
+  image: ../images/2015/sponsors/bantamik.png
+  url: https://www.bantamik.com/
+  categories: [emerald]
+
+- name: Mandrill
+  image: ../images/2015/sponsors/mandrill.png
+  url: https://www.mandrill.com/
+  categories: [sapphire]
+
+- name: Buildkite
+  image: ../images/2015/sponsors/buildkite.png
+  url: https://www.buildkite.com/
+  categories: [supporters]
+
+- name: DigitalOcean
+  image: ../images/2015/sponsors/digitalocean.png
+  url: https://www.digitalocean.com/
+  categories: [supporters]
+
+- name: Adorable
+  image: ../images/2015/sponsors/adorableio.png
+  url: https://www.adorable.io/
+  categories: [supporters]
+
+- name: Moringa
+  image: ../images/2015/sponsors/moringa.png
+  url: https://www.moringaschool.com/
+  categories: [Supporters]
+
+- name: Code School
+  image: ../images/2015/sponsors/code_school.png
+  url: https://www.codeschool.com/
+  categories: [Supporters]
+
+- name: pluralsight
+  image: ../images/2015/sponsors/pluralsight.jpg
+  url: https://www.pluralsight.com/
+  categories: [Supporters]
+
+- name: Uber
+  image: ../images/2015/sponsors/uber.png
+  url: https://www.uber.com/cities/nairobi
+  categories: [Supporters]
