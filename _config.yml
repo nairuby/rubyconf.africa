@@ -70,6 +70,24 @@ collections:
   speakers_2015:
     output: true
     permalink: /2015/speaker/:name/
+  year-2016:
+    output: true
+    permalink: /2016/:path/
+  speakers_2016:
+    output: true
+    permalink: /2016/speaker/:name/
+  year-2017:
+    output: true
+    permalink: /2017/:path/
+  speakers_2017:
+    output: true
+    permalink: /2017/speaker/:name/
+  year-2018:
+    output: true
+    permalink: /2018/:path/
+  speakers_2018:
+    output: true
+    permalink: /2018/speaker/:name/
   speakers_2024:
     output: true
     permalink: /2024/speaker/:name/

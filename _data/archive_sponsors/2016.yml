@@ -1,0 +1,44 @@
+- name: Github
+  image: ../images/2016/sponsors/github.png
+  url: https://www.github.com/
+  categories: [ruby]
+
+- name: BantaMik
+  image: ../images/2016/sponsors/bantamik.png
+  url: https://www.bantamik.com/
+  categories: [emerald]
+
+- name: Techweez
+  image: ../images/2016/sponsors/techweez.png
+  url: https://www.techweez.com/
+  categories: [emerald]
+
+- name: Mandrill
+  image: ../images/2016/sponsors/mandrill.png
+  url: https://www.mandrill.com/
+  categories: [sapphire]
+
+- name: Gitlab
+  image: ../images/2016/sponsors/gitlab.png
+  url: https://www.gitlab.com/
+  categories: [supporters]
+
+- name: DigitalOcean
+  image: ../images/2016/sponsors/digitalocean.png
+  url: https://www.digitalocean.com/
+  categories: [supporters]
+
+- name: Adorable
+  image: ../images/2016/sponsors/adorableio.png
+  url: https://www.adorable.io/
+  categories: [supporters]
+
+- name: Moringa
+  image: ../images/2016/sponsors/moringa.png
+  url: https://www.moringaschool.com/
+  categories: [Supporters]
+
+- name: pluralsight
+  image: ../images/2016/sponsors/pluralsight.jpg
+  url: https://www.pluralsight.com/
+  categories: [Supporters]
