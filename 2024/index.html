@@ -24,8 +24,8 @@ year: 2024
                     <span class="title">July 26-27, 2024</span>
                     <h2>Ruby Conf Africa 2024</h2>
                     <ul class="info-list">
-                        <li><span class="fa fa-chair"></span> 300 Seats</li>
-                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>
+<!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
+<!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
                         <li>
                             <span class="fa fa-map-marker-alt"></span> KCA University - Nairobi, Kenya
                         </li>
@@ -67,8 +67,8 @@ year: 2024
                     <span class="title">July 26-27, 2024</span>
                     <h2>Ruby Conf Africa 2024</h2>
                     <ul class="info-list">
-                        <li><span class="fa fa-chair"></span> 300 Seats</li>
-                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>
+<!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
+<!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
                         <li>
                             <span class="fa fa-map-marker-alt"></span> KCA University - Nairobi, Kenya
                         </li>
@@ -189,7 +189,7 @@ year: 2024
                             <figure class="image">
                                 <a href="speakers/matz/"
                                 ><img
-                                        src="images/speakers/compressed/matz.jpg"
+                                        src="../images/2024/speakers/matz.jpg"
                                         alt="Yukihiro 'Matz' Matsumoto - Creator of Ruby"
                                 /></a>
                             </figure>
@@ -227,7 +227,7 @@ year: 2024
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image">
-                                <a href="speakers/dhh/"><img src="images/speakers/compressed/dhh.jpg"
+                                <a href="speakers/dhh/"><img src="../images/2024/speakers/dhh.jpg"
                                                              alt="DHH - Creator of Ruby on Rails"/></a>
                             </figure>
                         </div>
@@ -267,7 +267,7 @@ year: 2024
                             <figure class="image">
                                 <a href="speakers/bernard-banta/"
                                 ><img
-                                        src="images/speakers/compressed/banta.jpg"
+                                        src="../images/2024/speakers/banta.jpg"
                                         alt="Bernard Banta - Co-founder Finplus."
                                 /></a>
                             </figure>
@@ -300,7 +300,7 @@ year: 2024
                             <figure class="image">
                                 <a href="speakers/hitoshi-hasumi/"
                                 ><img
-                                        src="images/speakers/compressed/hitoshi-hasumi.jpeg"
+                                        src="../images/2024/speakers/hitoshi-hasumi.jpeg"
                                         alt="Hitoshi Hasumi - Creator of PicoRuby and PRK Firmware. Maintainer of ruby/irb, ruby/reline, and mrubyc/mrubyc."
                                 /></a>
                             </figure>
@@ -330,7 +330,7 @@ year: 2024
                             <figure class="image">
                                 <a href="speakers/david-halasz/"
                                 ><img
-                                        src="images/speakers/compressed/david.jpeg"
+                                        src="../images/2024/speakers/david.jpeg"
                                         alt="Dávid Halász - Principal Software Engineer at Red Hat"
                                 /></a>
                             </figure>
@@ -548,7 +548,7 @@ year: 2024
         <div class="sponsors-outer">
             <div class="row justify-content-center">
                 <!-- Sponsor Block -->
-                {% for sponsor in site.data.sponsors %}
+                {% for sponsor in site.data.archive_sponsors.2024 %}
                 {% if sponsor.categories contains 'platinum' %}
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                     <figure class="">
@@ -586,7 +586,7 @@ year: 2024
         <div class="sponsors-outer">
             <div class="row justify-content-center">
                 <!-- Sponsor Block -->
-                {% for sponsor in site.data.sponsors %}
+                {% for sponsor in site.data.archive_sponsors.2024 %}
                 {% if sponsor.categories contains 'silver' %}
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                     <figure class="">
@@ -624,7 +624,7 @@ year: 2024
         <div class="sponsors-outer">
             <div class="row justify-content-center">
                 <!-- Sponsor Block -->
-                {% for sponsor in site.data.sponsors %}
+                {% for sponsor in site.data.archive_sponsors.2024 %}
                 {% if sponsor.categories contains 'partner' %}
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                     <figure class="">
@@ -701,7 +701,7 @@ year: 2024
         <div class="sponsors-outer">
             <div class="row justify-content-center">
                 <!-- Sponsor Block -->
-                {% for sponsor in site.data.sponsors %}
+                {% for sponsor in site.data.archive_sponsors.2024 %}
                 {% if sponsor.categories contains 'previous' %}
                 <div class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                     <figure class="">
