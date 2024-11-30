@@ -7,7 +7,7 @@ To set up the project for the first time, follow these steps:
 ```bash
 git clone https://github.com/nairuby/rubyconf.africa.git
 cd rubyconf.africa
-git checkout Ft/Jekyll-build
+git checkout Ft/Conf-details
 make setup
 ```
 
