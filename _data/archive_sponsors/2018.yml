@@ -1,0 +1,9 @@
+- name: Gitlab
+  image: ../images/2018/sponsors/gitlab.png
+  url: https://www.gitlab.com/
+  categories: [supporters]
+
+- name: KopoKopo
+  image: ../images/2018/sponsors/kopokopo.png
+  url: https://www.kopokopo.co.ke/
+  categories: [supporters]
