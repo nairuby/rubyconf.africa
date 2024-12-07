@@ -1,7 +1,16 @@
 (function($) {
 	
 	"use strict";
-	
+
+	// Add year selector
+	$(document).ready(function () {
+		$('#past-events').change(function () {
+			var year = $(this).val();
+			if (year) {
+				window.location.href = `/${year}`;
+			}
+		})
+	})
 	
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {

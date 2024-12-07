@@ -11,13 +11,13 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png"/>
 	<link rel="manifest" href="/site.webmanifest"/>
-	<meta name="apple-mobile-web-app-title" content="Ruby Mini Conf Africa 2024"/>
+	<meta name="apple-mobile-web-app-title" content="Ruby Conf Africa 2024"/>
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
 	<!-- For Android devices -->
 	<meta name="theme-color" content="#ffffff"/>
 	<meta name="mobile-web-app-capable" content="yes"/>
-	<meta name="application-name" content="Ruby Mini Conf Africa 2024"/>
+	<meta name="application-name" content="Ruby Conf Africa 2024"/>
 	<link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png"/>
 	<link rel="icon" type="image/png" sizes="512x512" href="/images/favicons/android-chrome-512x512.png"/>
 
@@ -57,7 +57,7 @@
 	<meta property="og:image" content="/images/logo/arc_logo_coloured.png"/>
 	<meta property="og:url" content="https://rubyconf.africa/contact"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:site_name" content="Ruby Mini Conf Africa 2024"/>
+	<meta property="og:site_name" content="Ruby Conf Africa 2024"/>
 
 	<!-- Twitter OG tags -->
 	<meta name="twitter:card" content="summary_large_image"/>
@@ -74,7 +74,7 @@
 		{
 			"@context": "https://schema.org",
 			"@type": "Event",
-			"name": "Ruby Mini Conf Africa 2024",
+			"name": "Ruby Conf Africa 2024",
 			"description": "Get in touch with the organizers of Ruby Conf Africa 2024. We are here to assist you with any queries you may have.",
 			"image": "/images/logo/arc_logo_coloured.png",
 			"startDate": "2024-07-26T09:00",
@@ -147,33 +147,24 @@
                             </li>
                             <li ><a href="/about-us">About</a>
                             </li>
-                             <li ><a href="/speakers">Speakers</a>
+                            <li class="dropdown "><a href="/speakers.html">Speakers</a>
+                            
                             </li>
-                            
-                            
-                                
-                                
-                                        
-                                        
-                                
-                                
-                            
-                            
 
                             
                             
 
 <!--                            <li class="dropdown" " ><a href="/practicalities">Attendee Guide</a>-->
-                            
-                            
-                                
-                                    
-                                
-                                
-                                    
-                                
-                            
-                            
+                            <li class="dropdown "><a href="/practicalities.html">Essentials</a>
+                            <ul>
+                                <li >
+                                    <a href="code-of-conduct.html">Code of Conduct</a>
+                                </li>
+                                <li>
+                                    <a href="practicalities.html">Attendee Guide</a>
+                                </li>
+                            </ul>
+                            </li>
                             <li ><a href="/blog">Blog</a>
                             </li>
                             <li class="current" ><a href="/contact">Contact</a>
@@ -320,7 +311,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="map-outer">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4845.845892415179!2d36.85687777577984!3d-1.2534411355927872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17eb1d447363%3A0x17a2d29bdcf01fda!2sKCA%20University!5e1!3m2!1sen!2ske!4v1728259303391!5m2!1sen!2ske"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.863608869563!2d36.856877776387456!3d-1.2534464987346106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17eb1d447363%3A0x17a2d29bdcf01fda!2sKCA%20University!5e0!3m2!1sen!2ske!4v1717111382662!5m2!1sen!2ske"
                         width="100%"
                         height="300"
                         style="border: 0"
@@ -362,13 +353,13 @@
                                             alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"
                                     /></a>
                                 </div>
-                                <div class="text">
-                                    <p>
-                                        Join us on the 29th to 31st October 2024, as leading Ruby
-                                        developers from around the world come together in
-                                        Nairobi, Kenya, to share, inspire, and learn.
-                                    </p>
-                                </div>
+                                
+                                    
+                                        
+                                        
+                                        
+                                    
+                                
                                 <ul class="social-icon-one social-icon-colored">
                                     <li>
                                         <a
@@ -404,13 +395,13 @@
                                 <li><a href="/about-us">About Us</a></li>
                                 <li><a href="/speakers">Speakers</a></li>
                                 <li><a href="/contact">Contact Us</a></li>
-                                
+                                <li><a href="/tickets">Tickets</a></li>
                                 <li>
                                   <a href="/code-of-conduct">Code of Conduct</a>
                                 </li>
-                                
-                                  
-                                
+                                <li>
+                                  <a href="/practicalities">Attendee Guide</a>
+                                </li>
                               </ul>
                             </div>
                         </div>
@@ -478,15 +469,24 @@
                 </div>
             </div>
         </div>
-        
-            
-                
-                  
-                  
-                  
-                
-            
-        
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="copyright-text">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <p class="mb-0 me-2">Past Events:</p>
+                        <select id="past-events" class="form-select w-auto">
+                            <option value="" disabled selected>Select Year</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2024</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </footer>
 <!-- End Footer -->
