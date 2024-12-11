@@ -1,0 +1,34 @@
+- name: BantaMik
+  image: ../images/2019/sponsors/bantamik.png
+  url: https://www.bantamik.com/
+  categories: [startup]
+
+- name: Kopokopo
+  image: ../images/2019/sponsors/kopokopo.png
+  url: https://kopokopo.co.ke/
+  categories: [startup]
+
+- name: iHub
+  image: ../images/2019/sponsors/ihub.png
+  url: https://ihub.co.ke/
+  categories: [supporters]
+
+- name: CookiesHQ
+  image: ../images/2019/sponsors/cookieshq.png
+  url: https://www.cookieshq.co.uk/
+  categories: [supporters]
+
+- name: IBM
+  image: ../images/2019/sponsors/ibm.jpg
+  url: https://www.ibm.com/
+  categories: [supporters]
+
+- name: Appslab
+  image: ../images/2019/sponsors/appslab.png
+  url: https://appslab.co.ke/
+  categories: [supporters]
+
+- name: LipaLater
+  image: ../images/2019/sponsors/lipalater.png
+  url: https://lipalater.com/
+  categories: [supporters]
