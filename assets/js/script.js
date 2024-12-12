@@ -6,7 +6,9 @@
 	$(document).ready(function () {
 		$('#past-events').change(function () {
 			var year = $(this).val();
-			if (year) {
+			if (year === 'main') {
+				window.location.href = `/`;
+			} else {
 				window.location.href = `/${year}`;
 			}
 		})
