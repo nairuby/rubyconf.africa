@@ -878,6 +878,70 @@ img {
 	font-weight: 400;
 }
 
+.preloader-new {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-logo-new {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/logo/ruby_conf_new_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 0px; /* Reduced space between logo and text */
+}
+
+.loader-new {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    display: inline-grid;
+    margin-top: 0; /* Eliminated unnecessary space between "Loading..." and "Almost Ready..." */
+}
+
+.loader-new:before,
+.loader-new:after {
+    content: "Almost ready...";
+    grid-area: 1/1;
+    -webkit-mask: linear-gradient(90deg, #ea0707 50%, #0000 0) 0 50%/2ch 100%;
+    animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+}
+
+.loader-new:after {
+    -webkit-mask-position: 1ch 50%;
+    --s: -1;
+}
+
+@keyframes l11 {
+    100% {
+        transform: translateY(calc(var(--s, 1) * 0.1%));
+    }
+}
+
+.preloader-new:after {
+    font-size: 15px;
+    line-height: 2em;
+    color: #ae0303;
+    text-decoration: underline;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    margin-top: 0px; /* Reduced space below the loader */
+}
+
+
+
+
 
 img {
 	display: inline-block;
