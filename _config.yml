@@ -43,7 +43,10 @@ exclude:
 # Build settings
 markdown: kramdown
 
-plugins: [jekyll-sitemap]
+plugins:
+  - jekyll-sitemap
+  - jekyll-minifier
+  - jekyll-assets
 
 assets:
   debug: false
