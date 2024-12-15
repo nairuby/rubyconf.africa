@@ -97,6 +97,12 @@ collections:
   speakers_2019:
     output: true
     permalink: /2019/speaker/:name/
+  year-2021:
+    output: true
+    permalink: /2021/:path
+  speakers_2021:
+    output: true
+    permalink: /2021/speaker/:name/
   speakers_2024:
     output: true
     permalink: /2024/speaker/:name/
