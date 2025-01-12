@@ -12,6 +12,7 @@
       }
     });
   });
+  // console.log("Redirecting to:", `/${year}`);
 
   // Hide Loading Box (Preloader)
   // function handlePreloader() {
@@ -21,7 +22,7 @@
   // }
   //
 
-   //Hide Loading Box (Preloader)
+  //Hide Loading Box (Preloader)
   // function handlePreloader() {
   // 	if($('.preloader').length){
   // 		$('.preloader').delay(200).fadeOut(500);
@@ -59,7 +60,6 @@
   // $(document).ready(function () {
   //   handlePreloader();
   // });
-
 
   function handlePreloader() {
     // Check for the old preloader (preloader)
