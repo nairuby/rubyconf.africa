@@ -46,19 +46,8 @@
                         <ul class="navigation clearfix">
                             <li {% if page.url contains "{{ year }}/index" %}class="current" {%endif%}><a href="/{{ year }}/index">Home</a>
                             </li>
-                            {% comment %}<li {% if page.url contains "/schedule" %}class="current" {%endif%}>{% endcomment %}
-                                {% comment %}<a href="../documents/schedule/{{ year }}/RubyConfEventSchedule.pdf" class="text-info-emphasis text-decoration-none d-flex align-items-center" target="_blank">{% endcomment %}
-                                    {% comment %}Schedule <i class="bi bi-download ms-2"></i>{% endcomment %}
-                                {% comment %}</a>{% endcomment %}
-                            {% comment %}</li>{% endcomment %}
                             <li {% if page.url contains "/schedule" %} class="current" {%endif%}>
-                                {% if year == "2021" %}
                                     <a href="/{{ year }}/schedule" class="text-info-emphasis text-decoration-none d-flex align-items-center">Schedule</a>
-                                {% else %}
-                                <a href="../documents/schedule/{{ year }}/RubyConfEventSchedule.pdf" class="text-info-emphasis text-decoration-none d-flex align-items-center" target="_blank">
-                                    Schedule <i class="bi bi-download ms-2"></i>
-                                </a>
-                                {% endif %}
                             </li>
                             <li {% if page.url contains "/about" %}class="current" {%endif%}><a href="/{{ year }}/about-us">About</a>
                             </li>

@@ -11,14 +11,14 @@
 - name: Turing
   image: ../images/2021/sponsors/turing.png
   url: https://turing.com/
-  categories: [supporters]
+  categories: [sponsors]
 
 - name: Cloud Africa
-  image: ../images/2021/sponsors/CloudAfricaLogo.svg
+  image: ../images/2021/sponsors/CloudAfricaLogo.png
   url: https://www.cloudafrica.net/
   categories: [supporters]
 
 - name: Bantamik
   image: ../images/2021/sponsors/bantamik.png
   url: https://www.bantamik.png/
-  categories: [sponsors]
+  categories: [supporters]
