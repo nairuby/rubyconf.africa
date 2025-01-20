@@ -27,4 +27,4 @@ build:
 
 # Clean the vendor directory
 clean:
-	rm -rf vendor
+	rm -rf vendor _site

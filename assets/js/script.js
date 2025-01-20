@@ -399,35 +399,92 @@
   }
 
   //Tabs Box
-  if ($(".tabs-box").length) {
-    $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
-      e.preventDefault();
-      var target = $($(this).attr("data-tab"));
+  // if ($(".tabs-box").length) {
+  //   $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
+  //     e.preventDefault();
+  //     var target = $($(this).attr("data-tab"));
+  //
+  //     if ($(target).is(":visible")) {
+  //       return false;
+  //     } else {
+  //       target
+  //         .parents(".tabs-box")
+  //         .find(".tab-buttons")
+  //         .find(".tab-btn")
+  //         .removeClass("active-btn");
+  //       $(this).addClass("active-btn");
+  //       target
+  //         .parents(".tabs-box")
+  //         .find(".tabs-content")
+  //         .find(".tab")
+  //         .fadeOut(0);
+  //       target
+  //         .parents(".tabs-box")
+  //         .find(".tabs-content")
+  //         .find(".tab")
+  //         .removeClass("active-tab animated fadeIn");
+  //       $(target).fadeIn(300);
+  //       $(target).addClass("active-tab animated fadeIn");
+  //     }
+  //   });
+  // }
 
-      if ($(target).is(":visible")) {
-        return false;
-      } else {
-        target
-          .parents(".tabs-box")
-          .find(".tab-buttons")
-          .find(".tab-btn")
-          .removeClass("active-btn");
-        $(this).addClass("active-btn");
-        target
-          .parents(".tabs-box")
-          .find(".tabs-content")
-          .find(".tab")
-          .fadeOut(0);
-        target
-          .parents(".tabs-box")
-          .find(".tabs-content")
-          .find(".tab")
-          .removeClass("active-tab animated fadeIn");
-        $(target).fadeIn(300);
-        $(target).addClass("active-tab animated fadeIn");
-      }
-    });
+  // Tabs Box with Persistence
+if ($(".tabs-box").length) {
+  // On page load, set the active tab from localStorage
+  const savedTab = localStorage.getItem("activeTab");
+
+  if (savedTab && $(savedTab).length) {
+    const target = $(savedTab);
+
+    // Reset all tab buttons and content
+    $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
+    $(".tabs-box .tabs-content .tab")
+      .hide()
+      .removeClass("active-tab animated fadeIn");
+
+    // Activate the saved tab and corresponding button
+    target
+      .parents(".tabs-box")
+      .find(`.tab-buttons [data-tab="${savedTab}"]`)
+      .addClass("active-btn");
+    target.show().addClass("active-tab animated fadeIn");
+  } else {
+    // Default to the first tab if no saved tab exists
+    $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
+    $(".tabs-box .tabs-content .tab")
+      .hide()
+      .removeClass("active-tab animated fadeIn");
+
+    $(".tabs-box .tab-buttons .tab-btn:first").addClass("active-btn");
+    $(".tabs-box .tabs-content .tab:first")
+      .show()
+      .addClass("active-tab animated fadeIn");
   }
+
+  // Handle tab button clicks
+  $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
+    e.preventDefault();
+    const target = $($(this).attr("data-tab"));
+
+    if ($(target).is(":visible")) {
+      return false;
+    } else {
+      // Remove active classes from all buttons and tabs
+      $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
+      $(".tabs-box .tabs-content .tab")
+        .fadeOut(0)
+        .removeClass("active-tab animated fadeIn");
+
+      // Show the clicked tab and add active class
+      $(this).addClass("active-btn");
+      $(target).fadeIn(300).addClass("active-tab animated fadeIn");
+
+      // Save the active tab to localStorage
+      localStorage.setItem("activeTab", `#${target.attr("id")}`);
+    }
+  });
+}
 
   //Accordion Box
   if ($(".accordion-box").length) {

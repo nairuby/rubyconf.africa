@@ -35,10 +35,10 @@ url: "https://rubyconf.africa" # the base hostname & protocol for your site, e.g
 gitlab_username: nairuby
 github_username: nairuby
 
-current_year: 2024
+current_year: 2025
 
-exclude:
-  - vendor
+#exclude:
+#  - vendor
 
 # Build settings
 markdown: kramdown
@@ -119,14 +119,19 @@ collections:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - 2017speakers/
+  - Makefile
+  - docker-compose.yml
+

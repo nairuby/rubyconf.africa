@@ -147,7 +147,7 @@
                         <p class="mb-0 me-2">Past Events:</p>
                         <select id="past-events" class="form-select w-auto">
                             <option value="" disabled>Select Year</option>
-                            {% assign years = "Year,2015,2016,2017,2018,2019,2021,2024" | split: "," %}
+                            {% assign years = ",2015,2016,2017,2018,2019,2021,2024" | split: "," %}
                             {% for year in years %}
                                 <option value="{{ year }}" {% if page.year == year %}selected{% endif %}>
                                     {{ year }}
