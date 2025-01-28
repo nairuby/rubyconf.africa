@@ -1,3 +1,5 @@
+[![Deploy site](https://github.com/nairuby/rubyconf.africa/actions/workflows/deploy.yml/badge.svg)](https://github.com/nairuby/rubyconf.africa/actions/workflows/deploy.yml)
+
 # RubyConf Africa
 
 ## Setup
