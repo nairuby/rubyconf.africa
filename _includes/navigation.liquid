@@ -42,10 +42,10 @@
                     >
                         <ul class="navigation clearfix">
                             {% comment %}<li><a href="/index">Home</a></li>{% endcomment %}
-                            <li {% if page.url=="/schedule" %}class="current" {%endif%}>
+                            <li {% if page.url == "/schedule" %}class="current" {%endif%}>
                                 <a href="/schedule">Schedule</a>
                             </li>
-                            <li {% if page.url=="/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
+                            <li {% if page.url == "/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
                             </li>
                             <li class="dropdown {% if page.url == "/speakers" %} current {% endif %}"><a href="/speakers.html">Speakers</a>
                             {% comment %}<ul>
@@ -61,10 +61,10 @@
                             {% comment %}<li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>{% endcomment %}
                             {% comment %}</li>{% endcomment %}
 
-<!--                            <li class="dropdown" {% if page.url=="/practicalities" %} current {% endif %}" ><a href="/practicalities">Attendee Guide</a>-->
+<!--                            <li class="dropdown" {% if page.url == "/practicalities" %} current {% endif %}" ><a href="/practicalities">Attendee Guide</a>-->
                             <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Essentials</a>
                             <ul>
-                                <li {% if page.url=="/code-of-conduct" %}class="current" {%endif%}>
+                                <li {% if page.url == "/code-of-conduct" %}class="current" {%endif%}>
                                     <a href="code-of-conduct.html">Code of Conduct</a>
                                 </li>
                                 <li>
@@ -72,9 +72,9 @@
                                 </li>
                             </ul>
                             </li>
-                            <li {% if page.url=="/blog" %}class="current" {%endif%}><a href="/blog">Blog</a>
+                            <li {% if page.url == "/blog" %}class="current" {%endif%}><a href="/blog">Blog</a>
                             </li>
-                            <li {% if page.url=="/contact" %}class="current" {%endif%}><a href="/contact">Contact</a>
+                            <li {% if page.url == "/contact" %}class="current" {%endif%}><a href="/contact">Contact</a>
                             </li>
                             <li class="dropdown">
                                     <a href="/">Past Events</a>

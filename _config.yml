@@ -109,6 +109,18 @@ collections:
   speakers_2024:
     output: true
     permalink: /2024/speaker/:name/
+  year-2024-mini:
+    output: true
+    permalink: /2024-mini/:path
+  speakers_2024_mini:
+    output: true
+    permalink: /2024-mini/speaker/:name/
+  year-2025-mini:
+    output: true
+    permalink: /2024-mini/:path
+  speakers_2025_mini:
+    output: true
+    permalink: /2024-mini/speaker/:name/
 
 
 # Exclude from processing.
