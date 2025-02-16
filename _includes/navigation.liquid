@@ -42,9 +42,9 @@
                     >
                         <ul class="navigation clearfix">
                             {% comment %}<li><a href="/index">Home</a></li>{% endcomment %}
-                            <li {% if page.url == "/schedule" %}class="current" {%endif%}>
-                                <a href="/schedule">Schedule</a>
-                            </li>
+                            {% comment %}<li {% if page.url == "/schedule" %}class="current" {%endif%}>{% endcomment %}
+                                {% comment %}<a href="/schedule">Schedule</a>{% endcomment %}
+                            {% comment %}</li>{% endcomment %}
                             <li {% if page.url == "/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
                             </li>
                             <li class="dropdown {% if page.url == "/speakers" %} current {% endif %}"><a href="/speakers.html">Speakers</a>
