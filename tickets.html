@@ -141,20 +141,25 @@
                             id="navbarSupportedContent"
                     >
                         <ul class="navigation clearfix">
-                            
-                            
-                                
-                            
+                            <li style="display: none"><a href="/index">Home</a></li>
+                            <li style="display: none" >
+                                <a href="/schedule">Schedule</a>
+                            </li>
                             <li ><a href="/about-us">About</a>
                             </li>
-                            <li class="dropdown "><a href="/speakers.html">Speakers</a>
-                            
+                            <li style="display: none" class="dropdown "><a href="/speakers.html">Speakers</a>
+                            <ul style="display: none">
+                                <li><a href="speakers.html">Speakers</a></li>
+                                <li><a
+                                        href="https://www.papercall.io/rubyconfafrica2024"
+                                        target="_blank"
+                                >CFP</a
+                                ></li>
+                            </ul>
                             </li>
 
-                            
-                            
-
-<!--                            <li class="dropdown" " ><a href="/practicalities">Attendee Guide</a>-->
+                            <li style="display: none" class="current" ><a href="/tickets">Tickets</a>
+                            </li>
                             <li class="dropdown "><a href="/practicalities.html">Essentials</a>
                             <ul>
                                 <li >
@@ -201,7 +206,7 @@
                 <!-- Main Menu End-->
 
                 <!-- Outer box -->
-                <!-- <div class="outer-box">
+                <div class="outer-box" style="display: none">
                   <div class="btn-box">
                     <a
                       href="tickets.html"
@@ -211,7 +216,7 @@
                       <span class="btn-title">Get Tickets</span></a
                     >
                   </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -451,13 +456,13 @@
                                             alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"
                                     /></a>
                                 </div>
-                                
-                                    
-                                        
-                                        
-                                        
-                                    
-                                
+                                <div class="text" style="display: none">
+                                    <p>
+                                        Join us on the 18th to 19th July 2024, as leading Ruby
+                                        developers from around the world come together in
+                                        Nairobi, Kenya, to share, inspire, and learn.
+                                    </p>
+                                </div>
                                 <ul class="social-icon-one social-icon-colored">
                                     <li>
                                         <a
@@ -491,9 +496,9 @@
                               <ul class="user-links">
                                 <li><a href="/index">Home</a></li>
                                 <li><a href="/about-us">About Us</a></li>
-                                <li><a href="/speakers">Speakers</a></li>
+                                <li style="display: none"><a href="/speakers">Speakers</a></li>
                                 <li><a href="/contact">Contact Us</a></li>
-                                <li><a href="/tickets">Tickets</a></li>
+                                <li style="display: none"><a href="/tickets">Tickets</a></li>
                                 <li>
                                   <a href="/code-of-conduct">Code of Conduct</a>
                                 </li>

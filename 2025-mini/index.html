@@ -112,14 +112,6 @@
                     /></a>
                 </div>
             </div>
-            <div class="auto-container clearfix">
-                <!-- <div class="logo-box">
-                <div class="logo">
-                    <a href="index.html"
-                        ><img src="images/logo.png" alt="" title=""
-                    /></a>
-                </div>
-            </div> -->
 
                 <!--Nav Box-->
                 <div class="nav-outer clearfix">
@@ -149,13 +141,21 @@
                                 id="navbarSupportedContent"
                         >
                             <ul class="navigation clearfix">
-                                <li class="current"><a href="index.html">Home</a></li>
-                                
+                                <li class="current" style="display: none"><a href="index.html">Home</a></li>
+                                <li><a href="/2025-mini/index.html">Mini-Conf</a></li>
+                                <li style="display: none"><a href="schedule.html">Schedule</a></li>
                                 <li><a href="about-us.html">About</a></li>
-                                <li class="dropdown"><a href="speakers.html">Speakers</a>
-                                    
+                                <li style="display: none" class="dropdown"><a href="speakers.html">Speakers</a>
+                                    <ul>
+                                        <li><a href="speakers.html">Speakers</a></li>
+                                        <li><a
+                                                href="https://www.papercall.io/rubyconfafrica2024"
+                                                target="_blank"
+                                        >CFP</a
+                                        ></li>
+                                    </ul>
                                 </li>
-                                
+                                <li style="display: none"><a href="tickets.html">Tickets</a></li>
                                 <li class="dropdown">
                                     <a href="practicalities.html">Essentials</a>
                                     <ul>
@@ -165,11 +165,9 @@
                                         <li>
                                             <a href="practicalities.html">Attendee Guide</a>
                                         </li>
-                                        
                                     </ul>
                                 </li>
-                                
-                                <li><a href="/2025-mini/index.html">Mini-Conf</a></li>
+                                 <li style="display: none"><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li class="dropdown">
                                     <a href="/">Past Events</a>
@@ -204,20 +202,20 @@
 
                     <!-- Outer box -->
                     <div class="outer-box">
-                        <div class="btn-box">
-                            
-                                    
-                                    
-                                    
-                            
-                                
-                            
-                            
-                                    
-                                    
-                            
-                                
-                            
+                        <div class="btn-box" style="display: none">
+                            <a
+                                    href="tickets.html"
+                                    target="_blank"
+                                    class="theme-btn btn-style-one"
+                            >
+                                <span class="btn-title">Get Tickets</span></a
+                            >
+                            <a
+                                    href="schedule.html"
+                                    class="theme-btn btn-style-two"
+                            >
+                                <span class="btn-title">Event Schedule</span></a
+                            >
                         </div>
                     </div>
                 </div>
@@ -725,13 +723,13 @@
                                             alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"
                                     /></a>
                                 </div>
-                                
-                                    
-                                        
-                                        
-                                        
-                                    
-                                
+                                <div class="text" style="display: none">
+                                    <p>
+                                        Join us on the 18th to 19th July 2024, as leading Ruby
+                                        developers from around the world come together in
+                                        Nairobi, Kenya, to share, inspire, and learn.
+                                    </p>
+                                </div>
                                 <ul class="social-icon-one social-icon-colored">
                                     <li>
                                         <a
@@ -765,9 +763,9 @@
                               <ul class="user-links">
                                 <li><a href="/index">Home</a></li>
                                 <li><a href="/about-us">About Us</a></li>
-                                <li><a href="/speakers">Speakers</a></li>
+                                <li style="display: none"><a href="/speakers">Speakers</a></li>
                                 <li><a href="/contact">Contact Us</a></li>
-                                <li><a href="/tickets">Tickets</a></li>
+                                <li style="display: none"><a href="/tickets">Tickets</a></li>
                                 <li>
                                   <a href="/code-of-conduct">Code of Conduct</a>
                                 </li>
