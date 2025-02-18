@@ -12,14 +12,6 @@
                     /></a>
                 </div>
             </div>
-            <div class="auto-container clearfix">
-                <!-- <div class="logo-box">
-                <div class="logo">
-                    <a href="index.html"
-                        ><img src="images/logo.png" alt="" title=""
-                    /></a>
-                </div>
-            </div> -->
 
                 <!--Nav Box-->
                 <div class="nav-outer clearfix">
@@ -49,20 +41,21 @@
                                 id="navbarSupportedContent"
                         >
                             <ul class="navigation clearfix">
-                                <li class="current"><a href="index.html">Home</a></li>
-                                <li><a href="schedule.html">Schedule</a></li>
+                                <li class="current" style="display: none"><a href="index.html">Home</a></li>
+                                <li><a href="/2025-mini/index.html">Mini-Conf</a></li>
+                                <li style="display: none"><a href="schedule.html">Schedule</a></li>
                                 <li><a href="about-us.html">About</a></li>
-                                <li class="dropdown"><a href="speakers.html">Speakers</a>
-                                    {% comment %}<ul>
+                                <li style="display: none" class="dropdown"><a href="speakers.html">Speakers</a>
+                                    <ul>
                                         <li><a href="speakers.html">Speakers</a></li>
                                         <li><a
                                                 href="https://www.papercall.io/rubyconfafrica2024"
                                                 target="_blank"
                                         >CFP</a
                                         ></li>
-                                    </ul>{% endcomment %}
+                                    </ul>
                                 </li>
-                                {% comment %}<li><a href="tickets.html">Tickets</a></li>{% endcomment %}
+                                <li style="display: none"><a href="tickets.html">Tickets</a></li>
                                 <li class="dropdown">
                                     <a href="practicalities.html">Essentials</a>
                                     <ul>
@@ -72,13 +65,9 @@
                                         <li>
                                             <a href="practicalities.html">Attendee Guide</a>
                                         </li>
-                                        {% comment %}<li>
-                                            <a href="schedule.html">Schedule</a>
-                                        </li>{% endcomment %}
                                     </ul>
                                 </li>
-                                {% comment %} <li><a href="blog.html">Blog</a></li> {% endcomment %}
-                                <li><a href="/2025-mini/index.html">Mini-Conf</a></li>
+                                 <li style="display: none"><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li class="dropdown">
                                     <a href="/">Past Events</a>
@@ -113,20 +102,20 @@
 
                     <!-- Outer box -->
                     <div class="outer-box">
-                        <div class="btn-box">
-                            {% comment %}<a{% endcomment %}
-                                    {% comment %}href="tickets.html"{% endcomment %}
-                                    {% comment %}target="_blank"{% endcomment %}
-                                    {% comment %}class="theme-btn btn-style-one"{% endcomment %}
-                            {% comment %}>{% endcomment %}
-                                {% comment %}<span class="btn-title">Get Tickets</span></a{% endcomment %}
-                            {% comment %}>{% endcomment %}
-                            {% comment %}<a{% endcomment %}
-                                    {% comment %}href="schedule.html"{% endcomment %}
-                                    {% comment %}class="theme-btn btn-style-two"{% endcomment %}
-                            {% comment %}>{% endcomment %}
-                                {% comment %}<span class="btn-title">Event Schedule</span></a{% endcomment %}
-                            {% comment %}>{% endcomment %}
+                        <div class="btn-box" style="display: none">
+                            <a
+                                    href="tickets.html"
+                                    target="_blank"
+                                    class="theme-btn btn-style-one"
+                            >
+                                <span class="btn-title">Get Tickets</span></a
+                            >
+                            <a
+                                    href="schedule.html"
+                                    class="theme-btn btn-style-two"
+                            >
+                                <span class="btn-title">Event Schedule</span></a
+                            >
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,12 @@
+{% assign url_parts = page.url | split: '/' %}
+{% assign year = url_parts[1] %}
 <!-- Main Header-->
 <header class="main-header header-style-two">
     <div class="main-box">
         <div class="auto-container clearfix">
             <div class="logo-box">
                 <div class="logo">
-                    <a href="/"
+                    <a href="{{ site.baseurl }}/{{ year }}/index"
                     ><img
                             src="{{'/images/logo/arc_logo_coloured.png' | prepend:site.baseurl}}"
                             alt="Africa Ruby Community Logo - Building a vibrant Ruby community in Africa"
@@ -41,65 +43,46 @@
                             id="navbarSupportedContent"
                     >
                         <ul class="navigation clearfix">
-                            <li style="display: none"><a href="/index">Home</a></li>
-                            <li style="display: none" {% if page.url == "/schedule" %}class="current" {%endif%}>
-                                <a href="/schedule">Schedule</a>
+                            <li {% if page.url contains "{{ year }}/index" %}class="current" {%endif%}><a href="/{{ year }}/index">Home</a>
                             </li>
-                            <li {% if page.url == "/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
+                            <li style="display: none" {% if page.url contains "/schedule" %} class="current" {%endif%}>
+                                <a href="/{{ year }}/schedule" class="text-decoration-none d-flex align-items-center">Schedule</a>
                             </li>
-                            <li style="display: none" class="dropdown {% if page.url == "/speakers" %} current {% endif %}"><a href="/speakers.html">Speakers</a>
-                            <ul style="display: none">
-                                <li><a href="speakers.html">Speakers</a></li>
-                                <li><a
-                                        href="https://www.papercall.io/rubyconfafrica2024"
-                                        target="_blank"
-                                >CFP</a
-                                ></li>
-                            </ul>
+                            <li {% if page.url contains "/about" %}class="current" {%endif%}><a href="/{{ year }}/about-us">About</a>
                             </li>
-
-                            <li style="display: none" {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>
+                            <li style="display: none" {% if page.url contains "/speakers" %}class="current" {%endif%}><a href="/{{ year }}/speakers">Speakers</a>
                             </li>
-                            <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Essentials</a>
-                            <ul>
-                                <li {% if page.url == "/code-of-conduct" %}class="current" {%endif%}>
-                                    <a href="code-of-conduct.html">Code of Conduct</a>
-                                </li>
-                                <li>
-                                    <a href="practicalities.html">Attendee Guide</a>
-                                </li>
-                            </ul>
-                            </li>
-                            <li {% if page.url == "/blog" %}class="current" {%endif%}><a href="/blog">Blog</a>
-                            </li>
-                            <li {% if page.url == "/contact" %}class="current" {%endif%}><a href="/contact">Contact</a>
+                            <li {% if page.url contains "/contact" %}class="current" {%endif%}><a href="/{{ year }}/contact">Contact</a>
                             </li>
                             <li class="dropdown">
-                                    <a href="/">Past Events</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/2024">2024</a>
-                                        </li>
-                                        <li>
-                                            <a href="/2021">2021</a>
-                                        </li>
-                                        <li>
-                                            <a href="/2019">2019</a>
-                                        </li>
-                                        <li>
-                                            <a href="/2018">2018</a>
-                                        </li>
-                                        <li>
-                                            <a href="/2017">2017</a>
-                                        </li>
-                                        <li>
-                                            <a href="/2016">2016</a>
-                                        </li>
-                                        <li>
-                                            <a href="/2015">2015</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <a href="/">Past Events</a>
+                                <ul>
+                                    <li>
+                                        <a href="/">Main Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2024">2024</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2021">2021</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2019">2019</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2018">2018</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2017">2017</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2016">2016</a>
+                                    </li>
+                                    <li>
+                                        <a href="/2015">2015</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </nav>
