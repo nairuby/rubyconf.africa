@@ -1,6 +1,6 @@
 # Makefile for Jekyll Setup and Commands
 
-.PHONY: install serve build clean
+.PHONY: install serve build clean assets
 
 # Install bundler and jekyll
 install:
@@ -22,9 +22,13 @@ serve:
 	bundle exec jekyll serve
 
 # Build the site for deployment
-build:
+build: assets
 	bundle exec jekyll build -d public
 
 # Clean the vendor directory
 clean:
 	rm -rf vendor _site
+
+# Assets
+assets:
+	ruby _build/preprocess_assets.rb
