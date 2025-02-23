@@ -39,18 +39,7 @@ year: 2017
               Mbagathi Way - Nairobi, Kenya
             </li>
           </ul>
-          <div class="btn-align">
-            <div
-              class="banner-text d-flex align-items-center text-bg-danger text-center py-3"
-            >
-              <div class="container">
-                <h6 class="display-6">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="fs-md-5">Thank you for joining us!</span>
-                </h6>
-              </div>
-            </div>
-          </div>
+          {% include thanks-banner.liquid %}
         </div>
       </div>
     </div>
@@ -70,18 +59,7 @@ year: 2017
               Mbagathi Way - Nairobi, Kenya
             </li>
           </ul>
-          <div class="btn-align">
-            <div
-              class="banner-text d-flex align-items-center text-bg-danger text-center py-3"
-            >
-              <div class="container">
-                <h6 class="display-6">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="fs-md-5">Thank you for joining us!</span>
-                </h6>
-              </div>
-            </div>
-          </div>
+          {% include thanks-banner.liquid %}
         </div>
       </div>
     </div>
@@ -288,29 +266,32 @@ year: 2017
         </div>
 
         <!-- Speaker Block -->
-        <!-- <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="https://www.papercall.io/rubyconfafrica2017"
-                                ><img
-                                        src="../images/speakers/cfp_logo.jpeg"
-                                        alt="Speaker Placeholder - Submit your talk for Ruby Conf Africa 2017"
-                                /></a>
-                            </figure>
-                        </div>
-                        <div class="info-box">
-                            <div class="inner">
-                                <h4 class="name">
-                                    <a href="https://www.papercall.io/rubyconfafrica2017"
-                                    >Submit your Proposal</a
-                                    >
-                                </h4>
-                                <span class="designation">Share your knowledge</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+        <div
+          class="speaker-block col-lg-3 col-md-6 col-sm-12"
+          style="display: none"
+        >
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="https://www.papercall.io/rubyconfafrica2017"
+                  ><img
+                    src="../images/speakers/cfp_logo.jpeg"
+                    alt="Speaker Placeholder - Submit your talk for Ruby Conf Africa 2017"
+                /></a>
+              </figure>
+            </div>
+            <div class="info-box">
+              <div class="inner">
+                <h4 class="name">
+                  <a href="https://www.papercall.io/rubyconfafrica2017"
+                    >Submit your Proposal</a
+                  >
+                </h4>
+                <span class="designation">Share your knowledge</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -355,73 +336,35 @@ year: 2017
 <!--End of Partner Section-->
 
 <!--Ticket Sponsor Section-->
-<!--<section class="clients-section">-->
-<!--    <div class="anim-icons">-->
-<!--        <span class="icon icon-dots-3 wow zoomIn"></span>-->
-<!--    </div>-->
-<!--    <div class="auto-container">-->
-<!--        <div class="sec-title" style="text-align: center">-->
-<!--            <h2 style="color: #c11803">Ticket Sponsors</h2>-->
-<!--            <hr/>-->
-<!--            <span class="title">-->
-<!--              These are the ticket sponsors for the event! 💪-->
-<!--            </span>-->
-<!--        </div>-->
+<section class="clients-section">
+  <div class="anim-icons">
+    <span class="icon icon-dots-3 wow zoomIn"></span>
+  </div>
+  <div class="auto-container">
+    <div class="sec-title" style="text-align: center">
+      <h2 style="color: #c11803">Ticket Sponsors</h2>
+      <hr />
+      <span class="title">
+        These are the ticket sponsors for the event! 💪
+      </span>
+    </div>
 
-<!--        <div class="sponsors-outer">-->
-<!--            <div class="row">-->
-
-<!--                {% for sponsor in site.data.sponsors %}-->
-<!--                {% if sponsor.categories contains 'ticket' %}-->
-<!--                <div class="client-block col-lg-3 col-md-6 col-sm-12">-->
-<!--                    <figure class="">-->
-<!--                        <a href="{{ sponsor.url }}" target="_blank"-->
-<!--                        ><img-->
-<!--                                src="{{ sponsor.image }}"-->
-<!--                                class="lazyload"-->
-<!--                                alt="{{ sponsor.name }}"-->
-<!--                        /></a>-->
-<!--                    </figure>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-<!--                {% endfor %}-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--End of Ticket Sponsor Section-->
-
-<!--Previous Sponsor Section-->
-<!--<section class="clients-section">-->
-<!--    <div class="anim-icons">-->
-<!--        <span class="icon icon-dots-3 wow zoomIn"></span>-->
-
-<!--    </div>-->
-<!--    <div class="auto-container">-->
-<!--        <div class="sec-title" style="text-align: center">-->
-<!--            <h2 style="color: #c11803">Previous Sponsors</h2>-->
-<!--            <hr />-->
-<!--            <span class="title">-->
-<!--                These were our previous sponsors who contributed to the success of-->
-<!--                past events! 🙌-->
-<!--            </span>-->
-<!--        </div>-->
-
-<!--        <div class="sponsors-outer">-->
-<!--            <div class="row justify-content-center">-->
-<!--                &lt;!&ndash; Sponsor Block &ndash;&gt;-->
-<!--                {% for sponsor in site.data.sponsors %}-->
-<!--                {% if sponsor.categories contains 'previous' %}-->
-<!--                <div class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">-->
-<!--                    <figure class="">-->
-<!--                        <a href="{{ sponsor.url }}" target="_blank"><img src="{{ sponsor.image }}" class="lazyload"-->
-<!--                                alt="{{ sponsor.name }}" /></a>-->
-<!--                    </figure>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-<!--                {% endfor %}-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--End Previous Sponsor Section-->
+    <div class="sponsors-outer">
+      <div class="row">
+        {% for sponsor in site.data.sponsors %} {% if sponsor.categories
+        contains 'ticket' %}
+        <div class="client-block col-lg-3 col-md-6 col-sm-12">
+          <figure class="">
+            <a href="{{ sponsor.url }}" target="_blank"
+              ><img
+                src="{{ sponsor.image }}"
+                class="lazyload"
+                alt="{{ sponsor.name }}"
+            /></a>
+          </figure>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

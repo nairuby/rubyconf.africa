@@ -7,7 +7,7 @@
             <ul class="post-info">
                 <li><span class="far fa-user"></span> {{ blog.author }}</li>
             </ul>
-            <h4><a href="{{ blog.url }}" target="_blank">{{ blog.title }}</a></h4>
+            <a href="{{ blog.url }}" target="_blank">{{ blog.title }}</a>
             {% comment %}<div class="text">{{ blog.description }}</div>{% endcomment %}
             <div class="btn-box"><a href="{{ blog.url }}" target="_blank" class="read-more">Read More</a></div>
         </div>

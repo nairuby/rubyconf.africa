@@ -26,7 +26,7 @@ year: 2024
     <!-- Slide Item -->
     <div
       class="slide-item lazyload"
-      style="background-image: url(../../images/compressed/nairobi.jpg)"
+      style="background-image: url(../images/compressed/nairobi.jpg)"
     >
       <div class="auto-container">
         <div class="content-box">
@@ -40,18 +40,7 @@ year: 2024
               Nairobi, Kenya
             </li>
           </ul>
-          <div class="btn-align">
-            <div
-              class="banner-text d-flex align-items-center text-bg-danger text-center py-3"
-            >
-              <div class="container">
-                <h6 class="display-6">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="fs-md-5">Thank you for joining us!</span>
-                </h6>
-              </div>
-            </div>
-          </div>
+          {% include thanks-banner.liquid %}
         </div>
       </div>
     </div>
@@ -66,37 +55,18 @@ year: 2024
           <span class="title">July 26-27, 2024</span>
           <h2>Ruby Conf Africa 2024</h2>
           <ul class="info-list">
-            <!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
-            <!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
+            <li style="display: none">
+              <span class="fa fa-chair"></span> 300 Seats
+            </li>
+            <li style="display: none">
+              <span class="fa fa-user-alt"></span> 20 SPEAKERS
+            </li>
             <li>
               <span class="fa fa-map-marker-alt"></span> KCA University -
               Nairobi, Kenya
             </li>
           </ul>
-          <div class="btn-align">
-            <!--                        <div class="btn-box" style="visibility: hidden;">-->
-            <!--                            -->
-            <!--                            <a href="tickets.html" target="_blank" class="theme-btn btn-style-two">-->
-            <!--                                <span class="btn-title">Buy Tickets <span class="fa fa-ticket-alt"></span> </span></a>-->
-            <!--                        </div>-->
-            <!--                        <div class="btn-box">-->
-            <!--                            <a-->
-            <!--                                    href="schedule.html"-->
-            <!--                                    class="theme-btn btn-style-two"-->
-            <!--                            >-->
-            <!--                                <span class="btn-title">Event Schedule</span></a-->
-            <!--                            >-->
-            <!--                        </div>-->
-
-            <div class="banner-text text-bg-danger text-center py-3">
-              <div class="container">
-                <h6 class="display-6">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="fs-md-5">Thank you for joining us!</span>
-                </h6>
-              </div>
-            </div>
-          </div>
+          {% include thanks-banner.liquid %}
         </div>
       </div>
     </div>
@@ -204,9 +174,9 @@ year: 2024
                       ><i class="fa-brands fa-x-twitter"></i
                     ></a>
                   </li>
-                  <!-- <li>
-                                                                                                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                                                                                                </li> -->
+                  <li style="display: none">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </li>
                   <li>
                     <a href="https://matz.rubyist.net"
                       ><i class="fab fa-sistrix"></i
@@ -370,29 +340,32 @@ year: 2024
         </div>
 
         <!-- Speaker Block -->
-        <!-- <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="https://www.papercall.io/rubyconfafrica2024"
-                                ><img
-                                        src="images/speakers/cfp_logo.jpeg"
-                                        alt="Speaker Placeholder - Submit your talk for Ruby Conf Africa 2024"
-                                /></a>
-                            </figure>
-                        </div>
-                        <div class="info-box">
-                            <div class="inner">
-                                <h4 class="name">
-                                    <a href="https://www.papercall.io/rubyconfafrica2024"
-                                    >Submit your Proposal</a
-                                    >
-                                </h4>
-                                <span class="designation">Share your knowledge</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+        <div
+          class="speaker-block col-lg-3 col-md-6 col-sm-12"
+          style="display: none"
+        >
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="https://www.papercall.io/rubyconfafrica2024"
+                  ><img
+                    src="images/speakers/cfp_logo.jpeg"
+                    alt="Speaker Placeholder - Submit your talk for Ruby Conf Africa 2024"
+                /></a>
+              </figure>
+            </div>
+            <div class="info-box">
+              <div class="inner">
+                <h4 class="name">
+                  <a href="https://www.papercall.io/rubyconfafrica2024"
+                    >Submit your Proposal</a
+                  >
+                </h4>
+                <span class="designation">Share your knowledge</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -759,43 +732,6 @@ year: 2024
   </div>
 </section>
 <!--End of Partner Section-->
-
-<!--Ticket Sponsor Section-->
-<!--<section class="clients-section">-->
-<!--    <div class="anim-icons">-->
-<!--        <span class="icon icon-dots-3 wow zoomIn"></span>-->
-<!--    </div>-->
-<!--    <div class="auto-container">-->
-<!--        <div class="sec-title" style="text-align: center">-->
-<!--            <h2 style="color: #c11803">Ticket Sponsors</h2>-->
-<!--            <hr/>-->
-<!--            <span class="title">-->
-<!--              These are the ticket sponsors for the event! 💪-->
-<!--            </span>-->
-<!--        </div>-->
-
-<!--        <div class="sponsors-outer">-->
-<!--            <div class="row">-->
-
-<!--                {% for sponsor in site.data.sponsors %}-->
-<!--                {% if sponsor.categories contains 'ticket' %}-->
-<!--                <div class="client-block col-lg-3 col-md-6 col-sm-12">-->
-<!--                    <figure class="">-->
-<!--                        <a href="{{ sponsor.url }}" target="_blank"-->
-<!--                        ><img-->
-<!--                                src="{{ sponsor.image }}"-->
-<!--                                class="lazyload"-->
-<!--                                alt="{{ sponsor.name }}"-->
-<!--                        /></a>-->
-<!--                    </figure>-->
-<!--                </div>-->
-<!--                {% endif %}-->
-<!--                {% endfor %}-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--End of Ticket Sponsor Section-->
 
 <!--Previous Sponsor Section-->
 <section class="clients-section">
