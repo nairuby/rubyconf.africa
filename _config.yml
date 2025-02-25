@@ -48,6 +48,10 @@ plugins:
   - jekyll-minifier
   - jekyll-assets
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 assets:
   debug: false
   compress:
