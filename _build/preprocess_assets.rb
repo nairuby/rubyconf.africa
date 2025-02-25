@@ -16,7 +16,7 @@ environment.append_path(File.join(project_root, '_assets', 'stylesheets'))
 
 # Set configuration
 # environment.js_compressor  = Uglifier.new(harmony: true)
-environment.css_compressor = :sassc
+environment.css_compressor = :sass
 
 # Create directories if they do not exist
 # FileUtils.mkdir_p project_root+'/assets/javascripts'

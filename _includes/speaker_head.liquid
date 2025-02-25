@@ -79,25 +79,26 @@
 
     <!--	 CSS Style-->
     <!-- Stylesheets -->
-    <link
-            href="{{ '/css/bootstrap.css' | prepend: site.baseurl }}"
-            rel="stylesheet"
-    />
-    <link
-            href="{{ '/css/style.css' | prepend: site.baseurl }}"
-            rel="stylesheet"
-    />
-    <link
-            href="{{ '/css/responsive.css'  | prepend: site.baseurl }}"
-            rel="stylesheet"
-    />
-    <!--Color Switcher Mockup-->
-    <link
-            href="{{ '/css/color-switcher-design.css' | prepend: site.baseurl }}"
-            rel="stylesheet"
-    />
+    {% comment %}<link{% endcomment %}
+            {% comment %}href="{{ '/css/bootstrap.css' | prepend: site.baseurl }}"{% endcomment %}
+            {% comment %}rel="stylesheet"{% endcomment %}
+    {% comment %}/>{% endcomment %}
+    {% comment %}<link{% endcomment %}
+            {% comment %}href="{{ '/css/style.css' | prepend: site.baseurl }}"{% endcomment %}
+            {% comment %}rel="stylesheet"{% endcomment %}
+    {% comment %}/>{% endcomment %}
+    {% comment %}<link{% endcomment %}
+            {% comment %}href="{{ '/css/responsive.css'  | prepend: site.baseurl }}"{% endcomment %}
+            {% comment %}rel="stylesheet"{% endcomment %}
+    {% comment %}/>{% endcomment %}
+    {% comment %}<!--Color Switcher Mockup-->{% endcomment %}
+    {% comment %}<link{% endcomment %}
+            {% comment %}href="{{ '/css/color-switcher-design.css' | prepend: site.baseurl }}"{% endcomment %}
+            {% comment %}rel="stylesheet"{% endcomment %}
+    {% comment %}/>{% endcomment %}
 
     {% include {{ '/google_analytics.liquid' | prepend: site.baseurl }} %}
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/application.css">
 
     <!-- Meta Tags for Responsive Design -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
