@@ -459,7 +459,7 @@ img {
 /* Button style two - Responsive */
 .btn-style-two {
 	position: relative;
-	padding: clamp(0.6rem, 2vw, 1rem) clamp(1.5rem, 5vw, 4rem);
+	padding: clamp(12px, 2vw, 1rem) clamp(1.5rem, 5vw, 4rem);
 	font-size: clamp(0.9rem, 2vw, 1.2rem);
 	line-height: 1.5;
 	color: #f7f3f3;
@@ -510,7 +510,7 @@ img {
 .btn-style-three {
 	position: relative;
 	padding: 10px 30px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #F2F2F2;
 	font-weight: 400;
@@ -575,7 +575,7 @@ img {
 .btn-style-four {
 	position: relative;
 	padding: 10px 30px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #F2F2F2;
 	font-weight: 400;
@@ -641,7 +641,7 @@ img {
 
 .list-style-one li {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 26px;
 	color: #0D0D0D;
 	font-weight: 400;
@@ -653,7 +653,7 @@ img {
 	position: absolute;
 	left: 0;
 	top: 0;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	content: "\52";
 	font-family: 'ElegantIcons';
 	color: #d90404;
@@ -667,7 +667,7 @@ img {
 
 .list-style-two li {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #0D0D0D;
 	font-weight: 400;
@@ -718,7 +718,7 @@ img {
 	width: 40px;
 	line-height: 40px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #F2F2F2;
 	background-color: #6A6A6A;
 	transition: all 900ms ease;
@@ -764,7 +764,7 @@ img {
 	width: 40px;
 	line-height: 40px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	border: 1px solid #F2F2F2;
 	background-color: #edeaea;
 	-webkit-transition: all 300ms ease;
@@ -799,7 +799,7 @@ img {
 	display: block;
 	line-height: 30px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -901,7 +901,7 @@ img {
 }
 
 .preloader-new:after {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
     line-height: 2em;
     color: #ae0303;
     text-decoration: underline;
@@ -943,7 +943,7 @@ img {
 	width: 40px;
 	height: 40px;
 	color: #F2F2F2;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	text-transform: uppercase;
 	line-height: 40px;
 	text-align: center;
@@ -1011,7 +1011,7 @@ img {
 .page-title .bread-crumb li {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #F2F2F2;
 	font-weight: 500;
@@ -1023,7 +1023,7 @@ img {
 .page-title .bread-crumb li:before {
 	position: absolute;
 	right: -3px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #F2F2F2;
 	font-weight: 400;
@@ -1068,7 +1068,7 @@ img {
 .sec-title .title {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #fa1d1d;
 	font-weight: 500;
@@ -1097,7 +1097,7 @@ img {
 
 .sec-title .text {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 28px;
 	color: #484848;
 	margin-top: 30px;
@@ -1177,6 +1177,7 @@ img {
 .main-header .logo-box .logo img {
 	display: inline-block;
 	max-width: 100%;
+	height: auto;
 	-webkit-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
 	-o-transition: all 300ms ease;
@@ -1218,7 +1219,7 @@ img {
 .main-menu .navigation>li>a {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	font-weight: 500;
 	padding: 10px 0;
@@ -1272,7 +1273,7 @@ img {
 	height: 20px;
 	display: block;
 	line-height: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-weight: 900;
 	text-align: center;
 	z-index: 5;
@@ -1344,7 +1345,7 @@ img {
 	padding: 5px 25px;
 	line-height: 24px;
 	font-weight: 400;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	text-transform: capitalize;
 	color: #0D0D0D;
 	transition: all 500ms ease;
@@ -1410,7 +1411,7 @@ img {
 	padding: 5px 25px;
 	line-height: 24px;
 	font-weight: 400;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	text-transform: capitalize;
 	color: #222222;
 	transition: all 500ms ease;
@@ -1490,7 +1491,7 @@ img {
 .main-header .search-box-btn {
 	position: relative;
 	float: left;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	cursor: pointer;
 	background: none;
@@ -1544,7 +1545,7 @@ img {
 	line-height: 24px;
 	padding: 7px 40px 7px 15px;
 	height: 40px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	border: 1px solid #F2F2F2;
 	background: #F2F2F2;
 }
@@ -1562,7 +1563,7 @@ img {
 	height: 40px;
 	text-align: center;
 	color: #0D0D0D;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	background: none;
 	cursor: pointer;
 }
@@ -1579,7 +1580,7 @@ img {
 	float: right;
 	padding: 10px 20px;
 	line-height: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .nav-outer .mobile-nav-toggler {
@@ -1788,7 +1789,7 @@ img {
 	line-height: 30px;
 	width: 30px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #F2F2F2;
 	background-color: #d90404;
 	cursor: pointer;
@@ -1838,7 +1839,7 @@ img {
 	display: block;
 	line-height: 24px;
 	padding: 10px 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #0D0D0D;
 	font-weight: 600;
 	text-transform: capitalize;
@@ -1856,7 +1857,7 @@ img {
 	width: 44px;
 	height: 44px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 44px;
 	color: #0D0D0D;
 	cursor: pointer;
@@ -2013,7 +2014,7 @@ img {
 .banner-carousel .content-box .info-list li {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 26px;
 	color: #F2F2F2;
 	font-weight: 400;
@@ -2025,7 +2026,7 @@ img {
 	color: #faaC1D;
 	margin-right: 10px;
 	float: left;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 26px;
 }
 
@@ -2109,7 +2110,7 @@ img {
 	color: white;
 	text-align: center;
 	padding: 25px 0;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 .banner-cfp a {
 	color: white;
@@ -2117,7 +2118,7 @@ img {
 	transition: all 0.3s ease;
 }
 .banner-cfp a:hover {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	text-decoration: underline;
 	background-color: #db4251;
 	color: #dc3535; /* Change text color */
@@ -2335,7 +2336,7 @@ img {
 
 .banner-conference-two .content-box .title {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #F2F2F2;
 	font-weight: 400;
 	margin-bottom: 20px;
@@ -2365,7 +2366,7 @@ img {
 	margin-right: 30px;
 	width: 90px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #F2F2F2;
 	font-weight: 500;
 }
@@ -2379,7 +2380,7 @@ img {
 	content: ':';
 	top: 10px;
 	right: -20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #F2F2F2;
 }
@@ -2405,7 +2406,7 @@ img {
 .banner-conference-two .time-countdown .counter-column .count {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #F2F2F2;
 	font-weight: 700;
@@ -2526,7 +2527,7 @@ img {
 	margin-right: 30px;
 	width: 80px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #d90404;
 	font-weight: 500;
 }
@@ -2541,7 +2542,7 @@ img {
 	content: ':';
 	top: 10px;
 	right: -20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #d90404;
 }
@@ -2565,7 +2566,7 @@ img {
 .banner-conference .time-countdown .counter-column .count {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #d90404;
 	font-weight: 700;
@@ -2619,7 +2620,7 @@ img {
 
 .about-section .content-column .sec-title .text {
 	margin-top: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 }
 
@@ -2633,7 +2634,7 @@ img {
 }
 
 .about-section .content-column .list-style-one li {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 2.7vw, 1.65rem);
 }
 
@@ -2645,7 +2646,7 @@ img {
 	padding: clamp(10px, 5%, 20px);
 	line-height: 20px;
 	font-weight: 600;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .about-section .image-column {
@@ -2798,6 +2799,10 @@ img {
 	padding: 100px 0 70px;
 }
 
+.speakers-section .sec-title h2 {
+	font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
 .speakers-section:before {
 	position: absolute;
 	left: 0;
@@ -2830,6 +2835,7 @@ img {
 	transition: all 500ms ease;
 }
 
+
 .speaker-block .inner-box:hover {
 	box-shadow: none;
 }
@@ -2841,6 +2847,7 @@ img {
 .speaker-block .image-box .image {
 	position: relative;
 	margin-bottom: 0;
+	overflow: hidden;
 }
 
 .speaker-block .image-box .image img {
@@ -2912,7 +2919,7 @@ img {
 .speaker-block .info-box .name {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #ffffff;
 	font-weight: 700;
@@ -2945,7 +2952,7 @@ img {
 }
 
 
-.speaker-block .info-box .name a {
+.speaker-block .info-box .inner .name a {
 	color: #ffffff;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -2962,7 +2969,7 @@ img {
 .speaker-block .info-box .designation {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #ffffff;
 	font-weight: 400;
@@ -3034,7 +3041,7 @@ img {
 	display: block;
 	width: 32px;
 	height: 32px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	background-color: #ffffff;
 	text-align: center;
@@ -3115,7 +3122,7 @@ img {
 
 .speaker-block-two .info-box .name {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #ffffff;
 	font-weight: 500;
@@ -3137,7 +3144,7 @@ img {
 .speaker-block-two .info-box .designation {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	color: #ffffff;
 	font-weight: 400;
@@ -3199,7 +3206,7 @@ img {
 	width: 32px;
 	height: 32px;
 	border: 1px solid #eeeeee;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	background-color: #ffffff;
 	text-align: center;
@@ -3386,7 +3393,7 @@ img {
 
 .speaker-block-three .info-box .name {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #ffffff;
 	font-weight: 500;
@@ -3408,7 +3415,7 @@ img {
 .speaker-block-three .info-box .designation {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	color: #ffffff;
 	font-weight: 400;
@@ -3445,7 +3452,7 @@ img {
 	width: 32px;
 	height: 32px;
 	border: 1px solid #eeeeee;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	background-color: #ffffff;
 	text-align: center;
@@ -3548,7 +3555,7 @@ img {
 
 .speaker-detail .info-column p {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.6em;
 	color: #888888;
 	margin-bottom: 30px;
@@ -3675,7 +3682,7 @@ img {
 	width: 160px;
 	border-radius: 20px;
 	background-color: #ffffff;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	color: #222222;
 	font-weight: 600;
@@ -3699,7 +3706,7 @@ img {
 	top: 30px;
 	padding: 5px 20px;
 	background-color: #222222;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	font-weight: 600;
 	color: #ffffff;
@@ -3712,7 +3719,7 @@ img {
 	top: 80px;
 	width: 100px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	font-weight: 600;
 	color: #222222;
@@ -3720,7 +3727,7 @@ img {
 
 .schedule-tabs .tab-buttons li .month {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	font-weight: 600;
 	color: #222222;
@@ -3728,7 +3735,7 @@ img {
 }
 
 .schedule-tabs .tab-buttons li .year {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .schedule-tabs .tab-buttons li.active-btn {
@@ -3855,7 +3862,7 @@ img {
 	height: 100px;
 	background-color: #ffffff;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 18px;
 	color: #212639;
 	font-weight: 500;
@@ -3886,14 +3893,14 @@ img {
 }
 
 .schedule-block .speaker-info .name {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #212639;
 	font-weight: 500;
 	line-height: 1.2em;
 }
 
 .schedule-block .speaker-info .designation {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .schedule-block h4 {
@@ -3922,7 +3929,7 @@ img {
 
 .schedule-block .text {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 26px;
 	color: #888888;
 	margin-bottom: 15px;
@@ -3936,7 +3943,7 @@ img {
 .schedule-block .btn-box a {
 	padding: 10px 20px;
 	line-height: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	background-color: #444444;
 	color: #ffffff;
 	border-top: 2px solid transparent;
@@ -4115,7 +4122,7 @@ img {
 	width: auto;
 	margin-bottom: 20px;
 	text-align: left;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .schedule-section.style-two .schedule-block .inner-box {
@@ -4176,7 +4183,7 @@ img {
 	width: auto;
 	margin-bottom: 20px;
 	text-align: left;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .schedule-section.style-three .schedule-block .inner-box {
@@ -4256,7 +4263,7 @@ img {
 .pricing-block-two .title {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #212639;
 	font-weight: 500;
@@ -4265,7 +4272,7 @@ img {
 }
 
 .pricing-block-two .title .icon {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	margin-right: 5px;
 	display: inline-block;
 }
@@ -4278,7 +4285,7 @@ img {
 .pricing-block-two .price {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: .9em;
 	color: #ffffff;
 	font-weight: 600;
@@ -4312,7 +4319,7 @@ img {
 .pricing-block-two .features li {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #848484;
 	font-weight: 500;
@@ -4325,7 +4332,7 @@ img {
 	position: absolute;
 	left: 0;
 	top: 5px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	content: "\52";
 	font-family: 'ElegantIcons';
@@ -4352,7 +4359,7 @@ img {
 
 .pricing-block-two .btn-box a {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 25px;
 	font-weight: 500;
 	padding: 8px 30px;
@@ -4411,7 +4418,7 @@ img {
 }
 
 .event-info-section .info-column .sec-title h2 {
-	font-size: clamp(0.6rem, 2vw, 1.5rem);
+	font-size: clamp(12px, 2vw, 1.5rem);
 }
 
 .event-info-tabs {
@@ -4426,7 +4433,7 @@ img {
 	position: relative;
 	float: left;
 	padding: 10px 25px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	background-color: #ffffff;
 	color: #dc2c2c;
@@ -4490,7 +4497,7 @@ img {
 }
 
 .event-info-tabs .tabs-content .text {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	color: #888888;
 	max-width: 470px;
@@ -4589,7 +4596,7 @@ img {
 
 .blog-sidebar .news-block .lower-content {
 	padding: 30px 30px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .blog-sidebar .news-block h4 {
@@ -4630,7 +4637,7 @@ img {
 }
 
 .blog-single .lower-content p {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	margin-bottom: 30px;
 	color: #888888;
@@ -4654,7 +4661,7 @@ img {
 }
 
 .blog-single .lower-content blockquote p {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 32px;
 	color: #7f8897;
 	font-weight: 400;
@@ -4664,7 +4671,7 @@ img {
 .blog-single .lower-content blockquote cite {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #f20487;
 	font-weight: 400;
@@ -4705,7 +4712,7 @@ img {
 .blog-single .post-share-options .tags a {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	border: 1px solid #dddddd;
 	color: #7f8897;
@@ -4766,7 +4773,7 @@ img {
 .blog-single .author-box .name {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #3f4161;
 	font-weight: 700;
@@ -4774,7 +4781,7 @@ img {
 
 .blog-single .author-box .designation {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 25px;
 	color: #7f8897;
 	font-weight: 400;
@@ -4783,7 +4790,7 @@ img {
 
 .blog-single .author-box .text {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	color: #888888;
 	font-weight: 400;
@@ -4793,7 +4800,7 @@ img {
 .blog-single .author-box .read-more {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 	color: #7f8897;
 	font-weight: 500;
@@ -4807,7 +4814,7 @@ img {
 .blog-single .author-box .read-more .icon {
 	margin-left: 7px;
 	float: right;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 }
 
@@ -4841,7 +4848,7 @@ img {
 .styled-pagination li a {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	height: 50px;
 	width: 50px;
@@ -4917,7 +4924,7 @@ img {
 .register-section .title-column .icon {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #222222;
 }
 
@@ -4927,12 +4934,12 @@ img {
 
 .register-section .title-column h2 {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	display: block;
 }
 
 .register-section .title-column .text {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	color: #ffffff;
 }
@@ -4968,7 +4975,7 @@ img {
 	top: 10px;
 	line-height: 33px;
 	color: #aaaaaa;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	z-index: 9;
 }
 
@@ -4983,7 +4990,7 @@ img {
 	position: relative;
 	display: block;
 	width: 100%;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	padding: 10px 20px;
 	height: 52px;
@@ -5016,7 +5023,7 @@ img {
 
 .register-form button {
 	cursor: pointer;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	padding: 10px 30px;
 }
@@ -5081,7 +5088,7 @@ img {
 	position: relative;
 	display: block;
 	width: 100%;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
 	color: #555555;
 	padding: 15px 30px;
@@ -5120,7 +5127,7 @@ img {
 .contact-form label.error {
 	display: block;
 	font-weight: 500;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	text-transform: capitalize;
 	line-height: 24px;
 	color: #ff0000;
@@ -5146,7 +5153,7 @@ img {
 
 .contact-page-section .contact-info li p {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 	color: #777777;
 	font-weight: 400;
@@ -5155,7 +5162,7 @@ img {
 
 .contact-page-section .contact-info li strong {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	color: #222222;
 	font-weight: 600;
@@ -5168,7 +5175,7 @@ img {
 	height: 40px;
 	width: 40px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 40px;
 	background-color: #1c94d2;
 	color: #ffffff;
@@ -5208,7 +5215,7 @@ img {
 
 .map-data {
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-weight: 400;
 	line-height: 1.8em;
 }
@@ -5218,7 +5225,7 @@ img {
 }
 
 .map-data h6 {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-weight: 700;
 	text-align: center;
 	margin-bottom: 5px;
@@ -5543,7 +5550,7 @@ img {
 
 .main-footer .footer-column .widget-title {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-weight: 500;
 	color: #ffffff;
 	line-height: 30px;
@@ -5586,7 +5593,7 @@ img {
 }
 
 .main-footer .about-widget .text p {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 	color: #aaaaaa;
 	font-weight: 400;
@@ -5631,7 +5638,7 @@ img {
 
 .recent-posts .post h4 {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #ffffff;
 	line-height: 30px;
 	font-weight: 500;
@@ -5654,7 +5661,7 @@ img {
 .recent-posts .post .date {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #bbbbbb;
 }
@@ -5681,7 +5688,7 @@ img {
 .user-links li a {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #ffffff;
 	font-weight: 400;
@@ -5716,14 +5723,14 @@ img {
 	position: absolute;
 	left: 0;
 	top: 0;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 25px;
 	color: #ffffff;
 }
 
 .main-footer .contact-list li .text {
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 	color: #ffffff;
 	font-weight: 400;
@@ -5762,7 +5769,7 @@ img {
 	border-radius: 50%;
 	background-color: #f70068;
 	color: #ffffff;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	text-align: center;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -5840,7 +5847,7 @@ img {
 	margin-top: -10px;
 	text-align: center;
 	line-height: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #f70068;
 	font-weight: 900;
 	content: "\f0c1";
@@ -5890,7 +5897,7 @@ img {
 .main-footer .footer-bottom .copyright-text p {
 	position: relative;
 	line-height: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #ffffff;
 	font-weight: 400;
 	margin-bottom: 0;
@@ -5931,7 +5938,7 @@ img {
 .main-footer .footer-bottom .footer-nav ul li a {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	color: #ffffff;
 	font-weight: 400;
@@ -5979,13 +5986,15 @@ img {
 
 .main-footer.style-two .footer-logo img {
 	display: inline-block;
+	max-width: 100%;
+	heignt: auto;
 }
 
 .main-footer.style-two .text {
 	position: relative;
 	max-width: 700px;
 	margin: 0 auto;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #ffffff;
 	line-height: 28px;
 	margin-bottom: 30px;
@@ -6005,7 +6014,7 @@ img {
 .main-footer .footer-nav li a {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #ffffff;
 	font-weight: 500;
@@ -6072,7 +6081,7 @@ img {
 	position: relative;
 	max-width: 700px;
 	margin: 0 auto;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #101130;
 	line-height: 28px;
 	margin-bottom: 30px;
@@ -6081,7 +6090,7 @@ img {
 .main-footer.style-three .footer-nav li a {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	color: #101130;
 	font-weight: 500;
@@ -6182,7 +6191,7 @@ img {
 
 .error-section .text {
 	color: #888888;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.4em;
 	margin-bottom: 30px;
 }
@@ -6263,7 +6272,7 @@ img {
 .sidebar-title {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #333333;
 	font-weight: 700;
@@ -6290,7 +6299,7 @@ img {
 	border: 2px solid #eeeeee;
 	background: #ffffff;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 18px;
 	width: 100%;
 	height: 60px;
@@ -6314,7 +6323,7 @@ img {
 	height: 60px;
 	width: 60px;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #888888;
 	line-height: 60px;
 	font-weight: normal;
@@ -6359,7 +6368,7 @@ img {
 
 .sidebar .popular-posts .post .text {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 26px;
 	font-weight: 600;
 	color: #888888;
@@ -6381,7 +6390,7 @@ img {
 
 .sidebar .popular-posts .post-info {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1rem);
+	font-size: clamp(12px, 2vw, 1rem);
 	color: #7f8897;
 	font-weight: 400;
 	line-height: 30px;
@@ -6402,7 +6411,7 @@ img {
 	position: relative;
 	display: block;
 	color: #333333;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 30px;
 	font-weight: 400;
 	margin-bottom: 10px;
@@ -6435,7 +6444,7 @@ img {
 	margin: 0 20px 10px 0;
 	color: #333333;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	background: none;
 	font-weight: 400;
@@ -6520,7 +6529,7 @@ img {
 	position: relative;
 	display: block;
 	margin-bottom: 5px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 25px;
 	font-weight: 700;
 	color: #12114a;
@@ -6529,7 +6538,7 @@ img {
 .comments-area .comment-box .name {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 25px;
 	font-weight: 700;
 	color: #12114a;
@@ -6539,7 +6548,7 @@ img {
 .comments-area .comment-box .date {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 	color: #777777;
 	font-weight: 400;
@@ -6547,7 +6556,7 @@ img {
 }
 
 .comments-area .comment-box .text {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 26px;
 	color: #888888;
 	font-weight: 400;
@@ -6556,7 +6565,7 @@ img {
 .comments-area .comment-box .reply-btn {
 	position: relative;
 	margin-top: 20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	padding: 5px 20px;
 }
@@ -6590,7 +6599,7 @@ img {
 	display: block;
 	height: 50px;
 	width: 100%;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #878787;
 	line-height: 28px;
 	font-weight: 400;
@@ -6617,7 +6626,7 @@ img {
 
 .comment-form .form-group input[type="submit"],
 .comment-form .form-group button {
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	padding: 10px 30px;
 	font-weight: 500;
 	cursor: pointer;
@@ -6709,7 +6718,7 @@ img {
 	position: relative;
 	display: block;
 	width: 100%;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 20px;
 	color: #9da6b4;
 	font-weight: 400;
@@ -6747,7 +6756,7 @@ img {
 
 .ticket-form .form-group label {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 24px;
 	color: #888888;
 }
@@ -6781,7 +6790,7 @@ img {
 
 .buy-ticket .support-box .number {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1.2em;
 	color: #1c94d2;
 	font-weight: 500;
@@ -6793,7 +6802,7 @@ img {
 
 .buy-ticket .support-box .number span {
 	color: #3f4161;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	margin-right: 5px;
 }
 
@@ -7632,7 +7641,7 @@ img {
 .header-top .text {
 	position: relative;
 	color: #ffffff;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .header-top .top-right {
@@ -7658,7 +7667,7 @@ img {
 .header-top .social-links li a {
 	position: relative;
 	color: #ffffff;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-ms-transition: all 0.3s ease;
@@ -7674,7 +7683,7 @@ img {
 	position: relative;
 	color: #ffffff;
 	float: left;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	padding: 16.5px 30px;
 	margin-left: 25px;
 	background-color: #1c94d2;
@@ -7787,7 +7796,7 @@ img {
 	position: relative;
 	color: #ffffff;
 	font-weight: 300;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-style: italic;
 }
 
@@ -7795,7 +7804,7 @@ img {
 	position: relative;
 	color: #ffffff;
 	font-weight: 600;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-style: italic;
 	margin-top: 8px;
 }
@@ -7856,7 +7865,7 @@ img {
 	margin: 0 40px;
 	width: 100px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #ffffff;
 	top: 30px;
 	font-weight: 300;
@@ -7924,7 +7933,7 @@ img {
 
 .header-top-two .top-left .links li a {
 	position: relative;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	font-weight: 400;
 	color: #ffffff;
 	padding-left: 24px;
@@ -7956,7 +7965,7 @@ img {
 .header-top-two .top-right .social-icons li a {
 	position: relative;
 	color: #ffffff;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 /***
@@ -8206,7 +8215,7 @@ img {
 	margin-right: 30px;
 	width: 90px;
 	text-align: center;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	color: #ffffff;
 	font-weight: 500;
 }
@@ -8220,7 +8229,7 @@ img {
 	content: ':';
 	top: 10px;
 	right: -20px;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #ffffff;
 }
@@ -8258,7 +8267,7 @@ img {
 .banner-conference-two .time-countdown .counter-column .count {
 	position: relative;
 	display: block;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: 1em;
 	color: #ffffff;
 	font-weight: 700;
@@ -8318,7 +8327,7 @@ img {
 	padding: 15px 30px;
 	line-height: 20px;
 	font-weight: 600;
-	font-size: clamp(0.6rem, 2vw, 1.1rem);
+	font-size: clamp(0.75rem, 3vw, 1.1rem);
 }
 
 .about-section .image-column {
