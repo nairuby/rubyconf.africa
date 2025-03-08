@@ -1,33 +1,25 @@
 (function ($) {
-    "use strict";
+  "use strict";
 
-    $('.color-trigger').on('click', function () {
-        $(this).parent().toggleClass('visible-palate');
-    });
-	
-	var layoutChangerBtn = $(".color-palate .box-version li");
-	var body = $("body");
-	layoutChangerBtn.on("click", function(e) {
-        var $this = $(this);
-        if ( $this.hasClass("box") ) {
-            body.addClass("box-layout");
-        } else {
-        	body.removeClass("box-layout");
-    	};
-	});
+  // Cache frequently used selectors
+  const $body = $("body");
+  const $wrapper = $(".page-wrapper");
+  const $colorPalate = $(".color-palate");
 
+  // Toggle visibility of the color palate
+  $(".color-trigger").on("click", function () {
+    $(this).parent().toggleClass("visible-palate");
+  });
 
-	var directionChanger = $(".color-palate .rtl-version li");
-	var wrapper = $(".page-wrapper");
-	directionChanger.on("click", function(e) {
-        var $this = $(this);
-        if ( $this.hasClass("rtl") ) {
-            wrapper.addClass("rtl");
-        } else {
-        	wrapper.removeClass("rtl");
-    	};
-	});
+  // Handle layout changer (box layout)
+  $colorPalate.on("click", ".box-version li", function () {
+    const isBoxLayout = $(this).hasClass("box");
+    $body.toggleClass("box-layout", isBoxLayout);
+  });
 
-
-
-}(jQuery));
+  // Handle direction changer (RTL)
+  $colorPalate.on("click", ".rtl-version li", function () {
+    const isRTL = $(this).hasClass("rtl");
+    $wrapper.toggleClass("rtl", isRTL);
+  });
+})(jQuery);
