@@ -11,7 +11,7 @@
 - name: Mandrill
   image: ../images/2015/sponsors/mandrill.png
   url: https://www.mandrill.com/
-  categories: [sapphire]
+  categories: [sapphire, emerald]
 
 - name: Buildkite
   image: ../images/2015/sponsors/buildkite.png
@@ -31,19 +31,19 @@
 - name: Moringa
   image: ../images/2015/sponsors/moringa.png
   url: https://www.moringaschool.com/
-  categories: [Supporters]
+  categories: [supporters]
 
 - name: Code School
   image: ../images/2015/sponsors/code_school.png
   url: https://www.codeschool.com/
-  categories: [Supporters]
+  categories: [supporters]
 
 - name: pluralsight
   image: ../images/2015/sponsors/pluralsight.jpg
   url: https://www.pluralsight.com/
-  categories: [Supporters]
+  categories: [supporters]
 
 - name: Uber
   image: ../images/2015/sponsors/uber.png
   url: https://www.uber.com/cities/nairobi
-  categories: [Supporters]
+  categories: [supporters]

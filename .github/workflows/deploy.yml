@@ -6,7 +6,6 @@ on:
       - Ft/Conf-details
     paths:
       - "assets/**"
-      - "css/**"
       - "documents/**"
       - "fonts/**"
       - "images/**"
@@ -23,7 +22,6 @@ on:
       - Ft/Conf-details
     paths:
       - "assets/**"
-      - "css/**"
       - "documents/**"
       - "fonts/**"
       - "images/**"
@@ -50,7 +48,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"
+          ruby-version: "3.3.5"
           bundler-cache: true
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
@@ -62,6 +60,10 @@ jobs:
       - name: Install and Build 🔧
         run: |
           bundle exec jekyll build
+      - name: Purge unused CSS 🧹
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
