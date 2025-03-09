@@ -825,7 +825,7 @@ img {
 	background-color: #F2F2F2;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-image: url(../images/logo/ruby_conf_logo.png);
+	background-image: url(../../images/logo/ruby_conf_logo.png);
 	background-size: 200px;
 	margin-bottom: 5px;
 }
@@ -866,7 +866,7 @@ img {
 .preloader-logo-new {
     width: clamp(100px, 25vw, 200px);
     height: clamp(100px, 25vw, 200px);
-    background-image: url(../images/logo/ruby_conf_new_logo.png);
+    background-image: url(../../images/logo/ruby_conf_new_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -2678,7 +2678,7 @@ img {
 	top: -10%;
 	height: 120%;
 	width: 120%;
-	background-image: url(../images/icons/shape-2.png);
+	background-image: url(../../images/icons/shape-2.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -2724,44 +2724,44 @@ img {
 .icon-shape-1 {
 	width: 484px;
 	height: 225px;
-	background-image: url(../images/icons/shape-1.png);
+	background-image: url(../../images/icons/shape-1.png);
 }
 
 .icon-shape-2 {
 	width: 325px;
 	height: 280px;
-	background-image: url(../images/icons/shape-2.png);
+	background-image: url(../../images/icons/shape-2.png);
 }
 
 .icon-line-1 {
 	width: 128px;
 	height: 128px;
-	background-image: url(../images/icons/icon-line-1.png);
+	background-image: url(../../images/icons/icon-line-1.png);
 }
 
 .icon-dots {
 	width: 72px;
 	height: 60px;
-	background-image: url(../images/icons/icon-dots.png);
+	background-image: url(../../images/icons/icon-dots.png);
 }
 
 .icon-dots-3 {
 	width: 204px;
 	height: 114px;
-	background-image: url(../images/icons/icon-dots-3.png);
+	background-image: url(../../images/icons/icon-dots-3.png);
 }
 
 .icon-circle-1 {
 	width: 500px;
 	height: 500px;
-	background-image: url(../images/icons/icon-circle-1.png);
+	background-image: url(../../images/icons/icon-circle-1.png);
 	background-size: 100%;
 }
 
 .icon-circle-blue {
 	width: 300px;
 	height: 300px;
-	background-image: url(../images/icons/circle-blue.png);
+	background-image: url(../../images/icons/circle-blue.png);
 }
 
 .about-section .icon-circle-blue {
@@ -3103,7 +3103,7 @@ img {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/speaker-bg.png);
+	background-image: url(../../images/icons/speaker-bg.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -3250,13 +3250,13 @@ img {
 .icon-circle-4 {
 	height: 156px;
 	width: 156px;
-	background-image: url(../images/icons/icon-circle-4.png);
+	background-image: url(../../images/icons/icon-circle-4.png);
 }
 
 .icon-circle-3 {
 	height: 360px;
 	width: 360px;
-	background-image: url(../images/icons/icon-circle-3.png);
+	background-image: url(../../images/icons/icon-circle-3.png);
 	background-size: 100%;
 }
 
@@ -3315,7 +3315,7 @@ img {
 	right: -10px;
 	top: -4px;
 	height: 100%;
-	background-image: url(../images/icons/shape-5.png);
+	background-image: url(../../images/icons/shape-5.png);
 	-webkit-transform: scale(-1);
 	-moz-transform: scale(-1);
 	-ms-transform: scale(-1);
@@ -4385,7 +4385,7 @@ img {
 .icon-shape-5 {
 	width: 540px;
 	height: 330px;
-	background-image: url(../images/icons/shape-5.png);
+	background-image: url(../../images/icons/shape-5.png);
 	background-size: 100%;
 }
 
@@ -4898,7 +4898,7 @@ img {
 	position: relative;
 	float: left;
 	width: 20%;
-	background-image: url(../images/icons/form-bg.png);
+	background-image: url(../../images/icons/form-bg.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -5257,7 +5257,7 @@ img {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/icon-dots-2.png);
+	background-image: url(../../images/icons/icon-dots-2.png);
 	content: "";
 	opacity: .02;
 	background-repeat: no-repeat;
@@ -5377,7 +5377,7 @@ img {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/icon-dots-2.png);
+	background-image: url(../../images/icons/icon-dots-2.png);
 	content: "";
 	opacity: .02;
 	background-repeat: no-repeat;
@@ -5451,7 +5451,7 @@ img {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/icon-dots-2.png);
+	background-image: url(../../images/icons/icon-dots-2.png);
 	content: "";
 	opacity: .02;
 	background-repeat: no-repeat;
@@ -6165,7 +6165,7 @@ img {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/pattern-1.jpg);
+	background-image: url(../../images/icons/pattern-1.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -7614,7 +7614,7 @@ img {
 	background-repeat: repeat;
 	background-position: center;
 	background-attachment: fixed;
-	background-image: url(../images/icons/form-bg.png);
+	background-image: url(../../images/icons/form-bg.png);
 }
 
 .box-layout .coming-soon {
@@ -8359,7 +8359,7 @@ img {
 	top: -10%;
 	height: 120%;
 	width: 120%;
-	background-image: url(../images/icons/shape-2.png);
+	background-image: url(../../images/icons/shape-2.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
