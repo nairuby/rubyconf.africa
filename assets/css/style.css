@@ -4417,9 +4417,9 @@ img {
 	margin-bottom: 50px;
 }
 
-.event-info-section .info-column .sec-title h2 {
-	font-size: clamp(12px, 2vw, 1.5rem);
-}
+/*.event-info-section .info-column .sec-title h2 {*/
+/*	font-size: clamp(12px, 2vw, 1.5rem);*/
+/*}*/
 
 .event-info-tabs {
 	position: relative;
@@ -4469,6 +4469,16 @@ img {
 	min-height: 155px;
 }
 
+.event-info-tabs .tabs-content h2 {
+	position: relative;
+	display: block;
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	line-height: 1.2em;
+	color: #3f4161;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
 .event-info-tabs .tabs-content h4 {
 	position: relative;
 	display: block;
@@ -4499,7 +4509,7 @@ img {
 .event-info-tabs .tabs-content .text {
 	font-size: clamp(0.75rem, 3vw, 1.1rem);
 	line-height: clamp(1.5rem, 3vw, 1.8rem);
-	color: #888888;
+	color: #1d1d1d;
 	max-width: 470px;
 }
 
@@ -5182,7 +5192,7 @@ img {
 }
 
 .contact-page-section .contact-info li a {
-	color: #777777;
+	color: #353434;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
