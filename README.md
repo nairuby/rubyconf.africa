@@ -1,4 +1,5 @@
 [![Deploy site](https://github.com/nairuby/rubyconf.africa/actions/workflows/deploy.yml/badge.svg)](https://github.com/nairuby/rubyconf.africa/actions/workflows/deploy.yml)
+[![Prettier code formatter](https://github.com/nairuby/rubyconf.africa/actions/workflows/prettier.yml/badge.svg)](https://github.com/nairuby/rubyconf.africa/actions/workflows/prettier.yml)
 
 # RubyConf Africa
 
