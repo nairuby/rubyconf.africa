@@ -134,6 +134,13 @@
 		text-align: center;
 	}
 
+	.clients-section img {
+		width: clamp(30%, 40%, 60%);
+		height: auto;
+		padding: 5px;
+		max-width: 60%;
+	}
+
 	.about-section .image-column .image{
 		max-width: 500px;
 		display: inline-block;
