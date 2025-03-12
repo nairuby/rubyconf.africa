@@ -12,54 +12,6 @@
       }
     });
   });
-  // console.log("Redirecting to:", `/${year}`);
-
-  // Hide Loading Box (Preloader)
-  // function handlePreloader() {
-  // 	if($('.preloader').length){
-  // 		$('.preloader').delay(200).fadeOut(500);
-  // 	}
-  // }
-  //
-
-  //Hide Loading Box (Preloader)
-  // function handlePreloader() {
-  // 	if($('.preloader').length){
-  // 		$('.preloader').delay(200).fadeOut(500);
-  // 	}
-  // }
-
-  // function handlePreloader() {
-  //   // Check if the page is fully loaded
-  //   var isPageLoaded = document.readyState === 'complete';
-  //
-  //   // Check for the old preloader (preloader)
-  //   if ($(".preloader").length) {
-  //     if (isPageLoaded) {
-  //       // Hide preloader is page is loaded
-  //       if (isPageLoaded) {
-  //         $('.preloader').fadeOut(0);
-  //       } else {
-  //         // Show preloader is page is still loading
-  //         $('.preloader').delay(300).fadeOut(100);
-  //       }
-  //     }
-  //   }
-  //
-  //   // New preloader
-  //   if ($('.preloader-new').length) {
-  //     if (isPageLoaded) {
-  //       $('.preloader-new').fadeOut(0);
-  //     } else {
-  //       $('.preloader-new').delay(1000).fadeOut(100);
-  //     }
-  //   }
-  // }
-  //
-  // // Run the handlePreloader function when the page is ready
-  // $(document).ready(function () {
-  //   handlePreloader();
-  // });
 
   function handlePreloader() {
     // Check for the old preloader (preloader)
@@ -110,17 +62,17 @@
   //Submenu Dropdown Toggle
   if ($(".main-header li.dropdown ul").length) {
     $(".main-header .navigation li.dropdown").append(
-      '<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>'
+      '<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>',
     );
   }
 
   //Mobile Nav Hide Show
   if ($(".mobile-menu").length) {
     var mobileMenuContent = $(
-      ".main-header .nav-outer .main-menu .navigation"
+      ".main-header .nav-outer .main-menu .navigation",
     ).html();
     $(".mobile-menu").append(
-      '<div class="close-btn"><span class="icon flaticon-cancel-music"></span></div>'
+      '<div class="close-btn"><span class="icon flaticon-cancel-music"></span></div>',
     );
     $(".mobile-menu .navigation").append(mobileMenuContent);
     $(".sticky-header .navigation").append(mobileMenuContent);
@@ -141,7 +93,7 @@
       "click",
       function () {
         $("body").removeClass("mobile-menu-visible");
-      }
+      },
     );
   }
 
@@ -169,23 +121,6 @@
     var last_date = $(".date-btn").attr("data-last-date");
     $(".date-btn").on("click", function () {
       $(this).html(last_date);
-    });
-  }
-
-  //Search Popup
-  if ($("#search-popup").length) {
-    //Show Popup
-    $(".search-box-btn").on("click", function () {
-      $("#search-popup").addClass("popup-visible");
-    });
-    $(document).keydown(function (e) {
-      if (e.keyCode == 27) {
-        $("#search-popup").removeClass("popup-visible");
-      }
-    });
-    //Hide Popup
-    $(".close-search,.search-popup .overlay-layer").on("click", function () {
-      $("#search-popup").removeClass("popup-visible");
     });
   }
 
@@ -240,71 +175,6 @@
         },
         1024: {
           items: 1,
-        },
-      },
-    });
-  }
-
-  // Gallery  Carousel
-  if ($(".gallery-carousel").length) {
-    $(".gallery-carousel").owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: true,
-      smartSpeed: 500,
-      autoplay: true,
-      navText: [
-        '<span class="arrow_carrot-left"></span>',
-        '<span class="arrow_carrot-right"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        480: {
-          items: 2,
-        },
-        767: {
-          items: 3,
-        },
-        800: {
-          items: 4,
-        },
-        1200: {
-          items: 5,
-        },
-      },
-    });
-  }
-
-  //Clients Carousel
-  if ($(".sponsors-carousel").length) {
-    $(".sponsors-carousel").owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: true,
-      lazyLoad: true,
-      smartSpeed: 700,
-      autoplay: true,
-      navText: [
-        '<span class="la la-angle-left"></span>',
-        '<span class="la la-angle-right"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 2,
-        },
-        768: {
-          items: 3,
-        },
-        1024: {
-          items: 4,
-        },
-        1200: {
-          items: 5,
         },
       },
     });
@@ -365,188 +235,61 @@
 
   enableMasonry();
 
-  //Fact Counter + Text Count
-  if ($(".count-box").length) {
-    $(".count-box").appear(
-      function () {
-        var $t = $(this),
-          n = $t.find(".count-text").attr("data-stop"),
-          r = parseInt($t.find(".count-text").attr("data-speed"), 10);
-
-        if (!$t.hasClass("counted")) {
-          $t.addClass("counted");
-          $({
-            countNum: $t.find(".count-text").text(),
-          }).animate(
-            {
-              countNum: n,
-            },
-            {
-              duration: r,
-              easing: "linear",
-              step: function () {
-                $t.find(".count-text").text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $t.find(".count-text").text(this.countNum);
-              },
-            }
-          );
-        }
-      },
-      { accY: 0 }
-    );
-  }
-
-  //Tabs Box
-  // if ($(".tabs-box").length) {
-  //   $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
-  //     e.preventDefault();
-  //     var target = $($(this).attr("data-tab"));
-  //
-  //     if ($(target).is(":visible")) {
-  //       return false;
-  //     } else {
-  //       target
-  //         .parents(".tabs-box")
-  //         .find(".tab-buttons")
-  //         .find(".tab-btn")
-  //         .removeClass("active-btn");
-  //       $(this).addClass("active-btn");
-  //       target
-  //         .parents(".tabs-box")
-  //         .find(".tabs-content")
-  //         .find(".tab")
-  //         .fadeOut(0);
-  //       target
-  //         .parents(".tabs-box")
-  //         .find(".tabs-content")
-  //         .find(".tab")
-  //         .removeClass("active-tab animated fadeIn");
-  //       $(target).fadeIn(300);
-  //       $(target).addClass("active-tab animated fadeIn");
-  //     }
-  //   });
-  // }
-
   // Tabs Box with Persistence
-if ($(".tabs-box").length) {
-  // On page load, set the active tab from localStorage
-  const savedTab = localStorage.getItem("activeTab");
+  if ($(".tabs-box").length) {
+    // On page load, set the active tab from localStorage
+    const savedTab = localStorage.getItem("activeTab");
 
-  if (savedTab && $(savedTab).length) {
-    const target = $(savedTab);
+    if (savedTab && $(savedTab).length) {
+      const target = $(savedTab);
 
-    // Reset all tab buttons and content
-    $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
-    $(".tabs-box .tabs-content .tab")
-      .hide()
-      .removeClass("active-tab animated fadeIn");
-
-    // Activate the saved tab and corresponding button
-    target
-      .parents(".tabs-box")
-      .find(`.tab-buttons [data-tab="${savedTab}"]`)
-      .addClass("active-btn");
-    target.show().addClass("active-tab animated fadeIn");
-  } else {
-    // Default to the first tab if no saved tab exists
-    $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
-    $(".tabs-box .tabs-content .tab")
-      .hide()
-      .removeClass("active-tab animated fadeIn");
-
-    $(".tabs-box .tab-buttons .tab-btn:first").addClass("active-btn");
-    $(".tabs-box .tabs-content .tab:first")
-      .show()
-      .addClass("active-tab animated fadeIn");
-  }
-
-  // Handle tab button clicks
-  $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
-    e.preventDefault();
-    const target = $($(this).attr("data-tab"));
-
-    if ($(target).is(":visible")) {
-      return false;
-    } else {
-      // Remove active classes from all buttons and tabs
+      // Reset all tab buttons and content
       $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
       $(".tabs-box .tabs-content .tab")
-        .fadeOut(0)
+        .hide()
         .removeClass("active-tab animated fadeIn");
 
-      // Show the clicked tab and add active class
-      $(this).addClass("active-btn");
-      $(target).fadeIn(300).addClass("active-tab animated fadeIn");
+      // Activate the saved tab and corresponding button
+      target
+        .parents(".tabs-box")
+        .find(`.tab-buttons [data-tab="${savedTab}"]`)
+        .addClass("active-btn");
+      target.show().addClass("active-tab animated fadeIn");
+    } else {
+      // Default to the first tab if no saved tab exists
+      $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
+      $(".tabs-box .tabs-content .tab")
+        .hide()
+        .removeClass("active-tab animated fadeIn");
 
-      // Save the active tab to localStorage
-      localStorage.setItem("activeTab", `#${target.attr("id")}`);
+      $(".tabs-box .tab-buttons .tab-btn:first").addClass("active-btn");
+      $(".tabs-box .tabs-content .tab:first")
+        .show()
+        .addClass("active-tab animated fadeIn");
     }
-  });
-}
 
-  //Accordion Box
-  if ($(".accordion-box").length) {
-    $(".accordion-box").on("click", ".acc-btn", function () {
-      var outerBox = $(this).parents(".accordion-box");
-      var target = $(this).parents(".accordion");
+    // Handle tab button clicks
+    $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
+      e.preventDefault();
+      const target = $($(this).attr("data-tab"));
 
-      if ($(this).hasClass("active") !== true) {
-        $(outerBox).find(".accordion .acc-btn").removeClass("active ");
-      }
-
-      if ($(this).next(".acc-content").is(":visible")) {
+      if ($(target).is(":visible")) {
         return false;
       } else {
-        $(this).addClass("active");
-        $(outerBox).children(".accordion").removeClass("active-block");
-        $(outerBox).find(".accordion").children(".acc-content").slideUp(300);
-        target.addClass("active-block");
-        $(this).next(".acc-content").slideDown(300);
+        // Remove active classes from all buttons and tabs
+        $(".tabs-box .tab-buttons .tab-btn").removeClass("active-btn");
+        $(".tabs-box .tabs-content .tab")
+          .fadeOut(0)
+          .removeClass("active-tab animated fadeIn");
+
+        // Show the clicked tab and add active class
+        $(this).addClass("active-btn");
+        $(target).fadeIn(300).addClass("active-tab animated fadeIn");
+
+        // Save the active tab to localStorage
+        localStorage.setItem("activeTab", `#${target.attr("id")}`);
       }
     });
-  }
-
-  //Event Countdown Timer
-  if ($(".time-countdown").length) {
-    $(".time-countdown").each(function () {
-      var $this = $(this),
-        finalDate = $(this).data("countdown");
-      $this.countdown(finalDate, function (event) {
-        var $this = $(this).html(
-          event.strftime(
-            "" +
-              '<div class="counter-column"><span class="count">%D</span>Days</div> ' +
-              '<div class="counter-column"><span class="count">%H</span>Hours</div>  ' +
-              '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' +
-              '<div class="counter-column"><span class="count">%S</span>Second</div>'
-          )
-        );
-      });
-    });
-  }
-
-  if ($(".cs-countdown").length) {
-    $(function () {
-      $("[data-countdown]").each(function () {
-        var $this = $(this),
-          finalDate = $(this).data("countdown");
-        $this.countdown(finalDate, function (event) {
-          $this.html(event.strftime("%D days %H:%M:%S"));
-        });
-      });
-    });
-
-    $(".cs-countdown")
-      .countdown("")
-      .on("update.countdown", function (event) {
-        var $this = $(this).html(
-          event.strftime(
-            "<div><span>%m</span><h6>Months</h6></div> <div><span>%D</span><h6>days</h6></div> <div><span>%H</span><h6>Hours</h6></div> <div><span>%M</span><h6>Minutes</h6></div> <div><span>%S</span><h6>Seconds</h6></div>"
-          )
-        );
-      });
   }
 
   //LightBox / Fancybox
@@ -560,24 +303,6 @@ if ($(".tabs-box").length) {
     });
   }
 
-  //Contact Form Validation
-  if ($("#contact-form").length) {
-    $("#contact-form").validate({
-      rules: {
-        name: {
-          required: true,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        message: {
-          required: true,
-        },
-      },
-    });
-  }
-
   // Scroll to a Specific Div
   if ($(".scroll-to-target").length) {
     $(".scroll-to-target").on("click", function () {
@@ -587,7 +312,7 @@ if ($(".tabs-box").length) {
         {
           scrollTop: $(target).offset().top,
         },
-        1500
+        1500,
       );
     });
   }

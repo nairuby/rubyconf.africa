@@ -16,10 +16,33 @@
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+# The title of your site
 title: Rubyconf Africa 2024
+
+# The email address for site-related communication
 email: organisers@rubyconf.africa
+
+# A brief description of your site
 description: >- # this means to ignore newlines until "baseurl:"
   <b>RubyConf Africa 2024</b> is the first conference of its
                       kind organized by ARC that aims to connect together
@@ -29,25 +52,32 @@ description: >- # this means to ignore newlines until "baseurl:"
                       conversations around the theme
                       <b>“Agile, Open Source & Entrepreneurship”</b>. The
                       objective of the conference is to:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rubyconf.africa" # the base hostname & protocol for your site, e.g. http://example.com
 
+# The subpath of your site, e.g. /blog
+baseurl: ""
+
+# The base hostname & protocol for your site, e.g. http://example.com
+url: "https://rubyconf.africa"
+
+# Your GitLab username
 gitlab_username: nairuby
+
+# Your GitHub username
 github_username: nairuby
 
+# The current year
 current_year: 2025
-
-#exclude:
-#  - vendor
 
 # Build settings
 markdown: kramdown
 
+# Plugins to use with Jekyll
 plugins:
   - jekyll-sitemap
   - jekyll-minifier
   - jekyll-assets
 
+# Asset settings
 assets:
   debug: false
   compress:
@@ -63,6 +93,7 @@ assets:
     - _assets/javascrips
     - _assets/stylesheets
 
+# Collections of content
 collections:
   speakers:
     output: true
@@ -122,6 +153,21 @@ collections:
     output: true
     permalink: /2024-mini/speaker/:name/
 
+# Minifier settings
+minifier:
+  css:
+    compress: true
+    preserve_comments: false
+  js:
+    compress: true
+    mangle: true
+  html:
+    remove_comments: true
+    remove_empty_lines: true
+    remove_blank_attributes: true
+    remove_optional_tags: true
+    collapse_whitespace: true
+    conservative_collapse: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -132,18 +178,16 @@ collections:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - vendor
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
+  - 2017speakers/
+  - Makefile
   - Gemfile
   - Gemfile.lock
+  - docker-compose.yml
+  - .sass-cache/
+  - .jekyll-cache/
   - node_modules/
+  - vendor/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - 2017speakers/
-  - Makefile
-  - docker-compose.yml
-

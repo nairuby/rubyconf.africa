@@ -14,7 +14,6 @@
   url: https://rubycommunity.africa/
   categories: [platinum]
 
-
 - name: Nairobits
   image: ./images/logo/nairobits_logo.png
   url: https://www.nairobits.com/
@@ -39,7 +38,6 @@
   image: ./images/logo/planet_argon_logo.png
   url: https://www.planetargon.com/
   categories: [partner]
-
 
 - name: Solutech
   image: ./images/logo/solutech_flat_logo.png
@@ -105,4 +103,3 @@
   image: ./images/logo/turing_logo.jpg
   url: https://www.turing.com/
   categories: [previous]
-

@@ -1,0 +1,97 @@
+name: 🐛 Report a Bug
+description: Report any errors or unexpected behavior.
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before reporting a bug, please ensure:
+        - You've searched for [existing issues](https://github.com/nairuby/rubyconf.africa/issues) to avoid duplicates.
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Have you checked for existing issues?
+      description: Please confirm you've checked for similar issues.
+      options:
+        - label: I've searched existing issues.
+          required: true
+
+  - type: input
+    attributes:
+      label: Bug Description
+      description: Briefly describe the bug.
+      placeholder: A clear and concise description of the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce the bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll to '....'
+        4. See the error
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected vs Actual Behavior
+      description: What did you expect to happen, and what actually happened?
+      placeholder: |
+        **Expected:** Describe what you expected to happen.
+        **Actual:** Describe what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Error Messages or Logs
+      description: Paste any error messages or logs here.
+      placeholder: |
+        ```
+        Paste error messages or logs here.
+        ```
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: Select the OS where the issue occurred.
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Where did you encounter the issue?
+      options:
+        - Local Development
+        - Deployed Site
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional Information
+      description: Add any other relevant details (e.g., screenshots, links, versions).
+      placeholder: |
+        Add any additional context or information here.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "**Thank you for helping us improve RubyConf Africa!**"

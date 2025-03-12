@@ -132,7 +132,7 @@ year: 2015
       <div
         class="image-column col-lg-6 col-md-12 col-sm-12"
         style="
-          background-image: url('../images/conference.jpg');
+          background-image: url(&quot;../images/conference.jpg&quot;);
           background-size: cover;
           background-position: center;
           height: auto;
@@ -267,7 +267,7 @@ year: 2015
     <div class="sponsors-outer">
       <div class="row justify-content-center">
         <!-- Sponsor Block -->
-        {% for sponsor in site.data.archive_sponsors.2015 %} {% if
+        {% for sponsor in site.data.archive_sponsors["2015"] %} {% if
         sponsor.categories contains 'ruby' %}
         <div
           class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
@@ -306,7 +306,7 @@ year: 2015
     <div class="sponsors-outer">
       <div class="row justify-content-center">
         <!-- Sponsor Block -->
-        {% for sponsor in site.data.archive_sponsors.2015 %} {% if
+        {% for sponsor in site.data.archive_sponsors["2015"] %} {% if
         sponsor.categories contains 'emerald' %}
         <div
           class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
@@ -343,7 +343,7 @@ year: 2015
     <div class="sponsors-outer">
       <div class="row justify-content-center">
         <!-- Sponsor Block -->
-        {% for sponsor in site.data.archive_sponsors.2015 %} {% if
+        {% for sponsor in site.data.archive_sponsors["2015"] %} {% if
         sponsor.categories contains 'supporters' %}
         <div
           class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"

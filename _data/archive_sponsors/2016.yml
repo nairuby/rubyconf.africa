@@ -16,7 +16,7 @@
 - name: Mandrill
   image: ../images/2016/sponsors/mandrill.png
   url: https://www.mandrill.com/
-  categories: [sapphire]
+  categories: [sapphire, emerald]
 
 - name: Gitlab
   image: ../images/2016/sponsors/gitlab.png
@@ -36,9 +36,9 @@
 - name: Moringa
   image: ../images/2016/sponsors/moringa.png
   url: https://www.moringaschool.com/
-  categories: [Supporters]
+  categories: [supporters]
 
 - name: pluralsight
   image: ../images/2016/sponsors/pluralsight.jpg
   url: https://www.pluralsight.com/
-  categories: [Supporters]
+  categories: [supporters]

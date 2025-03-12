@@ -1,124 +1,88 @@
-
 /* --------------------------------------------
 Google Map
--------------------------------------------- */ 
-window.onload = MapLoadScript;
-function GmapInit() {
-      Gmap = $('.map-canvas');
-      Gmap.each(function() {
-        var $this           = $(this),
-            lat             = '',
-            lng             = '',
-            zoom            = 12,
-            scrollwheel     = false,
-            zoomcontrol     = true,
-            draggable       = true,
-            mapType         = google.maps.MapTypeId.ROADMAP,
-            title           = '',
-            contentString   = '',
-            theme_icon_path         = $this.data('icon-path'),
-            dataLat         = $this.data('lat'),
-            dataLng         = $this.data('lng'),
-            dataZoom        = $this.data('zoom'),
-            dataType        = $this.data('type'),
-            dataScrollwheel = $this.data('scrollwheel'),
-            dataZoomcontrol = $this.data('zoomcontrol'),
-            dataHue         = $this.data('hue'),
-            dataTitle       = $this.data('title'),
-            dataContent     = $this.data('content');
-            
-        if( dataZoom !== undefined && dataZoom !== false ) {
-            zoom = parseFloat(dataZoom);
-        }
-        if( dataLat !== undefined && dataLat !== false ) {
-            lat = parseFloat(dataLat);
-        }
-        if( dataLng !== undefined && dataLng !== false ) {
-            lng = parseFloat(dataLng);
-        }
-        if( dataScrollwheel !== undefined && dataScrollwheel !== null ) {
-            scrollwheel = dataScrollwheel;
-        }
-        if( dataZoomcontrol !== undefined && dataZoomcontrol !== null ) {
-            zoomcontrol = dataZoomcontrol;
-        }
-        if( dataType !== undefined && dataType !== false ) {
-            if( dataType == 'satellite' ) {
-                mapType = google.maps.MapTypeId.SATELLITE;
-            } else if( dataType == 'hybrid' ) {
-                mapType = google.maps.MapTypeId.HYBRID;
-            } else if( dataType == 'terrain' ) {
-                mapType = google.maps.MapTypeId.TERRAIN;
-            }           
-        }
-        if( dataTitle !== undefined && dataTitle !== false ) {
-            title = dataTitle;
-        }
-        if( navigator.userAgent.match(/iPad|iPhone|Android/i) ) {
-            draggable = false;
-        }
-        
-        var mapOptions = {
-          zoom        : zoom,
-          scrollwheel : scrollwheel,
-          zoomControl : zoomcontrol,
-          draggable   : draggable,
-          center      : new google.maps.LatLng(lat, lng),
-          mapTypeId   : mapType
-        };      
-        var map = new google.maps.Map($this[0], mapOptions);
-        
-        //var image = 'images/icons/map-marker.png';
-        var image = theme_icon_path;
-        
-        if( dataContent !== undefined && dataContent !== false ) {
-            contentString = '<div class="map-data">' + '<h6>' + title + '</h6>' + '<div class="map-content">' + dataContent + '</div>' + '</div>';
-        }
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-        
-        var marker = new google.maps.Marker({
-          position : new google.maps.LatLng(lat, lng),
-          map      : map,
-          icon     : image,
-          title    : title
-        });
-        if( dataContent !== undefined && dataContent !== false ) {
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
-            });
-        }
-        
-        if( dataHue !== undefined && dataHue !== false ) {
-          var styles = [
-            {
-                "featureType": "poi.business",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.station.bus",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            }
-        ];
-          map.setOptions({styles: styles});
-        }
-     });
+-------------------------------------------- */
+window.addEventListener("load", initGoogleMaps);
+
+function initGoogleMaps() {
+  const mapCanvases = document.querySelectorAll(".map-canvas");
+  if (!mapCanvases.length || typeof google === "undefined") return;
+
+  mapCanvases.forEach((mapCanvas) => {
+    const {
+      lat: dataLat,
+      lng: dataLng,
+      zoom: dataZoom,
+      type: dataType,
+      scrollwheel: dataScrollwheel,
+      zoomcontrol: dataZoomcontrol,
+      hue: dataHue,
+      title: dataTitle,
+      content: dataContent,
+      iconPath: themeIconPath,
+    } = mapCanvas.dataset;
+
+    const lat = parseFloat(dataLat) || 0;
+    const lng = parseFloat(dataLng) || 0;
+    const zoom = parseFloat(dataZoom) || 12;
+    const scrollwheel = dataScrollwheel === "true";
+    const zoomcontrol = dataZoomcontrol !== "false";
+    const draggable = !navigator.userAgent.match(/iPad|iPhone|Android/i);
+    const mapType = getMapType(dataType);
+    const title = dataTitle || "";
+    const contentString = dataContent
+      ? `<div class="map-data"><h6>${title}</h6><div class="map-content">${dataContent}</div></div>`
+      : "";
+
+    const mapOptions = {
+      zoom,
+      scrollwheel,
+      zoomControl: zoomcontrol,
+      draggable,
+      center: new google.maps.LatLng(lat, lng),
+      mapTypeId: mapType,
+    };
+
+    const map = new google.maps.Map(mapCanvas, mapOptions);
+
+    const marker = new google.maps.Marker({
+      position: new google.maps.LatLng(lat, lng),
+      map,
+      icon: themeIconPath,
+      title,
+    });
+
+    if (contentString) {
+      const infowindow = new google.maps.InfoWindow({ content: contentString });
+      marker.addListener("click", () => infowindow.open(map, marker));
+    }
+
+    if (dataHue) {
+      const styles = [
+        {
+          featureType: "poi.business",
+          elementType: "labels.icon",
+          stylers: [{ visibility: "off" }],
+        },
+        {
+          featureType: "transit.station.bus",
+          elementType: "labels.icon",
+          stylers: [{ visibility: "off" }],
+        },
+      ];
+      map.setOptions({ styles });
+    }
+  });
 }
-    
-function MapLoadScript() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    GmapInit();
-    document.body.appendChild(script);
+
+function getMapType(type) {
+  switch (type) {
+    case "satellite":
+      return google.maps.MapTypeId.SATELLITE;
+    case "hybrid":
+      return google.maps.MapTypeId.HYBRID;
+    case "terrain":
+      return google.maps.MapTypeId.TERRAIN;
+    default:
+      return google.maps.MapTypeId.ROADMAP;
+  }
 }
