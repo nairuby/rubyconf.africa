@@ -7,7 +7,7 @@
         accX: 0, // X-axis accuracy offset
         accY: 0, // Y-axis accuracy offset
       },
-      options
+      options,
     );
 
     const $window = $(window);

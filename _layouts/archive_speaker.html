@@ -4,80 +4,89 @@ layout: archive_application_speaker
 
 <!-- Speaker Detail -->
 <section class="speaker-detail">
-    <div class="auto-container">
-        <div class="row">
-            <div class="image-column col-lg-4 col-md-12 col-sm-12">
-                <div class="image-box">
-                    <figure class="image">
-                        <img src="{{ page.image }}" alt=" page.name "/>
-                    </figure>
-                    <ul class="social-icon-two social-icon-colored text-center">
-                        {% if page.twitter and page.twitter != "" %}
-                        <li>
-                            <a href="{{ page.twitter }}" target="_blank"
-                            ><i class="fa-brands fa-x-twitter"></i
-                            ></a>
-                        </li>
-                        {% endif %}
-                        {% if page.linkedin and page.linkedin != "" %}
-                        <li>
-                            <a href="{{page.linkedin}}" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if page.website and page.website != "" %}
-                        <li>
-                            <a href="{{page.website}}" target="_blank"
-                            ><i class="fab fa-sistrix"></i
-                            ></a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-
-            <div class="info-column col-lg-8 col-md-12 col-sm-12">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title text-info-emphasis">{{ page.name }}</h3>
-                        <h5 class="text-secondary font-weight-bold">{{ page.bio }}</h5>
-                        <p class="card-text text-black">
-                            {{ page.details }}
-                        </p>
-                        <h4 class="mt-4 text-info-emphasis">Talks by {{ page.name }}</h4>
-                        <div class="row">
-                            {% for session in page.sessions %}
-                            <div class="col-lg-6 col-md-6 mb-3">
-                                <div class="border p-3 bg-white rounded shadow-sm">
-                                    <h5 class="text-danger-emphasis font-weight-bold">Day {{ session.day }}</h5>
-                                    <span class="text-muted">{{ session.full_day }}</span>
-                                    <span class="d-block">{{ session.time }}</span>
-                                    <p class="mt-2 font-weight-bold text-info-emphasis">{{ session.title }}</p>
-                                    {% if session.talk_description != "TBA" %}
-                                    <div class="text-info-emphasis ">
-                                        {{ session.talk_description }}
-                                    </div>
-                                    {% endif %}
-                                    {% if session.panelists %}
-                                    <h6 class="text-secondary">Panelists:</h6>
-                                    <ul class="list-unstyled">
-                                        {% for panelist in session.panelists %}
-                                        <li class="mb-2">
-                                            <a href="{{ panelist.permalink }}" class="text-dark d-flex align-items-center">
-                                                <img src="{{ panelist.image }}" class="rounded-circle mr-2" alt="{{ panelist.name }}" style="width: 30px; height: 30px;" />
-                                                {{ panelist.name }}
-                                            </a>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="auto-container">
+    <div class="row">
+      <div class="image-column col-lg-4 col-md-12 col-sm-12">
+        <div class="image-box">
+          <figure class="image">
+            <img src="{{ page.image }}" alt=" page.name " />
+          </figure>
+          <ul class="social-icon-two social-icon-colored text-center">
+            {% if page.twitter and page.twitter != "" %}
+            <li>
+              <a href="{{ page.twitter }}" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </li>
+            {% endif %} {% if page.linkedin and page.linkedin != "" %}
+            <li>
+              <a href="{{page.linkedin}}" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            {% endif %} {% if page.website and page.website != "" %}
+            <li>
+              <a href="{{page.website}}" target="_blank"
+                ><i class="fab fa-sistrix"></i
+              ></a>
+            </li>
+            {% endif %}
+          </ul>
         </div>
+      </div>
+
+      <div class="info-column col-lg-8 col-md-12 col-sm-12">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-info-emphasis">{{ page.name }}</h3>
+            <h5 class="text-secondary font-weight-bold">{{ page.bio }}</h5>
+            <p class="card-text text-black">{{ page.details }}</p>
+            <h4 class="mt-4 text-info-emphasis">Talks by {{ page.name }}</h4>
+            <div class="row">
+              {% for session in page.sessions %}
+              <div class="col-lg-6 col-md-6 mb-3">
+                <div class="border p-3 bg-white rounded shadow-sm">
+                  <h5 class="text-danger-emphasis font-weight-bold">
+                    Day {{ session.day }}
+                  </h5>
+                  <span class="text-muted">{{ session.full_day }}</span>
+                  <span class="d-block">{{ session.time }}</span>
+                  <p class="mt-2 font-weight-bold text-info-emphasis">
+                    {{ session.title }}
+                  </p>
+                  {% if session.talk_description != "TBA" %}
+                  <div class="text-info-emphasis">
+                    {{ session.talk_description }}
+                  </div>
+                  {% endif %} {% if session.panelists %}
+                  <h6 class="text-secondary">Panelists:</h6>
+                  <ul class="list-unstyled">
+                    {% for panelist in session.panelists %}
+                    <li class="mb-2">
+                      <a
+                        href="{{ panelist.permalink }}"
+                        class="text-dark d-flex align-items-center"
+                      >
+                        <img
+                          src="{{ panelist.image }}"
+                          class="rounded-circle mr-2"
+                          alt="{{ panelist.name }}"
+                          style="width: 30px; height: 30px"
+                        />
+                        {{ panelist.name }}
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!--End Speaker Detail -->

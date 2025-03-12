@@ -33,25 +33,25 @@ image: "/images/logo/arc_logo_coloured.png"
       <span class="display-4 text-danger font-weight-bold">Speakers</span>
     </div>
     <div class="row top-pd-mobile">
-      {% for speaker in site.speakers_2024_mini %} {% if speaker.is_keynote == true %} {%
-      include archive_speaker_block.liquid speaker=speaker designation="Keynote Speaker
-      " %} {% endif %} {% endfor %}
+      {% for speaker in site.speakers_2024_mini %} {% if speaker.is_keynote ==
+      true %} {% include archive_speaker_block.liquid speaker=speaker
+      designation="Keynote Speaker " %} {% endif %} {% endfor %}
       <!--        </div>-->
 
       <!--        Display Female Speakers-->
       <!--        <div class="row top-pd-mobile">-->
-      {% assign female_speakers = site.speakers_2024_mini | where: "gender", "female" %}
-      {% for speaker in female_speakers %} {% if speaker.is_keynote == false %}
-      {% include archive_speaker_block.liquid speaker=speaker designation="Speaker" %}
-      {% endif %} {% endfor %}
+      {% assign female_speakers = site.speakers_2024_mini | where: "gender",
+      "female" %} {% for speaker in female_speakers %} {% if speaker.is_keynote
+      == false %} {% include archive_speaker_block.liquid speaker=speaker
+      designation="Speaker" %} {% endif %} {% endfor %}
     </div>
 
     <!--        Display Male Speakers-->
     <div class="row top-pd-mobile">
-      {% assign male_speakers = site.speakers_2024_mini | where: "gender", "male" %} {%
-      for speaker in male_speakers %} {% if speaker.is_keynote == false %} {%
-      include archive_speaker_block.liquid speaker=speaker designation="Speaker" %} {%
-      endif %} {% endfor %}
+      {% assign male_speakers = site.speakers_2024_mini | where: "gender",
+      "male" %} {% for speaker in male_speakers %} {% if speaker.is_keynote ==
+      false %} {% include archive_speaker_block.liquid speaker=speaker
+      designation="Speaker" %} {% endif %} {% endfor %}
     </div>
   </div>
 </section>

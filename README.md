@@ -20,11 +20,13 @@ This will install the necessary dependencies and start the Jekyll server for dev
 If you need to update the project, you can follow these instructions:
 
 1. **Pull the latest changes:**
+
    ```bash
    git pull origin Ft/Conf-details
    ```
 
 2. **Update your local dependencies:**
+
    ```bash
    make install
    ```
