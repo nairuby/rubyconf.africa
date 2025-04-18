@@ -61,7 +61,7 @@
                             </ul>
                             </li>
 
-                            <li style="display: none" {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>
+                            <li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>
                             </li>
                             <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Essentials</a>
                             <ul>
@@ -109,7 +109,7 @@
                 <!-- Main Menu End-->
 
                 <!-- Outer box -->
-                <div class="outer-box" style="display: none">
+                <div class="outer-box">
                   <div class="btn-box">
                     <a
                       href="tickets.html"
