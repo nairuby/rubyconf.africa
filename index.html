@@ -502,3 +502,43 @@ year: 2025
   </div>
 </section>
 <!-- End of Why Attend -->
+
+<!--Previous Sponsor Section-->
+<section class="clients-section">
+  <div class="anim-icons">
+    <span class="icon icon-dots-3 wow zoomIn"></span>
+    <!-- <span class="icon icon-circle-blue wow zoomIn"></span> -->
+  </div>
+  <div class="auto-container">
+    <div class="sec-title" style="text-align: center">
+      <h2 style="color: #c11803">Previous Sponsors</h2>
+      <hr />
+      <span class="title">
+        These were our previous sponsors who contributed to the success of past
+        events! 🙌
+      </span>
+    </div>
+
+    <div class="sponsors-outer">
+      <div class="row justify-content-center">
+        <!-- Sponsor Block -->
+        {% for sponsor in site.data.sponsors %} {% if
+        sponsor.categories contains 'previous' %}
+        <div
+                class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
+        >
+          <figure class="">
+            <a href="{{ sponsor.url }}" target="_blank"
+            ><img
+                    src="{{ sponsor.image }}"
+                    class="lazyload"
+                    alt="{{ sponsor.name }}"
+            /></a>
+          </figure>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Previous Sponsor Section-->
