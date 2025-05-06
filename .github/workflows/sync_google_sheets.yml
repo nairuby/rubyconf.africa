@@ -35,4 +35,4 @@ jobs:
           SHEET2_FILENAME: ${{ secrets.SHEET2_FILENAME }}
           SHEET2_NAME: ${{ secrets.SHEET2_NAME }}
           APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
-        run: ruby _build/google_service_account.rb
+        run: ruby _build/sync_google_sheets.rb
