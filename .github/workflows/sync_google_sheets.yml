@@ -1,0 +1,38 @@
+name: Sync Google Sheet to Jekyll Data
+
+on:
+  workflow_dispatch:
+    # schedule:
+    #  - cron: "0 6 * * *" # run daily at 6AM UTC
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install dependecies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Write service account JSON to file
+        run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_acc.json
+
+      - name: Run script to fetch Google Sheet data
+        env:
+          CREDENTIALS_PATH: ./service_acc.json
+          SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+          SHEET1_FILENAME: ${{ secrets.SHEET1_FILENAME }}
+          SHEET1_NAME: ${{ secrets.SHEET1_NAME }}
+          SHEET2_FILENAME: ${{ secrets.SHEET2_FILENAME }}
+          SHEET2_NAME: ${{ secrets.SHEET2_NAME }}
+          APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
+        run: ruby _build/google_service_account.rb
