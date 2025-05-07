@@ -11,8 +11,8 @@ on:
       - ".github/workflows/sync-google-sheets.yml"
       - "Gemfile"
       - "Gemfile.lock"
-    # schedule:
-    #  - cron: "0 6 * * *" # run daily at 6AM UTC
+# schedule:
+#  - cron: "0 6 * * *" # run daily at 6AM UTC
 
 jobs:
   sync:

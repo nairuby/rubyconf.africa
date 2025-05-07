@@ -1,6 +1,10 @@
 name: Deploy site
 
 on:
+  workflow_run:
+    workflows: [ "Sync Google Sheet to Jekyll Data" ]
+    types:
+      - completed
   push:
     branches:
       - Ft/Conf-details
@@ -34,10 +38,7 @@ on:
       - "Gemfile.lock"
       - "!README.md"
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Sync Google Sheet to Jekyll Data"]
-    types:
-      - completed
+
 
 permissions:
   contents: write
@@ -51,6 +52,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch || github.ref }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
