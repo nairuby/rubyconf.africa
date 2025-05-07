@@ -2,10 +2,10 @@ require 'google/apis/sheets_v4'
 require 'googleauth'
 require 'yaml'
 require 'fileutils'
-require 'dotenv'
+require_relative './env_helper'
 
-Dotenv.load if File.exist?('.env') # Load .env variables
-puts "🔍 Loaded env vars:"
+load_env_if_available
+
 puts "SHEET1_FILENAME: #{ENV['SHEET1_FILENAME']}"
 puts "SHEET1_NAME: #{ENV['SHEET1_NAME']}"
 puts "SHEET2_FILENAME: #{ENV['SHEET2_FILENAME']}"
@@ -80,7 +80,7 @@ sheets_config.each do |filename, sheet_name|
   rescue Google::Apis::ClientError => e
     puts "❌ Unexpected error for '#{filename}': #{e.message}"
   rescue StandardError => e
-    puts "❌ Unexpected error for '#{filename}': #[e.class} - #{e.message}"
+    puts "❌ Unexpected error for '#{filename}': #{e.class} - #{e.message}"
   end
 end
 

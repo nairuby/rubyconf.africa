@@ -7,6 +7,7 @@ on:
       - Ft/Conf-details
     paths:
       - "_build/sync_google_sheets.rb"
+      - "_build/env_helper.rb"
       - ".github/workflows/sync-google-sheets.yml"
       - "Gemfile"
       - "Gemfile.lock"
@@ -26,11 +27,11 @@ jobs:
         with:
           ruby-version: "3.2"
 
-      - name: Install Ruby dependecies
+      - name: Install Ruby dependencies
         run: |
           gem install bundler
+          bundle config set path 'vendor/bundle'
           bundle install
-          gem install google-apis-sheets_v4 googleauth
 
       - name: Write service account JSON to file
         run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_acc.json
@@ -45,3 +46,10 @@ jobs:
           SHEET2_NAME: ${{ secrets.SHEET2_NAME }}
           APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
         run: ruby _build/sync_google_sheets.rb
+
+      - name: Verify output files
+        run: |
+          echo "Contents of _data/new_remote:"
+          ls -lah _data/new_remote
+          echo "Preview contents:"
+          head -n 20 _data/new_remote/*.yml
