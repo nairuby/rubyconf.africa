@@ -1,0 +1,111 @@
+name: Sync and Deploy Jekyll Site
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - Ft/Conf-details
+    paths:
+      - "_build/sync_google_sheets.rb"
+      - "_build/env_helper.rb"
+      - ".github/workflows/sync-and-deploy.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "assets/**"
+      - "documents/**"
+      - "fonts/**"
+      - "images/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "!README.md"
+  pull_request:
+    branches:
+      - Ft/Conf-details
+    paths:
+      - "assets/**"
+      - "documents/**"
+      - "fonts/**"
+      - "images/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "!README.md"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install Ruby dependencies
+        run: |
+          gem install bundler
+          bundle config set path 'vendor/bundle'
+          bundle install
+
+      - name: Install google-api-client system-wide
+        run: gem install google-api-client -v 0.53.0
+
+      - name: Run script to fetch Google Sheet data
+        env:
+          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+          SHEET1_FILENAME: ${{ secrets.SHEET1_FILENAME }}
+          SHEET1_NAME: ${{ secrets.SHEET1_NAME }}
+          SHEET2_FILENAME: ${{ secrets.SHEET2_FILENAME }}
+          SHEET2_NAME: ${{ secrets.SHEET2_NAME }}
+          APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
+        run: ruby _build/sync_google_sheets.rb
+
+      - name: Verify data files exist
+        run: ls -R _data || echo "No data files found"
+
+      - name: Setup Node (for PurgeCSS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install PurgeCSS
+        run: npm install -g purgecss
+
+      - name: Setup Ruby for Build
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Update _config.yml (optional)
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "giscus.repo"
+          value: ${{ github.repository }}
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Purge unused CSS
+        run: purgecss -c purgecss.config.js
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
