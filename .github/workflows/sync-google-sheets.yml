@@ -33,6 +33,14 @@ jobs:
           bundle config set path 'vendor/bundle'
           bundle install
 
+      - name: Install google-api-client system-wide
+        run: gem install google-api-client -v 0.53.0
+
+      - name: Verify Gem Installation
+        run: |
+          gem list google-apis-sheets_v4
+          gem list googleauth
+
       - name: Write service account JSON to file
         run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_acc.json
 
