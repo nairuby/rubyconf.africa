@@ -34,6 +34,10 @@ on:
       - "Gemfile.lock"
       - "!README.md"
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Sync Google Sheet to Jekyll Data"]
+    types:
+      - completed
 
 permissions:
   contents: write
@@ -42,6 +46,8 @@ jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
+    # prevent deploying on PR
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
