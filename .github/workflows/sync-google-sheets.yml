@@ -30,7 +30,7 @@ jobs:
         run: |
           gem install bundler
           bundle install
-          gem install google-apis_sheets_v4 googleauth
+          gem install google-apis-sheets_v4 googleauth
 
       - name: Write service account JSON to file
         run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_acc.json
