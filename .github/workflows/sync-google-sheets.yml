@@ -2,6 +2,12 @@ name: Sync Google Sheet to Jekyll Data
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - Ft/Conf-details
+    paths:
+      - "_build/sync_google_sheets.rb"
+      - ".github/workflows/sync-google-sheets.yml"
     # schedule:
     #  - cron: "0 6 * * *" # run daily at 6AM UTC
 
