@@ -42,10 +42,9 @@ permissions:
   contents: write
 
 jobs:
-  sync:
+  sync-and-deploy:
     runs-on: ubuntu-latest
-    outputs:
-      sync-success: ${{ steps.sync-step.outcome }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -64,13 +63,7 @@ jobs:
       - name: Install google-api-client system-wide
         run: gem install google-api-client -v 0.53.0
 
-      - name: Verify Gem Installation
-        run: |
-          gem list google-apis-sheets_v4
-          gem list googleauth
-
       - name: Run script to fetch Google Sheet data
-        id: sync-step
         env:
           SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
@@ -81,26 +74,24 @@ jobs:
           APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
         run: ruby _build/sync_google_sheets.rb
 
-      - name: Verify output files
-        run: |
-          echo "File existence check:"
-          ls _data/new_remote/*.yml 2>/dev/null || echo "No files found"
+      - name: Verify data files exist
+        run: ls -R _data || echo "No data files found"
 
-  deploy:
-    needs: sync
-    runs-on: ubuntu-latest
-    if: ${{ always() && needs.sync.result == 'success' && github.event_name != 'pull_request' }}
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
+      - name: Setup Node (for PurgeCSS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Setup Ruby
+      - name: Install PurgeCSS
+        run: npm install -g purgecss
+
+      - name: Setup Ruby for Build
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
 
-      - name: Update _config.yml ⚙️
+      - name: Update _config.yml (optional)
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
@@ -108,15 +99,13 @@ jobs:
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
 
-      - name: Install and Build 🔧
+      - name: Build site
         run: bundle exec jekyll build
 
-      - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+      - name: Purge unused CSS
+        run: purgecss -c purgecss.config.js
 
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
