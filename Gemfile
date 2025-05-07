@@ -12,5 +12,4 @@ gem 'jekyll-assets'
 gem "dotenv", "~> 3.1"
 
 gem 'google-api-client', '~> 0.17'
-gem 'google-apis-sheets_v4'
-gem 'googleauth'
+

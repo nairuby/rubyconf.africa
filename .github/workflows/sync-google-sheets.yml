@@ -25,7 +25,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-          bundler-cache: true
+
+      - name: Install Ruby dependecies
+        run: |
+          gem install bundler
+          bundle install
+          gem install google-apis_sheets_v4 googleauth
 
       - name: Write service account JSON to file
         run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_acc.json
