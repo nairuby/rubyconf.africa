@@ -8,6 +8,7 @@ on:
     paths:
       - "_build/sync_google_sheets.rb"
       - ".github/workflows/sync-google-sheets.yml"
+      - "Gemfile"
     # schedule:
     #  - cron: "0 6 * * *" # run daily at 6AM UTC
 
