@@ -3,9 +3,6 @@ require 'googleauth'
 require 'yaml'
 require 'fileutils'
 
-puts "Starting Google Sheets sync..."
-load_env_if_available
-
 # Folder to store remote sheet data
 DATA_FOLDER = "_data/new_remote"
 FileUtils.mkdir_p(DATA_FOLDER)
