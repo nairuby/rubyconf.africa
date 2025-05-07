@@ -45,6 +45,9 @@ If you need to update the project, you can follow these instructions:
 - **Install Dependencies:**  
   Run `make install` to install or update the project's dependencies.
 
+- **Sync Google Sheets:**
+  Run `make sync` to run a Google sheets sync script
+
 - **Serve the Site:**  
   Run `make serve` to start the Jekyll server for local development.
 
