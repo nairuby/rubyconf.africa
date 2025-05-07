@@ -2,22 +2,25 @@ require 'google/apis/sheets_v4'
 require 'googleauth'
 require 'yaml'
 require 'fileutils'
+require_relative './env_helper'
 
 puts "Starting Google Sheets sync..."
 load_env_if_available
+
+puts "SHEET1_FILENAME: #{ENV['SHEET1_FILENAME']}"
+puts "SHEET1_NAME: #{ENV['SHEET1_NAME']}"
+puts "SHEET2_FILENAME: #{ENV['SHEET2_FILENAME']}"
+puts "SHEET2_NAME: #{ENV['SHEET2_NAME']}"
+
 
 # Folder to store remote sheet data
 DATA_FOLDER = "_data/new_remote"
 FileUtils.mkdir_p(DATA_FOLDER)
 
 # Path to your service account JSON file
-SERVICE_ACCOUNT_JSON = ENV['SERVICE_ACCOUNT_JSON']
-APPLICATION_NAME = ENV['APPLICATION_NAME']
+CREDENTIALS_PATH = ENV['CREDENTIALS_PATH'] || "../service_acc.json"
+APPLICATION_NAME = ENV['APPLICATION_NAME'] || 'GoogleSheetsSync'
 SPREADSHEET_ID = ENV['SPREADSHEET_ID']
-SHEET1_FILENAME = ENV['SHEET1_FILENAME']
-SHEET1_NAME = ENV['SHEET1_NAME']
-SHEET2_FILENAME = ENV['SHEET2_FILENAME']
-SHEET2_NAME = ENV['SHEET2_NAME']
 
 # Sheet names and output files
 sheets_config = {
@@ -35,21 +38,14 @@ SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS_READONLY
 
 # Function to authorize using the service account
 def authorize
-  unless SERVICE_ACCOUNT_JSON
-    puts "❌ SERVICE_ACCOUNT_JSON environment variable not set. Please set it to the path of your service account JSON file."
-    exit(1)
-  end
   begin
-    credentials_hash = JSON.parse(SERVICE_ACCOUNT_JSON)
     Google::Auth::ServiceAccountCredentials.make_creds(
-      json_key_io: StringIO.new(SERVICE_ACCOUNT_JSON),
+      json_key_io: File.open(CREDENTIALS_PATH),
       scope: SCOPE
     )
-  rescue JSON::ParserError => e
-    puts "❌ Error parsing SERVICE_ACCOUNT_JSON: #{e.message}"
-    exit(1)
-  rescue Google::Auth::CredentialsError => e
-    puts "❌ Error creating credentials from JSON: #{e.message}"
+  rescue Errno::ENOENT
+    puts "❌ Error: Credentials file not found at #{CREDENTIALS_PATH}."
+    puts "  Please ensure the file exists or set the CREDENTIALS_PATH environment variable."
     exit(1)
   end
 end

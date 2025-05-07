@@ -17,6 +17,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
@@ -41,12 +43,9 @@ jobs:
           gem list google-apis-sheets_v4
           gem list googleauth
 
-      - name: Write service account JSON to file
-        run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_acc.json
-
       - name: Run script to fetch Google Sheet data
         env:
-          CREDENTIALS_PATH: ./service_acc.json
+          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
           SHEET1_FILENAME: ${{ secrets.SHEET1_FILENAME }}
           SHEET1_NAME: ${{ secrets.SHEET1_NAME }}
@@ -57,7 +56,5 @@ jobs:
 
       - name: Verify output files
         run: |
-          echo "Contents of _data/new_remote:"
-          ls -lah _data/new_remote
-          echo "Preview contents:"
-          head -n 20 _data/new_remote/*.yml
+          echo "File existence check:"
+          ls _data/new_remote/*.yml 2>/dev/null || echo "No files found"
