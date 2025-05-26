@@ -1,105 +1,69 @@
 - name: KCA University
-  alt: KCA University, a Platinum sponsor, offering quality education and research opportunities.
-  image: ./images/logo/kca_university.svg
+  image: ./images/2024/sponsors/kca_university.png
   url: https://www.kcau.ac.ke/
-  categories: [platinum]
+  categories: [previous]
 
 - name: KopoKopo
   image: ./images/logo/kopokopo_logo.png
   url: https://kopokopo.co.ke/
-  categories: [platinum, previous]
-
-- name: African Ruby Community
-  image: ./images/logo/arc_logo_coloured.png
-  url: https://rubycommunity.africa/
-  categories: [platinum]
-
-- name: Nairobits
-  image: ./images/logo/nairobits_logo.png
-  url: https://www.nairobits.com/
-  categories: [partner, previous]
+  categories: [previous]
 
 - name: AppSignal
   image: ./images/logo/app_signal_logo.png
   url: https://www.appsignal.com/
-  categories: [silver]
+  categories: [previous]
 
 - name: Finplus Group
   image: ./images/logo/finplus_group_logo.png
   url: https://finplusgroup.com/
-  categories: [silver]
+  categories: [previous]
 
 - name: Africa Data School
   image: ./images/logo/ads.svg
   url: https://www.africadataschool.com/
-  categories: [silver]
+  categories: [previous]
 
 - name: Planet Argon
   image: ./images/logo/planet_argon_logo.png
   url: https://www.planetargon.com/
-  categories: [partner]
+  categories: [previous]
 
 - name: Solutech
   image: ./images/logo/solutech_flat_logo.png
   url: https://www.solutech.co.ke
-  categories: [partner]
+  categories: [previous]
 
 - name: Microverse
   image: ./images/logo/microverse_logo.png
   url: https://www.microverse.org/
-  categories: [partner]
+  categories: [previous]
 
 - name: Ruby Central
   image: ./images/logo/ruby_central.png
   url: https://rubycentral.org/
-  categories: [partner]
+  categories: [previous]
 
 - name: Friendly Ruby
   image: ./images/logo/friendly-rb.webp
   url: https://friendlyrb.com/
-  categories: [partner]
+  categories: [previous]
 
 - name: WNB
   image: ./images/logo/wnb_rb_logo.png
   url: https://www.wnb-rb.dev/
-  categories: [partner, ticket]
+  categories: [previous]
 
 - name: Quikk API
   image: ./images/logo/quikk_api.jpg
   url: https://quikk.dev/
-  categories: [partner]
+  categories: [previous]
 
 - name: Zote App
   image: ./images/logo/zote_app.jpg
   url: https://www.zoteapp.com/
-  categories: [partner]
+  categories: [previous]
 
 - name: Andpad
   image: ./images/logo/andpad.png
   url: https://andpad.co.jp/
-  categories: [partner]
-
-- name: Shopify
-  image: ./images/logo/Shopify_logo_2018.svg.png
-  url: https://www.shopify.com/
-  categories: [previous]
-
-- name: Kwara
-  image: ./images/logo/Kwara.png
-  url: https://kwara.com/
-  categories: [previous]
-
-- name: Andela
-  image: ./images/logo/andela_logo.png
-  url: https://andela.com/
-  categories: [previous]
-
-- name: IHub
-  image: ./images/logo/IHub_logo.png
-  url: https://ihub.co.ke/
-  categories: [previous]
-
-- name: Turing
-  image: ./images/logo/turing_logo.jpg
-  url: https://www.turing.com/
   categories: [previous]

@@ -1,38 +1,42 @@
 name: Deploy site
 
 on:
-  push:
-    branches:
-      - Ft/Conf-details
-    paths:
-      - "assets/**"
-      - "documents/**"
-      - "fonts/**"
-      - "images/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!README.md"
-  pull_request:
-    branches:
-      - Ft/Conf-details
-    paths:
-      - "assets/**"
-      - "documents/**"
-      - "fonts/**"
-      - "images/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!README.md"
+  workflow_run:
+    workflows: ["Sync Google Sheet to Jekyll Data"]
+    types:
+      - completed
+#  push:
+#    branches:
+#      - Ft/Conf-details
+#    paths:
+#      - "assets/**"
+#      - "documents/**"
+#      - "fonts/**"
+#      - "images/**"
+#      - "**.html"
+#      - "**.js"
+#      - "**.liquid"
+#      - "**/*.md"
+#      - "**.yml"
+#      - "Gemfile"
+#      - "Gemfile.lock"
+#      - "!README.md"
+#  pull_request:
+#    branches:
+#      - Ft/Conf-details
+#    paths:
+#      - "assets/**"
+#      - "documents/**"
+#      - "fonts/**"
+#      - "images/**"
+#      - "**.html"
+#      - "**.js"
+#      - "**.liquid"
+#      - "**/*.md"
+#      - "**.yml"
+#      - "Gemfile"
+#      - "Gemfile.lock"
+#      - "!README.md"
   workflow_dispatch:
 
 permissions:
@@ -42,9 +46,13 @@ jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
+    # prevent deploying on PR
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch || github.ref }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

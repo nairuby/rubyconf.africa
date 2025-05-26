@@ -76,3 +76,7 @@ public
 
 # Gems will be installed here. This is used by Gitlab CI/CD
 vendor
+
+# Service account
+service_acc.json
+.env
