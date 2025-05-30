@@ -4,55 +4,35 @@ permalink: /speakers
 title: "Speakers for Ruby Conf Africa 2024"
 description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2024.  Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
+year: 2025
 ---
 
 <!-- Preloader -->
 <div class="preloader-new">
-  <!-- Logo -->
-  <div class="preloader-logo-new"></div>
+    <!-- Logo -->
+    <div class="preloader-logo-new"></div>
 
-  <!-- Animated Loading Text -->
-  <div class="loader-new"></div>
+    <!-- Animated Loading Text -->
+    <div class="loader-new"></div>
 </div>
-<!--<section style="margin-top: 90px">-->
-<!--    <div-->
-<!--            class="container-fluid bg-danger banner-cfp text-white text-center mt-4 py-2"-->
-<!--    >-->
-<!--        <a-->
-<!--                href="https://www.papercall.io/rubyconfafrica2024"-->
-<!--                class="text-white d-block"-->
-<!--                style="text-decoration: none"-->
-<!--        >-->
-<!--            <h4>Submit CFP</h4>-->
-<!--        </a>-->
-<!--    </div>-->
-<!--</section>-->
+<!--Start Speakers Sections-->
 <section class="speakers-section-two" style="margin-top: 0">
-  <div class="auto-container">
-    <div class="sec-title text-center my-4">
-      <span class="display-4 text-danger font-weight-bold">Speakers</span>
-    </div>
-    <div class="row top-pd-mobile">
-      {% for speaker in site.speakers %} {% if speaker.is_keynote == true %} {%
-      include speaker_block.liquid speaker=speaker designation="Keynote Speaker
-      " %} {% endif %} {% endfor %}
-      <!--        </div>-->
+    <div class="auto-container">
+        <div class="sec-title text-center my-4">
+            <span class="display-4 text-danger font-weight-bold">Speakers</span>
+        </div>
+        {% assign all_speakers = site.data.new_remote.speakers %}
+        <div class="row top-pd-mobile">
+          {% for speaker in all_speakers %}
+            {% assign designation = "Speaker" %}
 
-      <!--        Display Female Speakers-->
-      <!--        <div class="row top-pd-mobile">-->
-      {% assign female_speakers = site.speakers | where: "gender", "female" %}
-      {% for speaker in female_speakers %} {% if speaker.is_keynote == false %}
-      {% include speaker_block.liquid speaker=speaker designation="Speaker" %}
-      {% endif %} {% endfor %}
-    </div>
+            {% if speaker.is_keynote == "Yes" or speaker.is_keynote == true %}
+                {% assign designation = "Keynote Speaker" %}
+            {% endif %}
 
-    <!--        Display Male Speakers-->
-    <div class="row top-pd-mobile">
-      {% assign male_speakers = site.speakers | where: "gender", "male" %} {%
-      for speaker in male_speakers %} {% if speaker.is_keynote == false %} {%
-      include speaker_block.liquid speaker=speaker designation="Speaker" %} {%
-      endif %} {% endfor %}
+            {% include speaker_block.liquid speaker=speaker designation=designation %}
+          {% endfor %}
+        </div>
     </div>
-  </div>
 </section>
-<!-- End Speakers Section -->
+<!--End Speakers Section-->

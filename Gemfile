@@ -8,6 +8,7 @@ gem 'uglifier'
 gem 'jekyll-sitemap'
 gem 'jekyll-minifier'
 gem 'jekyll-assets'
+gem "jekyll-datapage-generator"
 
 gem "dotenv", "~> 3.1", group: :development
 

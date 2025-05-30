@@ -80,3 +80,5 @@ vendor
 # Service account
 service_acc.json
 .env
+
+.ruby-lsp

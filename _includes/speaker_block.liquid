@@ -2,7 +2,7 @@
     <div class="inner-box">
         <div class="info-box">
             <h4 class="name">
-                <a href="https://www.papercall.io/rubyconfafrica2025">{{ include.speaker.name }}</a>
+                <a href="/speakers/{{ include.speaker.name | slugify }}">{{ include.speaker.name }}</a>
             </h4>
             <span class="designation">{{ include.designation }}
                 {% if include.speaker.is_keynote == true %}
@@ -12,7 +12,7 @@
         </div>
         <div class="image-box">
             <figure class="image">
-                <a href="https://www.papercall.io/rubyconfafrica2025">
+                <a href="/speakers/{{ include.speaker.name | slugify }}">
                     <img src="{{ include.speaker.image }}" alt="{{ include.speaker.name }}"
                          style="width: 200px; height: 145px"/>
                 </a>

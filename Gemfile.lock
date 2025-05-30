@@ -134,6 +134,7 @@ GEM
       sprockets (~> 2.10)
       sprockets-helpers
       sprockets-sass
+    jekyll-datapage-generator (1.4.0)
     jekyll-minifier (0.1.10)
       cssminify2 (~> 2.0)
       htmlcompressor (~> 0.4)
@@ -284,6 +285,7 @@ DEPENDENCIES
   googleauth (~> 1.14)
   jekyll (= 4.3.4)
   jekyll-assets
+  jekyll-datapage-generator
   jekyll-minifier
   jekyll-sitemap
   sassc
