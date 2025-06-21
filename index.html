@@ -322,6 +322,45 @@ year: 2025
 </section>
 <!-- End of Why Attend -->
 
+<!--Platinum Sponsor Section-->
+<section class="clients-section">
+    <div class="anim-icons">
+        <span class="icon icon-dots-3 wow zoomIn"></span>
+        <!-- <span class="icon icon-circle-blue wow zoomIn"></span> -->
+    </div>
+    <div class="auto-container">
+        <div class="sec-title" style="text-align: center">
+            <h2 style="color: #c11803">Platinum Sponsors</h2>
+            <hr/>
+            <span class="title">
+         These Platinum Sponsors are making a big impact on our event! 💪
+      </span>
+        </div>
+
+        <div class="sponsors-outer">
+            <div class="row justify-content-center">
+                <!-- Sponsor Block -->
+                {% for sponsor in site.data.new_remote.sponsors %} {% if
+                sponsor.categories contains 'platinum' %}
+                <div
+                        class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
+                >
+                    <figure class="">
+                        <a href="{{ sponsor.url }}" target="_blank"
+                        ><img
+                                src="{{ sponsor.image }}"
+                                class="lazyload"
+                                alt="{{ sponsor.name }}"
+                        /></a>
+                    </figure>
+                </div>
+                {% endif %} {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Platinum Sponsor Section-->
+
 <!--Gold Sponsor Section-->
 <section class="clients-section">
     <div class="anim-icons">
@@ -399,6 +438,86 @@ year: 2025
     </div>
 </section>
 <!--End Silver Sponsor Section-->
+
+<!--Supporters Sponsor Section-->
+<section class="clients-section">
+    <div class="anim-icons">
+        <span class="icon icon-dots-3 wow zoomIn"></span>
+        <!-- <span class="icon icon-circle-blue wow zoomIn"></span> -->
+    </div>
+    <div class="auto-container">
+        <div class="sec-title" style="text-align: center">
+            <h2 style="color: #c11803">Supporters Sponsors</h2>
+            <hr/>
+            <span class="title">
+        These Supporters are making a big impact on our event! 💪
+      </span>
+        </div>
+
+        <div class="sponsors-outer">
+            <div class="row justify-content-center">
+                <!-- Sponsor Block -->
+                {% for sponsor in site.data.new_remote.sponsors %} {% if
+                sponsor.categories contains 'supporters' %}
+                <div
+                        class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
+                >
+                    <figure class="">
+                        <a href="{{ sponsor.url }}" target="_blank"
+                        ><img
+                                src="{{ sponsor.image }}"
+                                class="lazyload"
+                                alt="{{ sponsor.name }}"
+                        /></a>
+                    </figure>
+                </div>
+                {% endif %} {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Supporters Sponsor Section-->
+
+
+<!--Partners Sponsor Section-->
+<section class="clients-section">
+    <div class="anim-icons">
+        <span class="icon icon-dots-3 wow zoomIn"></span>
+        <!-- <span class="icon icon-circle-blue wow zoomIn"></span> -->
+    </div>
+    <div class="auto-container">
+        <div class="sec-title" style="text-align: center">
+            <h2 style="color: #c11803">Partners Sponsors</h2>
+            <hr/>
+            <span class="title">
+        These Partners are making a big impact on our event! 💪
+      </span>
+        </div>
+
+        <div class="sponsors-outer">
+            <div class="row justify-content-center">
+                <!-- Sponsor Block -->
+                {% for sponsor in site.data.new_remote.sponsors %} {% if
+                sponsor.categories contains 'partners' %}
+                <div
+                        class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
+                >
+                    <figure class="">
+                        <a href="{{ sponsor.url }}" target="_blank"
+                        ><img
+                                src="{{ sponsor.image }}"
+                                class="lazyload"
+                                alt="{{ sponsor.name }}"
+                        /></a>
+                    </figure>
+                </div>
+                {% endif %} {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Partners Sponsor Section-->
+
 
 <!--Previous Sponsor Section-->
 <section class="clients-section">
