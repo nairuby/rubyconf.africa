@@ -1056,7 +1056,6 @@ media .page-title .bread-crumb li a:hover {
   display: block;
   font-size: clamp(0.75rem, 3vw, 1.1rem);
   line-height: 1em;
-  color: #fa1d1d;
   font-weight: 500;
   background: #d90404;
   background: -moz-linear-gradient(
@@ -1088,6 +1087,18 @@ media .page-title .bread-crumb li a:hover {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin-bottom: 15px;
+}
+
+/* Selection styling for .sec-title .title */
+.sec-title .title::selection {
+  background: #ffd6d6; /* Light red background */
+  color: #000;          /* Make text readable on selection */
+  -webkit-text-fill-color: #000; /* Override transparent fill in WebKit */
+}
+
+.sec-title .title::-moz-selection {
+  background: #ffd6d6;
+  color: #000;
 }
 
 .sec-title h2 {
