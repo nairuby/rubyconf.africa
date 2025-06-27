@@ -7,7 +7,7 @@ image: "/images/logo/arc_logo_coloured.png"
 year: 2025
 ---
 
-<div class="preloader-new">
+<div class="preloader-new" xmlns="http://www.w3.org/1999/html">
     <!-- Logo -->
     <div class="preloader-logo-new"></div>
 
@@ -322,6 +322,190 @@ year: 2025
 </section>
 <!-- End of Why Attend -->
 
+<!-- Schedule Section Style two -->
+<section class="schedule-section style-three">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <span class="title"> <h1>Featured Sessions</h1></span>
+        </div>
+
+        <div class="schedule-tabs style-three tabs-box">
+
+            <div class="tabs-content">
+
+                <!--Tab-->
+                <div class="tab active-tab" id="tab-1">
+                    <div class="schedule-timeline row">
+                        {% assign obie_fernandez = site.data.new_remote.speakers | where: "url", "obie" | first %}
+                        {% assign dmitry_pogrebnoy = site.data.new_remote.speakers | where: "url", "dmitry" | first %}
+                        {% assign amani_kanu = site.data.new_remote.speakers | where: "url", "amani" | first %}
+                        {% assign caleb_muoki = site.data.new_remote.speakers | where: "url", "caleb" | first %}
+
+                        {% if obie_fernandez %}
+                        <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="inner">
+                                    <div class="speaker-info">
+                                        {% if obie_fernandez.image %}
+                                        <figure class="thumb"><img src="{{ site.baseurl }}{{ obie_fernandez.image }}"
+                                                                   alt="{{ obie_fernandez.name }}"></figure>
+                                        {% endif %}
+                                        <h5 class="name">{{ obie_fernandez.name }}</h5>
+                                        {% if obie_fernandez.bio %}
+                                        <span class="designation">{{ obie_fernandez.bio }}</span>
+                                        {% elsif obie_fernandez.details %}
+                                        <span class="designation">{{ obie_fernandez.details | strip_html | truncatewords: 10 }}</span>
+                                        {% endif %}
+                                    </div>
+                                    <h4>
+                                        {% if obie_fernandez.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ obie_fernandez.name | slugify }}">{{
+                                            obie_fernandez.talk_title }}</a>
+                                        {% else %}
+                                        {{ obie_fernandez.talk_title }}
+                                        {% endif %}
+                                    </h4>
+                                    {% if obie_fernandez.talk_description %}
+                                    <div class="text">{{ obie_fernandez.talk_description | truncatewords: 30 }}</div>
+                                    {% endif %}
+                                    <div class="btn-box">
+                                        {% if obie_fernandez.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ obie_fernandez.name | slugify }}"
+                                           class="theme-btn">Read More</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if dmitry_pogrebnoy %}
+                        <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="inner">
+                                    <div class="speaker-info">
+                                        {% if dmitry_pogrebnoy.image %}
+                                        <figure class="thumb"><img src="{{ site.baseurl }}{{ dmitry_pogrebnoy.image }}"
+                                                                   alt="{{ dmitry_pogrebnoy.name }}"></figure>
+                                        {% endif %}
+                                        <h5 class="name">{{ dmitry_pogrebnoy.name }}</h5>
+                                        {% if dmitry_pogrebnoy.bio %}
+                                        <span class="designation">{{ dmitry_pogrebnoy.bio }}</span>
+                                        {% elsif dmitry_pogrebnoy.details %}
+                                        <span class="designation">{{ dmitry_pogrebnoy.details | strip_html | truncatewords: 10 }}</span>
+                                        {% endif %}
+                                    </div>
+                                    <h4>
+                                        {% if dmitry_pogrebnoy.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}">{{
+                                            dmitry_pogrebnoy.talk_title }}</a>
+                                        {% else %}
+                                        {{ dmitry_pogrebnoy.talk_title }}
+                                        {% endif %}
+                                    </h4>
+                                    {% if dmitry_pogrebnoy.talk_description %}
+                                    <div class="text">{{ dmitry_pogrebnoy.talk_description | truncatewords: 30 }}</div>
+                                    {% endif %}
+                                    <div class="btn-box">
+                                        {% if dmitry_pogrebnoy.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
+                                           class="theme-btn">Read More</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if amani_kanu %}
+                        <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="inner">
+                                    <div class="speaker-info">
+                                        {% if amani_kanu.image %}
+                                        <figure class="thumb">
+                                            <img src="{{ site.baseurl }}{{ amani_kanu.image }}"
+                                                 alt="{{ amani_kanu.name }}"
+                                                 style="width:100px; height:60px; object-fit:cover; border-radius:50%;">
+                                        </figure>
+                                        {% endif %}
+                                        <h5 class="name">{{ amani_kanu.name }}</h5>
+                                        {% if amani_kanu.bio %}
+                                        <span class="designation">{{ amani_kanu.bio }}</span>
+                                        {% elsif amani_kanu.details %}
+                                        <span class="designation">{{ amani_kanu.details | strip_html | truncatewords: 10 }}</span>
+                                        {% endif %}
+                                    </div>
+                                    <h4>
+                                        {% if amani_kanu.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ amani_kanu.name | slugify }}">{{
+                                            amani_kanu.talk_title }}</a>
+                                        {% else %}
+                                        {{ amani_kanu.talk_title }}
+                                        {% endif %}
+                                    </h4>
+                                    {% if amani_kanu.talk_description %}
+                                    <div class="text">{{ amani_kanu.talk_description | truncatewords: 30 }}</div>
+                                    {% endif %}
+                                    <div class="btn-box">
+                                        {% if amani_kanu.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ amani_kanu.name | slugify }}"
+                                           class="theme-btn">Read More</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if caleb_muoki %}
+                        <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="inner">
+                                    <div class="speaker-info">
+                                        {% if caleb_muoki.image %}
+                                        <figure class="thumb"><img src="{{ site.baseurl }}{{ caleb_muoki.image }}"
+                                                                   alt="{{ caleb_muoki.name }}"></figure>
+                                        {% endif %}
+                                        <h5 class="name">{{ caleb_muoki.name }}</h5>
+                                        {% if caleb_muoki.bio %}
+                                        <span class="designation">{{ caleb_muoki.bio }}</span>
+                                        {% elsif caleb_muoki.details %}
+                                        <span class="designation">{{ caleb_muoki.details | strip_html | truncatewords: 10 }}</span>
+                                        {% endif %}
+                                    </div>
+                                    <h4>
+                                        {% if caleb_muoki.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}">{{
+                                            caleb_muoki.talk_title }}</a>
+                                        {% else %}
+                                        {{ caleb_muoki.talk_title }}
+                                        {% endif %}
+                                    </h4>
+                                    {% if caleb_muoki.talk_description %}
+                                    <div class="text">{{ caleb_muoki.talk_description | truncatewords: 30 }}</div>
+                                    {% endif %}
+                                    <div class="btn-box">
+                                        {% if caleb_muoki.url %}
+                                        <a href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
+                                           class="theme-btn">Read More</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End schedule Section -->
+
 <!--Start Sponsor Section-->
 
 <!--Platinum Sponsors-->
@@ -359,3 +543,5 @@ category="partners" %}
 title="Previous Sponsors"
 description="We celebrate our Previous Sponsors and Partners for their past invaluable support! 🗓️"
 category="previous" %}
+
+<!--End Sponsor Section-->
