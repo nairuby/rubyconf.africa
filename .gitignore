@@ -82,3 +82,4 @@ service_acc.json
 .env
 
 .ruby-lsp
+_build/service_acc.json
