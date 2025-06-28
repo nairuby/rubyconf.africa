@@ -40,42 +40,46 @@ layout: application_speaker
           <div class="card-body">
             <h3 class="card-title text-info-emphasis">{{ page.title }}</h3>
             <h5 class="text-secondary font-weight-bold">{{ page.bio }}</h5>
-            <p class="fs-6 fs-md-6 fs-lg-6 fs-xl-6 fs-xxl-6 text-black">{{ page.details }}</p>
+            <p class="fs-6 fs-md-6 fs-lg-6 fs-xl-6 fs-xxl-6 text-black">
+              {{ page.details }}
+            </p>
 
             {% if page.talk_title %}
             <h4 class="mt-4 text-info-emphasis">Talks by {{ page.title }}</h4>
             <div class="row">
-              {% if page.session_day and page.session_time %}
-              {% assign days = page.session_day | split: ',' %}
-              {% assign times = page.session_time | split: ',' %}
-              {% for i in (0..days.size) %}
-              {% assign day = days[i] | strip %}
-              {% assign time = times[i] | strip %}
-              {% if day and time %}
+              {% if page.session_day and page.session_time %} {% assign days =
+              page.session_day | split: ',' %} {% assign times =
+              page.session_time | split: ',' %} {% for i in (0..days.size) %} {%
+              assign day = days[i] | strip %} {% assign time = times[i] | strip
+              %} {% if day and time %}
               <div class="col-lg-6 col-md-6 mb-3">
                 <div class="border p-3 bg-white rounded shadow-sm">
-                  <h5 class="text-danger-emphasis font-weight-bold">Day {{ day }}</h5>
+                  <h5 class="text-danger-emphasis font-weight-bold">
+                    Day {{ day }}
+                  </h5>
                   <span class="d-block text-muted">{{ time }}</span>
                   <p class="mt-2 font-weight-bold text-info-emphasis">
                     {{ page.talk_title }}
                   </p>
                   {% if page.talk_description != "TBA" %}
-                  <div class="text-info-emphasis fs-6 fs-md-6 fs-lg-6 fs-xl-6 fs-xxl-6">
+                  <div
+                    class="text-info-emphasis fs-6 fs-md-6 fs-lg-6 fs-xl-6 fs-xxl-6"
+                  >
                     {{ page.talk_description }}
                   </div>
                   {% endif %}
                 </div>
               </div>
-              {% endif %}
-              {% endfor %}
-              {% else %}
+              {% endif %} {% endfor %} {% else %}
               <div class="col-lg-6 col-md-6 mb-3">
                 <div class="border p-3 bg-white rounded shadow-sm">
                   <p class="mt-2 font-weight-bold text-info-emphasis">
                     {{ page.talk_title }}
                   </p>
                   {% if page.talk_description != "TBA" %}
-                  <div class="text-info-emphasis fs-6 fs-md-6 fs-lg-6 fs-xl-6 fs-xxl-6">
+                  <div
+                    class="text-info-emphasis fs-6 fs-md-6 fs-lg-6 fs-xl-6 fs-xxl-6"
+                  >
                     {{ page.talk_description }}
                   </div>
                   {% endif %}
@@ -87,7 +91,6 @@ layout: application_speaker
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
