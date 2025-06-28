@@ -19,7 +19,7 @@ setup:
 
 # Sync Google Sheets data to _data/new_remote
 sync:
-	ruby _build/sync_google_sheets.rb
+	ruby _build/google_service_account.rb
 
 # Serve the Jekyll site locally for development
 serve:
