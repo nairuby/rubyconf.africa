@@ -83,3 +83,4 @@ service_acc.json
 
 .ruby-lsp
 _build/service_acc.json
+_data/new_remote/*
