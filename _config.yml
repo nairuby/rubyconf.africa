@@ -106,13 +106,13 @@ minifier:
     conservative_collapse: true
 
 page_gen:
-  - data: 'new_remote.speakers'
-    template: 'speaker'
-    name: 'name'
-    dir: 'speakers'
-    extension: 'html'
+  - data: "new_remote.speakers"
+    template: "speaker"
+    name: "name"
+    dir: "speakers"
+    extension: "html"
     index_files: false
-    title: 'name'
+    title: "name"
     slugify: true
     raw: false
 

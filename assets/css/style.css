@@ -1090,21 +1090,75 @@ media .page-title .bread-crumb li a:hover {
 }
 
 /* Selection styling for .sec-title .title */
-.sec-title .title::selection {
-  background: #ffd6d6; /* Light red background */
-  color: #000;          /* Make text readable on selection */
-  -webkit-text-fill-color: #000; /* Override transparent fill in WebKit */
+.featured-title {
+  font-size: clamp(2rem, 4vw, 3rem); /* Overrides default size */
+  font-weight: 700; /* Optional: emphasize more */
+  position: relative;
+  display: block;
+  line-height: 1em;
+  background: #d90404;
+  background: -moz-linear-gradient(
+    to left,
+    #d90404 0%,
+    rgba(102, 16, 16, 0.671) 25%,
+    #d90404 75%,
+    rgba(102, 16, 16, 0.671) 100%
+  );
+  background: -webkit-linear-gradient(
+    to left,
+    #d90404 0%,
+    rgba(102, 16, 16, 0.671) 25%,
+    #d90404 75%,
+    rgba(102, 16, 16, 0.671) 100%
+  );
+  background: linear-gradient(
+    to left,
+    #d90404 0%,
+    rgba(102, 16, 16, 0.671) 25%,
+    #d90404 75%,
+    rgba(102, 16, 16, 0.671) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F70068', endColorstr='#441066', GradientType=1);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
 }
 
+.sec-title .title::selection {
+  background: #ffd6d6; /* Light red background */
+  color: #000; /* Make text readable on selection */
+  -webkit-text-fill-color: #000; /* Override transparent fill in WebKit */
+}
+.featured-title::selection {
+  background: #ffd6d6; /* Light red background */
+  color: #000; /* Make text readable on selection */
+  -webkit-text-fill-color: #000; /* Override transparent fill in WebKit */
+}
 .sec-title .title::-moz-selection {
   background: #ffd6d6;
   color: #000;
 }
-
+.featured-title::-moz-selection {
+  background: #ffd6d6;
+  color: #000;
+}
 .sec-title h2 {
   position: relative;
   display: inline-block;
   font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.2em;
+  color: #0d0d0d;
+  font-weight: 700;
+}
+
+.sec-title h1 {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   line-height: 1.2em;
   color: #0d0d0d;
   font-weight: 700;

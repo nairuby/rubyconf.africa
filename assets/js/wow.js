@@ -15,12 +15,12 @@
           if (b in this && this[b] === a) return b;
         return -1;
       };
-  (b = (function () {
+  ((b = (function () {
     function a() {}
     return (
       (a.prototype.extend = function (a, b) {
         var c, d;
-        for (c in b) (d = b[c]), null == a[c] && (a[c] = d);
+        for (c in b) ((d = b[c]), null == a[c] && (a[c] = d));
         return a;
       }),
       (a.prototype.isMobile = function (a) {
@@ -36,7 +36,7 @@
       this.MozWeakMap ||
       (c = (function () {
         function a() {
-          (this.keys = []), (this.values = []);
+          ((this.keys = []), (this.values = []));
         }
         return (
           (a.prototype.get = function (a) {
@@ -48,7 +48,7 @@
             var c, d, e, f, g;
             for (g = this.keys, c = e = 0, f = g.length; f > e; c = ++e)
               if (((d = g[c]), d === a)) return void (this.values[c] = b);
-            return this.keys.push(a), this.values.push(b);
+            return (this.keys.push(a), this.values.push(b));
           }),
           a
         );
@@ -59,22 +59,26 @@
       this.MozMutationObserver ||
       (a = (function () {
         function a() {
-          console.warn("MutationObserver is not supported by your browser."),
+          (console.warn("MutationObserver is not supported by your browser."),
             console.warn(
               "WOW.js cannot detect dom mutations, please call .sync() after loading new content.",
-            );
+            ));
         }
-        return (a.notSupported = !0), (a.prototype.observe = function () {}), a;
+        return (
+          (a.notSupported = !0),
+          (a.prototype.observe = function () {}),
+          a
+        );
       })())),
     (this.WOW = (function () {
       function f(a) {
-        null == a && (a = {}),
+        (null == a && (a = {}),
           (this.scrollCallback = d(this.scrollCallback, this)),
           (this.scrollHandler = d(this.scrollHandler, this)),
           (this.start = d(this.start, this)),
           (this.scrolled = !0),
           (this.config = this.util().extend(a, this.defaults)),
-          (this.animationNameCache = new c());
+          (this.animationNameCache = new c()));
       }
       return (
         (f.prototype.defaults = {
@@ -108,13 +112,13 @@
                 c > a;
                 a++
               )
-                (b = d[a]), e.push(b);
+                ((b = d[a]), e.push(b));
               return e;
             }.call(this)),
             (this.all = function () {
               var a, c, d, e;
               for (d = this.boxes, e = [], a = 0, c = d.length; c > a; a++)
-                (b = d[a]), e.push(b);
+                ((b = d[a]), e.push(b));
               return e;
             }.call(this)),
             this.boxes.length)
@@ -122,10 +126,10 @@
             if (this.disabled()) this.resetStyle();
             else {
               for (e = this.boxes, c = 0, d = e.length; d > c; c++)
-                (b = e[c]), this.applyStyle(b, !0);
-              window.addEventListener("scroll", this.scrollHandler, !1),
+                ((b = e[c]), this.applyStyle(b, !0));
+              (window.addEventListener("scroll", this.scrollHandler, !1),
                 window.addEventListener("resize", this.scrollHandler, !1),
-                (this.interval = setInterval(this.scrollCallback, 50));
+                (this.interval = setInterval(this.scrollCallback, 50)));
             }
           return this.config.live
             ? new a(
@@ -133,7 +137,7 @@
                   return function (b) {
                     var c, d, e, f, g;
                     for (g = [], e = 0, f = b.length; f > e; e++)
-                      (d = b[e]),
+                      ((d = b[e]),
                         g.push(
                           function () {
                             var a, b, e, f;
@@ -145,10 +149,10 @@
                               b > a;
                               a++
                             )
-                              (c = e[a]), f.push(this.doSync(c));
+                              ((c = e[a]), f.push(this.doSync(c)));
                             return f;
                           }.call(a),
-                        );
+                        ));
                     return g;
                   };
                 })(this),
@@ -179,13 +183,13 @@
               d > c;
               c++
             )
-              (b = f[c]),
+              ((b = f[c]),
                 e.call(this.all, b) < 0
                   ? (this.applyStyle(b, !0),
                     this.boxes.push(b),
                     this.all.push(b),
                     g.push((this.scrolled = !0)))
-                  : g.push(void 0);
+                  : g.push(void 0));
             return g;
           }
         }),
@@ -222,7 +226,8 @@
         (f.prototype.resetStyle = function () {
           var a, b, c, d, e;
           for (d = this.boxes, e = [], b = 0, c = d.length; c > b; b++)
-            (a = d[b]), e.push(a.setAttribute("style", "visibility: visible;"));
+            ((a = d[b]),
+              e.push(a.setAttribute("style", "visibility: visible;")));
           return e;
         }),
         (f.prototype.customStyle = function (a, b, c, d, e) {
@@ -243,7 +248,7 @@
           var c, d, e, f;
           f = [];
           for (c in b)
-            (d = b[c]),
+            ((d = b[c]),
               (a["" + c] = d),
               f.push(
                 function () {
@@ -253,14 +258,14 @@
                     f > b;
                     b++
                   )
-                    (e = g[b]),
+                    ((e = g[b]),
                       h.push(
                         (a["" + e + c.charAt(0).toUpperCase() + c.substr(1)] =
                           d),
-                      );
+                      ));
                   return h;
                 }.call(this),
-              );
+              ));
           return f;
         }),
         (f.prototype.vendorCSS = function (a, b) {
@@ -274,7 +279,7 @@
             g > f;
             f++
           )
-            (e = h[f]), (c = c || d.getPropertyCSSValue("-" + e + "-" + b));
+            ((e = h[f]), (c = c || d.getPropertyCSSValue("-" + e + "-" + b)));
           return c;
         }),
         (f.prototype.animationName = function (a) {
@@ -302,7 +307,8 @@
             (this.boxes = function () {
               var b, c, d, e;
               for (d = this.boxes, e = [], b = 0, c = d.length; c > b; b++)
-                (a = d[b]), a && (this.isVisible(a) ? this.show(a) : e.push(a));
+                ((a = d[b]),
+                  a && (this.isVisible(a) ? this.show(a) : e.push(a)));
               return e;
             }.call(this)),
             this.boxes.length || this.config.live)
@@ -335,5 +341,5 @@
         }),
         f
       );
-    })());
+    })()));
 }).call(this);
