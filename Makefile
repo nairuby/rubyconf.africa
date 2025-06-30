@@ -1,34 +1,49 @@
-# Makefile for Jekyll Setup and Commands
+## Makefile for Jekyll Setup and Commands
 
-.PHONY: install serve build clean
+## help: Print this help message
+.PHONY: help
+help:
+	@echo 'Usage:'
+	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' | sed -e 's/^/ /'
+	@echo ' '
+	@echo 'Please raise an issue on Github if you encounter an issue'
 
-# Install bundler and jekyll
+## confirm: Ask for confirmation before running a command
+.PHONY: confirm
+confirm:
+	@echo -n 'Are you sure? [y/N] ' && read ans && [ $${and:-N} = y ]
+
+## install: Install bundler and jekyll, then install dependencies
+install:
+.PHONY: install
 install:
 	gem install bundler jekyll
 	bundle config set --local path 'vendor/bundle'
 	bundle install
 	bundle update
 
-# First time setup: install bundler and jekyll, then serve the site
-setup:
-	gem install bundler jekyll
-	bundle config set --local path 'vendor/bundle'
-	bundle install
-	bundle update
+## setup: First time setup; install bundler and jekyll, then serve the site
+.PHONY: setup
+setup: confirm
+	$(MAKE) install
 	bundle exec jekyll serve
 
-# Sync Google Sheets data to _data/new_remote
+## sync: Sync Google Sheets data to _data/new_remote
+.PHONY: sync
 sync:
 	ruby _build/google_service_account.rb
 
-# Serve the Jekyll site locally for development
+## serve: Serve the Jekyll site locally for development
+.PHONY: serve
 serve:
 	bundle exec jekyll serve
 
-# Build the site for deployment
+## build: Build the site for deployment into the public directory
+.PHONY: build
 build:
 	bundle exec jekyll build -d public
 
-# Clean the vendor directory
-clean:
-	rm -rf vendor _site
+## clean: Remove vendor and _site directories
+.PHONY: clean
+clean: confirm
+	@rm -rf vendor _site

@@ -160,7 +160,7 @@ GEM
     json (2.12.2)
     json-minify (0.0.3)
       json (> 0)
-    jwt (2.10.1)
+    jwt (2.10.2)
       base64
     kramdown (2.5.1)
       rexml (>= 3.3.9)
