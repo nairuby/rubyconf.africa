@@ -3324,7 +3324,7 @@
           if (Math.min(maximum, i - lower) === maximum) {
             break;
           }
-          (j = 0), ++k;
+          ((j = 0), ++k);
         }
         j += this._core.mergers(this._core.relative(i));
       }
