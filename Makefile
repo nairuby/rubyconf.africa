@@ -11,7 +11,7 @@ help:
 ## confirm: Ask for confirmation before running a command
 .PHONY: confirm
 confirm:
-	@echo -n 'Are you sure? [y/N] ' && read ans && [ $${and:-N} = y ]
+	@echo -n 'Are you sure? [y/N] ' && read ans && [ "$$ans" = y ]
 
 ## install: Install bundler and jekyll, then install dependencies
 install:
