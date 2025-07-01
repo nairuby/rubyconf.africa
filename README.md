@@ -53,6 +53,28 @@ If you need to update the project, you can follow these instructions:
 - **Clean Up:**  
   Run `make clean` to remove the vendor directory and the `_serve` folder.
 
+## Troubleshooting
+
+### Gem Installation Issues
+
+If you encounter errors with the following gems during setup or installation:
+
+- `dotenv` (~> 3.1)
+- `googleauth` (~> 1.14)
+- `google-api-client` (~> 0.53.0)
+- `google-apis-sheets_v4` (~> 0.41)
+
+You can install them manually using these commands:
+
+```bash
+gem install dotenv
+gem install googleauth
+gem install google-api-client
+gem install google-apis-sheets_v4
+```
+
+After installing the gems manually, try running `make install` or `make setup` again.
+
 ## Deployment
 
 To build the site for deployment, you can run:
