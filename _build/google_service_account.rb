@@ -34,6 +34,14 @@ def authorize_google_sheets(path, json_string)
   ).tap(&:fetch_access_token!)
 end
 
+# GDrive image link parser
+def convert_gdrive_url(url)
+  return nil unless url
+  match = url.match(%r{https://drive\.google\.com/file/d/(.+)/view})
+  return nil unless match
+  "https://lh3.googleusercontent.com/d/#{match[1]}=w1000?authuser=1/view"
+end
+
 # Initialize google sheet API
 service = Google::Apis::SheetsV4::SheetsService.new
 service.authorization = authorize_google_sheets(CREDENTIALS_PATH, SERVICE_ACCOUNT_JSON)
@@ -47,15 +55,35 @@ SHEETS.each do |sheet|
   data = values[1..-1].map { |row| headers.zip(row).to_h }
 
   data.each do |item|
-    next if item["image"].nil? # Skip if there is no image url
-    gdrive_link = item["image"]
-    extract = gdrive_link.scan(/https:\/\/drive.google.com\/file\/d\/(.*)\/view/)
+    item["image"] = convert_gdrive_url(item["image"]) if item["image"]
+  end
 
-    next unless extract.length > 0 # Skip if GDrive link format is not correct
-    gdrive_file_id = extract&.first&.first
+  # Schedule tab
+  if sheet.downcase == "schedule"
+    schedule = {}
 
-    next if gdrive_file_id.nil? # Skip if id is nil
-    item["image"] = "https://lh3.googleusercontent.com/d/#{gdrive_file_id}=w1000?authuser=1/view"
+    data.group_by { |row| row["day"] }.each do |day_key, entries|
+      next if day_key.nil? || day_key.strip.empty?
+
+      day_date = entries.first["date"]
+      events = entries.map do |entry|
+        event = {
+          "time" => {
+            "start" => entry["start_time"],
+            "end" => entry["end_time"]
+          },
+          "topic" => entry["topic"]
+        }
+        event["description"] = entry["description"] unless entry["description"].nil? || entry["description"].to_s.strip.empty?
+        event["speaker"] = entry["speaker"] unless entry["speaker"].nil? || entry["speaker"].empty?
+        event["image"] = convert_gdrive_url(entry["image"]) if entry["image"]
+      end
+
+      schedule[day_key] = {
+        "date" => day_date,
+        "events" => events
+      }
+    end
   end
 
   # Save data to a json data file
