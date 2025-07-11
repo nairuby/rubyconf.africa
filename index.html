@@ -22,7 +22,7 @@ year: 2025
     <!-- Slide Item -->
     <div
       class="slide-item lazyload"
-      style="background-image: url(images/compressed/community.jpg)"
+      style="background-image: url(images/intro-landing.jpg)"
     >
       <div class="auto-container">
         <div class="content-box">
@@ -88,7 +88,7 @@ year: 2025
     <!-- Slide Item -->
     <div
       class="slide-item lazyload"
-      style="background-image: url(images/compressed/nairobi3.jpg)"
+      style="background-image: url(images/intro-landing.jpg)"
     >
       <div class="auto-container">
         <div class="content-box">
@@ -340,52 +340,52 @@ year: 2025
         <!--Tab-->
         <div class="tab active-tab" id="tab-1">
           <div class="schedule-timeline row">
-            {% assign obie_fernandez = site.data.new_remote.speakers | where:
-            "url", "obie" | first %} {% assign dmitry_pogrebnoy =
-            site.data.new_remote.speakers | where: "url", "dmitry" | first %} {%
-            assign amani_kanu = site.data.new_remote.speakers | where: "url",
-            "amani" | first %} {% assign caleb_muoki =
+            {% assign victor_turuthi = site.data.new_remote.speakers | where:
+            "url", "turuthi" | first %} {% assign caleb_muoki =
             site.data.new_remote.speakers | where: "url", "caleb" | first %} {%
-            if obie_fernandez %}
+            assign amani_kanu = site.data.new_remote.speakers | where: "url",
+            "amani" | first %} {% assign ganesh_kunwar =
+            site.data.new_remote.speakers | where: "url", "ganesh" | first %} {%
+            if victor_turuthi %}
             <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
               <div class="inner-box">
                 <div class="inner">
                   <div class="speaker-info">
-                    {% if obie_fernandez.image %}
+                    {% if victor_turuthi.image %}
                     <figure class="thumb">
                       <img
-                        src="{{ site.baseurl }}{{ obie_fernandez.image }}"
-                        alt="{{ obie_fernandez.name }}"
+                        src="{{ site.baseurl }}{{ victor_turuthi.image }}"
+                        alt="{{ victor_turuthi.name }}"
                       />
                     </figure>
                     {% endif %}
-                    <h5 class="name">{{ obie_fernandez.name }}</h5>
-                    {% if obie_fernandez.bio %}
-                    <span class="designation">{{ obie_fernandez.bio }}</span>
-                    {% elsif obie_fernandez.details %}
+                    <h5 class="name">{{ victor_turuthi.name }}</h5>
+                    {% if victor_turuthi.bio %}
+                    <span class="designation">{{ victor_turuthi.bio }}</span>
+                    {% elsif victor_turuthi.details %}
                     <span class="designation"
-                      >{{ obie_fernandez.details | strip_html | truncatewords:
+                      >{{ victor_turuthi.details | strip_html | truncatewords:
                       10 }}</span
                     >
                     {% endif %}
                   </div>
                   <h4>
-                    {% if obie_fernandez.url %}
+                    {% if victor_turuthi.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ obie_fernandez.name | slugify }}"
-                      >{{ obie_fernandez.talk_title }}</a
+                      href="{{ site.baseurl }}/speakers/{{ victor_turuthi.name | slugify }}"
+                      >{{ victor_turuthi.talk_title }}</a
                     >
-                    {% else %} {{ obie_fernandez.talk_title }} {% endif %}
+                    {% else %} {{ victor_turuthi.talk_title }} {% endif %}
                   </h4>
-                  {% if obie_fernandez.talk_description %}
+                  {% if victor_turuthi.talk_description %}
                   <div class="text">
-                    {{ obie_fernandez.talk_description | truncatewords: 30 }}
+                    {{ victor_turuthi.talk_description | truncatewords: 30 }}
                   </div>
                   {% endif %}
                   <div class="btn-box">
-                    {% if obie_fernandez.url %}
+                    {% if victor_turuthi.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ obie_fernandez.name | slugify }}"
+                      href="{{ site.baseurl }}/speakers/{{ victor_turuthi.name | slugify }}"
                       class="theme-btn"
                       >Read More</a
                     >
@@ -394,46 +394,46 @@ year: 2025
                 </div>
               </div>
             </div>
-            {% endif %} {% if dmitry_pogrebnoy %}
+            {% endif %} {% if caleb_muoki %}
             <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
               <div class="inner-box">
                 <div class="inner">
                   <div class="speaker-info">
-                    {% if dmitry_pogrebnoy.image %}
+                    {% if caleb_muoki.image %}
                     <figure class="thumb">
                       <img
-                        src="{{ site.baseurl }}{{ dmitry_pogrebnoy.image }}"
-                        alt="{{ dmitry_pogrebnoy.name }}"
+                        src="{{ site.baseurl }}{{ caleb_muoki.image }}"
+                        alt="{{ caleb_muoki.name }}"
                       />
                     </figure>
                     {% endif %}
-                    <h5 class="name">{{ dmitry_pogrebnoy.name }}</h5>
-                    {% if dmitry_pogrebnoy.bio %}
-                    <span class="designation">{{ dmitry_pogrebnoy.bio }}</span>
-                    {% elsif dmitry_pogrebnoy.details %}
+                    <h5 class="name">{{ caleb_muoki.name }}</h5>
+                    {% if caleb_muoki.bio %}
+                    <span class="designation">{{ caleb_muoki.bio }}</span>
+                    {% elsif caleb_muoki.details %}
                     <span class="designation"
-                      >{{ dmitry_pogrebnoy.details | strip_html | truncatewords:
-                      10 }}</span
+                      >{{ caleb_muoki.details | strip_html | truncatewords: 10
+                      }}</span
                     >
                     {% endif %}
                   </div>
                   <h4>
-                    {% if dmitry_pogrebnoy.url %}
+                    {% if caleb_muoki.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
-                      >{{ dmitry_pogrebnoy.talk_title }}</a
+                      href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
+                      >{{ caleb_muoki.talk_title }}</a
                     >
-                    {% else %} {{ dmitry_pogrebnoy.talk_title }} {% endif %}
+                    {% else %} {{ caleb_muoki.talk_title }} {% endif %}
                   </h4>
-                  {% if dmitry_pogrebnoy.talk_description %}
+                  {% if caleb_muoki.talk_description %}
                   <div class="text">
-                    {{ dmitry_pogrebnoy.talk_description | truncatewords: 30 }}
+                    {{ caleb_muoki.talk_description | truncatewords: 30 }}
                   </div>
                   {% endif %}
                   <div class="btn-box">
-                    {% if dmitry_pogrebnoy.url %}
+                    {% if caleb_muoki.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
+                      href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
                       class="theme-btn"
                       >Read More</a
                     >
@@ -496,46 +496,46 @@ year: 2025
                 </div>
               </div>
             </div>
-            {% endif %} {% if caleb_muoki %}
+            {% endif %} {% if ganesh_kunwar %}
             <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
               <div class="inner-box">
                 <div class="inner">
                   <div class="speaker-info">
-                    {% if caleb_muoki.image %}
+                    {% if ganesh_kunwar.image %}
                     <figure class="thumb">
                       <img
-                        src="{{ site.baseurl }}{{ caleb_muoki.image }}"
-                        alt="{{ caleb_muoki.name }}"
+                        src="{{ site.baseurl }}{{ ganesh_kunwar.image }}"
+                        alt="{{ ganesh_kunwar.name }}"
                       />
                     </figure>
                     {% endif %}
-                    <h5 class="name">{{ caleb_muoki.name }}</h5>
-                    {% if caleb_muoki.bio %}
-                    <span class="designation">{{ caleb_muoki.bio }}</span>
-                    {% elsif caleb_muoki.details %}
+                    <h5 class="name">{{ ganesh_kunwar.name }}</h5>
+                    {% if ganesh_kunwar.bio %}
+                    <span class="designation">{{ ganesh_kunwar.bio }}</span>
+                    {% elsif ganesh_kunwar.details %}
                     <span class="designation"
-                      >{{ caleb_muoki.details | strip_html | truncatewords: 10
+                      >{{ ganesh_kunwar.details | strip_html | truncatewords: 10
                       }}</span
                     >
                     {% endif %}
                   </div>
                   <h4>
-                    {% if caleb_muoki.url %}
+                    {% if ganesh_kunwar.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
-                      >{{ caleb_muoki.talk_title }}</a
+                      href="{{ site.baseurl }}/speakers/{{ ganesh_kunwar.name | slugify }}"
+                      >{{ ganesh_kunwar.talk_title }}</a
                     >
-                    {% else %} {{ caleb_muoki.talk_title }} {% endif %}
+                    {% else %} {{ ganesh_kunwar.talk_title }} {% endif %}
                   </h4>
-                  {% if caleb_muoki.talk_description %}
+                  {% if ganesh_kunwar.talk_description %}
                   <div class="text">
-                    {{ caleb_muoki.talk_description | truncatewords: 30 }}
+                    {{ ganesh_kunwar.talk_description | truncatewords: 30 }}
                   </div>
                   {% endif %}
                   <div class="btn-box">
-                    {% if caleb_muoki.url %}
+                    {% if ganesh_kunwar.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
+                      href="{{ site.baseurl }}/speakers/{{ ganesh_kunwar.name | slugify }}"
                       class="theme-btn"
                       >Read More</a
                     >
