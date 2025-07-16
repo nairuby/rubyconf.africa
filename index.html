@@ -217,6 +217,66 @@ year: 2025
 </section>
 <!--End About Section -->
 
+<!-- Keynote Speakers -->
+<section class="speakers-section">
+  <div class="auto-container">
+    <div class="sec-title light text-center">
+      <h2>Keynote Speakers</h2>
+    </div>
+
+    <div class="outer-box">
+      <div class="row d-flex align-items-center justify-content-center">
+        {% assign keynote_speakers = site.data.new_remote.speakers | where:
+        "is_keynote", "Yes" %} {% for speaker in keynote_speakers %}
+        <div class="speaker-block col-lg-4 col-md-6 col-sm-12">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="speakers/{{ speaker.name | slugify }}">
+                  <img src="{{ speaker.image }}" alt="{{ speaker.name }}" />
+                </a>
+              </figure>
+            </div>
+            <div class="info-box">
+              <div class="inner">
+                <h4 class="name">
+                  <a href="speakers/{{ speaker.name | slugify }}">
+                    {{ speaker.name }}
+                  </a>
+                </h4>
+                <span class="designation">{{ speaker.bio }}</span>
+                <ul class="social-links social-icon-colored">
+                  {% if speaker.twitter %}
+                  <li>
+                    <a href="{{ speaker.twitter }}">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                  </li>
+                  {% endif %} {% if speaker.linkedin %}
+                  <li>
+                    <a href="{{ speaker.linkedin }}">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                  {% endif %} {% if speaker.website %}
+                  <li>
+                    <a href="{{ speaker.website }}">
+                      <i class="fab fa-sistrix"></i>
+                    </a>
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Keynote Speakers -->
+
 <!-- Speakers -->
 <section class="speakers-section">
   <div class="auto-container">
@@ -243,8 +303,8 @@ year: 2025
               <div class="inner">
                 <h4 class="name">
                   <a href="speakers/{{ speaker.name | slugify }}"
-                    >{{ speaker.name }}<i class="fas fa-video"></i
-                  ></a>
+                    >{{ speaker.name }}
+                  </a>
                 </h4>
                 <span class="designation">{{ speaker.bio }}</span>
                 <ul class="social-links social-icon-colored">
@@ -328,7 +388,7 @@ year: 2025
 </section>
 <!-- End of Why Attend -->
 
-<!-- Schedule Section Style two -->
+<!-- Featured Speaker -->
 <section class="schedule-section style-three">
   <div class="auto-container">
     <div class="sec-title text-center">
@@ -340,52 +400,52 @@ year: 2025
         <!--Tab-->
         <div class="tab active-tab" id="tab-1">
           <div class="schedule-timeline row">
-            {% assign victor_turuthi = site.data.new_remote.speakers | where:
-            "url", "turuthi" | first %} {% assign caleb_muoki =
+            {% assign dmitry_pogrebnoy = site.data.new_remote.speakers | where:
+            "url", "dmitry" | first %} {% assign caleb_muoki =
             site.data.new_remote.speakers | where: "url", "caleb" | first %} {%
             assign amani_kanu = site.data.new_remote.speakers | where: "url",
             "amani" | first %} {% assign ganesh_kunwar =
             site.data.new_remote.speakers | where: "url", "ganesh" | first %} {%
-            if victor_turuthi %}
+            if dmitry_pogrebnoy %}
             <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
               <div class="inner-box">
                 <div class="inner">
                   <div class="speaker-info">
-                    {% if victor_turuthi.image %}
+                    {% if dmitry_pogrebnoy.image %}
                     <figure class="thumb">
                       <img
-                        src="{{ site.baseurl }}{{ victor_turuthi.image }}"
-                        alt="{{ victor_turuthi.name }}"
+                        src="{{ site.baseurl }}{{ dmitry_pogrebnoy.image }}"
+                        alt="{{ dmitry_pogrebnoy.name }}"
                       />
                     </figure>
                     {% endif %}
-                    <h5 class="name">{{ victor_turuthi.name }}</h5>
-                    {% if victor_turuthi.bio %}
-                    <span class="designation">{{ victor_turuthi.bio }}</span>
-                    {% elsif victor_turuthi.details %}
+                    <h5 class="name">{{ dmitry_pogrebnoy.name }}</h5>
+                    {% if dmitry_pogrebnoy.bio %}
+                    <span class="designation">{{ dmitry_pogrebnoy.bio }}</span>
+                    {% elsif dmitry_pogrebnoy.details %}
                     <span class="designation"
-                      >{{ victor_turuthi.details | strip_html | truncatewords:
+                      >{{ dmitry_pogrebnoy.details | strip_html | truncatewords:
                       10 }}</span
                     >
                     {% endif %}
                   </div>
                   <h4>
-                    {% if victor_turuthi.url %}
+                    {% if dmitry_pogrebnoy.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ victor_turuthi.name | slugify }}"
-                      >{{ victor_turuthi.talk_title }}</a
+                      href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
+                      >{{ dmitry_pogrebnoy.talk_title }}</a
                     >
-                    {% else %} {{ victor_turuthi.talk_title }} {% endif %}
+                    {% else %} {{ dmitry_pogrebnoy.talk_title }} {% endif %}
                   </h4>
-                  {% if victor_turuthi.talk_description %}
+                  {% if dmitry_pogrebnoy.talk_description %}
                   <div class="text">
-                    {{ victor_turuthi.talk_description | truncatewords: 30 }}
+                    {{ dmitry_pogrebnoy.talk_description | truncatewords: 30 }}
                   </div>
                   {% endif %}
                   <div class="btn-box">
-                    {% if victor_turuthi.url %}
+                    {% if dmitry_pogrebnoy.url %}
                     <a
-                      href="{{ site.baseurl }}/speakers/{{ victor_turuthi.name | slugify }}"
+                      href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
                       class="theme-btn"
                       >Read More</a
                     >
@@ -558,7 +618,7 @@ year: 2025
     </div>
   </div>
 </section>
-<!--End schedule Section -->
+<!--End Featured Speaker -->
 
 <!--Start Sponsor Section-->
 
