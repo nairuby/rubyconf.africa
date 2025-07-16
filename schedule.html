@@ -66,25 +66,31 @@ image: "/images/logo/arc_logo_coloured.png"
                     <p class="small mt-2 mb-0">{{ event.description }}</p>
                     {% endif %}
                   </div>
+
+                  {% assign speakers = event.speaker | split: "," %}
                   <div
                     class="d-flex justify-content-center flex-wrap gap-2 mt-2"
                   >
+                    {% for speaker in speakers %} {% assign speaker_trimmed =
+                    speaker | strip %}
                     <figure
                       class="thumb d-flex flex-column align-items-center m-1"
                     >
-                      <a href="/speakers/{{ event.speaker | slugify }}">
+                      <a href="/speakers/{{ speaker_trimmed | slugify }}">
                         <img
-                          src="{{ event.image }}"
-                          alt="{{ event.speaker }}"
+                          src="{{ event.image[forloop.index0] }}"
+                          alt="{{ speaker_trimmed }}"
                           class="img-fluid rounded-circle mb-1"
                           style="width: 60px; height: 60px"
                         />
                       </a>
-                      <span class="text-dark small">{{ event.speaker }}</span>
+                      <span class="text-dark small">{{ speaker_trimmed }}</span>
                     </figure>
+                    {% endfor %}
                   </div>
                   {% else %} {{ event.topic }} {% endif %}
                 </td>
+
                 <td class="p-4"></td>
               </tr>
               {% endfor %}
