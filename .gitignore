@@ -83,3 +83,7 @@ service_acc.json
 
 .ruby-lsp
 _build/service_acc.json
+jekyll_build_log.txt
+.idea/**
+_build/update_data.rb
+_data/new_remote/**

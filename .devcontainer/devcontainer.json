@@ -1,32 +1,28 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
-  "name": "Jekyll",
-  "image": "mcr.microsoft.com/devcontainers/jekyll",
+  "name": "Jekyll Dev",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.4", // OR mcr.microsoft.com/devcontainers/jekyll
 
-  // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
+    "ghcr.io/devcontainers-contrib/features/prettier:1": {},
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages": "build-essential,imagemagick,inotify-tools,jupyter-nbconvert,procps,ruby-full,zlib1g-dev"
-    },
-    "ghcr.io/devcontainers-contrib/features/prettier:1": {}
+      "packages": "build-essential libsass-dev libsqlite3-dev nodejs npm zlib1g-dev git"
+    }
   },
 
-  // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
-  "postAttachCommand": "./bin/entry_point.sh",
+  "postCreateCommand": "bundle install && ruby _build/google_sheet_sync.rb",
 
   "customizations": {
     "vscode": {
       "extensions": [
         "esbenp.prettier-vscode",
         "sissel.shopify-liquid",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "rebornix.Ruby"
       ],
       "settings": {
-        // use prettier code formatter as default formatter
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "prettier.configPath": ".prettierrc",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "prettier.configPath": ".prettierrc"
       }
     }
   },
