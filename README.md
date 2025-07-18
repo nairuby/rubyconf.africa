@@ -64,7 +64,7 @@ If you encounter errors with the following gems during setup or installation:
 - `google-api-client` (~> 0.53.0)
 - `google-apis-sheets_v4` (~> 0.41)
 
-You can install them manually using these commands(Watchout for the (`gem install google-apis-sheets_v4`)):
+You can install them manually using these commands:
 
 ```bash
 gem install dotenv
