@@ -39,7 +39,7 @@ on:
       - "Gemfile"
       - "Gemfile.lock"
       - "!README.md"
-  #workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
   contents: write
