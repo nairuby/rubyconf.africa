@@ -5923,6 +5923,14 @@ media .page-title .bread-crumb li a:hover {
 .clients-section-three .sponsors-outer .image-box:hover img {
   opacity: 1;
 }
+@media (max-width: 576px) {
+  .clients-section .sponsors-outer .image-box img,
+  .clients-section-two .sponsors-outer .image-box img,
+  .clients-section-three .sponsors-outer .image-box img,
+  .client-block img {
+    max-width: 80%; 
+  }
+}
 
 /***
 
