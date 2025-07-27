@@ -3,10 +3,10 @@ name: Deploy site
 on:
   #schedule:
    # - cron: "0 6 * * *" # runs daily at 06:00 UTC
-  #workflow_run:
-  #  workflows: ["Sync Google Sheet to Jekyll Data"]
-   # types:
-    #  - completed
+  workflow_run:
+    workflows: ["Sync Google Sheet to Jekyll Data"]
+    types:
+      - completed
   push:
     branches:
       - main
