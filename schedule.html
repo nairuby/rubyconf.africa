@@ -85,7 +85,14 @@ image: "/images/logo/arc_logo_coloured.png"
                           style="width: 60px; height: 60px"
                         />
                       </a>
-                      <span class="text-dark small">{{ speaker_trimmed }}</span>
+                      <span class="text-dark small d-flex align-items-center gap-2">
+                          {{ speaker_trimmed }}
+                          {% if event.recording and event.recording != "" %}
+                            <a href="{{ event.recording }}" target="_blank" class="ms-1">
+                                <i class="fab fa-youtube fs-3 text-danger" ></i>
+                            </a>
+                          {% endif %}
+                      </span>
                     </figure>
                     {% endfor %}
                   </div>

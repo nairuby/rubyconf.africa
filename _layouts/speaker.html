@@ -75,6 +75,42 @@ layout: application_speaker
         </div>
       </div>
     </div>
+
+<!--      Link to YT-->
+      {% if page.recording %}
+      <div class="mt-4">
+          <div class="card shadow-sm border-0">
+              <div class="card-body text-center">
+                  <h5 class="card-title text-info-emphasis mb-3">
+                      🎥 Watch {{ page.title }}’s Talk
+                  </h5>
+                  <a href="{{ page.recording }}" target="_blank" class="btn btn-danger btn-lg d-inline-flex align-items-center gap-2">
+                      <i class="fab fa-youtube fs-4"></i> Watch on YouTube
+                  </a>
+              </div>
+          </div>
+      </div>
+      {% endif %}
+ <!--      Embed recording-->
+      {% if page.recording %}
+      <div class="mt-4">
+          <div class="card shadow-sm border-0">
+              <div class="card-body">
+                  <h5 class="card-title text-info-emphasis mb-3 text-center">
+                      🎥 Recording of {{ page.title }}’s Talk
+                  </h5>
+                  <div class="ratio ratio-16x9">
+                      <iframe src="{{ page.recording | replace: 'watch?v=', 'embed/' }}"
+                              title="YouTube video"
+                              allowfullscreen>
+                      </iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {% endif %}
+
+
   </div>
 </section>
 <!--End Speaker Detail -->
