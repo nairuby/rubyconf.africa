@@ -1,0 +1,34 @@
+---
+layout: archive_application
+permalink: /2025/blog
+title: "Ruby Conf Africa Blogs"
+description: "Explore the latest news, insights, and updates about Ruby Conf Africa 2024. Stay informed about our events, speakers, and community activities."
+image: "/images/logo/arc_logo_coloured.png"
+---
+
+<!--Sidebar Page Container-->
+<div class="sidebar-page-container" style="margin-top: 40px">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side / Blog Sidebar-->
+      <div class="content-side col-lg-8 col-md-12 col-sm-12 centered">
+        <div class="blog-sidebar">
+          <!-- News Block Three -->
+
+          {% for blog in site.data.blogs %} {% include blog_block.liquid
+          blog=blog %} {% endfor %}
+
+          <!--Styled Pagination-->
+          <!--                    <ul class="styled-pagination">-->
+          <!--                        <li><a href="#">1</a></li>-->
+          <!--                        <li><a href="#" class="active">2</a></li>-->
+          <!--                        <li><a href="#">3</a></li>-->
+          <!--                        <li><a href="#"><span class="icon fa fa-angle-right"></span></a></li>-->
+          <!--                    </ul>-->
+          <!--End Styled Pagination-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Sidebar Page Container -->

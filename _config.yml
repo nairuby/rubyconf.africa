@@ -115,6 +115,15 @@ page_gen:
     title: "name"
     slugify: true
     raw: false
+  - data: "new_remote.speakers_2025"
+    template: "new_archive_speaker"
+    name: "name"
+    dir: "2025/speakers"
+    extension: "html"
+    index_files: false
+    title: "name"
+    slugify: true
+    raw: false
 
 # Collections of content
 collections:
@@ -169,12 +178,12 @@ collections:
   speakers_2024_mini:
     output: true
     permalink: /2024-mini/speaker/:name/
-  year-2025-mini:
+  year-2025:
     output: true
-    permalink: /2024-mini/:path
-  speakers_2025_mini:
+    permalink: /2025/:path
+  speakers_2025:
     output: true
-    permalink: /2024-mini/speaker/:name/
+    permalink: /2025/speaker/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
