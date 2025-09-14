@@ -1,10 +1,11 @@
 ---
-layout: application_home
-title: "Ruby Conf Africa 2026—Leading Ruby Developers Conference in Nairobi, Kenya"
-name: "Ruby Conf Africa 2026"
-description: "Join us on August 21-22, 2026, for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby developers, learn from insightful sessions, and explore the latest trends in Ruby development."
+layout: archive_application_home
+title: "Ruby Conf Africa 2025—Leading Ruby Developers Conference in Nairobi, Kenya"
+name: "Ruby Conf Africa 2025"
+description: "Join us on July 18-19, 2025, for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby developers, learn from insightful sessions, and explore the latest trends in Ruby development."
 image: "/images/logo/arc_logo_coloured.png"
-year: 2026
+permalink: /2025/
+year: 2025
 ---
 
 <div class="preloader-new" xmlns="http://www.w3.org/1999/html">
@@ -22,17 +23,21 @@ year: 2026
     <!-- Slide Item -->
     <div
       class="slide-item lazyload"
-      style="background-image: url(images/intro-landing.jpg)"
+      style="background-image: url(../images/intro-landing.jpg)"
     >
       <div class="auto-container">
         <div class="content-box">
-          <span class="title">August 21st-22nd</span>
-          <h2>Ruby Conf Africa 2026</h2>
+          <span class="title">July 18th-19th</span>
+          <h2>Ruby Conf Africa 2025</h2>
           <ul class="info-list">
             <!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
             <!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
-            <li><span class="fa fa-map-marker-alt"></span> Venue TBA</li>
+            <li>
+              <span class="fa fa-map-marker-alt"></span> Daystar University -
+              Nairobi, Kenya
+            </li>
           </ul>
+          {% include thanks-banner.liquid %}
           <div
             class="btn-align"
             style="
@@ -44,7 +49,7 @@ year: 2026
           >
             <div class="btn-box" style="display: none">
               <a
-                href="https://www.papercall.io/rubyconfafrica2026"
+                href="https://www.papercall.io/rubyconfafrica2025"
                 target="_blank"
                 class="theme-btn btn-style-two"
               >
@@ -85,17 +90,21 @@ year: 2026
     <!-- Slide Item -->
     <div
       class="slide-item lazyload"
-      style="background-image: url(images/intro-landing.jpg)"
+      style="background-image: url(../images/intro-landing.jpg)"
     >
       <div class="auto-container">
         <div class="content-box">
-          <span class="title">August 21st-22nd</span>
-          <h2>Ruby Conf Africa 2026</h2>
+          <span class="title">July 18th-19th</span>
+          <h2>Ruby Conf Africa 2025</h2>
           <ul class="info-list">
             <!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
             <!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
-            <li><span class="fa fa-map-marker-alt"></span> Venue TBA</li>
+            <li>
+              <span class="fa fa-map-marker-alt"></span> Daystar University -
+              Nairobi, Kenya
+            </li>
           </ul>
+          {% include thanks-banner.liquid %}
           <div
             class="btn-align"
             style="
@@ -107,7 +116,7 @@ year: 2026
           >
             <div class="btn-box" style="display: none">
               <a
-                href="https://www.papercall.io/rubyconfafrica2026"
+                href="https://www.papercall.io/rubyconfafrica2025"
                 target="_blank"
                 class="theme-btn btn-style-two"
               >
@@ -158,11 +167,37 @@ year: 2026
         <div class="inner-column">
           <div class="sec-title">
             <span class="title">ABOUT EVENT</span>
-            <h2>Welcome to RubyConfAfrica 2026</h2>
+            <h2>Welcome to RubyConfAfrica 2025</h2>
             <div class="text">
-              <strong>Still cooking…</strong>
-              Check back soon for updates on RubyConfAfrica 2026.
+              This year’s theme,
+              <strong>“Beyond code: Innovating for the future”</strong>,
+              highlights how Ruby and open-source technologies can shape
+              tomorrow’s world. Join us in Kenya for a two-day experience that
+              brings together thought leaders, innovators, and entrepreneurs
+              driven by a passion for Ruby and its power to spark meaningful
+              change. Dive into forward-thinking discussions, hands-on
+              workshops, and vibrant networking sessions that go beyond code —
+              into the heart of innovation.
             </div>
+          </div>
+          <ul class="list-style-one">
+            <li>
+              Discover how Ruby is powering innovation in open-source
+              communities and tech ecosystems.
+            </li>
+            <li>
+              Participate in practical workshops and insightful talks from
+              industry visionaries.
+            </li>
+            <li>
+              Connect with a passionate network of developers, founders, and
+              changemakers shaping the future.
+            </li>
+          </ul>
+          <div class="btn-box" style="display: none">
+            <a href="tickets.html" class="theme-btn btn-style-three"
+              ><span class="btn-title">Buy Tickets</span></a
+            >
           </div>
         </div>
       </div>
@@ -171,7 +206,7 @@ year: 2026
       <div
         class="image-column col-lg-6 col-md-12 col-sm-12"
         style="
-          background-image: url(&quot;images/conference.jpg&quot;);
+          background-image: url(&quot;../images/conference.jpg&quot;);
           background-size: cover;
           background-position: center;
           height: auto;
@@ -186,7 +221,7 @@ year: 2026
 <!--End About Section -->
 
 <!-- Keynote Speakers -->
-<section class="speakers-section" style="display: none">
+<section class="speakers-section">
   <div class="auto-container">
     <div class="sec-title light text-center">
       <h2>Keynote Speakers</h2>
@@ -194,7 +229,7 @@ year: 2026
 
     <div class="outer-box">
       <div class="row d-flex align-items-center justify-content-center">
-        {% assign keynote_speakers = site.data.new_remote.speakers | where:
+        {% assign keynote_speakers = site.data.new_remote.speakers_2025 | where:
         "is_keynote", "Yes" %} {% for speaker in keynote_speakers %}
         <div class="speaker-block col-lg-4 col-md-6 col-sm-12">
           <div class="inner-box">
@@ -247,7 +282,7 @@ year: 2026
 <!-- End Keynote Speakers -->
 
 <!-- Speakers -->
-<section class="speakers-section" style="display: none">
+<section class="speakers-section">
   <div class="auto-container">
     <div class="sec-title light text-center">
       <h2>Speakers</h2>
@@ -255,7 +290,7 @@ year: 2026
 
     <div class="outer-box">
       <div class="row d-flex align-items-center justify-content-center">
-        {% assign all_speakers = site.data.new_remote.speakers %} {% assign
+        {% assign all_speakers = site.data.new_remote.speakers_2025 %} {% assign
         featured_speakers = all_speakers | slice: 0, 4 %}
         <!-- Speaker Block -->
         {% for speaker in featured_speakers %}
@@ -358,7 +393,7 @@ year: 2026
 <!-- End of Why Attend -->
 
 <!-- Featured Speaker -->
-<section class="schedule-section style-three" style="display: none">
+<section class="schedule-section style-three">
   <div class="auto-container">
     <div class="sec-title text-center">
       <span class="featured-title"> Featured Sessions</span>
@@ -369,13 +404,13 @@ year: 2026
         <!--Tab-->
         <div class="tab active-tab" id="tab-1">
           <div class="schedule-timeline row">
-            {% assign dmitry_pogrebnoy = site.data.new_remote.speakers | where:
-            "url", "dmitry" | first %} {% assign caleb_muoki =
-            site.data.new_remote.speakers | where: "url", "caleb" | first %} {%
-            assign amani_kanu = site.data.new_remote.speakers | where: "url",
-            "amani" | first %} {% assign ganesh_kunwar =
-            site.data.new_remote.speakers | where: "url", "ganesh" | first %} {%
-            if dmitry_pogrebnoy %}
+            {% assign dmitry_pogrebnoy = site.data.new_remote.speakers_2025 |
+            where: "url", "dmitry" | first %} {% assign caleb_muoki =
+            site.data.new_remote.speakers_2025 | where: "url", "caleb" | first
+            %} {% assign amani_kanu = site.data.new_remote.speakers_2025 |
+            where: "url", "amani" | first %} {% assign ganesh_kunwar =
+            site.data.new_remote.speakers_2025 | where: "url", "ganesh" | first
+            %} {% if dmitry_pogrebnoy %}
             <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
               <div class="inner-box">
                 <div class="inner">
@@ -591,36 +626,34 @@ year: 2026
 
 <!--Start Sponsor Section-->
 
-<div style="display: none">
-  <!--Platinum Sponsors-->
-  {% include sponsor_section.liquid title="Platinum Sponsors" description="Our
-  Platinum Sponsors are the foundational force behind this event! ✨"
-  category="platinum" %}
+<!--Platinum Sponsors-->
+{% include archive_sponsor_section.liquid title="Platinum Sponsors"
+description="Our Platinum Sponsors are the foundational force behind this event!
+✨" category="platinum" %}
 
-  <!--Gold Sponsors-->
-  {% include sponsor_section.liquid title="Gold Sponsors" description="Our Gold
-  Sponsors provide essential support, truly elevating our event! 🌟"
-  category="gold" %}
+<!--Gold Sponsors-->
+{% include archive_sponsor_section.liquid title="Gold Sponsors" description="Our
+Gold Sponsors provide essential support, truly elevating our event! 🌟"
+category="gold" %}
 
-  <!--Silver Sponsors-->
-  {% include sponsor_section.liquid title="Silver Sponsors" description="Thank
-  you to our Silver Sponsors for their strong and valued contributions! 🙌"
-  category="silver" %}
+<!--Silver Sponsors-->
+{% include archive_sponsor_section.liquid title="Silver Sponsors"
+description="Thank you to our Silver Sponsors for their strong and valued
+contributions! 🙌" category="silver" %}
 
-  <!--Speaker Supporters-->
-  {% include sponsor_section.liquid title="Speaker Supporters" description="Our
-  Speaker Supporters help us bring inspiring voices to the stage! 🎤"
-  category="speaker-supporter" %}
+<!--Speaker Supporters-->
+{% include archive_sponsor_section.liquid title="Speaker Supporters"
+description="Our Speaker Supporters help us bring inspiring voices to the stage!
+🎤" category="speaker-supporter" %}
 
-  <!--Partners-->
-  {% include sponsor_section.liquid title="Partner Sponsors" description="These
-  Partner Sponsors are key collaborators, making our event stronger! 🤝"
-  category="partners" %}
-</div>
+<!--Partners-->
+{% include archive_sponsor_section.liquid title="Partner Sponsors"
+description="These Partner Sponsors are key collaborators, making our event
+stronger! 🤝" category="partners" %}
 
 <!--Previous Sponsors-->
-{% include sponsor_section.liquid title="Previous Sponsors" description="We
-celebrate our Previous Sponsors and Partners for their past invaluable support!
-🗓️" category="previous" %}
+{% include archive_sponsor_section.liquid title="Previous Sponsors"
+description="We celebrate our Previous Sponsors and Partners for their past
+invaluable support! 🗓️" category="previous" %}
 
 <!--End Sponsor Section-->

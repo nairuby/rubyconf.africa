@@ -47,20 +47,20 @@
                             <li style="display: none"><a href="/index">Home</a></li>
                             <li {% if page.url == "/about-us" %}class="current" {%endif%}><a href="/about-us">About</a>
                             </li>
-                            <li class="dropdown {% if page.url == "/speakers" %} current {% endif %}"><a href="/speakers.html">Speakers</a>
-                            {%comment%}<ul>
+                            <li class="dropdown {% if page.url == "/speakers" %} current {% endif %}" style="display: none"><a href="/speakers.html">Speakers</a>
+                            <ul style="display: none">
                                 <li><a href="/speakers">Speakers</a></li>
                                 <li><a
                                         href="https://www.papercall.io/rubyconfafrica2025"
                                         target="_blank"
                                 >CFP</a
                                 ></li>
-                            </ul>{%endcomment%}
+                            </ul>
                             </li>
-                            <li {% if page.url == "/schedule" %}class="current" {%endif%}>
+                            <li {% if page.url == "/schedule" %}class="current" {%endif%} style="display: none">
                                 <a href="/schedule">Schedule</a>
                             </li>
-                            {%comment%}<li {% if page.url=="/tickets" %}class="current" {%endif%}><a href="/tickets">Tickets</a>{%endcomment%}
+                            <li {% if page.url=="/tickets" %}class="current" {%endif%} style="display: none"><a href="/tickets">Tickets</a>
                             </li>
                             <li class="dropdown {% if page.url == "/practicalities" %} current {% endif %}"><a href="/practicalities.html">Essentials</a>
                             <ul>
@@ -80,6 +80,9 @@
                             <li class="dropdown">
                                     <a href="/">Past Events</a>
                                     <ul>
+                                        <li>
+                                            <a href="/2025">2025</a>
+                                        </li>
                                         <li>
                                             <a href="/2024">2024</a>
                                         </li>

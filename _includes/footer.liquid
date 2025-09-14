@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="text">
                                     <p>
-                                        Join us on the 18th to 19th July 2025, as leading Ruby
+                                        Join us on the 21st to 22nd August 2026, as leading Ruby
                                         developers from around the world come together in
                                         Nairobi, Kenya, to share, inspire, and learn.
                                     </p>
@@ -65,8 +65,8 @@
                                 <h2 class="widget-title">Quick Links</h2>
                                 <ul class="user-links">
                                     <li><a href="/index">Home</a></li>
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/speakers">Speakers</a></li>
+                                    <li style="display: none"><a href="/about-us">About Us</a></li>
+                                    <li style="display: none"><a href="/speakers">Speakers</a></li>
                                     <li><a href="/contact">Contact Us</a></li>
                                     {% comment  %} <li><a href="/tickets">Tickets</a></li> {% endcomment %}
                                     <li>
@@ -141,7 +141,7 @@
                         <p class="mb-0 me-2">Past Events:</p>
                         <select id="past-events" class="form-select w-auto">
                             <option value="" disabled>Select Year</option>
-                            {% assign years = ",2015,2016,2017,2018,2019,2021,2024" | split: "," %}
+                            {% assign years = ",2015,2016,2017,2018,2019,2021,2024,2025" | split: "," %}
                             {% for year in years %}
                                 <option value="{{ year }}" {% if page.year == year %}selected{% endif %}>
                                     {{ year }}
