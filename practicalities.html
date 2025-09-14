@@ -11,13 +11,13 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png"/>
 	<link rel="manifest" href="/site.webmanifest"/>
-	<meta name="apple-mobile-web-app-title" content="Ruby Conf Africa 2025"/>
+	<meta name="apple-mobile-web-app-title" content="Ruby Conf Africa 2026"/>
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
 	<!-- For Android devices -->
 	<meta name="theme-color" content="#ffffff"/>
 	<meta name="mobile-web-app-capable" content="yes"/>
-	<meta name="application-name" content="Ruby Conf Africa 2025"/>
+	<meta name="application-name" content="Ruby Conf Africa 2026"/>
 	<link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png"/>
 	<link rel="icon" type="image/png" sizes="512x512" href="/images/favicons/android-chrome-512x512.png"/>
 
@@ -57,7 +57,7 @@
 	<meta property="og:image" content="https://rubyconf.africa/images/og_rubyconf2.png"/>
 	<meta property="og:url" content="https://rubyconf.africa/practicalities"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:site_name" content="Ruby Conf Africa 2025"/>
+	<meta property="og:site_name" content="Ruby Conf Africa 2026"/>
 
 	<!-- Twitter meta tags -->
 	<meta name="twitter:card" content="summary_large_image"/>
@@ -77,11 +77,11 @@
 		{
 			"@context": "https://schema.org",
 			"@type": "Event",
-			"name": "Ruby Conf Africa 2025",
+			"name": "Ruby Conf Africa 2026",
 			"description": "Find all the practical information you need for attending Ruby Conf Africa 2025, including venue details, travel information, and accommodations.",
 			"image": "/images/logo/arc_logo_coloured.png",
-			"startDate": "2025-07-18T09:00",
-			"endDate": "2025-07-19",
+			"startDate": "2026-07-18T09:00",
+			"endDate": "2026-07-19",
 			"eventStatus": "https://schema.org/EventScheduled",
 			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
 			"location": {
@@ -150,13 +150,20 @@
                             <li style="display: none"><a href="/index">Home</a></li>
                             <li ><a href="/about-us">About</a>
                             </li>
-                            <li class="dropdown "><a href="/speakers.html">Speakers</a>
-                            
+                            <li class="dropdown " style="display: none"><a href="/speakers.html">Speakers</a>
+                            <ul style="display: none">
+                                <li><a href="/speakers">Speakers</a></li>
+                                <li><a
+                                        href="https://www.papercall.io/rubyconfafrica2025"
+                                        target="_blank"
+                                >CFP</a
+                                ></li>
+                            </ul>
                             </li>
-                            <li >
+                            <li  style="display: none">
                                 <a href="/schedule">Schedule</a>
                             </li>
-                            
+                            <li  style="display: none"><a href="/tickets">Tickets</a>
                             </li>
                             <li class="dropdown  current "><a href="/practicalities.html">Essentials</a>
                             <ul>
@@ -174,6 +181,9 @@
                             <li class="dropdown">
                                     <a href="/">Past Events</a>
                                     <ul>
+                                        <li>
+                                            <a href="/2025">2025</a>
+                                        </li>
                                         <li>
                                             <a href="/2024">2024</a>
                                         </li>
@@ -733,7 +743,7 @@
                 <b>Enjoy your time in Kenya!</b>
               </div>
               <!-- [Insert New Registration Link] -->
-              <div class="btn-box mt-2" style="display: none;">
+              <div class="btn-box mt-2" style="display: none">
                 <a href="tickets.html" class="theme-btn btn-style-three"
                   ><span class="btn-title">Register Now</span></a
                 >
@@ -778,7 +788,7 @@
                                 </div>
                                 <div class="text">
                                     <p>
-                                        Join us on the 18th to 19th July 2025, as leading Ruby
+                                        Join us on the 21st to 22nd August 2026, as leading Ruby
                                         developers from around the world come together in
                                         Nairobi, Kenya, to share, inspire, and learn.
                                     </p>
@@ -818,8 +828,8 @@
                                 <h2 class="widget-title">Quick Links</h2>
                                 <ul class="user-links">
                                     <li><a href="/index">Home</a></li>
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/speakers">Speakers</a></li>
+                                    <li style="display: none"><a href="/about-us">About Us</a></li>
+                                    <li style="display: none"><a href="/speakers">Speakers</a></li>
                                     <li><a href="/contact">Contact Us</a></li>
                                     
                                     <li>
@@ -926,6 +936,10 @@
                             
                                 <option value="2024" >
                                     2024
+                                </option>
+                            
+                                <option value="2025" >
+                                    2025
                                 </option>
                             
                         </select>
