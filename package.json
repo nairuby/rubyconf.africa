@@ -7,9 +7,9 @@
   "scripts": {
     "build:css": "postcss assets/modern/css/tailwind.css -o assets/modern/css/main.css",
     "build:css:prod": "NODE_ENV=production postcss assets/modern/css/tailwind.css -o assets/modern/css/main.css",
-    "build:css:purge": "purgecss --config purgecss.modern.config.js",
+    "build:css:purge": "purgecss --config purgecss.modern.config.cjs",
     "build:css:full": "pnpm run build:css:prod && pnpm run build:css:purge",
-    "build:js": "node scripts/build-js.js",
+    "build:js": "ruby _build/build_modern_js.rb",
     "watch:css": "postcss assets/modern/css/tailwind.css -o assets/modern/css/main.css --watch",
     "dev": "pnpm run watch:css",
     "build": "pnpm run build:css:full && pnpm run build:js",
@@ -18,7 +18,11 @@
     "test:build": "vitest --run test/build-process.test.js"
   },
   "packageManager": "pnpm@9.0.0",
-  "keywords": ["jekyll", "tailwind", "rubyconf"],
+  "keywords": [
+    "jekyll",
+    "tailwind",
+    "rubyconf"
+  ],
   "author": "RubyConf Africa",
   "license": "MIT",
   "devDependencies": {

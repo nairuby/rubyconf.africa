@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   content: [
     // Only modern site files - strict isolation from archives
     '_layouts/modern/**/*.{html,liquid}',
