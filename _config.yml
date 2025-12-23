@@ -101,18 +101,6 @@ tailwind:
   enabled: true
   purge_css: true
   config_file: "tailwind.config.js"
-
-# Modern asset pipeline configuration
-modern_assets:
-  enabled: true
-  css_path: "/assets/modern/css/main.css"
-  js_path: "/assets/modern/js/bundle.js"
-  
-# Tailwind CSS configuration
-tailwind:
-  enabled: true
-  purge_css: true
-  config_file: "tailwind.config.js"
   
 # Asset isolation settings
 archive_isolation:
