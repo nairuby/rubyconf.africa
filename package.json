@@ -1,0 +1,36 @@
+{
+  "name": "rubyconf-africa-modern",
+  "version": "1.0.0",
+  "description": "Modern asset pipeline for RubyConf Africa website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:css": "postcss assets/modern/css/tailwind.css -o assets/modern/css/main.css",
+    "build:css:prod": "NODE_ENV=production postcss assets/modern/css/tailwind.css -o assets/modern/css/main.css",
+    "build:css:purge": "purgecss --config purgecss.modern.config.js",
+    "build:css:full": "pnpm run build:css:prod && pnpm run build:css:purge",
+    "build:js": "node scripts/build-js.js",
+    "watch:css": "postcss assets/modern/css/tailwind.css -o assets/modern/css/main.css --watch",
+    "dev": "pnpm run watch:css",
+    "build": "pnpm run build:css:full && pnpm run build:js",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:build": "vitest --run test/build-process.test.js"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "keywords": ["jekyll", "tailwind", "rubyconf"],
+  "author": "RubyConf Africa",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.22",
+    "cssnano": "^7.1.2",
+    "fast-check": "^4.4.0",
+    "jsdom": "^27.3.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "purgecss": "^6.0.0",
+    "tailwindcss": "^4.1.18",
+    "vitest": "^4.0.15"
+  }
+}

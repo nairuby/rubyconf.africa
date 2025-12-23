@@ -64,7 +64,14 @@ gitlab_username: nairuby
 github_username: nairuby
 
 # The current year
-current_year: 2025
+current_year: 2026
+
+# Internationalization settings
+languages: ["en", "fr", "sw"]
+default_lang: "en"
+exclude_from_localizations: ["javascript", "images", "css", "assets", "vendor", "node_modules"]
+parallel_localization: true
+
 
 # Build settings
 markdown: kramdown
@@ -74,7 +81,44 @@ plugins:
   - jekyll-sitemap
   - jekyll-minifier
   - jekyll-datapage-generator
+  - jekyll-polyglot
 #  - jekyll-assets
+
+# Modern asset pipeline configuration
+modern_assets:
+  enabled: true
+  css_path: "/assets/modern/css/main.css"
+  js_path: "/assets/modern/js/bundle.js"
+  
+# Archive asset preservation
+archive_assets:
+  preserve_original: true
+  css_path: "/assets/css/"
+  js_path: "/assets/js/"
+
+# Tailwind configuration
+tailwind:
+  enabled: true
+  purge_css: true
+  config_file: "tailwind.config.js"
+
+# Modern asset pipeline configuration
+modern_assets:
+  enabled: true
+  css_path: "/assets/modern/css/main.css"
+  js_path: "/assets/modern/js/bundle.js"
+  
+# Tailwind CSS configuration
+tailwind:
+  enabled: true
+  purge_css: true
+  config_file: "tailwind.config.js"
+  
+# Asset isolation settings
+archive_isolation:
+  enabled: true
+  preserve_original_assets: true
+  archive_years: [2015, 2016, 2017, 2018, 2019, 2021, 2024, "2024-mini", 2025]
 
 # Asset settings
 #assets:
@@ -107,7 +151,7 @@ minifier:
 
 page_gen:
   - data: "new_remote.speakers"
-    template: "speaker"
+    template: "modern/speaker"
     name: "name"
     dir: "speakers"
     extension: "html"
@@ -195,6 +239,8 @@ collections:
 #
 exclude:
   - 2017speakers/
+  - fr/
+  - sw/
   - Makefile
   - Gemfile
   - Gemfile.lock

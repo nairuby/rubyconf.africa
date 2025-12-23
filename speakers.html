@@ -1,34 +1,98 @@
 ---
-layout: application
+layout: modern/application
 permalink: /speakers
 title: "Speakers for Ruby Conf Africa 2026"
-description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2026.  Browse speaker profiles, session topics, and more."
+description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2026. Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
 year: 2026
 ---
 
-<!-- Preloader -->
-<div class="preloader-new">
-  <!-- Logo -->
-  <div class="preloader-logo-new"></div>
+<!-- Modern Speakers Page with Tailwind CSS -->
+<div class="min-h-screen bg-gray-50">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-red-600 to-red-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Speakers</h1>
+      <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto leading-relaxed">
+        Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2026
+      </p>
+    </div>
+  </section>
 
-  <!-- Animated Loading Text -->
-  <div class="loader-new"></div>
-</div>
-<!--Start Speakers Sections-->
-<section class="speakers-section-two" style="margin-top: 0">
-  <div class="auto-container">
-    <div class="sec-title text-center my-4">
-      <span class="display-4 text-danger font-weight-bold">Speakers</span>
-    </div>
+  <!-- Speakers Grid -->
+  {% assign current_year = site.current_year | default: 2026 %}
+  {% if current_year == 2025 %}
+    {% assign all_speakers = site.data.new_remote.speakers_2025 %}
+  {% else %}
     {% assign all_speakers = site.data.new_remote.speakers %}
-    <div class="row top-pd-mobile">
-      {% for speaker in all_speakers %} {% assign designation = "Speaker" %} {%
-      if speaker.is_keynote == "Yes" or speaker.is_keynote == true %} {% assign
-      designation = "Keynote Speaker" %} {% endif %} {% include
-      speaker_block.liquid speaker=speaker designation=designation %} {% endfor
-      %}
+  {% endif %}
+  
+  {% if all_speakers.size > 0 %}
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {% for speaker in all_speakers %}
+            {% assign designation = "Speaker" %}
+            {% if speaker.is_keynote == "Yes" or speaker.is_keynote == true %}
+              {% assign designation = "Keynote Speaker" %}
+            {% endif %}
+            
+            {% include modern/components/speaker-card.liquid speaker=speaker designation=designation %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% else %}
+    <!-- Coming Soon Section -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-2xl shadow-lg p-12">
+          <i class="fas fa-microphone text-6xl text-red-600 mb-6"></i>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Speakers Coming Soon!</h2>
+          <p class="text-xl text-gray-600 mb-8">
+            We're working hard to bring you an amazing lineup of Ruby experts. 
+            Stay tuned for speaker announcements!
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <a href="/contact" 
+               class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+              <i class="fas fa-envelope mr-2"></i>
+              Get Notified
+            </a>
+            
+            <a href="/" 
+               class="inline-flex items-center px-6 py-3 border-2 border-red-600 text-base font-medium rounded-md text-red-600 hover:bg-red-50 transition-colors duration-200">
+              <i class="fas fa-home mr-2"></i>
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Want to Speak at Ruby Conf Africa?</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        We're always looking for passionate Ruby developers to share their knowledge and experiences.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <a href="/contact" 
+           class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+          <i class="fas fa-paper-plane mr-2"></i>
+          Submit a Proposal
+        </a>
+        
+        <a href="/code-of-conduct" 
+           class="inline-flex items-center px-6 py-3 border-2 border-red-600 text-base font-medium rounded-md text-red-600 hover:bg-red-50 transition-colors duration-200">
+          <i class="fas fa-heart mr-2"></i>
+          Code of Conduct
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-<!--End Speakers Section-->
+  </section>
+</div>

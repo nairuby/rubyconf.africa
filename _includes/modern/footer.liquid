@@ -1,0 +1,148 @@
+<!-- Modern Footer Component with Tailwind CSS and Internationalization -->
+{% assign current_locale = site.locale | default: site.default_locale | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
+
+<footer class="bg-gray-900 dark:bg-gray-950 text-white theme-transition">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Logo and Description -->
+      <div class="col-span-1 lg:col-span-2">
+        <div class="mb-6">
+          <h3 class="text-3xl font-bold mb-4 text-red-400">Ruby Conf Africa</h3>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            {% include modern/components/translation-helper.liquid key="conference.welcome" fallback="The premier Ruby conference in Africa, bringing together developers, enthusiasts, and industry leaders to share knowledge, build community, and celebrate the Ruby ecosystem." %}
+          </p>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="flex space-x-6">
+          <a href="https://twitter.com/rubyconfafrica" 
+             class="text-gray-400 hover:text-red-400 transition-colors duration-200 transform hover:scale-110"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="{% include modern/components/translation-helper.liquid key='footer.follow_us' fallback='Follow us on Twitter' %}">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+          <a href="https://linkedin.com/company/rubyconfafrica" 
+             class="text-gray-400 hover:text-red-400 transition-colors duration-200 transform hover:scale-110"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="{% include modern/components/translation-helper.liquid key='footer.follow_us' fallback='Follow us on LinkedIn' %}">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="https://github.com/rubyconfafrica" 
+             class="text-gray-400 hover:text-red-400 transition-colors duration-200 transform hover:scale-110"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="{% include modern/components/translation-helper.liquid key='footer.follow_us' fallback='Follow us on GitHub' %}">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://youtube.com/rubyconfafrica" 
+             class="text-gray-400 hover:text-red-400 transition-colors duration-200 transform hover:scale-110"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="{% include modern/components/translation-helper.liquid key='footer.follow_us' fallback='Follow us on YouTube' %}">
+            <i class="fab fa-youtube text-2xl"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-semibold mb-6 text-white">{% include modern/components/translation-helper.liquid key="navigation.home" fallback="Conference" %}</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="/speakers" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-microphone mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              {% include modern/components/translation-helper.liquid key="navigation.speakers" fallback="Speakers" %}
+            </a>
+          </li>
+          <li>
+            <a href="/schedule" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group" style="display: none">
+              <i class="fas fa-calendar mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              {% include modern/components/translation-helper.liquid key="navigation.schedule" fallback="Schedule" %}
+            </a>
+          </li>
+          <li>
+            <a href="/about-us" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-info-circle mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              {% include modern/components/translation-helper.liquid key="navigation.about" fallback="About" %}
+            </a>
+          </li>
+          <li>
+            <a href="/contact" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group" style="display: none">
+              <i class="fas fa-envelope mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              {% include modern/components/translation-helper.liquid key="navigation.contact" fallback="Contact" %}
+            </a>
+          </li>
+          <li>
+            <a href="/code-of-conduct" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-heart mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              {% include modern/components/translation-helper.liquid key="navigation.code_of_conduct" fallback="Code of Conduct" %}
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Archive Links -->
+      <div>
+        <h4 class="text-xl font-semibold mb-6 text-white">Past Events</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="/2025" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-archive mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              2025
+            </a>
+          </li>
+          <li>
+            <a href="/2024" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-archive mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              2024
+            </a>
+          </li>
+          <li>
+            <a href="/2021" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-archive mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              2021
+            </a>
+          </li>
+          <li>
+            <a href="/2019" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-archive mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              2019
+            </a>
+          </li>
+          <li>
+            <a href="/2018" 
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group">
+              <i class="fas fa-archive mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+              View All Archives
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-12 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+          {% include modern/components/translation-helper.liquid key="footer.copyright" fallback="&copy; {{ 'now' | date: '%Y' }} Ruby Conf Africa. All rights reserved." %}
+        </p>
+        <div class="flex space-x-6 text-sm">
+          <a href="/privacy" class="text-gray-400 hover:text-red-400 transition-colors duration-200">
+            Privacy Policy
+          </a>
+          <a href="/terms" class="text-gray-400 hover:text-red-400 transition-colors duration-200">
+            Terms of Service
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

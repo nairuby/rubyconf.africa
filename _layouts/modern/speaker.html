@@ -1,0 +1,216 @@
+---
+layout: modern/application
+---
+
+<!-- Modern Speaker Detail Page with Tailwind CSS -->
+<div class="min-h-screen bg-gray-50">
+  <!-- Speaker Hero Section -->
+  <section class="bg-gradient-to-br from-red-600 to-red-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <!-- Speaker Image -->
+        <div class="lg:col-span-1">
+          <div class="relative">
+            <img 
+              src="{{ page.image[0] | default: page.image | default: '/images/default-speaker.jpg' }}" 
+              alt="{{ page.title }}"
+              class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+            />
+            {% if page.is_keynote == true %}
+              <div class="absolute -top-4 -right-4 bg-yellow-400 text-red-800 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                <i class="fas fa-star mr-1"></i>
+                Keynote Speaker
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        
+        <!-- Speaker Info -->
+        <div class="lg:col-span-2">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">{{ page.title }}</h1>
+          
+          {% if page.bio %}
+            <p class="text-xl text-red-100 mb-6 leading-relaxed">{{ page.bio }}</p>
+          {% endif %}
+          
+          <!-- Social Links -->
+          <div class="flex flex-wrap gap-3 mb-8">
+            {% if page.github and page.github != "" %}
+              <a href="{{ page.github }}" 
+                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
+                 style="background-color: #1f2937; hover:background-color: #111827;"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github mr-2 text-lg"></i>
+                <span class="text-sm font-medium">GitHub</span>
+              </a>
+            {% endif %}
+            
+            {% if page.linkedin and page.linkedin != "" %}
+              <a href="{{ page.linkedin }}" 
+                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
+                 style="background-color: #2563eb;"
+                 onmouseover="this.style.backgroundColor='#1d4ed8'"
+                 onmouseout="this.style.backgroundColor='#2563eb'"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin mr-2 text-lg"></i>
+                <span class="text-sm font-medium">LinkedIn</span>
+              </a>
+            {% endif %}
+            
+            {% if page.website and page.website != "" %}
+              <a href="{{ page.website }}" 
+                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
+                 style="background-color: #059669;"
+                 onmouseover="this.style.backgroundColor='#047857'"
+                 onmouseout="this.style.backgroundColor='#059669'"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-globe mr-2 text-lg"></i>
+                <span class="text-sm font-medium">Website</span>
+              </a>
+            {% endif %}
+            
+            {% if page.twitter and page.twitter != "" %}
+              <a href="{{ page.twitter }}" 
+                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
+                 style="background-color: #000000;"
+                 onmouseover="this.style.backgroundColor='#1f2937'"
+                 onmouseout="this.style.backgroundColor='#000000'"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter mr-2 text-lg"></i>
+                <span class="text-sm font-medium">Twitter</span>
+              </a>
+            {% endif %}
+          </div>
+          
+          <!-- Back to Speakers -->
+          <a href="/speakers" 
+             class="inline-flex items-center text-red-100 hover:text-white transition-colors duration-200">
+            <i class="fas fa-arrow-left mr-2"></i>
+            Back to All Speakers
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaker Details -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="p-8">
+          <!-- Talk Information -->
+          {% if page.talk_title %}
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+                <i class="fas fa-microphone text-red-600 mr-3"></i>
+                Talk Details
+              </h2>
+              
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">{{ page.talk_title }}</h3>
+                
+                {% if page.talk_description and page.talk_description != "TBA" %}
+                  <div class="prose prose-lg text-gray-700 mb-4">
+                    {{ page.talk_description | markdownify }}
+                  </div>
+                {% endif %}
+                
+                <!-- Session Information -->
+                {% if page.session_day and page.session_time %}
+                  <div class="border-t border-gray-200 pt-4">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Session Schedule</h4>
+                    <div class="flex items-center text-gray-600">
+                      <i class="fas fa-calendar-alt mr-3 text-red-600"></i>
+                      <span class="font-medium">Day {{ page.session_day }}</span>
+                      <span class="mx-2">•</span>
+                      <span>{{ page.session_time }}</span>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+          
+          <!-- Speaker Bio -->
+          {% if page.details %}
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+                <i class="fas fa-user text-red-600 mr-3"></i>
+                About {{ page.title | split: ' ' | first }}
+              </h2>
+              
+              <div class="prose prose-lg text-gray-700 max-w-none">
+                {{ page.details | markdownify }}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recording Section -->
+  {% if page.recording %}
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="p-8 text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+              <i class="fas fa-play-circle text-red-600 mr-3"></i>
+              Watch {{ page.title }}'s Talk
+            </h3>
+            <a href="{{ page.recording }}" target="_blank" 
+               class="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 mb-6">
+              <i class="fab fa-youtube text-xl mr-2"></i>
+              Watch on YouTube
+            </a>
+          </div>
+          
+          <!-- Embedded Video -->
+          <div class="aspect-w-16 aspect-h-9">
+            <iframe src="{{ page.recording | replace: 'watch?v=', 'embed/' }}" 
+                    title="YouTube video" 
+                    allowfullscreen
+                    class="w-full h-96">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Related Speakers -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Other Speakers</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% assign current_year = site.current_year | default: 2026 %}
+        {% if current_year == 2025 %}
+          {% assign all_speakers = site.data.new_remote.speakers_2025 %}
+        {% else %}
+          {% assign all_speakers = site.data.new_remote.speakers %}
+        {% endif %}
+        
+        {% assign other_speakers = all_speakers | where_exp: "speaker", "speaker.name != page.title" | sample: 3 %}
+        
+        {% for speaker in other_speakers %}
+          {% assign designation = "Speaker" %}
+          {% if speaker.is_keynote == "Yes" or speaker.is_keynote == true %}
+            {% assign designation = "Keynote Speaker" %}
+          {% endif %}
+          
+          {% include modern/components/speaker-card.liquid speaker=speaker designation=designation %}
+        {% endfor %}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/speakers" 
+           class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+          View All Speakers
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

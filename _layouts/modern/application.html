@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.active_lang | default: site.default_lang | default: "en" }}">
+{% include modern/head.liquid %}
+<body class="bg-gray-50 font-sans antialiased">
+<div class="min-h-screen flex flex-col">
+    <!-- Header and Navigation-->
+    {% include modern/navigation.liquid %}
+
+    <!-- Content -->
+    <main class="flex-grow">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    {% include modern/footer.liquid %}
+</div>
+
+<!--Scroll to top-->
+<div id="scroll-to-top" class="fixed bottom-8 right-8 z-50 opacity-0 transition-opacity duration-300 pointer-events-none">
+    <button class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200">
+        <i class="fas fa-angle-double-up text-lg"></i>
+    </button>
+</div>
+
+<!-- Modern JavaScript -->
+<script src="{{ site.baseurl }}/assets/modern/js/main.js"></script>
+</body>
+</html>

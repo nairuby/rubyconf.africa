@@ -1,0 +1,19 @@
+# Conference information for 2026
+conference:
+  name: "Ruby Conf Africa 2026"
+  dates: "August 21-22, 2026"
+  location: "Nairobi, Kenya"
+  venue: "TBA"
+  announcements:
+    - "Call for Papers now open!"
+    - "Early bird tickets available"
+    - "Venue announcement coming soon"
+  status: "active" # active, planning, past
+  theme: "Beyond code: Innovating for the future"
+  description: >-
+    RubyConf Africa 2026 aims to connect together
+    Developers (Engineers), Designers and Entrepreneurs, from
+    across Africa to a two day conference from
+    21st to 22nd August, 2026 in Nairobi, Kenya to have
+    conversations around the theme
+    "Beyond code: Innovating for the future".
