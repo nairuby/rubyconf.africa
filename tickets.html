@@ -1,7 +1,7 @@
 ---
 layout: modern/page
 title: "Tickets"
-description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard Pass or Full Pass options."
+description: "Get your tickets for Ruby Conf Africa 2026. Choose from Normal Pass, Full Pass, or Group Pass options."
 ---
 
 {% include modern/translation-system.liquid %}
@@ -29,7 +29,7 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
       
       <!-- Description -->
       <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto mb-8">
-        Join the biggest Ruby gathering in Africa. Three days of code, connection, and inspiration.
+        Join the biggest Ruby gathering in Africa. Two days of code, connection, and inspiration.
       </p>
       
       <!-- Event Details -->
@@ -58,31 +58,32 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-translate="tickets.choose_experience" data-fallback="Choose Your Experience">
-        {% include modern/components/translation-helper.liquid key="tickets.choose_experience" fallback="Choose Your Experience" %}
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Choose Your Experience
       </h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-translate="tickets.select_ticket" data-fallback="Select the ticket that best fits your needs and join us for an unforgettable Ruby experience.">
-        {% include modern/components/translation-helper.liquid key="tickets.select_ticket" fallback="Select the ticket that best fits your needs and join us for an unforgettable Ruby experience." %}
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Select the ticket that best fits your needs and join us for an unforgettable Ruby experience.
       </p>
     </div>
 
     <!-- Ticket Cards -->
-    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+    <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
       
-      <!-- Standard Pass -->
+      <!-- Normal Pass -->
       <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
         <div class="mb-6">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2" data-translate="tickets.normal_ticket" data-fallback="Standard Pass">
-            {% include modern/components/translation-helper.liquid key="tickets.normal_ticket" fallback="Standard Pass" %}
-          </h3>
-          <p class="text-gray-600" data-translate="tickets.standard_description" data-fallback="Perfect for individuals getting started with Ruby.">{% include modern/components/translation-helper.liquid key="tickets.standard_description" fallback="Perfect for individuals getting started with Ruby." %}</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Normal Pass</h3>
+          <p class="text-gray-600">Perfect for conference attendees who want the core experience.</p>
         </div>
         
         <!-- Price -->
         <div class="mb-8">
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="text-4xl font-bold text-gray-900">KSH 1,500</span>
+          </div>
           <div class="flex items-baseline gap-2">
-            <span class="text-5xl font-bold text-gray-900">$150</span>
-            <span class="text-gray-500">{% include modern/components/translation-helper.liquid key="tickets.per_attendee" fallback="/attendee" %}</span>
+            <span class="text-2xl font-semibold text-gray-600">~$13</span>
+            <span class="text-gray-500">/attendee</span>
           </div>
         </div>
         
@@ -92,67 +93,62 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.main_stage_access" fallback="Access to all main stage talks" %}</span>
+            <span class="text-gray-700">2-Day Conference Access</span>
           </li>
           <li class="flex items-center gap-3">
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.coffee_lunch" fallback="Coffee & lunch included" %}</span>
+            <span class="text-gray-700">All main stage talks</span>
           </li>
           <li class="flex items-center gap-3">
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.conference_materials" fallback="Conference materials & badge" %}</span>
+            <span class="text-gray-700">Coffee & lunch included</span>
           </li>
           <li class="flex items-center gap-3">
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.networking_opportunities" fallback="Networking opportunities" %}</span>
+            <span class="text-gray-700">Conference materials & badge</span>
           </li>
           <li class="flex items-center gap-3 opacity-50">
             <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-400 line-through">{% include modern/components/translation-helper.liquid key="tickets.workshop_access" fallback="Workshop access" %}</span>
-          </li>
-          <li class="flex items-center gap-3 opacity-50">
-            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-400 line-through">{% include modern/components/translation-helper.liquid key="tickets.speaker_dinner" fallback="Exclusive speaker dinner" %}</span>
+            <span class="text-gray-400 line-through">Networking Party</span>
           </li>
         </ul>
         
         <!-- CTA Button -->
-        <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-4 px-6 rounded-xl transition-colors duration-200" data-translate="tickets.buy_now" data-fallback="Buy Standard Pass">
-          {% include modern/components/translation-helper.liquid key="tickets.buy_now" fallback="Buy Standard Pass" %}
+        <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-4 px-6 rounded-xl transition-colors duration-200">
+          Buy Normal Pass
         </button>
       </div>
 
       <!-- Full Pass (Featured) -->
-      <div class="bg-white rounded-2xl border-2 border-red-500 p-8 shadow-xl relative transform md:-translate-y-4">
+      <div class="bg-white rounded-2xl border-2 border-red-500 p-8 shadow-xl relative transform lg:-translate-y-4">
         <!-- Popular Badge -->
         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
-            {% include modern/components/translation-helper.liquid key="tickets.most_popular" fallback="Most Popular" %}
+            Most Popular
           </span>
         </div>
         
         <div class="mb-6">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">
-            {% include modern/components/translation-helper.liquid key="tickets.full_pass_ticket" fallback="Full Pass" %}
-          </h3>
-          <p class="text-gray-600">{% include modern/components/translation-helper.liquid key="tickets.full_description" fallback="The complete Ruby conference experience." %}</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Full Pass</h3>
+          <p class="text-gray-600">The complete Ruby conference experience with networking party.</p>
         </div>
         
         <!-- Price -->
         <div class="mb-8">
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="text-4xl font-bold text-gray-900">KSH 3,500</span>
+          </div>
           <div class="flex items-baseline gap-2">
-            <span class="text-5xl font-bold text-gray-900">$250</span>
-            <span class="text-gray-500">{% include modern/components/translation-helper.liquid key="tickets.per_attendee" fallback="/attendee" %}</span>
+            <span class="text-2xl font-semibold text-gray-600">~$27</span>
+            <span class="text-gray-500">/attendee</span>
           </div>
         </div>
         
@@ -162,43 +158,107 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700 font-medium">{% include modern/components/translation-helper.liquid key="tickets.everything_in_standard" fallback="Everything in Standard Pass" %}</span>
+            <span class="text-gray-700 font-medium">2-Day Conference Access</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <pathass="wrule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Networking Party Access</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule=5 text-g" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">All main stage talks</span>
           </li>
           <li class="flex items-center gap-3">
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.workshop_access" fallback="Access to all workshops" %}</span>
+            <span class="text-gray-700">Coffee, lunch & dinner</span>
           </li>
           <li class="flex items-center gap-3">
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.speaker_dinner" fallback="Exclusive speaker dinner" %}</span>
+            <span class="text-gray-700">Premium swag pack</span>
           </li>
           <li class="flex items-center gap-3">
             <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              <path"evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.premium_swag" fallback="Premium swag pack" %}</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.video_recordings" fallback="Video recordings access" %}</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-700">{% include modern/components/translation-helper.liquid key="tickets.vip_networking" fallback="VIP networking events" %}</span>
+            <span class="text-gray-700">VIP networking opportunities</span>
           </li>
         </ul>
         
         <!-- CTA Button -->
         <button class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200 shadow-lg">
-          {% include modern/components/translation-helper.liquid key="tickets.buy_now" fallback="Buy Full Pass" %}
+          Buy Full Pass
+        </button>
+      </div>
+
+      <!-- Group Pass -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <h3 class="text-2xl font-bold text-gray-900">Group Pass</h3>
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">SAVE 30%</span>
+          </div>
+          <p class="text-gray-600">Bulk discount for teams and organizations (3 people).</p>
+        </div>
+        
+        <!-- Price -->
+        <div class="mb-8">
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="text-4xl font-bold text-gray-900">KSH 9,000</span>
+          </div>
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="text-2xl font-semibold text-gray-600">~$70</span>
+            <span class="text-gray-500">for 3 people</span>
+          </div>
+          <div class="text-sm text-green-600 font-medium">
+            Only KSH 3,000 (~$23) per person
+          </div>
+        </div>
+        
+        <!-- Features -->
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700 font-medium">3 Full Pass Tickets</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">2-Day Conference + Networking Party</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">All meals & refreshments</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Premium swag for all 3</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-700">Group seating arrangement</span>
+          </li>
+        </ul>
+        
+        <!-- CTA Button -->
+        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200">
+          Buy Group Pass
         </button>
       </div>
     </div>
@@ -206,74 +266,74 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
 </section>
 
 <!-- What's Included Section -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{% include modern/components/translation-helper.liquid key="tickets.whats_included" fallback="What's Included" %}</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What's Included</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        {% include modern/components/translation-helper.liquid key="tickets.unforgettable_experience" fallback="Every ticket grants you access to an unforgettable Ruby experience." %}
+        Every ticket grants you access to an unforgettable Ruby experience.
       </p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Networking -->
-      <div class="text-center p-6 rounded-xl border border-gray-100 bg-gray-50">
+      <div class="text-center p-6 rounded-xl border border-gray-100 bg-white">
         <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
           </svg>
         </div>
         <h3 class="text-lg font-bold text-gray-900 mb-2">Networking</h3>
-        <p class="text-gray-600 text-sm">{% include modern/components/translation-helper.liquid key="tickets.networking_description" fallback="Connect with 500+ Rubyists from across the continent and beyond." %}</p>
+        <p class="text-gray-600 text-sm">Connect with 500+ Rubyists from across the continent and beyond.</p>
       </div>
 
-      <!-- Workshops -->
-      <div class="text-center p-6 rounded-xl border border-gray-100 bg-gray-50">
+      <!-- Talks -->
+      <div class="text-center p-6 rounded-xl border border-gray-100 bg-white">
         <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
           </svg>
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">Workshops</h3>
-        <p class="text-gray-600 text-sm">{% include modern/components/translation-helper.liquid key="tickets.workshops_description" fallback="Deep dive into advanced topics with hands-on sessions led by experts." %}</p>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Expert Talks</h3>
+        <p class="text-gray-600 text-sm">Learn from industry leaders and Ruby core contributors.</p>
       </div>
 
       <!-- After Party -->
-      <div class="text-center p-6 rounded-xl border border-gray-100 bg-gray-50">
+      <div class="text-center p-6 rounded-xl border border-gray-100 bg-white">
         <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
           </svg>
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">{% include modern/components/translation-helper.liquid key="tickets.after_party" fallback="After Party" %}</h3>
-        <p class="text-gray-600 text-sm">{% include modern/components/translation-helper.liquid key="tickets.after_party_description" fallback="Unwind after a long day of coding with music, food, and drinks." %}</p>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Networking Party</h3>
+        <p class="text-gray-600 text-sm">Unwind after a long day of coding with music, food, and drinks.</p>
       </div>
 
       <!-- Swag -->
-      <div class="text-center p-6 rounded-xl border border-gray-100 bg-gray-50">
+      <div class="text-center p-6 rounded-xl border border-gray-100 bg-white">
         <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
           </svg>
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2">{% include modern/components/translation-helper.liquid key="tickets.epic_swag" fallback="Epic Swag" %}</h3>
-        <p class="text-gray-600 text-sm">{% include modern/components/translation-helper.liquid key="tickets.swag_description" fallback="T-shirts, stickers, and exclusive gear from our amazing sponsors." %}</p>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Epic Swag</h3>
+        <p class="text-gray-600 text-sm">T-shirts, stickers, and exclusive gear from our amazing sponsors.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ Section -->
-<section class="py-20 bg-gray-50">
+<section class="py-20 bg-white" style="display: none;">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{% include modern/components/translation-helper.liquid key="tickets.faq_title" fallback="Frequently Asked Questions" %}</h2>
-      <p class="text-xl text-gray-600">{% include modern/components/translation-helper.liquid key="tickets.faq_subtitle" fallback="Get answers to common questions about tickets and the conference." %}</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+      <p class="text-xl text-gray-600">Get answers to common questions about tickets and the conference.</p>
     </div>
 
     <div class="space-y-4">
       <!-- FAQ Item 1 -->
-      <details class="group bg-white rounded-xl border border-gray-200 shadow-sm">
+      <details class="group bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
         <summary class="flex items-center justify-between p-6 cursor-pointer font-medium text-gray-900">
           <span>Can I get a refund if I can't attend?</span>
           <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -286,7 +346,7 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
       </details>
 
       <!-- FAQ Item 2 -->
-      <details class="group bg-white rounded-xl border border-gray-200 shadow-sm">
+      <details class="group bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
         <summary class="flex items-center justify-between p-6 cursor-pointer font-medium text-gray-900">
           <span>Is there a student discount available?</span>
           <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,7 +359,20 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
       </details>
 
       <!-- FAQ Item 3 -->
-      <details class="group bg-white rounded-xl border border-gray-200 shadow-sm">
+      <details class="group bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
+        <summary class="flex items-center justify-between p-6 cursor-pointer font-medium text-gray-900">
+          <span>What payment methods do you accept?</span>
+          <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </summary>
+        <div class="px-6 pb-6 text-gray-600">
+          We accept M-Pesa, credit/debit cards (Visa, Mastercard), bank transfers, and PayPal. This ensures both local and international attendees can easily purchase tickets.
+        </div>
+      </details>
+
+      <!-- FAQ Item 4 -->
+      <details class="group bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
         <summary class="flex items-center justify-between p-6 cursor-pointer font-medium text-gray-900">
           <span>Will the sessions be recorded?</span>
           <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -310,19 +383,6 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
           Yes, all main stage talks will be recorded. Full Pass holders get access to the recordings 1 week after the event. They will be made public 3 months later.
         </div>
       </details>
-
-      <!-- FAQ Item 4 -->
-      <details class="group bg-white rounded-xl border border-gray-200 shadow-sm">
-        <summary class="flex items-center justify-between p-6 cursor-pointer font-medium text-gray-900">
-          <span>What COVID-19 safety measures are in place?</span>
-          <svg class="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </summary>
-        <div class="px-6 pb-6 text-gray-600">
-          We follow all local health guidelines and venue requirements. Hand sanitizing stations will be available throughout the venue, and we encourage attendees to follow current health recommendations.
-        </div>
-      </details>
     </div>
   </div>
 </section>
@@ -330,17 +390,17 @@ description: "Get your tickets for Ruby Conf Africa 2026. Choose from Standard P
 <!-- Call to Action Section -->
 <section class="py-20 bg-red-600 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">{% include modern/components/translation-helper.liquid key="tickets.ready_to_join" fallback="Ready to Join Us?" %}</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Join Us?</h2>
     <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-      {% include modern/components/translation-helper.liquid key="tickets.dont_miss_out" fallback="Don't miss out on the premier Ruby conference in Africa. Get your tickets now and be part of the Ruby community." %}
+      Don't miss out on the premier Ruby conference in Africa. Get your tickets now and be part of the Ruby community.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <button class="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-colors duration-200">
-        {% include modern/components/translation-helper.liquid key="tickets.buy_standard_pass" fallback="Buy Standard Pass - $150" %}
+        Buy Normal Pass - KSH 1,500
       </button>
       <button class="bg-red-800 hover:bg-red-900 text-white font-bold py-4 px-8 rounded-xl transition-colors duration-200 border-2 border-red-400">
-        {% include modern/components/translation-helper.liquid key="tickets.buy_full_pass" fallback="Buy Full Pass - $250" %}
+        Buy Full Pass - KSH 3,500
       </button>
     </div>
   </div>
-</section>
+</section></details>

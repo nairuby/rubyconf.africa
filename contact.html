@@ -8,6 +8,12 @@ image: "/images/logo/arc_logo_coloured.png"
 
 <!-- Contact Section -->
 <div class="max-w-4xl mx-auto">
+  <!-- Success Message (shown when form is submitted) -->
+  <div id="success-message" class="hidden mb-8 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold">Thank you!</strong>
+    <span class="block sm:inline"> Your message has been sent successfully. We'll get back to you soon!</span>
+  </div>
+
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
     <!-- Contact Information -->
     <div class="bg-white rounded-lg shadow-lg p-8">
@@ -80,7 +86,18 @@ image: "/images/logo/arc_logo_coloured.png"
     <div class="bg-white rounded-lg shadow-lg p-8">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
       
-      <form class="space-y-6" action="#" method="POST">
+      <form class="space-y-6" 
+            action="https://formspree.io/f/mojaodbo" 
+            method="POST">
+        
+        <!-- Hidden honeypot field for spam protection -->
+        <input type="hidden" name="bot-field" />
+        
+        <!-- Hidden field to specify recipient email -->
+        <input type="hidden" name="_replyto" value="organisers@rubyconf.africa">
+        <input type="hidden" name="_subject" value="New Contact Form Submission - Ruby Conf Africa">
+        <input type="hidden" name="_next" value="https://rubyconf.africa/contact?success=true">
+        
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
             Full Name *
@@ -135,9 +152,9 @@ image: "/images/logo/arc_logo_coloured.png"
 
         <div>
           <button type="submit" 
-                  class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200">
+                  class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
             <i class="fas fa-paper-plane mr-2"></i>
-            Send Message
+            <span class="button-text">Send Message</span>
           </button>
         </div>
       </form>
@@ -208,3 +225,29 @@ image: "/images/logo/arc_logo_coloured.png"
     </div>
   </div>
 </div>
+
+<script>
+// Handle form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form[action*="formspree"]');
+  const successMessage = document.getElementById('success-message');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const buttonText = submitButton.querySelector('.button-text');
+  
+  // Check if we're returning from a successful submission
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    successMessage.classList.remove('hidden');
+    form.reset();
+  }
+  
+  form.addEventListener('submit', function(e) {
+    // Show loading state
+    submitButton.disabled = true;
+    buttonText.textContent = 'Sending...';
+    
+    // The form will submit normally to Formspree
+    // Formspree will redirect back with success parameter
+  });
+});
+</script>
