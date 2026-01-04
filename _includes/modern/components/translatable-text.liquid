@@ -1,0 +1,27 @@
+<!-- Translatable Text Component -->
+<!-- This component creates text that can be dynamically updated via JavaScript -->
+
+{% comment %}
+Usage: 
+{% include modern/components/translatable-text.liquid key="tickets.buy_now" fallback="Buy Now" tag="span" class="button-text" %}
+
+Parameters:
+- key: Translation key (required)
+- fallback: Fallback text (required)
+- tag: HTML tag to use (default: span)
+- class: CSS classes to apply
+- id: HTML id attribute
+{% endcomment %}
+
+{% assign current_locale = site.locale | default: site.default_locale | default: 'en' %}
+{% assign fallback_locale = site.locale_fallback | default: 'en' %}
+
+{% comment %} Get the translation using the helper {% endcomment %}
+{% include modern/components/translation-helper.liquid key=include.key fallback=include.fallback %}
+{% assign translation_text = translation_helper_output %}
+
+{% comment %} Set default tag {% endcomment %}
+{% assign tag = include.tag | default: 'span' %}
+
+{% comment %} Build the element {% endcomment %}
+<{{ tag }}{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.id %} id="{{ include.id }}"{% endif %} data-translate="{{ include.key }}" data-fallback="{{ include.fallback }}">{{ translation_text }}</{{ tag }}>

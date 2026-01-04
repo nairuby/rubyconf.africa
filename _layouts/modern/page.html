@@ -1,0 +1,25 @@
+---
+layout: modern/application
+---
+
+<!-- Page Content -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {% if page.title %}
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        {{ page.title }}
+      </h1>
+      {% if page.description %}
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        {{ page.description }}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="prose prose-lg prose-red max-w-none">
+      {{ content }}
+    </div>
+  </div>
+</section>

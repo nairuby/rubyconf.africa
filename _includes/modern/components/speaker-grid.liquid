@@ -1,0 +1,50 @@
+<!-- Modern Speaker Grid Component with Tailwind CSS -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        {{ include.title | default: "Our Speakers" }}
+      </h2>
+      {% if include.subtitle %}
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          {{ include.subtitle }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Speakers Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      {% if include.speakers %}
+        {% assign speakers_to_show = include.speakers %}
+      {% else %}
+        {% assign current_year = site.current_year | default: 2026 %}
+        {% if current_year == 2025 %}
+          {% assign speakers_to_show = site.data.new_remote.speakers_2025 %}
+        {% else %}
+          {% assign speakers_to_show = site.data.new_remote.speakers %}
+        {% endif %}
+      {% endif %}
+      
+      {% for speaker in speakers_to_show %}
+        {% assign designation = "Speaker" %}
+        {% if speaker.is_keynote == "Yes" or speaker.is_keynote == true %}
+          {% assign designation = "Keynote Speaker" %}
+        {% endif %}
+        
+        {% include modern/components/speaker-card.liquid speaker=speaker designation=designation %}
+      {% endfor %}
+    </div>
+
+    <!-- Call to Action -->
+    {% if include.show_cta %}
+      <div class="text-center mt-12">
+        <a href="{{ include.cta_link | default: '/speakers' }}" 
+           class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+          {{ include.cta_text | default: "View All Speakers" }}
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>

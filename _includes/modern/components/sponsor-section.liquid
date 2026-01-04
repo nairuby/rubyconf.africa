@@ -1,0 +1,55 @@
+<!-- Modern Tailwind Sponsor Section Component -->
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+
+<!-- Check if sponsors exist for this category -->
+{% assign sponsors_found = false %}
+{% for sponsor in site.data.new_remote.sponsors %}
+  {% if sponsor.categories contains include.category %}
+    {% assign sponsors_found = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<!-- Only render section if sponsors exist -->
+{% if sponsors_found %}
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-red-600 mb-4">{{ include.title }}</h2>
+      <div class="w-24 h-1 bg-red-600 mx-auto mb-4"></div>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">{{ include.description }}</p>
+    </div>
+
+    <!-- Sponsors Grid -->
+    <div class="sponsors-grid">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-center justify-items-center">
+        {% for sponsor in site.data.new_remote.sponsors %}
+          {% if sponsor.categories contains include.category %}
+            <div class="sponsor-item group">
+              <a 
+                href="{{ sponsor.url }}" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="block p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+              >
+                <img
+                  src="{% if sponsor.image.first %}{{ sponsor.image.first }}{% else %}{{ sponsor.image }}{% endif %}"
+                  alt="{{ sponsor.name }}"
+                  class="w-full h-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  loading="lazy"
+                />
+                <div class="mt-3 text-center">
+                  <p class="text-sm font-medium text-gray-700 group-hover:text-red-600 transition-colors duration-300">
+                    {{ sponsor.name }}
+                  </p>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

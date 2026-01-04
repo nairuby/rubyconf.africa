@@ -1,520 +1,314 @@
 ---
-layout: application
+layout: modern/application
 permalink: /practicalities
-title: "Practicalities for Ruby Conf Africa 2025"
-description: "Find all the practical information you need for attending Ruby Conf Africa 2025, including venue details, travel information, and accommodations."
+title: "Practicalities for Ruby Conf Africa 2026"
+description: "Find all the practical information you need for attending Ruby Conf Africa 2026, including venue details, travel information, and accommodations."
 image: "/images/logo/arc_logo_coloured.png"
 ---
 
-<!-- Practicalities Section -->
-<section class="about-section">
-  <div class="anim-icons full-width">
-    <span class="icon icon-circle-blue wow fadeIn"></span>
-    <span class="icon icon-circle-1 wow zoomIn"></span>
-  </div>
-  <div class="auto-container">
-    <div class="row">
-      <!-- Content Column -->
-      <div class="col-full-width">
-        <div class="sec-title top-pd-mobile">
-          <span class="title">RUBYCONF AFRICA 2025</span>
-          <h2>Attendee Guide</h2>
-          <div class="text">
-            Explore our A-Z comprehensive guide for
-            <b>RubyConf Africa 2025</b>. We keep this information current, so
-            anticipate updates as the event draws nearer. Last updated on
-            <strong>May 15th, 2024</strong>.
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
+
+<!-- Hero Section -->
+{% include modern/components/hero-section.liquid 
+   title=translations.practicalities.hero_title
+   subtitle=translations.practicalities.hero_subtitle
+   description=translations.practicalities.description
+   cta_text=translations.practicalities.download_guide
+   cta_link="/documents/hotel-recommendations/hotels.pdf"
+   background_image="/images/nairobi2.jpg"
+%}
+
+<!-- Main Content -->
+<div class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-red-50 border-l-4 border-red-600 p-6 mb-12 rounded-r-lg">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <i class="fas fa-info-circle text-red-600 text-xl"></i>
           </div>
-          <h3 class="text-2xl text-gray-800 font-semibold mb-4 mt-4">
-            Travel Authorisations
-          </h3>
-          <div class="mt-4 mb-2 fs-6">
-            <b>Travelling to Kenya for Ruby Conf Africa 2025</b>
-          </div>
-
-          <div class="text mb-4">
-            There are no visa requirements for any traveller visiting Kenya
-            however you must complete your
-            <strong>Electronic Travel Authorisation</strong> (eTA) at least
-            <strong>2 weeks</strong> prior to travel to Kenya to avoid
-            inconveniences.
-          </div>
-          <div class="accordion" id="accordionFlushExample">
-            <div class="accordion-item rounded-4">
-              <button
-                class="accordion-button collapsed rounded-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo"
-                aria-expanded="false"
-                aria-controls="flush-collapseTwo"
-              >
-                <b>What is the eTA fee for travellers?</b>
-              </button>
-              <div
-                id="flush-collapseTwo"
-                class="text accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="px-4 my-4">
-                  The eTA fee is <strong>USD 32.50</strong> per traveller, plus
-                  bank and processing fees.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item rounded-4">
-              <button
-                class="accordion-button collapsed rounded-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree"
-                aria-expanded="false"
-                aria-controls="flush-collapseThree"
-              >
-                <b>Who should apply for the eTA?</b>
-              </button>
-              <div
-                id="flush-collapseThree"
-                class="text accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="px-4 my-4">
-                  All foreign visitors must apply for an eTA unless they are
-                  holders of valid Kenya Permanent Residence, Work Permits and
-                  Passes.
-                </div>
-                <div class="px-4 my-4">
-                  Passport holders from the following
-                  <strong>EAC</strong> countries are exempted from applying to
-                  an eTA:
-                  <i
-                    >Burundi, Democratic Republic of Congo, Rwanda, South Sudan,
-                    Tanzania and Uganda</i
-                  >.
-                </div>
-                <div class="px-4 my-4">
-                  <strong>Important Note:</strong> The eTA application collects
-                  biographic information and answers to eligibility questions
-                  from the traveller. Applications are usually processed within
-                  <strong>3 days</strong>, but in some cases it may take longer.
-                  <strong
-                    >We recommend applying for your eTA 2 weeks prior to
-                    travel</strong
-                  >. You can submit your application up to 3 months prior to
-                  travel.
-                </div>
-                <div class="px-4 my-4">
-                  <i
-                    >We highly recommend that you apply as soon as you have
-                    booked your accommodation and transport tickets.</i
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item rounded-4">
-              <button
-                class="accordion-button collapsed rounded-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseFour"
-                aria-expanded="false"
-                aria-controls="flush-collapseFour"
-              >
-                <b>How to Apply for your eTA?</b>
-              </button>
-              <div
-                id="flush-collapseFour"
-                class="text accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="px-4 my-4">
-                  Applications are made through the official Kenyan Electronic
-                  Travel Authority website:
-                  <a href="https://www.etakenya.go.ke/en">eTA Kenya</a>.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item rounded-4">
-              <button
-                class="accordion-button collapsed rounded-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseFive"
-                aria-expanded="false"
-                aria-controls="flush-collapseFive"
-              >
-                <b
-                  >What health documents do I need to show for my arrival in
-                  Kenya?</b
-                >
-              </button>
-
-              <div
-                id="flush-collapseFive"
-                class="text accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="px-4 my-4">
-                  Currently, a Yellow Fever Certificate is required and in some
-                  cases, a COVID-19 certificate will be needed
-                </div>
-                <div class="px-4 my-4">
-                  Please refer to these
-                  <a href="https://health.go.ke/incoming-travellers"
-                    >Incoming Travellers</a
-                  >
-                  requirements for further details.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item rounded-4">
-              <button
-                class="accordion-button collapsed rounded-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseSix"
-                aria-expanded="false"
-                aria-controls="flush-collapseFive"
-              >
-                <b>What Documents are needed for your ETA Application?</b>
-              </button>
-
-              <div
-                id="flush-collapseSix"
-                class="text accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="px-4 my-4">
-                  Please have the following documents ready before starting your
-                  application.
-                </div>
-                <ul class="list-style-one px-4 my-2">
-                  <li>
-                    <div class="text">
-                      Valid passport for at least six (6) months after your
-                      planned date of arrival into Kenya, with at least one
-                      blank page.
-                    </div>
-                  </li>
-                  <li>
-                    <div class="text">
-                      Recent passport picture OR a selfie picture taken during
-                      the application process.
-                    </div>
-                  </li>
-                  <li>
-                    <div class="text">
-                      Contact details (home address, telephone, email).
-                    </div>
-                  </li>
-                  <li>
-                    <div class="text">
-                      Travel information and flight itinerary (arrival flight
-                      number, date of departure of initial flight in case of
-                      connecting flights).
-                    </div>
-                  </li>
-                  <li>
-                    <div class="text">
-                      Proof of booking for the hotel you will be staying at (if
-                      staying with friends, a letter of invitation is accepted).
-                    </div>
-                  </li>
-                  <li>
-                    <div class="text">
-                      Credit/Debit card information for payment, if applicable.
-                    </div>
-                  </li>
-                  <li>
-                    <div class="text">
-                      Conference invitation or participation letter.
-                    </div>
-                  </li>
-                </ul>
-                <div class="px-4 my-4">
-                  <i
-                    >To obtain the conference invitation or participation letter
-                    fill out the
-                    <a href="https://forms.gle/rfHZmRHYPwbSFXFo7"
-                      >conference letter request form</a
-                    >
-                    to provide you with the letter.</i
-                  >
-                </div>
-                <div class="text px-4 my-4">
-                  <b
-                    >Based on your country of residence and citizenship the
-                    following may also be required:</b
-                  >
-                </div>
-                <ul class="list-style-one px-4 my-2">
-                  <li>This could include financial assets / bank letter(s).</li>
-                </ul>
-              </div>
-            </div>
-            <div class="text-2xl text-gray-800 font-semibold mb-4 mt-4">
-              <h3>Guide For Travelling Speakers!</h3>
-              <p class="text-gray-600 mb-4">
-                Please note that, unfortunately, we are unable to cover travel
-                or accommodation expenses for speakers. Therefore, you will need
-                to make your own arrangements for flights and hotels. We
-                understand that this information is crucial for planning your
-                trip, and we find it important to communicate this clearly.
-              </p>
-            </div>
-            <!--Hotel recommendation section -->
-            <h3 class="text-2xl text-gray-800 font-semibold mb-4 mt-4">
-              Hotel Recommendations
-            </h3>
-
-            <p class="text-gray-600 mb-4">
-              We have curated a selection of top-rated hotels, all within close
-              proximity to our venue. Catering to various preferences and
-              budgets, these options ensure convenience and comfort during your
-              stay. For any inquiries, please write to us at
-              <a href="mailto:organisers@rubyconf.africa"
-                >organisers@rubyconf.africa</a
-              >.
+          <div class="ml-3">
+            <p class="text-sm text-red-700">
+              {{ translations.practicalities.intro_update }}
             </p>
-            <ul class="list-style-one">
-              <li>
-                <a
-                  href="/documents/hotel-recommendations/hotels.pdf"
-                  target="_blank"
-                >
-                  View Detailed Hotel Recommendations
-                </a>
-              </li>
-            </ul>
-            <!--end of hotels section-->
-            <h3 class="text-2xl text-gray-800 font-semibold mb-4 mt-4">
-              Tourist Attractions in Kenya: A Guide for International Speakers &
-              Guests
-            </h3>
-
-            <div class="accordion" id="accordionFlushExample">
-              <div class="accordion-item rounded-4">
-                <button
-                  class="accordion-button collapsed rounded-2"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
-                >
-                  <div>
-                    <b>Experiencing Wildlife in Nairobi and Beyond:</b>
-                  </div>
-                </button>
-                <div
-                  id="flush-collapseOne"
-                  class="text accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <ul class="list-style-one px-4 my-2">
-                    <li>
-                      <div class="text">
-                        <b>Nairobi National Park:</b> Witness lions, zebras,
-                        giraffes, and rhinos just a short drive from Nairobi's
-                        city centre. Take a game drive or bike through the park
-                        for a thrilling safari experience.
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Giraffe Centre:</b> Get up close and personal with
-                        endangered Rothschild's giraffes at this non-profit
-                        sanctuary. You can even feed these gentle giants!
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>David Sheldrick Wildlife Trust:</b> Visit the
-                        orphanage and learn about the Trust's efforts to rescue
-                        and rehabilitate orphaned elephants. Witness
-                        heartwarming scenes of elephant calves being cared for.
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="accordion-item rounded-4">
-                <button
-                  class="accordion-button collapsed rounded-2"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
-                >
-                  <div>
-                    <b>Exploring Nairobi's Cultural Gems:</b>
-                  </div>
-                </button>
-                <div
-                  id="flush-collapseTwo"
-                  class="text accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <ul class="list-style-one px-4 my-4">
-                    <li>
-                      <div class="text">
-                        <b>Nairobi National Museum:</b> Immerse yourself in
-                        Kenya's rich history and culture through exhibits on
-                        human evolution, wildlife, and traditional artifacts.
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Karen Blixen Museum:</b> Step back in time and
-                        explore the home of Danish author Karen Blixen, made
-                        famous by the book and film "Out of Africa."
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Bomas of Kenya:</b> Experience traditional Kenyan
-                        culture through dance performances, demonstrations of
-                        daily life, and authentic homesteads representing
-                        various ethnic groups.
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Uhuru Park:</b> Relax in Nairobi's largest park,
-                        offering a lake, boat rides, monuments, and a chance to
-                        mingle with locals.
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="accordion-item rounded-4">
-                <button
-                  class="accordion-button collapsed rounded-2"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseThree"
-                >
-                  <div>
-                    <b>Beyond Nairobi:</b>
-                  </div>
-                </button>
-                <div
-                  id="flush-collapseThree"
-                  class="text accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="px-4 my-4">
-                    For a truly unforgettable adventure, consider venturing
-                    beyond Nairobi:
-                  </div>
-                  <ul class="list-style-one px-4 my-4">
-                    <li>
-                      <div class="text">
-                        <b>Maasai Mara National Reserve:</b> Witness the
-                        awe-inspiring wildebeest migration and witness the
-                        diverse wildlife this reserve is famous for.
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Amboseli National Park:</b> Marvel at herds of
-                        elephants against the backdrop of Mount Kilimanjaro,
-                        Africa's highest peak
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Lake Nakuru National Park:</b> See a spectacular
-                        concentration of flamingos along with rhinos, lions, and
-                        other wildlife.
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion-item rounded-4">
-                <button
-                  class="accordion-button collapsed rounded-2"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseFour"
-                >
-                  <div>
-                    <b>Additional Activities:</b>
-                  </div>
-                </button>
-                <div
-                  id="flush-collapseFour"
-                  class="text accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <ul class="list-style-one px-4 my-2">
-                    <li>
-                      <div class="text">
-                        <b>Karura Forest:</b> Hike or bike through this
-                        expansive indigenous forest, a welcome escape from the
-                        city.
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Ngong Hills:</b> Hike or take a zipline adventure on
-                        these scenic hills overlooking the Great Rift Valley.
-                      </div>
-                    </li>
-                    <li>
-                      <div class="text">
-                        <b>Shopping:</b> Explore Nairobi's vibrant markets like
-                        the Maasai Market for souvenirs and local crafts.
-                        Upscale malls like The Village Market and Two Rivers
-                        Mall offer a variety of shops and restaurants.
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="text">
-                <b>Remember, this is just a starting point!</b> Kenya has a
-                wealth of other attractions to discover. Be sure to consult with
-                your travel agent or do further research online to find
-                experiences that suit your interests and time constraints.
-              </div>
-              <br />
-              <ul class="list-style-one">
-                <li style="display: none">
-                  <a
-                    href="/documents/hotel-recommendations/tourist-guide.pdf"
-                    target="_blank"
-                  >
-                    Exclusive Three-Day Nairobi Adventure for International
-                    Speakers and Guests
-                  </a>
-                </li>
-              </ul>
-              <div class="text">
-                <b>Enjoy your time in Kenya!</b>
-              </div>
-              <!-- [Insert New Registration Link] -->
-              <div class="btn-box mt-2" style="display: none">
-                <a href="tickets.html" class="theme-btn btn-style-three"
-                  ><span class="btn-title">Register Now</span></a
-                >
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
-      <!--End Practicalities Section -->
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.travel_auth_title }}</h2>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">
+          <i class="fas fa-passport mr-2 text-red-600"></i>
+          {{ translations.practicalities.travel_auth_subtitle }}
+        </h3>
+        
+        <p class="text-gray-700 mb-4">
+          {{ translations.practicalities.visa_text }}
+        </p>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4">
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-dollar-sign text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_fee_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 pl-6">
+              {{ translations.practicalities.faq_fee_a }}
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-users text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_who_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 space-y-3 pl-6">
+              <p>{{ translations.practicalities.faq_who_a_1 }}</p>
+              
+              <p>{{ translations.practicalities.faq_who_a_2 }}</p>
+              
+              <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                <p>{{ translations.practicalities.faq_who_note }}</p>
+              </div>
+              
+              <p class="italic">{{ translations.practicalities.faq_who_rec }}</p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-laptop text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_how_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 pl-6">
+              {{ translations.practicalities.faq_how_a }}
+              <a href="https://www.etakenya.go.ke/en" class="text-red-600 hover:text-red-700 underline font-medium">eTA Kenya</a>.
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-heartbeat text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_health_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 pl-6">
+              <p>{{ translations.practicalities.faq_health_a_1 }}</p>
+              <p>{{ translations.practicalities.faq_health_a_2 }} <a href="https://health.go.ke/incoming-travellers" class="text-red-600 hover:text-red-700 underline font-medium">{{ translations.practicalities.incoming_travellers }}</a> {{ translations.practicalities.requirements_details }}</p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-file-alt text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_docs_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 space-y-3 pl-6">
+              <p>{{ translations.practicalities.faq_docs_intro }}</p>
+              
+              <ul class="space-y-3 ml-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_passport }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_photo }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_contact }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_travel_info }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_booking }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_payment }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_invitation }}</span>
+                </li>
+              </ul>
+              
+              <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                <p class="italic">{{ translations.practicalities.doc_invitation_note }} 
+                <a href="https://forms.gle/rfHZmRHYPwbSFXFo7" class="text-blue-600 hover:text-blue-700 underline font-medium">{{ translations.practicalities.conference_letter_form }}</a> 
+                {{ translations.practicalities.to_provide_letter }}</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.speakers_guide_title }}</h2>
+      
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+          <i class="fas fa-exclamation-triangle text-yellow-600 text-xl mr-3 mt-1"></i>
+          <p class="text-yellow-800">
+            {{ translations.practicalities.speakers_guide_text }}
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.hotel_title }}</h2>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <p class="text-gray-700 mb-4">
+          {{ translations.practicalities.hotel_text }}
+          <a href="mailto:organisers@rubyconf.africa" class="text-red-600 hover:text-red-700 underline">organisers@rubyconf.africa</a>.
+        </p>
+        
+        <div class="flex items-center">
+          <i class="fas fa-file-pdf text-red-600 mr-3 text-xl"></i>
+          <a href="/documents/hotel-recommendations/hotels.pdf" 
+             target="_blank" 
+             class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+            {{ translations.practicalities.hotel_button }}
+            <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.attractions_title }}</h2>
+      <p class="text-xl text-gray-600 mb-8">{{ translations.practicalities.attractions_subtitle }}</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-paw text-red-600 mr-3 text-2xl"></i>
+            Wildlife in Nairobi and Beyond
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.nairobi_park }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.giraffe_centre }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.sheldrick_trust }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-landmark text-red-600 mr-3 text-2xl"></i>
+            Cultural Gems
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.museum }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.karen_blixen }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.bomas }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.uhuru_park }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-mountain text-red-600 mr-3 text-2xl"></i>
+            Beyond Nairobi
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.maasai_mara }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.amboseli }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.lake_nakuru }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-hiking text-red-600 mr-3 text-2xl"></i>
+            Additional Activities
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.karura }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.ngong_hills }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.shopping }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-400 p-8 rounded-r-lg">
+        <div class="flex items-start">
+          <i class="fas fa-lightbulb text-green-600 text-2xl mr-4 mt-1"></i>
+          <div>
+            <h4 class="text-lg font-semibold text-green-800 mb-2">{{ translations.practicalities.final_note_title }}</h4>
+            <p class="text-green-800">
+              {{ translations.practicalities.final_note_text }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+</div>

@@ -151,6 +151,8 @@ GEM
       jekyll (~> 4.0)
       json-minify (~> 0.0.3)
       terser (~> 1.2.3)
+    jekyll-polyglot (1.11.0)
+      jekyll (>= 4.0, >= 3.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-sitemap (1.4.0)
@@ -300,6 +302,7 @@ DEPENDENCIES
   jekyll-assets
   jekyll-datapage-generator
   jekyll-minifier
+  jekyll-polyglot (~> 1.11)
   jekyll-sitemap
   sassc
   sprockets

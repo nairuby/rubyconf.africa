@@ -22,6 +22,11 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "tailwind.config.js"
+      - "postcss.config.js"
+      - "purgecss.*.config.js"
       - "!README.md"
   pull_request:
     branches:
@@ -38,6 +43,11 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "tailwind.config.js"
+      - "postcss.config.js"
+      - "purgecss.*.config.js"
       - "!README.md"
   workflow_dispatch:
 
@@ -60,6 +70,16 @@ jobs:
         with:
           ruby-version: "3.4.2"
           bundler-cache: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.0.0
+      - name: Install Node dependencies
+        run: pnpm install
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -77,13 +97,12 @@ jobs:
         run: |
           bundle exec ruby _build/google_service_account.rb
 
+      - name: Build modern assets 🎨
+        run: |
+          pnpm run build
       - name: Install and Build 🔧
         run: |
           bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

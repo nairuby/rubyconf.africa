@@ -87,3 +87,17 @@ jekyll_build_log.txt
 .idea/**
 _build/update_data.rb
 _data/new_remote/**
+
+# Modern asset pipeline
+node_modules/
+pnpm-lock.yaml
+assets/modern/css/main.css
+assets/modern/css/main.purged.css
+assets/modern/js/bundle.js
+
+# Build artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

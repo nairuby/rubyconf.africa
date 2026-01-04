@@ -1,212 +1,202 @@
 ---
-layout: application
+layout: modern/application
 permalink: /about-us
 title: "About Ruby Conf Africa 2026"
 description: "Learn about Ruby Conf, our mission to connect Ruby developers in Africa, our team, and how to get involved in this vibrant community."
 image: "/images/logo/arc_logo_coloured.png"
 ---
 
-<span class="header-span"></span>
+<!-- About Conference Section -->
+{% include modern/components/content-section.liquid 
+   layout="two-column"
+   title="Ruby: Elegance, Convention, and Versatility"
+   subtitle="Beyond code: Innovating for the future"
+   content="
+   <p>This year's theme, <strong>'Beyond code: Innovating for the future'</strong>, highlights how Ruby and open-source technologies can shape tomorrow's world. Join us in Kenya for a two-day experience that brings together thought leaders, innovators, and entrepreneurs driven by a passion for Ruby and its power to spark meaningful change.</p>
+   
+   <p>Dive into forward-thinking discussions, hands-on workshops, and vibrant networking sessions that go beyond code — into the heart of innovation.</p>
+   
+   <ul class='space-y-3 mt-6'>
+     <li class='flex items-start'>
+       <i class='fas fa-check-circle text-red-600 mt-1 mr-3'></i>
+       <span>Discover how Ruby is powering innovation in open-source communities and tech ecosystems.</span>
+     </li>
+     <li class='flex items-start'>
+       <i class='fas fa-check-circle text-red-600 mt-1 mr-3'></i>
+       <span>Discuss the evolving role of Ruby in modern software development, from small projects to large-scale enterprise solutions.</span>
+     </li>
+     <li class='flex items-start'>
+       <i class='fas fa-check-circle text-red-600 mt-1 mr-3'></i>
+       <span>Foster knowledge sharing on best practices, tooling, and methodologies that make Ruby a powerful choice for developers.</span>
+     </li>
+     <li class='flex items-start'>
+       <i class='fas fa-check-circle text-red-600 mt-1 mr-3'></i>
+       <span>Strengthen community collaboration and highlight how Ruby continues to shape and influence the broader tech ecosystem.</span>
+     </li>
+     <li class='flex items-start'>
+       <i class='fas fa-check-circle text-red-600 mt-1 mr-3'></i>
+       <span>Elevate the Ruby community in Africa, positioning it as a globally recognized hub for innovation and excellence.</span>
+     </li>
+   </ul>
+   "
+   image="/images/rca_logo.png"
+   image_alt="Ruby Conf Africa Logo"
+   image_first=false
+%}
 
-<section class="about-section" style="margin-top: 40px">
-  <div class="auto-container">
-    <div class="row">
-      <div class="content-column col-lg-6 col-md-12 col-sm-12">
-        <div class="inner-column">
-            <div class="sec-title">
-            <span class="title"
-            >ABOUT THE CONFERENCE - RUBY CONF AFRICA 2025</span
-            >
-                <h3>Ruby: Elegance, Convention, and Versatility</h3>
-                <div class="text">
-                    This year’s theme,
-                    <strong>“Beyond code: Innovating for the future”</strong>,
-                    highlights how Ruby and open-source technologies can shape
-                    tomorrow’s world. Join us in Kenya for a two-day experience that
-                    brings together thought leaders, innovators, and entrepreneurs
-                    driven by a passion for Ruby and its power to spark meaningful
-                    change. Dive into forward-thinking discussions, hands-on
-                    workshops, and vibrant networking sessions that go beyond code —
-                    into the heart of innovation.
-                </div>
-                <br />
-                <ul class="list-style-one">
-                    <li>
-                        Discover how Ruby is powering innovation in open-source
-                        communities and tech ecosystems.
-                    </li>
-                    <li>
-                        Discuss the evolving role of Ruby in modern software
-                        development, from small projects to large-scale enterprise
-                        solutions.
-                    </li>
-                    <li>
-                        Foster knowledge sharing on best practices, tooling, and
-                        methodologies that make Ruby a powerful choice for developers.
-                    </li>
-                    <li>
-                        Strengthen community collaboration and highlight how Ruby
-                        continues to shape and influence the broader tech ecosystem.
-                    </li>
-                    <li>
-                        Elevate the Ruby community in Africa, positioning it as a
-                        globally recognized hub for innovation and excellence.
-                    </li>
-                </ul>
-                <div class="btn-box" style="display: none">
-                    <a href="tickets.html" class="theme-btn btn-style-three">
-                        <span class="btn-title">Register Now</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-      </div>
+<!-- Venue Information Section (Hidden - Location Still Being Planned) -->
+<section class="py-16 bg-white" style="display: none;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Conference Venue</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Join us at a world-class venue in the heart of Nairobi
+      </p>
+    </div>
 
-      <div class="content-column col-lg-6 col-md-12 col-sm-12">
-        <div class="inner-column">
-          <div class="image-box">
-            <figure class="image">
-              <img
-                src="/images/rca_logo.png"
-                alt="Image of Ruby Conf Africa Team"
-              />
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-column col-lg-6 col-md-12 col-sm-12">
-        <div class="inner-column">
-          <div class="image-box">
-            <figure class="image">
-              <img
-                src="/images/conference.jpg"
-                alt="Image of Ruby Conf Africa Team"
-              />
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-column col-lg-6 col-md-12 col-sm-12">
-        <div class="inner-column">
-          <div class="sec-title">
-            <span class="title">THE ORGANIZER - AFRICA RUBY COMMUNITY</span>
-            <div class="text">
-              The African Ruby Community (ARC) is a community of 5000+ Ruby
-              Developers, entrepreneurs, designers and freelancers with chapters
-              in Nairobi-Kenya, Kampala-Uganda, Kigali-Rwanda, and Dar es
-              Salaam-Tanzania.
-            </div>
-            <div class="text">
-              ARC aims to unite entrepreneurs, developers, designers, and
-              open-source contributors to tackle various challenges. By
-              embracing entrepreneurship and open-source principles, ARC
-              believes in offering comprehensive solutions to numerous issues.
-              Attendees are equipped with both technological tools and
-              entrepreneurial methodologies to maximize their potential and
-              inspire others in their communities and beyond.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="info-column col-lg-6 col-md-12 col-sm-12 order-2 mt-4"
-        style="display: none"
-      >
-        <div class="inner-column">
-          <div class="sec-title style-two">
-            <span class="title">Directions</span>
-            <h2>Direction to the Conference</h2>
-          </div>
-
-          <div class="event-info-tabs tabs-box">
-            <ul class="tab-buttons clearfix">
-              <li class="tab-btn active-btn" data-tab="#tab1">Time</li>
-              <li class="tab-btn" data-tab="#tab2">Venue</li>
-              <li class="tab-btn" data-tab="#tab3">How to get there</li>
-            </ul>
-
-            <div class="tabs-content">
-              <div class="tab active-tab" id="tab1">
-                <h4>
-                  <span class="icon far fa-calendar"></span> July 18th & 19th,
-                  2025
-                </h4>
-                <div class="text">8.00 AM - 05.30 PM</div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Venue Details -->
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Kenyatta International Convention Centre (KICC)</h3>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">Address</p>
+                <p class="text-gray-600">Harambee Avenue, Nairobi, Kenya</p>
               </div>
-
-              <div class="tab" id="tab2">
-                <h4>
-                  <span class="icon fa fa-map-marker-alt"></span>Daystar
-                  University, Nairobi, Kenya
-                </h4>
-                <div class="text">
-                  Daystar University’s Nairobi campus, located along Valley
-                  Road, offers a serene and accessible environment ideal for
-                  conferences. It features modern lecture halls, computer labs,
-                  reliable internet, and a stocked library for a comfortable
-                  attendee experience.
-                  <br /><br />
-                  The campus is close to restaurants, banks, healthcare, and
-                  shopping centers, with easy access to public transport,
-                  including matatus, buses, and ride-hailing apps like Uber and
-                  Bolt.
-                  <br /><br />
-                  It’s about a 25–30 minute drive from Jomo Kenyatta
-                  International Airport, depending on traffic. Security is
-                  ensured by both campus staff and police patrols.
-                  <br /><br />
-                  We hope you enjoy the conference and explore Nairobi’s vibrant
-                  culture from the heart of Daystar University!
-                </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-phone text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">Contact</p>
+                <p class="text-gray-600">+254 20 2221291</p>
               </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-parking text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">Parking</p>
+                <p class="text-gray-600">On-site parking available</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-wifi text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">Amenities</p>
+                <p class="text-gray-600">Free WiFi, Air conditioning, Accessibility features</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-              <div class="tab" id="tab3">
-                <h2>
-                  <span class="icon fa fa-directions"></span> How to get there
-                </h2>
-                <div class="text">
-                  Directions to Daystar University are provided in the map
-                  section.
-                </div>
+        <!-- Transportation -->
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h4 class="text-lg font-bold text-gray-900 mb-4">Getting There</h4>
+          <div class="space-y-3">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-plane text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">From Jomo Kenyatta International Airport</p>
+                <p class="text-gray-600">30-45 minutes by taxi or Uber (approx. KES 1,500-2,500)</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-bus text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">Public Transport</p>
+                <p class="text-gray-600">Matatu routes 46, 100, 111 stop near KICC</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-walking text-red-600 mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-900">Walking Distance</p>
+                <p class="text-gray-600">5 minutes from Nairobi Railway Station</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        class="map-column col-lg-6 col-md-12 col-sm-12 mb-5 mt-4"
-        style="display: none"
-      >
-        <div class="map-outer">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4970.412861837118!2d36.799687675873805!3d-1.2975313356403897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11eb4f9d91a5%3A0xf51b4362dde71587!2sDaystar%20University-Nairobi%20Campus%2CMbagathi%20Way!5e1!3m2!1sen!2ske!4v1750982251981!5m2!1sen!2ske"
-            width="100%"
-            height="400"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <br />
+      <!-- Map Placeholder -->
+      <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+        <div class="text-center">
+          <i class="fas fa-map text-gray-400 text-4xl mb-4"></i>
+          <p class="text-gray-600">Interactive map will be available closer to the event</p>
+          <a href="https://maps.google.com/?q=KICC+Nairobi" target="_blank" 
+             class="inline-flex items-center mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+            <i class="fas fa-external-link-alt mr-2"></i>
+            View on Google Maps
+          </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Nearby Hotels -->
+    <div class="mt-12 bg-gray-50 rounded-lg p-8">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Recommended Accommodation</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h4 class="font-bold text-gray-900 mb-2">Hilton Nairobi</h4>
+          <p class="text-gray-600 text-sm mb-3">5-star luxury hotel, 2 minutes walk to KICC</p>
+          <div class="flex items-center text-sm text-gray-500">
+            <i class="fas fa-walking mr-1"></i>
+            <span>2 min walk</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h4 class="font-bold text-gray-900 mb-2">Serena Hotel Nairobi</h4>
+          <p class="text-gray-600 text-sm mb-3">4-star hotel with conference facilities</p>
+          <div class="flex items-center text-sm text-gray-500">
+            <i class="fas fa-car mr-1"></i>
+            <span>5 min drive</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h4 class="font-bold text-gray-900 mb-2">Norfolk Hotel</h4>
+          <p class="text-gray-600 text-sm mb-3">Historic hotel with modern amenities</p>
+          <div class="flex items-center text-sm text-gray-500">
+            <i class="fas fa-car mr-1"></i>
+            <span>8 min drive</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-6">
+        <p class="text-gray-600 mb-4">Need help finding accommodation?</p>
+        <a href="/documents/hotel-recommendations/" 
+           class="inline-flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+          <i class="fas fa-bed mr-2"></i>
+          View Hotel Recommendations
+        </a>
       </div>
     </div>
   </div>
 </section>
-<style>
-  .image-box img {
-    transition:
-      opacity 0.3s ease,
-      box-shadow 0.3s ease;
-  }
 
-  .image-box:hover img {
-    opacity: 0.8;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
-  }
-</style>
+<!-- Organizer Section -->
+{% include modern/components/content-section.liquid 
+   layout="two-column"
+   bg_class="bg-gray-50"
+   title="The African Ruby Community"
+   subtitle="Uniting Ruby Developers Across Africa"
+   content="
+   <p>The African Ruby Community (ARC) is a community of 5000+ Ruby Developers, entrepreneurs, designers and freelancers with chapters in Nairobi-Kenya, Kampala-Uganda, Kigali-Rwanda, and Dar es Salaam-Tanzania.</p>
+   
+   <p>ARC aims to unite entrepreneurs, developers, designers, and open-source contributors to tackle various challenges. By embracing entrepreneurship and open-source principles, ARC believes in offering comprehensive solutions to numerous issues.</p>
+   
+   <p>Attendees are equipped with both technological tools and entrepreneurial methodologies to maximize their potential and inspire others in their communities and beyond.</p>
+   "
+   image="/images/conference.jpg"
+   image_alt="Ruby Conference Africa Community"
+   image_first=true
+%}
