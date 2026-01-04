@@ -1,0 +1,65 @@
+<!-- Translation System Setup for Jekyll Polyglot -->
+<!-- This include sets up global translation variables -->
+
+{% comment %}
+Jekyll Polyglot automatically provides:
+- site.active_lang: current language
+- site.default_lang: default language  
+- site.languages: array of supported languages
+{% endcomment %}
+
+{% assign current_locale = site.active_lang %}
+{% assign fallback_locale = site.default_lang %}
+{% assign supported_locales = site.languages %}
+
+{% comment %} Load current translations {% endcomment %}
+{% assign translations = site.data.translations[current_locale] %}
+{% assign fallback_translations = site.data.translations[fallback_locale] %}
+
+{% comment %} Set up RTL language detection {% endcomment %}
+{% assign rtl_languages = 'ar,he,fa,ur' | split: ',' %}
+{% assign is_rtl = false %}
+{% if rtl_languages contains current_locale %}
+  {% assign is_rtl = true %}
+{% endif %}
+
+{% comment %} Make translations available to JavaScript if needed {% endcomment %}
+<script>
+  window.locale = {
+    current: '{{ current_locale }}',
+    fallback: '{{ fallback_locale }}',
+    supported: {{ supported_locales | jsonify }},
+    isRTL: {{ is_rtl | jsonify }}
+  };
+  
+  {% if site.data.translations %}
+  window.translations = {{ site.data.translations | jsonify }};
+  {% endif %}
+</script>
+
+{% comment %} Add RTL support if needed {% endcomment %}
+{% if is_rtl %}
+<style>
+  html[dir="rtl"] {
+    direction: rtl;
+  }
+  
+  html[dir="rtl"] .text-left {
+    text-align: right;
+  }
+  
+  html[dir="rtl"] .text-right {
+    text-align: left;
+  }
+  
+  html[dir="rtl"] .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  html[dir="rtl"] .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+  }
+</style>
+{% endif %}

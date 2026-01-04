@@ -1,589 +1,186 @@
 ---
-layout: application_home
-title: "Ruby Conf Africa 2026—Leading Ruby Developers Conference in Nairobi, Kenya"
+layout: modern/application
+title: "Ruboconf Africa 2026"
 name: "Ruby Conf Africa 2026"
 description: "Join us on August 21-22, 2026, for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby developers, learn from insightful sessions, and explore the latest trends in Ruby development."
 image: "/images/logo/arc_logo_coloured.png"
 year: 2026
 ---
 
-<div class="preloader-new" xmlns="http://www.w3.org/1999/html">
-  <!-- Logo -->
-  <div class="preloader-logo-new"></div>
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
 
-  <!-- Animated Loading Text -->
-  <div class="loader-new"></div>
-</div>
-<!-- Header span -->
-
-<!-- Banner Section -->
-<section class="banner-section">
-  <div class="banner-carousel owl-carousel owl-theme">
-    <!-- Slide Item -->
-    <div
-      class="slide-item lazyload"
-      style="background-image: url(images/intro-landing.jpg)"
-    >
-      <div class="auto-container">
-        <div class="content-box">
-          <span class="title">August 21st-22nd</span>
-          <h2>Ruby Conf Africa 2026</h2>
-          <ul class="info-list">
-            <!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
-            <!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
-            <li><span class="fa fa-map-marker-alt"></span> Venue in Nairobi, Kenya TBA</li>
-          </ul>
-          <div
-            class="btn-align"
-            style="
-              display: flex;
-              gap: 1rem;
-              flex-wrap: wrap;
-              justify-content: center;
-            "
-          >
-            <div class="btn-box">
-              <a
-                href="https://papercall.io/ruby-conf-africa-2026"
-                target="_blank"
-                class="theme-btn btn-style-two"
-              >
-                <span class="btn-title">Submit Your Talk</span></a
-              >
-            </div>
-            <div class="btn-box" style="display: none">
-              <a
-                href="tickets.html"
-                target="_blank"
-                class="theme-btn btn-style-two"
-              >
-                <span class="btn-title"
-                  >Buy Tickets <span class="fa fa-ticket-alt"></span> </span
-              ></a>
-            </div>
-            <div class="btn-box" style="display: none">
-              <a href="schedule.html" class="theme-btn btn-style-two">
-                <span class="btn-title">Event Schedule</span></a
-              >
-            </div>
-            <div
-              class="banner-text text-bg-danger text-center py-3"
-              style="display: none"
-            >
-              <div class="container">
-                <h6 class="display-6">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="fs-md-5">Thank you for joining us!</span>
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide Item -->
-    <div
-      class="slide-item lazyload"
-      style="background-image: url(images/intro-landing.jpg)"
-    >to-container">
-        <div class="content-box">
-            <span class="title">August 21st-22nd</span>
-            <h2>Ruby Conf Africa 2026</h2>
-            <ul class="info-list">
-                <!--                        <li><span class="fa fa-chair"></span> 300 Seats</li>-->
-                <!--                        <li><span class="fa fa-user-alt"></span> 20 SPEAKERS</li>-->
-                <li><span class="fa fa-map-marker-alt"></span> Venue in Nairobi, Kenya TBA</li>
-            </ul>
-            <div
-      <div class="au
-            class="btn-align"
-            style="
-              display: flex;
-              gap: 1rem;
-              flex-wrap: wrap;
-              justify-content: center;
-            "
-          >
-            <div class="btn-box">
-              <a
-                href="https://papercall.io/ruby-conf-africa-2026"
-                target="_blank"
-                class="theme-btn btn-style-two"
-              >
-                <span class="btn-title">Submit Your Talk</span></a
-              >
-            </div>
-            <div class="btn-box" style="display: none">
-              <a
-                href="tickets.html"
-                target="_blank"
-                class="theme-btn btn-style-two"
-              >
-                <span class="btn-title"
-                  >Buy Tickets <span class="fa fa-ticket-alt"></span> </span
-              ></a>
-            </div>
-            <div class="btn-box" style="display: none">
-              <a href="schedule.html" class="theme-btn btn-style-two">
-                <span class="btn-title">Event Schedule</span></a
-              >
-            </div>
-
-            <div
-              class="banner-text text-bg-danger text-center py-3"
-              style="display: none"
-            >
-              <div class="container">
-                <h6 class="display-6">
-                  <i class="fa-solid fa-heart"></i>
-                  <span class="fs-md-5">Thank you for joining us!</span>
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--End Banner Section -->
+<!-- Modern Hero Section -->
+{% include modern/components/hero-section.liquid 
+   title=translations.home.hero_title
+   subtitle=translations.home.hero_subtitle
+   date=translations.home.hero_date
+   location=translations.home.hero_location
+   primary_cta_text=translations.home.submit_talk
+   primary_cta_link="https://papercall.io/ruby-conf-africa-2026"
+   secondary_cta_text=translations.home.learn_more
+   secondary_cta_link="/about-us"
+%}
 
 <!-- About Section -->
-<section class="about-section">
-  <div class="auto-container">
-    <div class="row">
-      <!-- Content Column -->
-      <div class="content-column col-lg-6 col-md-12 col-sm-12">
-        <div class="inner-column">
-          <div class="sec-title">
-            <span class="title">ABOUT EVENT</span>
-            <h2>Welcome to RubyConfAfrica 2026</h2>
-            <div class="text">
-              <strong>Still cooking…</strong>
-              Check back soon for updates on RubyConfAfrica 2026.
-            </div>
-          </div>
+{% include modern/components/content-section.liquid 
+   layout="two-column"
+   title=translations.home.about_title
+   subtitle=translations.home.about_subtitle
+   content=translations.home.about_content
+   image="/images/conference.jpg"
+   image_alt="Ruby Conference Africa"
+   image_first=false
+%}
+
+<!-- Speakers Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100"></section>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{{ translations.home.speakers_title }}</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ translations.home.speakers_subtitle }}</p>
+    </div>
+
+    <!-- Keynote Speakers -->
+    {% assign keynote_speakers = site.data.new_remote.speakers | where: "is_keynote", "Yes" %}
+    {% if keynote_speakers.size > 0 %}
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold text-red-600 mt-4 mb-8 text-center">{{ translations.home.keynote_title }}</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {% for speaker in keynote_speakers %}
+            {% include modern/components/speaker-card.liquid speaker=speaker designation="Keynote Speaker" featured=true %}
+          {% endfor %}
         </div>
       </div>
+    {% endif %}
 
-      <!-- Image Column -->
-      <div
-        class="image-column col-lg-6 col-md-12 col-sm-12"
-        style="
-          background-image: url(&quot;images/conference.jpg&quot;);
-          background-size: cover;
-          background-position: center;
-          height: auto;
-          min-height: 400px;
-        "
-      >
-        <!-- Optionally, you can add content inside the image column -->
+    <!-- Regular Speakers -->
+    {% assign regular_speakers = site.data.new_remote.speakers | where: "is_keynote", "No" %}
+    {% if regular_speakers.size > 0 %}
+      <div>
+        <h3 class="text-2xl font-bold text-red-600 mt-4 mb-8 text-center">{{ translations.home.featured_speakers_title }}</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {% for speaker in regular_speakers limit: 6 %}
+            {% include modern/components/speaker-card.liquid speaker=speaker designation="Speaker" %}
+          {% endfor %}
+        </div>
       </div>
+    {% endif %}
+
+    <!-- View All Speakers Button -->
+    <div class="text-center mt-12">
+      <a href="/speakers" 
+         class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+        {{ translations.home.view_all_speakers }}
+        <i class="fas fa-arrow-right ml-3"></i>
+      </a>
     </div>
   </div>
 </section>
-<!--End About Section -->
-
-<!-- Keynote Speakers -->
-<section class="speakers-section" style="display: none">
-  <div class="auto-container">
-    <div class="sec-title light text-center">
-      <h2>Keynote Speakers</h2>
-    </div>
-
-    <div class="outer-box">
-      <div class="row d-flex align-items-center justify-content-center">
-        {% assign keynote_speakers = site.data.new_remote.speakers | where:
-        "is_keynote", "Yes" %} {% for speaker in keynote_speakers %}
-        <div class="speaker-block col-lg-4 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/{{ speaker.name | slugify }}">
-                  <img src="{{ speaker.image }}" alt="{{ speaker.name }}" />
-                </a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/{{ speaker.name | slugify }}">
-                    {{ speaker.name }}
-                  </a>
-                </h4>
-                <span class="designation">{{ speaker.bio }}</span>
-                <ul class="social-links social-icon-colored">
-                  {% if speaker.twitter and speaker.twitter != "" %}
-                  <li>
-                    <a href="{{ speaker.twitter }}">
-                      <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                  </li>
-                  {% endif %} {% if speaker.linkedin and speaker.linkedin != ""
-                  %}
-                  <li>
-                    <a href="{{ speaker.linkedin }}">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                  {% endif %} {% if speaker.website and speaker.website != "" %}
-                  <li>
-                    <a href="{{ speaker.website }}">
-                      <i class="fab fa-sistrix"></i>
-                    </a>
-                  </li>
-                  {% endif %}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Keynote Speakers -->
-
-<!-- Speakers -->
-<section class="speakers-section" style="display: none">
-  <div class="auto-container">
-    <div class="sec-title light text-center">
-      <h2>Speakers</h2>
-    </div>
-
-    <div class="outer-box">
-      <div class="row d-flex align-items-center justify-content-center">
-        {% assign all_speakers = site.data.new_remote.speakers %} {% assign
-        featured_speakers = all_speakers | slice: 0, 4 %}
-        <!-- Speaker Block -->
-        {% for speaker in featured_speakers %}
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/{{ speaker.name | slugify }}"
-                  ><img src="{{ speaker.image }}" alt="{{ speaker.name }}"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/{{ speaker.name | slugify }}"
-                    >{{ speaker.name }}
-                  </a>
-                </h4>
-                <span class="designation">{{ speaker.bio }}</span>
-                <ul class="social-links social-icon-colored">
-                  {% if speaker.twitter %}
-                  <li>
-                    <a href="{{ speaker.twitter }}"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                  {% endif %} {% if speaker.linkedin %}
-                  <li>
-                    <a href="{{ speaker.linkedin }}"
-                      ><i class="fab fa-linkedin"></i
-                    ></a>
-                  </li>
-                  {% endif %} {% if speaker.website %}
-                  <li>
-                    <a href="{{ speaker.website }}"
-                      ><i class="fab fa-sistrix"></i
-                    ></a>
-                  </li>
-                  {% endif %}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End  Speakers -->
+<!-- End Speakers Section -->
 
 <!-- Why Attend -->
-<section class="about-section" style="position: relative">
-  <div
-    class="overlay"
-    style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /*background: rgba(0, 0, 0, 0.5);*/
-      z-index: -1;
-    "
-  ></div>
-  <div class="auto-container">
-    <div class="row align-items-center">
-      <div class="content-column col-lg-6 col-md-10 col-sm-12 mx-auto">
-        <div class="inner-column">
-          <div class="sec-title">
-            <span class="title">WHY ATTEND THE CONFERENCE?</span>
-          </div>
-          <ul class="list-style-one">
-            <li>
-              <strong>Networking Opportunities:</strong> Connect with
-              like-minded professionals, industry experts, and potential
-              collaborators.
-            </li>
-            <li>
-              <strong>Masterclasses:</strong> Participate in specialized
-              sessions hosted by esteemed partners
-            </li>
-            <li>
-              <strong>Expand Your Knowledge:</strong> Attend insightful talks
-              and workshops led by industry experts. Stay ahead of the curve
-              with the latest trends, tools, and best practices in Ruby and
-              Software development.
-            </li>
-            <li>
-              <strong>Exhibitions:</strong> Explore cutting-edge ideas and
-              technologies showcased by various exhibitors.
-            </li>
-          </ul>
+{% capture why_attend_content %}
+    <ul class='space-y-4 text-left max-w-3xl mx-auto'>
+      <li class='flex items-start'>
+        <i class='fas fa-users text-red-600 mt-1 mr-3'></i>
+        <div>
+          <strong>{{ translations.home.networking_title }}</strong> {{ translations.home.networking_desc }}
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End of Why Attend -->
+      </li>
+      <li class='flex items-start'>
+        <i class='fas fa-chalkboard-teacher text-red-600 mt-1 mr-3'></i>
+        <div>
+          <strong>{{ translations.home.masterclasses_title }}</strong> {{ translations.home.masterclasses_desc }}
+        </div>
+      </li>
+      <li class='flex items-start'>
+        <i class='fas fa-brain text-red-600 mt-1 mr-3'></i>
+        <div>
+          <strong>{{ translations.home.expand_knowledge_title }}</strong> {{ translations.home.expand_knowledge_desc }}
+        </div>
+      </li>
+      <li class='flex items-start'>
+        <i class='fas fa-lightbulb text-red-600 mt-1 mr-3'></i>
+        <div>
+          <strong>{{ translations.home.exhibitions_title }}</strong> {{ translations.home.exhibitions_desc }}
+        </div>
+      </li>
+    </ul>
+{% endcapture %}
+
+{% include modern/components/content-section.liquid 
+   layout="centered"
+   bg_class="bg-gray-50"
+   title=translations.home.why_attend_title
+   content=why_attend_content
+%}
 
 <!-- Featured Speaker -->
-<section class="schedule-section style-three" style="display: none">
-  <div class="auto-container">
-    <div class="sec-title text-center">
-      <span class="featured-title"> Featured Sessions</span>
+<section class="py-16 bg-white" style="display: none;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{{ translations.home.featured_sessions_title }}</h2>
     </div>
 
-    <div class="schedule-tabs style-three tabs-box">
-      <div class="tabs-content">
-        <!--Tab-->
-        <div class="tab active-tab" id="tab-1">
-          <div class="schedule-timeline row">
-            {% assign dmitry_pogrebnoy = site.data.new_remote.speakers | where:
-            "url", "dmitry" | first %} {% assign caleb_muoki =
-            site.data.new_remote.speakers | where: "url", "caleb" | first %} {%
-            assign amani_kanu = site.data.new_remote.speakers | where: "url",
-            "amani" | first %} {% assign ganesh_kunwar =
-            site.data.new_remote.speakers | where: "url", "ganesh" | first %} {%
-            if dmitry_pogrebnoy %}
-            <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-box">
-                <div class="inner">
-                  <div class="speaker-info">
-                    {% if dmitry_pogrebnoy.image %}
-                    <figure class="thumb">
-                      <img
-                        src="{{ site.baseurl }}{{ dmitry_pogrebnoy.image }}"
-                        alt="{{ dmitry_pogrebnoy.name }}"
-                      />
-                    </figure>
-                    {% endif %}
-                    <h5 class="name">{{ dmitry_pogrebnoy.name }}</h5>
-                    {% if dmitry_pogrebnoy.bio %}
-                    <span class="designation">{{ dmitry_pogrebnoy.bio }}</span>
-                    {% elsif dmitry_pogrebnoy.details %}
-                    <span class="designation"
-                      >{{ dmitry_pogrebnoy.details | strip_html | truncatewords:
-                      10 }}</span
-                    >
-                    {% endif %}
-                  </div>
-                  <h4>
-                    {% if dmitry_pogrebnoy.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
-                      >{{ dmitry_pogrebnoy.talk_title }}</a
-                    >
-                    {% else %} {{ dmitry_pogrebnoy.talk_title }} {% endif %}
-                  </h4>
-                  {% if dmitry_pogrebnoy.talk_description %}
-                  <div class="text">
-                    {{ dmitry_pogrebnoy.talk_description | truncatewords: 30 }}
-                  </div>
-                  {% endif %}
-                  <div class="btn-box">
-                    {% if dmitry_pogrebnoy.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ dmitry_pogrebnoy.name | slugify }}"
-                      class="theme-btn"
-                      >Read More</a
-                    >
-                    {% endif %}
-                  </div>
-                </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {% assign dmitry_pogrebnoy = site.data.new_remote.speakers | where: "url", "dmitry" | first %}
+      {% assign caleb_muoki = site.data.new_remote.speakers | where: "url", "caleb" | first %}
+      {% assign amani_kanu = site.data.new_remote.speakers | where: "url", "amani" | first %}
+      {% assign ganesh_kunwar = site.data.new_remote.speakers | where: "url", "ganesh" | first %}
+      
+      {% for speaker in site.data.new_remote.speakers limit: 4 %}
+        {% if speaker.talk_title %}
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+              {% if speaker.image %}
+                <img src="{{ site.baseurl }}{{ speaker.image }}" 
+                     alt="{{ speaker.name }}"
+                     class="w-16 h-16 rounded-full object-cover mr-4">
+              {% endif %}
+              <div>
+                <h5 class="text-lg font-semibold text-gray-900">{{ speaker.name }}</h5>
+                {% if speaker.bio %}
+                  <p class="text-gray-600">{{ speaker.bio }}</p>
+                {% endif %}
               </div>
             </div>
-            {% endif %} {% if caleb_muoki %}
-            <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-box">
-                <div class="inner">
-                  <div class="speaker-info">
-                    {% if caleb_muoki.image %}
-                    <figure class="thumb">
-                      <img
-                        src="{{ site.baseurl }}{{ caleb_muoki.image }}"
-                        alt="{{ caleb_muoki.name }}"
-                      />
-                    </figure>
-                    {% endif %}
-                    <h5 class="name">{{ caleb_muoki.name }}</h5>
-                    {% if caleb_muoki.bio %}
-                    <span class="designation">{{ caleb_muoki.bio }}</span>
-                    {% elsif caleb_muoki.details %}
-                    <span class="designation"
-                      >{{ caleb_muoki.details | strip_html | truncatewords: 10
-                      }}</span
-                    >
-                    {% endif %}
-                  </div>
-                  <h4>
-                    {% if caleb_muoki.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
-                      >{{ caleb_muoki.talk_title }}</a
-                    >
-                    {% else %} {{ caleb_muoki.talk_title }} {% endif %}
-                  </h4>
-                  {% if caleb_muoki.talk_description %}
-                  <div class="text">
-                    {{ caleb_muoki.talk_description | truncatewords: 30 }}
-                  </div>
-                  {% endif %}
-                  <div class="btn-box">
-                    {% if caleb_muoki.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ caleb_muoki.name | slugify }}"
-                      class="theme-btn"
-                      >Read More</a
-                    >
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endif %} {% if amani_kanu %}
-            <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-box">
-                <div class="inner">
-                  <div class="speaker-info">
-                    {% if amani_kanu.image %}
-                    <figure class="thumb">
-                      <img
-                        src="{{ site.baseurl }}{{ amani_kanu.image }}"
-                        alt="{{ amani_kanu.name }}"
-                        style="
-                          width: 100px;
-                          height: 60px;
-                          object-fit: cover;
-                          border-radius: 50%;
-                        "
-                      />
-                    </figure>
-                    {% endif %}
-                    <h5 class="name">{{ amani_kanu.name }}</h5>
-                    {% if amani_kanu.bio %}
-                    <span class="designation">{{ amani_kanu.bio }}</span>
-                    {% elsif amani_kanu.details %}
-                    <span class="designation"
-                      >{{ amani_kanu.details | strip_html | truncatewords: 10
-                      }}</span
-                    >
-                    {% endif %}
-                  </div>
-                  <h4>
-                    {% if amani_kanu.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ amani_kanu.name | slugify }}"
-                      >{{ amani_kanu.talk_title }}</a
-                    >
-                    {% else %} {{ amani_kanu.talk_title }} {% endif %}
-                  </h4>
-                  {% if amani_kanu.talk_description %}
-                  <div class="text">
-                    {{ amani_kanu.talk_description | truncatewords: 30 }}
-                  </div>
-                  {% endif %}
-                  <div class="btn-box">
-                    {% if amani_kanu.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ amani_kanu.name | slugify }}"
-                      class="theme-btn"
-                      >Read More</a
-                    >
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endif %} {% if ganesh_kunwar %}
-            <div class="schedule-block col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-box">
-                <div class="inner">
-                  <div class="speaker-info">
-                    {% if ganesh_kunwar.image %}
-                    <figure class="thumb">
-                      <img
-                        src="{{ site.baseurl }}{{ ganesh_kunwar.image }}"
-                        alt="{{ ganesh_kunwar.name }}"
-                      />
-                    </figure>
-                    {% endif %}
-                    <h5 class="name">{{ ganesh_kunwar.name }}</h5>
-                    {% if ganesh_kunwar.bio %}
-                    <span class="designation">{{ ganesh_kunwar.bio }}</span>
-                    {% elsif ganesh_kunwar.details %}
-                    <span class="designation"
-                      >{{ ganesh_kunwar.details | strip_html | truncatewords: 10
-                      }}</span
-                    >
-                    {% endif %}
-                  </div>
-                  <h4>
-                    {% if ganesh_kunwar.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ ganesh_kunwar.name | slugify }}"
-                      >{{ ganesh_kunwar.talk_title }}</a
-                    >
-                    {% else %} {{ ganesh_kunwar.talk_title }} {% endif %}
-                  </h4>
-                  {% if ganesh_kunwar.talk_description %}
-                  <div class="text">
-                    {{ ganesh_kunwar.talk_description | truncatewords: 30 }}
-                  </div>
-                  {% endif %}
-                  <div class="btn-box">
-                    {% if ganesh_kunwar.url %}
-                    <a
-                      href="{{ site.baseurl }}/speakers/{{ ganesh_kunwar.name | slugify }}"
-                      class="theme-btn"
-                      >Read More</a
-                    >
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            </div>
+            
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              {% if speaker.url %}
+                <a href="{{ site.baseurl }}/speakers/{{ speaker.name | slugify }}" 
+                   class="text-red-600 hover:text-red-700">
+                  {{ speaker.talk_title }}
+                </a>
+              {% else %}
+                {{ speaker.talk_title }}
+              {% endif %}
+            </h4>
+            
+            {% if speaker.talk_description %}
+              <p class="text-gray-700 mb-4">
+                {{ speaker.talk_description | truncatewords: 30 }}
+              </p>
+            {% endif %}
+            
+            {% if speaker.url %}
+              <a href="{{ site.baseurl }}/speakers/{{ speaker.name | slugify }}" 
+                 class="inline-flex items-center text-red-600 hover:text-red-700 font-medium">
+                {{ translations.home.read_more }}
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
             {% endif %}
           </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
-    <div class="btn-box text-center">
-      <a
-        href="{{ site.baseurl }}/schedule"
-        class="theme-btn btn-style-three fw-bold"
-        ><span class="btn-title">View Full Schedule</span></a
-      >
+    
+    <div class="text-center mt-12">
+      <a href="{{ site.baseurl }}/schedule" 
+         class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+        {{ translations.home.view_full_schedule }}
+        <i class="fas fa-calendar-alt ml-2"></i>
+      </a>
     </div>
   </div>
 </section>
@@ -591,36 +188,22 @@ year: 2026
 
 <!--Start Sponsor Section-->
 
-<div style="display: none">
-  <!--Platinum Sponsors-->
-  {% include sponsor_section.liquid title="Platinum Sponsors" description="Our
-  Platinum Sponsors are the foundational force behind this event! ✨"
-  category="platinum" %}
+<!--Platinum Sponsors-->
+{% include modern/components/sponsor-section.liquid title="Platinum Sponsors" description="Our Platinum Sponsors are the foundational force behind this event! ✨" category="platinum" %}
 
-  <!--Gold Sponsors-->
-  {% include sponsor_section.liquid title="Gold Sponsors" description="Our Gold
-  Sponsors provide essential support, truly elevating our event! 🌟"
-  category="gold" %}
+<!--Gold Sponsors-->
+{% include modern/components/sponsor-section.liquid title="Gold Sponsors" description="Our Gold Sponsors provide essential support, truly elevating our event! 🌟" category="gold" %}
 
-  <!--Silver Sponsors-->
-  {% include sponsor_section.liquid title="Silver Sponsors" description="Thank
-  you to our Silver Sponsors for their strong and valued contributions! 🙌"
-  category="silver" %}
+<!--Silver Sponsors-->
+{% include modern/components/sponsor-section.liquid title="Silver Sponsors" description="Thank you to our Silver Sponsors for their strong and valued contributions! 🙌" category="silver" %}
 
-  <!--Speaker Supporters-->
-  {% include sponsor_section.liquid title="Speaker Supporters" description="Our
-  Speaker Supporters help us bring inspiring voices to the stage! 🎤"
-  category="speaker-supporter" %}
+<!--Speaker Supporters-->
+{% include modern/components/sponsor-section.liquid title="Speaker Supporters" description="Our Speaker Supporters help us bring inspiring voices to the stage! 🎤" category="speaker-supporter" %}
 
-  <!--Partners-->
-  {% include sponsor_section.liquid title="Partner Sponsors" description="These
-  Partner Sponsors are key collaborators, making our event stronger! 🤝"
-  category="partners" %}
-</div>
+<!--Partners-->
+{% include modern/components/sponsor-section.liquid title="Partner Sponsors" description="These Partner Sponsors are key collaborators, making our event stronger! 🤝" category="partners" %}
 
 <!--Previous Sponsors-->
-{% include sponsor_section.liquid title="Previous Sponsors" description="We
-celebrate our Previous Sponsors and Partners for their past invaluable support!
-🗓️" category="previous" %}
+{% include modern/components/sponsor-section.liquid title="Previous Sponsors" description="We celebrate our Previous Sponsors and Partners for their past invaluable support! 🗓️" category="previous" %}
 
 <!--End Sponsor Section-->

@@ -1,0 +1,42 @@
+<!-- Translation Helper Component for Jekyll Polyglot -->
+<!-- This component provides translation functionality with fallback support -->
+
+{% comment %}
+Usage: 
+{% assign translation_key = "navigation.home" %}
+{% include modern/components/translation-helper.liquid key=translation_key fallback="Home" %}
+
+Or with direct key:
+{% include modern/components/translation-helper.liquid key="navigation.home" fallback="Home" %}
+{% endcomment %}
+
+{% assign current_locale = site.active_lang %}
+{% assign fallback_locale = site.default_lang %}
+
+{% comment %} Split the key to navigate nested YAML structure {% endcomment %}
+{% assign key_parts = include.key | split: '.' %}
+{% assign translation_value = site.data.translations[current_locale] %}
+{% assign fallback_value = site.data.translations[fallback_locale] %}
+
+{% comment %} Navigate through the nested structure for current locale {% endcomment %}
+{% for part in key_parts %}
+  {% if translation_value %}
+    {% assign translation_value = translation_value[part] %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} If translation not found, try fallback locale {% endcomment %}
+{% unless translation_value %}
+  {% assign fallback_value = site.data.translations[fallback_locale] %}
+  {% for part in key_parts %}
+    {% if fallback_value %}
+      {% assign fallback_value = fallback_value[part] %}
+    {% endif %}
+  {% endfor %}
+  {% assign translation_value = fallback_value %}
+{% endunless %}
+
+{% comment %} Final fallback to provided fallback text {% endcomment %}
+{% assign final_translation = translation_value | default: include.fallback | default: include.key %}
+
+{{ final_translation }}

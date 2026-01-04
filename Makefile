@@ -38,9 +38,15 @@ sync:
 serve:
 	bundle exec jekyll serve
 
+## build-js: Build modern JavaScript bundle
+.PHONY: build-js
+build-js:
+	ruby _build/build_modern_js.rb
+
 ## build: Build the site for deployment into the public directory
 .PHONY: build
 build:
+	ruby _build/build_modern_js.rb
 	bundle exec jekyll build -d public
 
 ## clean: Remove vendor and _site directories
