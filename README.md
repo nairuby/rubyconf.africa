@@ -4,11 +4,30 @@
 
 ## Setup
 
+
+
+
 To set up the project for the first time, follow these steps:
 
 ```bash
 git clone https://github.com/nairuby/rubyconf.africa.git
 cd rubyconf.africa
+```
+
+## NOTE
+This project requires a service account configuration and environment variables to run.
+Obtain a service account JSON key from the admin.
+Store it securely on your machine.
+Set environment variables
+
+## Set Up Tailwind
+```bash
+npm install -g pnpm
+pnpm install
+pnpm dev
+```
+
+```
 git checkout Ft/Conf-details
 make setup
 ```
