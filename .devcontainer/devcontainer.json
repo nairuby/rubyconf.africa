@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/ruby:3.4", // OR mcr.microsoft.com/devcontainers/jekyll
 
   "features": {
-    "ghcr.io/devcontainers-contrib/features/prettier:1": {},
+    "ghcr.io/devcontainers-extra/features/prettier:1": {},
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "build-essential libsass-dev libsqlite3-dev nodejs npm zlib1g-dev git"
     }
