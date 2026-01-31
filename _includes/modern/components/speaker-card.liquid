@@ -34,7 +34,7 @@
       </p>
     {% endif %}
 
-    {% if include.speaker.talk_title %}
+    {% if include.speaker.talk_title and include.speaker.talk_title != "" and include.speaker.talk_title != emptly %}
       <div class="mb-4">
         <h4 class="text-sm font-semibold text-gray-900 mb-1">Talk:</h4>
         <p class="text-sm text-gray-700">{{ include.speaker.talk_title }}</p>
