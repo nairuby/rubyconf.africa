@@ -74,6 +74,14 @@
           <i class="fa-brands fa-x-twitter text-lg"></i>
         </a>
       {% endif %}
+      
+      {% if include.speaker.youtube and include.speaker.youtube != "" %}
+        <a href="{{ include.speaker.youtube }}" 
+           class="text-gray-400 hover:text-red-600 transition-colors duration-200"
+           target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-youtube text-lg"></i>
+        </a>
+      {% endif %}
     </div>
   </div>
 </div>
