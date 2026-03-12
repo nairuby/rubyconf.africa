@@ -22,29 +22,29 @@ description: "Get your tickets for Ruby Conf Africa 2026."
             <!-- Page Title Badge -->
             <div class="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-lg font-medium text-white backdrop-blur-sm mb-6">
                 <i class="fas fa-ticket-alt mr-2"></i>
-                Tickets
+                {{ translations.tickets_page.title }}
             </div>
 
             <!-- Main Heading -->
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Get your tickets for<br>Ruby Conf Africa 2026
+                {{ translations.tickets_page.get_tickets_for }}
             </h1>
 
             <!-- Subtitle -->
             <p class="text-xl md:text-2xl text-red-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join the biggest Ruby gathering in Africa. Two days of code, connection, and inspiration.
+                {{ translations.tickets_page.join_biggest }}
             </p>
 
             <!-- Date and Location -->
             <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12 text-red-100">
                 <div class="flex items-center">
                     <i class="fas fa-calendar-alt mr-3 text-red-200"></i>
-                    <span class="text-lg font-medium">August 21-22, 2026</span>
+                    <span class="text-lg font-medium">{{ translations.tickets_page.august_dates }}</span>
                 </div>
 
                 <div class="flex items-center">
                     <i class="fas fa-map-marker-alt mr-3 text-red-200"></i>
-                    <span class="text-lg font-medium">Nairobi, Kenya</span>
+                    <span class="text-lg font-medium">{{ translations.tickets_page.nairobi_kenya }}</span>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
             <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <a href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                    class="pretix-button inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-red-700 bg-white hover:bg-red-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    Get Tickets Now
+                    {{ translations.tickets_page.get_tickets_now }}
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -77,10 +77,10 @@ description: "Get your tickets for Ruby Conf Africa 2026."
         <!-- Section Header -->
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Choose Your Experience
+                {{ translations.tickets_page.choose_experience }}
             </h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                Select the ticket that best fits your needs and join us for an unforgettable Ruby experience.
+                {{ translations.tickets_page.select_ticket }}
             </p>
         </div>
 
@@ -92,13 +92,13 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                 <!-- Popular Badge -->
                 <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
-            Most Popular
+            {{ translations.tickets_page.most_popular }}
           </span>
                 </div>
 
                 <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Full Pass</h3>
-                    <p class="text-gray-600">The complete Ruby conference experience with networking party.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ translations.tickets_page.full_pass }}</h3>
+                    <p class="text-gray-600">{{ translations.tickets_page.full_pass_desc }}</p>
                 </div>
 
                 <!-- Price -->
@@ -120,7 +120,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700 font-medium">2-Day Conference Access</span>
+                        <span class="text-gray-700 font-medium">{{ translations.tickets_page.two_day_access }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -128,7 +128,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">Networking Party Access</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.networking_party_access }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -136,7 +136,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">All main stage talks</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.all_main_stage }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -144,7 +144,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">Coffee, lunch & dinner</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.coffee_lunch_dinner }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -152,7 +152,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">Premium swag pack</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.premium_swag }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -160,7 +160,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">VIP networking opportunities</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.vip_networking }}</span>
                     </li>
                 </ul>
 
@@ -168,15 +168,15 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                 <a
                         href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                         class="pretix-button w-full block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200 shadow-lg">
-                    Buy Full Pass
+                    {{ translations.tickets_page.buy_full_pass }}
                 </a>
             </div>
 
             <!-- Normal Pass -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Normal Pass</h3>
-                    <p class="text-gray-600">Perfect for conference attendees who want the core experience.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ translations.tickets_page.normal_pass }}</h3>
+                    <p class="text-gray-600">{{ translations.tickets_page.normal_pass_desc }}</p>
                 </div>
 
                 <!-- Price -->
@@ -198,7 +198,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">2-Day Conference Access</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.two_day_access }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -206,7 +206,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">All main stage talks</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.all_main_stage }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -214,7 +214,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">Coffee & lunch included</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.coffee_lunch }}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -222,7 +222,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-700">Conference materials & badge</span>
+                        <span class="text-gray-700">{{ translations.tickets_page.conference_materials }}</span>
                     </li>
                     <li class="flex items-center gap-3 opacity-50">
                         <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -230,7 +230,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                   clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-400 line-through">Networking Party</span>
+                        <span class="text-gray-400 line-through">{{ translations.tickets_page.networking_party }}</span>
                     </li>
                 </ul>
 
@@ -238,7 +238,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                 <a
                         href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                         class="pretix-button w-full block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200 shadow-lg">
-                    Buy Normal Pass
+                    {{ translations.tickets_page.buy_normal_pass }}
                 </a>
             </div>
 
@@ -246,8 +246,8 @@ description: "Get your tickets for Ruby Conf Africa 2026."
             <!-- Early bird community Pass -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Early bird Community Tickets</h3>
-                    <p class="text-gray-600">Early bird tickets for the ARC community</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ translations.tickets_page.early_bird_community }}</h3>
+                    <p class="text-gray-600">{{ translations.tickets_page.early_bird_desc }}</p>
                 </div>
 
                 <!-- Price -->
@@ -309,7 +309,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                 <a
                         href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                         class="pretix-button w-full block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200 shadow-lg">
-                    Buy Early bird Community Tickets
+                    {{ translations.tickets_page.buy_early_bird }}
                 </a>
             </div>
 
@@ -319,10 +319,10 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                  style="display: none;">
                 <div class="mb-6">
                     <div class="flex items-center gap-2 mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">Group Pass</h3>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">SAVE 30%</span>
+                        <h3 class="text-2xl font-bold text-gray-900">{{ translations.tickets_page.group_pass }}</h3>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">{{ translations.tickets_page.save_30 }}</span>
                     </div>
-                    <p class="text-gray-600">Bulk discount for teams and organizations (3 people).</p>
+                    <p class="text-gray-600">{{ translations.tickets_page.group_pass_desc }}</p>
                 </div>
 
                 <!-- Price -->
@@ -332,10 +332,10 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                     </div>
                     <div class="flex items-baseline gap-2 mb-2">
                         <span class="text-2xl font-semibold text-gray-600">~$70</span>
-                        <span class="text-gray-500">for 3 people</span>
+                        <span class="text-gray-500">{{ translations.tickets_page.for_3_people }}</span>
                     </div>
                     <div class="text-sm text-green-600 font-medium">
-                        Only KSH 3,000 (~$23) per person
+                        {{ translations.tickets_page.only_per_person }}
                     </div>
                 </div>
 
@@ -387,7 +387,7 @@ description: "Get your tickets for Ruby Conf Africa 2026."
                 <a
                         href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                         class="pretix-button w-full block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200">
-                    Buy Group Pass
+                    {{ translations.tickets_page.buy_group_pass }}
                 </a>
             </div>
         </div>
@@ -531,22 +531,21 @@ description: "Get your tickets for Ruby Conf Africa 2026."
 <!-- Call to Action Section -->
 <section class="py-20 bg-red-600 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Join Us?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ translations.tickets_page.ready_to_join }}</h2>
         <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Don't miss out on the premier Ruby conference in Africa. Get your tickets now and be part of the Ruby
-            community.
+            {{ translations.tickets_page.dont_miss_out }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <!-- Both CTA buttons point to the event landing page and use the pretix-button class -->
             <a
                     href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                     class="pretix-button bg-white text-red-600 hover:bg-red-100 border border-red-400 font-bold py-4 px-8 rounded-xl transition-colors duration-200">
-                Buy Normal Pass - KSH 1,500
+                {{ translations.tickets_page.buy_normal_price }}
             </a>
             <a
                     href="https://tickets.rubyconf.africa/events/ruby-conf-africa-2026/"
                     class="pretix-button bg-red-800 hover:bg-red-900 text-white font-bold py-4 px-8 rounded-xl transition-colors duration-200 border-2 border-red-400">
-                Buy Full Pass - KSH 3,500
+                {{ translations.tickets_page.buy_full_price }}
             </a>
         </div>
     </div>

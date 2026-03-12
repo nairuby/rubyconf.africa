@@ -7,22 +7,24 @@ image: "/images/logo/arc_logo_coloured.png"
 ---
 
 {% assign schedule_data = site.data.new_remote.schedule %}
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
 
 <!-- Modern Schedule Section -->
 <section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Conference Schedule</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{{ translations.schedule_page.conference_schedule }}</h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Join us for two days of inspiring talks, workshops, and networking opportunities
+        {{ translations.schedule_page.two_days_text }}
       </p>
       <div class="flex items-center justify-center gap-2 text-gray-500 mt-4">
         <i class="fas fa-map-marker-alt"></i>
-        <span>Nairobi, Kenya</span>
+        <span>{{ translations.tickets_page.nairobi_kenya }}</span>
         <span class="w-1 h-1 bg-current rounded-full mx-2"></span>
         <i class="fas fa-calendar-alt"></i>
-        <span>August 21-22, 2026</span>
+        <span>{{ translations.tickets_page.august_dates }}</span>
       </div>
     </div>
 
@@ -35,15 +37,15 @@ image: "/images/logo/arc_logo_coloured.png"
             class="schedule-tab-btn py-4 px-1 border-b-2 border-red-600 font-medium text-sm text-red-600 whitespace-nowrap active"
             data-tab="day-1"
           >
-            <span class="block font-bold text-lg">Day 1</span>
-            <span class="block text-xs text-gray-500">Friday, August 21</span>
+            <span class="block font-bold text-lg">{{ translations.schedule_page.day_1 }}</span>
+            <span class="block text-xs text-gray-500">{{ translations.schedule_page.friday_aug_21 }}</span>
           </button>
           <button 
             class="schedule-tab-btn py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap"
             data-tab="day-2"
           >
-            <span class="block font-bold text-lg">Day 2</span>
-            <span class="block text-xs text-gray-400">Saturday, August 22</span>
+            <span class="block font-bold text-lg">{{ translations.schedule_page.day_2 }}</span>
+            <span class="block text-xs text-gray-400">{{ translations.schedule_page.saturday_aug_22 }}</span>
           </button>
         </nav>
       </div>
@@ -80,7 +82,7 @@ image: "/images/logo/arc_logo_coloured.png"
                             {% if event.topic contains "Keynote" %}
                               <div class="flex items-center gap-3 mb-3">
                                 <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider">
-                                  <i class="fas fa-star mr-1"></i>Keynote
+                                  <i class="fas fa-star mr-1"></i>{{ translations.schedule_page.keynote }}
                                 </span>
                               </div>
                             {% endif %}
@@ -174,7 +176,7 @@ image: "/images/logo/arc_logo_coloured.png"
                 {% endfor %}
               </div>
               <p class="text-gray-500 mt-8 text-lg">
-                Schedule coming soon! Stay tuned for updates.
+                {{ translations.schedule_page.schedule_coming_soon }}
               </p>
             </div>
           {% endif %}
@@ -210,7 +212,7 @@ image: "/images/logo/arc_logo_coloured.png"
                             {% if event.topic contains "Keynote" %}
                               <div class="flex items-center gap-3 mb-3">
                                 <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider">
-                                  <i class="fas fa-star mr-1"></i>Keynote
+                                  <i class="fas fa-star mr-1"></i>{{ translations.schedule_page.keynote }}
                                 </span>
                               </div>
                             {% endif %}
@@ -304,7 +306,7 @@ image: "/images/logo/arc_logo_coloured.png"
                 {% endfor %}
               </div>
               <p class="text-gray-500 mt-8 text-lg">
-                Schedule coming soon! Stay tuned for updates.
+                {{ translations.schedule_page.schedule_coming_soon }}
               </p>
             </div>
           {% endif %}

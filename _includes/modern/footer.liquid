@@ -54,6 +54,13 @@
               {% include modern/components/translation-helper.liquid key="navigation.speakers" fallback="Speakers" %}
             </a>
           </li>
+        <li>
+            <a href="/tickets"
+               class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group" >
+                <i class="fas fa-ticket mr-2 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+                {% include modern/components/translation-helper.liquid key="navigation.tickets" fallback="Tickets" %}
+            </a>
+        </li>
           <li>
             <a href="/schedule" 
                class="text-gray-300 hover:text-red-400 transition-colors duration-200 flex items-center group" style="display: none">

@@ -6,18 +6,22 @@ description: "Get in touch with the organizers of Ruby Conf Africa 2026. We are 
 image: "/images/logo/arc_logo_coloured.png"
 ---
 
+<!--Polygot assigns the language of the current build to page-->
+{% assign current_locale = page.lang | default: site.default_locale | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
+
 <!-- Contact Section -->
 <div class="max-w-4xl mx-auto mt-4">
   <!-- Success Message (shown when form is submitted) -->
   <div id="success-message" class="hidden mb-8 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-    <strong class="font-bold">Thank you!</strong>
-    <span class="block sm:inline"> Your message has been sent successfully. We'll get back to you soon!</span>
+    <strong class="font-bold">{{ translations.contact_page.thank_you }}</strong>
+    <span class="block sm:inline"> {{ translations.contact_page.message_sent }}</span>
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
     <!-- Contact Information -->
     <div class="bg-white rounded-lg shadow-lg p-8">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ translations.contact_page.get_in_touch }}</h2>
       
       <div class="space-y-6">
         <div class="flex items-start">
@@ -25,7 +29,7 @@ image: "/images/logo/arc_logo_coloured.png"
             <i class="fas fa-envelope text-red-600 text-xl mt-1"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-900">Email</h3>
+            <h3 class="text-lg font-semibold text-gray-900">{{ translations.contact_page.email }}</h3>
             <p class="text-gray-600">
               <a href="mailto:organisers@rubyconf.africa" 
                  class="text-red-600 hover:text-red-700 underline">
@@ -40,7 +44,7 @@ image: "/images/logo/arc_logo_coloured.png"
             <i class="fab fa-twitter text-red-600 text-xl mt-1"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-900">Twitter</h3>
+            <h3 class="text-lg font-semibold text-gray-900">{{ translations.contact_page.twitter }}</h3>
             <p class="text-gray-600">
               <a href="https://twitter.com/ruby_african"
                  target="_blank"
@@ -56,7 +60,7 @@ image: "/images/logo/arc_logo_coloured.png"
             <i class="fab fa-linkedin text-red-600 text-xl mt-1"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-900">LinkedIn</h3>
+            <h3 class="text-lg font-semibold text-gray-900">{{ translations.contact_page.linkedin }}</h3>
             <p class="text-gray-600">
               <a href="https://www.linkedin.com/company/african-ruby-community"
                  target="_blank"
@@ -72,10 +76,10 @@ image: "/images/logo/arc_logo_coloured.png"
             <i class="fas fa-map-marker-alt text-red-600 text-xl mt-1"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-900">Location</h3>
+            <h3 class="text-lg font-semibold text-gray-900">{{ translations.contact_page.location }}</h3>
             <p class="text-gray-600">
               Nairobi, Kenya<br>
-              <span class="text-sm text-gray-500">Venue TBA</span>
+              <span class="text-sm text-gray-500">{{ translations.contact_page.venue_tba }}</span>
             </p>
           </div>
         </div>
@@ -84,7 +88,7 @@ image: "/images/logo/arc_logo_coloured.png"
 
     <!-- Contact Form -->
     <div class="bg-white rounded-lg shadow-lg p-8">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ translations.contact_page.send_message }}</h2>
       
       <form class="space-y-6" 
             action="https://formspree.io/f/mojaodbo" 
@@ -100,7 +104,7 @@ image: "/images/logo/arc_logo_coloured.png"
         
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-            Full Name *
+            {{ translations.contact_page.full_name }} *
           </label>
           <input type="text" 
                  id="name" 
@@ -111,7 +115,7 @@ image: "/images/logo/arc_logo_coloured.png"
 
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-            Email Address *
+            {{ translations.contact_page.email_address }} *
           </label>
           <input type="email" 
                  id="email" 
@@ -122,31 +126,31 @@ image: "/images/logo/arc_logo_coloured.png"
 
         <div>
           <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
-            Subject *
+            {{ translations.contact_page.subject }} *
           </label>
           <select id="subject" 
                   name="subject" 
                   required
                   class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500">
-            <option value="">Select a subject</option>
-            <option value="speaking">Speaking Opportunity</option>
-            <option value="sponsorship">Sponsorship Inquiry</option>
-            <option value="attendance">Attendance Question</option>
-            <option value="media">Media & Press</option>
-            <option value="general">General Inquiry</option>
-            <option value="other">Other</option>
+            <option value="">{{ translations.contact_page.select_subject }}</option>
+            <option value="speaking">{{ translations.contact_page.speaking_opportunity }}</option>
+            <option value="sponsorship">{{ translations.contact_page.sponsorship_inquiry }}</option>
+            <option value="attendance">{{ translations.contact_page.attendance_question }}</option>
+            <option value="media">{{ translations.contact_page.media_press }}</option>
+            <option value="general">{{ translations.contact_page.general_inquiry }}</option>
+            <option value="other">{{ translations.contact_page.other }}</option>
           </select>
         </div>
 
         <div>
           <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-            Message *
+            {{ translations.contact_page.message }} *
           </label>
           <textarea id="message" 
                     name="message" 
                     rows="5" 
                     required
-                    placeholder="Tell us how we can help you..."
+                    placeholder="{{ translations.contact_page.message_placeholder }}"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"></textarea>
         </div>
 
@@ -154,7 +158,7 @@ image: "/images/logo/arc_logo_coloured.png"
           <button type="submit" 
                   class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
             <i class="fas fa-paper-plane mr-2"></i>
-            <span class="button-text">Send Message</span>
+            <span class="button-text">{{ translations.contact_page.send_message_btn }}</span>
           </button>
         </div>
       </form>
@@ -163,63 +167,63 @@ image: "/images/logo/arc_logo_coloured.png"
 
   <!-- Additional Information -->
   <div class="mt-12 bg-gray-50 rounded-lg p-8">
-    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Frequently Asked Questions</h2>
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">{{ translations.contact_page.faq_title }}</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3">
           <i class="fas fa-microphone text-red-600 mr-2"></i>
-          Speaking Opportunities
+          {{ translations.contact_page.speaking_opportunities }}
         </h3>
         <p class="text-gray-600 mb-3">
-          Interested in speaking at Ruby Conf Africa 2026? We'd love to hear from you!
+          {{ translations.contact_page.speaking_text }}
         </p>
         <a href="https://papercall.io/ruby-conf-africa-2026" 
            target="_blank"
            class="text-red-600 hover:text-red-700 underline font-medium">
-          Submit Your Talk Proposal →
+          {{ translations.contact_page.submit_talk_proposal }}
         </a>
       </div>
 
       <div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3">
           <i class="fas fa-handshake text-red-600 mr-2"></i>
-          Sponsorship
+          {{ translations.contact_page.sponsorship }}
         </h3>
         <p class="text-gray-600 mb-3">
-          Want to support Ruby Conf Africa 2026? Learn about our sponsorship opportunities.
+          {{ translations.contact_page.sponsorship_text }}
         </p>
         <a href="mailto:organisers@rubyconf.africa?subject=Sponsorship%20Inquiry" 
            class="text-red-600 hover:text-red-700 underline font-medium">
-          Contact Us About Sponsorship →
+          {{ translations.contact_page.contact_sponsorship }}
         </a>
       </div>
 
       <div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3">
           <i class="fas fa-ticket-alt text-red-600 mr-2"></i>
-          Tickets & Registration
+          {{ translations.contact_page.tickets_registration }}
         </h3>
         <p class="text-gray-600 mb-3">
-          Ticket information will be available soon. Stay tuned for updates!
+          {{ translations.contact_page.tickets_text }}
         </p>
         <a href="/" 
            class="text-red-600 hover:text-red-700 underline font-medium">
-          Back to Home →
+          {{ translations.contact_page.back_to_home }}
         </a>
       </div>
 
       <div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3">
           <i class="fas fa-users text-red-600 mr-2"></i>
-          Community
+          {{ translations.contact_page.community }}
         </h3>
         <p class="text-gray-600 mb-3">
-          Join the African Ruby Community and connect with fellow developers.
+          {{ translations.contact_page.community_text }}
         </p>
         <a href="/about-us" 
            class="text-red-600 hover:text-red-700 underline font-medium">
-          Learn More About ARC →
+          {{ translations.contact_page.learn_more_arc }}
         </a>
       </div>
     </div>
