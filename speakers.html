@@ -7,14 +7,17 @@ image: "/images/logo/arc_logo_coloured.png"
 year: 2026
 ---
 
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
+
 <!-- Modern Speakers Page with Tailwind CSS -->
 <div class="min-h-screen bg-gray-50">
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-red-600 to-red-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Speakers</h1>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">{{ translations.speakers_page.our_speakers }}</h1>
       <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto leading-relaxed">
-        Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2026
+        {{ translations.speakers_page.meet_lineup }}
       </p>
     </div>
   </section>
@@ -48,23 +51,22 @@ year: 2026
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="bg-white rounded-2xl shadow-lg p-12">
           <i class="fas fa-microphone text-6xl text-red-600 mb-6"></i>
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Speakers Coming Soon!</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">{{ translations.speakers_page.coming_soon_title }}</h2>
           <p class="text-xl text-gray-600 mb-8">
-            We're working hard to bring you an amazing lineup of Ruby experts. 
-            Stay tuned for speaker announcements!
+            {{ translations.speakers_page.coming_soon_text }}
           </p>
           
           <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a href="/contact" 
                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
               <i class="fas fa-envelope mr-2"></i>
-              Get Notified
+              {{ translations.speakers_page.get_notified }}
             </a>
             
             <a href="/" 
                class="inline-flex items-center px-6 py-3 border-2 border-red-600 text-base font-medium rounded-md text-red-600 hover:bg-red-50 transition-colors duration-200">
               <i class="fas fa-home mr-2"></i>
-              Back to Home
+              {{ translations.speakers_page.back_home }}
             </a>
           </div>
         </div>
@@ -75,22 +77,22 @@ year: 2026
   <!-- Call to Action -->
   <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Want to Speak at Ruby Conf Africa?</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">{{ translations.speakers_page.want_to_speak }}</h2>
       <p class="text-xl text-gray-600 mb-8">
-        We're always looking for passionate Ruby developers to share their knowledge and experiences.
+        {{ translations.speakers_page.want_to_speak_text }}
       </p>
       
       <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
         <a href="/contact" 
            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
           <i class="fas fa-paper-plane mr-2"></i>
-          Submit a Proposal
+          {{ translations.speakers_page.submit_proposal }}
         </a>
         
         <a href="/code-of-conduct" 
            class="inline-flex items-center px-6 py-3 border-2 border-red-600 text-base font-medium rounded-md text-red-600 hover:bg-red-50 transition-colors duration-200">
           <i class="fas fa-heart mr-2"></i>
-          Code of Conduct
+          {{ translations.speakers_page.code_of_conduct }}
         </a>
       </div>
     </div>
