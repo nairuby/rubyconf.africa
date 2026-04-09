@@ -37,8 +37,7 @@ layout: modern/application
           <div class="flex flex-wrap gap-3 mb-8">
             {% if page.github and page.github != "" %}
               <a href="{{ page.github }}" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #1f2937; hover:background-color: #111827;"
+                 class="bg-[#1f2937] hover:bg-[#111827] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github mr-2 text-lg"></i>
                 <span class="text-sm font-medium">GitHub</span>
@@ -47,10 +46,7 @@ layout: modern/application
             
             {% if page.linkedin and page.linkedin != "" %}
               <a href="{{ page.linkedin }}" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #2563eb;"
-                 onmouseover="this.style.backgroundColor='#1d4ed8'"
-                 onmouseout="this.style.backgroundColor='#2563eb'"
+                 class="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin mr-2 text-lg"></i>
                 <span class="text-sm font-medium">LinkedIn</span>
@@ -59,10 +55,7 @@ layout: modern/application
             
             {% if page.website and page.website != "" %}
               <a href="{{ page.website }}" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #059669;"
-                 onmouseover="this.style.backgroundColor='#047857'"
-                 onmouseout="this.style.backgroundColor='#059669'"
+                 class="bg-[#059669] hover:bg-[#047857] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-globe mr-2 text-lg"></i>
                 <span class="text-sm font-medium">Website</span>
@@ -71,10 +64,7 @@ layout: modern/application
             
             {% if page.twitter and page.twitter != "" %}
               <a href="{{ page.twitter }}" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #000000;"
-                 onmouseover="this.style.backgroundColor='#1f2937'"
-                 onmouseout="this.style.backgroundColor='#000000'"
+                 class="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-x-twitter mr-2 text-lg"></i>
                 <span class="text-sm font-medium">Twitter</span>
@@ -83,10 +73,7 @@ layout: modern/application
             
             {% if page.youtube and page.youtube != "" %}
               <a href="{{ page.youtube }}" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #ff0000;"
-                 onmouseover="this.style.backgroundColor='#cc0000'"
-                 onmouseout="this.style.backgroundColor='#ff0000'"
+                 class="bg-[#ff0000] hover:bg-[#cc0000] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-youtube mr-2 text-lg"></i>
                 <span class="text-sm font-medium">YouTube</span>
@@ -163,7 +150,7 @@ layout: modern/application
 
   <!-- Recording Section -->
   {% if page.recording %}
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white" style="display: none;">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div class="p-8 text-center">
