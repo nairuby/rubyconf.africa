@@ -899,8 +899,7 @@ Code de conduite
           <div class="flex flex-wrap gap-3 mb-8">
             
               <a href="https://github.com/Amospikins" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #1f2937; hover:background-color: #111827;"
+                 class="bg-[#1f2937] hover:bg-[#111827] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github mr-2 text-lg"></i>
                 <span class="text-sm font-medium">GitHub</span>
@@ -909,10 +908,7 @@ Code de conduite
             
             
               <a href="https://www.linkedin.com/in/sanmi-amos/" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #2563eb;"
-                 onmouseover="this.style.backgroundColor='#1d4ed8'"
-                 onmouseout="this.style.backgroundColor='#2563eb'"
+                 class="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin mr-2 text-lg"></i>
                 <span class="text-sm font-medium">LinkedIn</span>
@@ -921,10 +917,7 @@ Code de conduite
             
             
               <a href="https://x.com/amospikins" 
-                 class="text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
-                 style="background-color: #059669;"
-                 onmouseover="this.style.backgroundColor='#047857'"
-                 onmouseout="this.style.backgroundColor='#059669'"
+                 class="bg-[#059669] hover:bg-[#047857] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
                  target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-globe mr-2 text-lg"></i>
                 <span class="text-sm font-medium">Website</span>
@@ -1007,7 +1000,7 @@ Code de conduite
 
   <!-- Recording Section -->
   
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white" style="display: none;">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div class="p-8 text-center">
@@ -1053,15 +1046,83 @@ Code de conduite
           <!-- Modern Speaker Card Component with Tailwind CSS -->
 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
   <!-- Speaker Image -->
-  <div class="relative overflow-hidden">
-    <img 
-      src="https://lh3.googleusercontent.com/d/1bQxO8n01y4iQaM9tsGm5QBmh4pJef4zF=w1000?authuser=1/view" 
-      alt="Denis Sellu"
-      class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-      loading="lazy"
-    />
+  <a href="/fr/speakers/mike-dalton">
+      <div class="relative overflow-hidden">
+          <img
+                  src="https://lh3.googleusercontent.com/d/149BnjYEmCBQ_wTMrKapNw1BQ3FjfZaJb=w1000?authuser=1/view"
+                  alt="Mike Dalton"
+                  class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+          />
+          
+      </div>
+  </a>
+
+  <!-- Speaker Info -->
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-200">
+      <a href="/fr/speakers/mike-dalton" class="hover:underline">
+        Mike Dalton
+      </a>
+    </h3>
     
+    <p class="text-gray-600 text-sm mb-3 font-medium">
+      Speaker
+    </p>
+    
+    
+      <p class="text-gray-700 text-sm mb-4 line-clamp-3">
+        Staff Software Engineer, Triumph
+
+      </p>
+    
+
+    
+
+    <!-- Social Links -->
+    <div class="flex space-x-3 pt-4 border-t border-gray-100">
+      
+      
+      
+        <a href="https://www.linkedin.com/in/michaelcdalton/ " 
+           class="text-gray-400 hover:text-blue-700 transition-colors duration-200"
+           target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin text-lg"></i>
+        </a>
+      
+      
+      
+      
+      
+        <a href="https://x.com/kcdragon_" 
+           class="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+           target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-x-twitter text-lg"></i>
+        </a>
+      
+      
+      
+    </div>
   </div>
+</div>
+        
+          
+          
+          
+          <!-- Modern Speaker Card Component with Tailwind CSS -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+  <!-- Speaker Image -->
+  <a href="/fr/speakers/denis-sellu">
+      <div class="relative overflow-hidden">
+          <img
+                  src="https://lh3.googleusercontent.com/d/1bQxO8n01y4iQaM9tsGm5QBmh4pJef4zF=w1000?authuser=1/view"
+                  alt="Denis Sellu"
+                  class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+          />
+          
+      </div>
+  </a>
 
   <!-- Speaker Info -->
   <div class="p-6">
@@ -1116,84 +1177,17 @@ Code de conduite
           <!-- Modern Speaker Card Component with Tailwind CSS -->
 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
   <!-- Speaker Image -->
-  <div class="relative overflow-hidden">
-    <img 
-      src="https://lh3.googleusercontent.com/d/1mqLs6XxlH07_BkMB94MLniCPxNAUULwM=w1000?authuser=1/view" 
-      alt="Okura Masafumi"
-      class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-      loading="lazy"
-    />
-    
-  </div>
-
-  <!-- Speaker Info -->
-  <div class="p-6">
-    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-200">
-      <a href="/fr/speakers/okura-masafumi" class="hover:underline">
-        Okura Masafumi
-      </a>
-    </h3>
-    
-    <p class="text-gray-600 text-sm mb-3 font-medium">
-      Speaker
-    </p>
-    
-    
-      <p class="text-gray-700 text-sm mb-4 line-clamp-3">
-        Founder, Kaigi on Rails | Creator of Alba
-
-      </p>
-    
-
-    
-      <div class="mb-4">
-        <h4 class="text-sm font-semibold text-gray-900 mb-1">Talk:</h4>
-        <p class="text-sm text-gray-700">Ruby for complete beginners WORKSHOP</p>
+  <a href="/fr/speakers/nicolo-rebughini">
+      <div class="relative overflow-hidden">
+          <img
+                  src="https://lh3.googleusercontent.com/d/1L2dwAuapTFLoVIuTMNFQloDogj3IR7LM=w1000?authuser=1/view"
+                  alt="Nicolo Rebughini"
+                  class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+          />
+          
       </div>
-    
-
-    <!-- Social Links -->
-    <div class="flex space-x-3 pt-4 border-t border-gray-100">
-      
-        <a href="https://github.com/okuramasafumi" 
-           class="text-gray-400 hover:text-gray-900 transition-colors duration-200"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github text-lg"></i>
-        </a>
-      
-      
-      
-      
-      
-      
-      
-        <a href=" https://x.com/okuramasafumi" 
-           class="text-gray-400 hover:text-blue-500 transition-colors duration-200"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-x-twitter text-lg"></i>
-        </a>
-      
-      
-      
-    </div>
-  </div>
-</div>
-        
-          
-          
-          
-          <!-- Modern Speaker Card Component with Tailwind CSS -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-  <!-- Speaker Image -->
-  <div class="relative overflow-hidden">
-    <img 
-      src="https://lh3.googleusercontent.com/d/1L2dwAuapTFLoVIuTMNFQloDogj3IR7LM=w1000?authuser=1/view" 
-      alt="Nicolo Rebughini"
-      class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-      loading="lazy"
-    />
-    
-  </div>
+  </a>
 
   <!-- Speaker Info -->
   <div class="p-6">
