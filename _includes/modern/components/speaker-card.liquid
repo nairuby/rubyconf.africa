@@ -1,20 +1,22 @@
 <!-- Modern Speaker Card Component with Tailwind CSS -->
 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
   <!-- Speaker Image -->
-  <div class="relative overflow-hidden">
-    <img 
-      src="{{ include.speaker.image | default: '/images/default-speaker.jpg' }}" 
-      alt="{{ include.speaker.name }}"
-      class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-      loading="lazy"
-    />
-    {% if include.speaker.is_keynote == true or include.speaker.is_keynote == "Yes" %}
-      <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-        <i class="fas fa-star mr-1"></i>
-        Keynote
+  <a href="/speakers/{{ include.speaker.name | slugify }}">
+      <div class="relative overflow-hidden">
+          <img
+                  src="{{ include.speaker.image | default: '/images/default-speaker.jpg' }}"
+                  alt="{{ include.speaker.name }}"
+                  class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+          />
+          {% if include.speaker.is_keynote == true or include.speaker.is_keynote == "Yes" %}
+              <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <i class="fas fa-star mr-1"></i>
+                  Keynote
+              </div>
+          {% endif %}
       </div>
-    {% endif %}
-  </div>
+  </a>
 
   <!-- Speaker Info -->
   <div class="p-6">
