@@ -1,0 +1,200 @@
+<!-- Venue Section Component — static structure (carousel markup added in task 3) -->
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+{% assign t = site.data.translations[current_locale].venue_section %}
+{% unless t %}
+  {% assign t = site.data.translations['en'].venue_section %}
+{% endunless %}
+
+<section id="venue" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-red-600 mb-4">{{ t.title }}</h2>
+      <div class="w-24 h-1 bg-red-600 mx-auto mb-4"></div>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">{{ t.subtitle }}</p>
+    </div>
+
+    <!-- Two-column grid: carousel (left) + info/map (right) -->
+    <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+
+      <!-- Left column: Photo Carousel -->
+      <figure id="venue-carousel" class="rounded-lg shadow-lg overflow-hidden mb-8 lg:mb-0" aria-label="{{ t.gallery_label }}">
+        {% assign venue_images = "sarit1.jpg,sarit2.jpg,sarit3.jpg,sarit4.jpg,sarit5.jpg" | split: "," %}
+
+        <div style="position: relative; width: 100%; padding-top: 75%;">
+
+          <!-- Slides -->
+          {% for img in venue_images %}
+            {% assign img_index = forloop.index0 %}
+            <div class="carousel-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: {% if img_index == 0 %}1{% else %}0{% endif %}; transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1); pointer-events: {% if img_index == 0 %}auto{% else %}none{% endif %};">
+              <img
+                src="{{ site.baseurl }}/images/venues/sarit/{{ img }}"
+                alt="{{ t.photo_alt }}"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                loading="lazy"
+              />
+            </div>
+          {% endfor %}
+
+          <!-- Prev button -->
+          <button
+            id="carousel-prev"
+            aria-label="{{ t.prev_label }}"
+            style="position: absolute; left: 0.5rem; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.5); border: none; border-radius: 9999px; padding: 0.5rem; cursor: pointer; color: white;"
+          >
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Next button -->
+          <button
+            id="carousel-next"
+            aria-label="{{ t.next_label }}"
+            style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.5); border: none; border-radius: 9999px; padding: 0.5rem; cursor: pointer; color: white;"
+          >
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <!-- Dot indicators -->
+          <div id="carousel-dots" style="position: absolute; bottom: 0.75rem; left: 0; right: 0; display: flex; justify-content: center; gap: 0.5rem; z-index: 10;">
+            {% for img in venue_images %}
+              {% assign dot_label = t.dot_label | replace: '%{n}', forloop.index | replace: '%{total}', venue_images.size %}
+              <button
+                class="carousel-dot"
+                aria-label="{{ dot_label }}"
+                style="width: 0.75rem; height: 0.75rem; border-radius: 9999px; border: none; cursor: pointer; background: {% if forloop.first %}#dc2626{% else %}#d1d5db{% endif %}; padding: 0;"
+              ></button>
+            {% endfor %}
+          </div>
+
+        </div>
+
+        <!-- noscript fallback -->
+        <noscript>
+          <img
+            src="{{ site.baseurl }}/images/venues/sarit/sarit1.jpg"
+            alt="{{ t.photo_alt }}"
+            style="width: 100%; display: block;"
+          />
+        </noscript>
+
+        <figcaption aria-label="{{ t.gallery_label }}" class="sr-only">{{ t.gallery_label }}</figcaption>
+      </figure>
+
+      <!-- Right column: Venue info + OSM map -->
+      <div>
+
+        <!-- Venue info card -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ t.name }}</h3>
+          <p class="text-gray-600 mb-4">{{ t.description }}</p>
+          <address class="not-italic text-gray-700 mb-4 flex items-start gap-2">
+            <svg class="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            {{ t.address }}
+          </address>
+          {% if t.amenities %}
+            <ul class="space-y-2">
+              {% for amenity in t.amenities %}
+                <li class="flex items-center gap-2 text-gray-700">
+                  <svg class="w-4 h-4 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  {{ amenity }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+
+        <!-- OSM Map card -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=36.7927%2C-1.2731%2C36.8127%2C-1.2531&layer=mapnik&marker=-1.2631%2C36.8027"
+            title="{{ t.map_title }}"
+            class="w-full"
+            style="min-height: 350px; border: 0;"
+            loading="lazy"
+            allowfullscreen
+            onerror="document.getElementById('map-fallback').classList.remove('hidden'); this.classList.add('hidden');"
+          ></iframe>
+
+          <!-- Fallback shown if iframe fails to load -->
+          <div id="map-fallback" class="hidden p-4 text-center">
+            <p class="text-gray-600 mb-2">{{ t.map_fallback }}</p>
+            <a href="https://www.openstreetmap.org/directions?to=-1.2631%2C36.8027" target="_blank" rel="noopener" class="text-red-600 hover:underline">{{ t.directions_label }}</a>
+          </div>
+
+          <!-- Directions link -->
+          <div class="p-4 border-t border-gray-100">
+            <a
+              href="https://www.openstreetmap.org/directions?to=-1.2631%2C36.8027"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 text-red-600 font-medium hover:underline"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              {{ t.directions_label }}
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end right column -->
+    </div><!-- end grid -->
+  </div>
+</section>
+
+<script>
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.getElementById('venue-carousel');
+    if (!carousel) return;
+
+    var slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    var dots = carousel.querySelectorAll('.carousel-dot');
+    var prevBtn = document.getElementById('carousel-prev');
+    var nextBtn = document.getElementById('carousel-next');
+    var total = slides.length;
+    var currentIndex = 0;
+    var autoInterval = null;
+
+    function showSlide(n) {
+      slides.forEach(function (slide, i) {
+        slide.style.opacity = i === n ? '1' : '0';
+        slide.style.pointerEvents = i === n ? 'auto' : 'none';
+      });
+      dots.forEach(function (dot, i) {
+        dot.style.background = i === n ? '#dc2626' : '#d1d5db';
+      });
+      currentIndex = n;
+    }
+
+    function next() { showSlide((currentIndex + 1) % total); }
+    function prev() { showSlide((currentIndex - 1 + total) % total); }
+
+    function startAuto() { autoInterval = setInterval(next, 4000); }
+    function resetAuto() { clearInterval(autoInterval); startAuto(); }
+
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAuto(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAuto(); });
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { showSlide(i); resetAuto(); });
+    });
+
+    carousel.addEventListener('mouseenter', function () { clearInterval(autoInterval); });
+    carousel.addEventListener('mouseleave', startAuto);
+
+    showSlide(0);
+    startAuto();
+  });
+})();
+</script>
