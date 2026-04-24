@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include archive/head.liquid %}
+<body>
+<div class="page-wrapper">
+    <!-- Header and Navigation-->
+    {% include archive/navigation.liquid %}
+
+    <!-- Content -->
+    <div class="content-wrapper">
+        {% if content and content != "" %}
+            {{ content }}
+        {% else %}
+            <!-- Speaker Detail -->
+            <section class="speaker-detail">
+              <div class="auto-container">
+                <div class="row">
+                  <div class="image-column col-lg-4 col-md-12 col-sm-12">
+                    <div class="image-box">
+                      <figure class="image">
+                        <img src="{{ page.speaker.image }}" alt="{{ page.speaker.name }}" />
+                      </figure>
+                      <ul class="social-icon-two social-icon-colored text-center">
+                        {% if page.speaker.twitter and page.speaker.twitter != "" %}
+                        <li>
+                          <a href="{{ page.speaker.twitter }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        {% endif %}
+                        {% if page.speaker.linkedin and page.speaker.linkedin != "" %}
+                        <li>
+                          <a href="{{ page.speaker.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        {% endif %}
+                        {% if page.speaker.website and page.speaker.website != "" %}
+                        <li>
+                          <a href="{{ page.speaker.website }}" target="_blank"><i class="fab fa-sistrix"></i></a>
+                        </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="info-column col-lg-8 col-md-12 col-sm-12">
+                    <div class="card shadow-sm">
+                      <div class="card-body">
+                        <h3 class="card-title text-info-emphasis">{{ page.speaker.name }}</h3>
+                        <h5 class="text-secondary font-weight-bold">{{ page.speaker.bio }}</h5>
+                        <p class="card-text text-black">{{ page.speaker.details }}</p>
+                        {% if page.speaker.talk_title and page.speaker.talk_title != "" %}
+                        <h4 class="mt-4 text-info-emphasis">Talk by {{ page.speaker.name }}</h4>
+                        <div class="border p-3 bg-white rounded shadow-sm mt-2">
+                          <p class="font-weight-bold text-info-emphasis">{{ page.speaker.talk_title }}</p>
+                          {% if page.speaker.talk_description and page.speaker.talk_description != "" and page.speaker.talk_description != "TBA" %}
+                          <div class="text-info-emphasis">{{ page.speaker.talk_description }}</div>
+                          {% endif %}
+                        </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!--End Speaker Detail -->
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    {% include archive/footer.liquid %}
+</div>
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+{% include js.liquid %}
+</body>
+</html>

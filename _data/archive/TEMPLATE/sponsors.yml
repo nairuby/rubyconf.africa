@@ -1,0 +1,9 @@
+# sponsors.yml — Sponsor list for a single archive year
+# Each entry represents one sponsor organization.
+# The 'categories' array controls which sponsor section(s) the sponsor appears in.
+# Valid categories (used in sponsor_section.liquid include calls): platinum, gold, silver, partner, previous, speaker-supporter, ticket
+
+- name: "Sponsor Name"                  # Display name
+  image: "../images/YYYY/sponsors/sponsor.png"  # Logo image path
+  url: "https://sponsor.example.com"    # Sponsor website URL
+  categories: [platinum]                # Array of category strings

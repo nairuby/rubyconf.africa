@@ -1,12 +1,12 @@
 ---
-layout: archive_application_home
+layout: archive/application_home
 title: "Ruby Conf Africa 2018 - Leading Ruby Developers Conference in Nairobi, Kenya"
 name: "Ruby Conf Africa 2018"
 description: "Join us on June 28-30, 2018, for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby
 developers, learn from insightful sessions, and explore the latest trends in Ruby development."
 image: "../images/logo/arc_logo_coloured.png"
 permalink: /2018/
-year: 2018
+year: "2018"
 ---
 
 <!--<div class="preloader"></div>-->
@@ -158,141 +158,8 @@ year: 2018
 </section>
 <!--End About Section -->
 
-<!-- Speakers -->
-<section class="speakers-section">
-  <div class="auto-container">
-    <div class="sec-title light text-center">
-      <h2>Speakers</h2>
-    </div>
-    <div class="outer-box">
-      <div class="row d-flex align-items-center justify-content-center">
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/paul-oguda"
-                  ><img
-                    src="../images/2018/speakers/paul_o.png"
-                    alt="Paul Oguda"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/paul-oguda">Paul Oguda</a>
-                </h4>
-                <span class="designation"
-                  >Spatial Planner, Smart Cities Advocate, and Autodidact
-                  Programmer</span
-                >
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="http://twitter.com/kamalogudah"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/aaron_cruz"
-                  ><img
-                    src="../images/2018/speakers/aaron_cruz.jpg"
-                    alt="Aaron Cruz"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/aaron_cruz">Aaron Cruz</a>
-                </h4>
-                <span class="designation">Ruby Developer</span>
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="https://x.com/mraaroncruz"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/hagerty"
-                  ><img
-                    src="../images/2018/speakers/hagerty.png"
-                    alt="Pj Hagerty"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name"><a href="speakers/hagerty">Pj Hagerty</a></h4>
-                <span class="designation">Founder of DevRelate.io</span>
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="https://twitter.com/aspleenic"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Coming Soon -->
+{% include archive/components/speakers_section_home.liquid %}
 
 <!--Partner Section-->
-<section class="clients-section">
-  <div class="anim-icons">
-    <span class="icon icon-dots-3 wow zoomIn"></span>
-  </div>
-  <div class="auto-container">
-    <div class="sec-title" style="text-align: center">
-      <h2 style="color: #c11803">Supporters</h2>
-      <hr />
-      <span class="title"> These supporters are all in for the event! 💪 </span>
-    </div>
-
-    <div class="sponsors-outer">
-      <div class="row justify-content-center">
-        <!-- Sponsor Block -->
-        {% for sponsor in site.data.archive_sponsors.2018 %} {% if
-        sponsor.categories contains 'supporters' %}
-        <div
-          class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
-        >
-          <figure class="">
-            <a href="{{ sponsor.url }}"
-              ><img
-                src="{{ sponsor.image }}"
-                class="lazyload"
-                alt="{{ sponsor.name }}"
-            /></a>
-          </figure>
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
+{% include archive/components/sponsor_section.liquid category="supporters" title="Supporters" description="These supporters are all in for the event! 💪" %}
+<!--End of Partner Section-->

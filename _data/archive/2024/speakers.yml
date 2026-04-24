@@ -1,0 +1,246 @@
+- name: "Yukihiro \"Matz\" Matsumoto"
+  is_keynote: true
+  gender: male
+  bio: "Creator of Ruby."
+  details: "Matz is a Japanese computer scientist and software programmer best known as the chief designer of the Ruby programming language and its original reference implementation, Matz's Ruby Interpreter (mri). Matz is nice, and so we are nice!."
+  image: "../images/2024/speakers/matz.jpg"
+  talk_title: "Second System Syndrome"
+  talk_description: ""
+  twitter: "https://twitter.com/yukihiro_matz"
+  linkedin: ""
+  website: "https://matz.rubyist.net/"
+  url: "matz"
+
+- name: "David Heinemeier Hansson"
+  is_keynote: true
+  gender: male
+  bio: "Creator of Ruby on Rails"
+  details: ""
+  image: "../images/2024/speakers/dhh.jpg"
+  talk_title: "Keynote"
+  talk_description: "Rubyconf Africa 2024 Keynote."
+  twitter: "https://twitter.com/dhh"
+  linkedin: "https://www.linkedin.com/in/david-heinemeier-hansson-374b18221"
+  website: "https://dhh.dk/"
+  url: "dhh"
+
+- name: "Marek Piasecki"
+  is_keynote: false
+  gender: male
+  bio: "Full Stack Web Developer"
+  details: "I have been doing web technologies since 2000. I worked for successful start-ups, huge corporations, banks, and government organizations. I traveled a lot and participated in conferences for many years."
+  image: "../images/2024/speakers/marek_piasecki.jpg"
+  talk_title: "Yet another framework?"
+  talk_description: "TBA"
+  twitter: "https://x.com/mad_maniak"
+  linkedin: ""
+  website: ""
+  url: "marek-piasecki"
+
+- name: "Hitoshi Hasumi"
+  is_keynote: false
+  gender: male
+  bio: "Creator of PicoRuby and PRK Firmware."
+  details: "As an OSS programmer: Creator of PicoRuby and PRK Firmware. Maintainer of CRuby's IRB and Reline. Awards: A final nominee of the Ruby Prize 2021. Twice first prize winner of the Fukuoka Ruby Award in 2020 and 2022."
+  image: "../images/2024/speakers/hitoshi-hasumi.jpeg"
+  talk_title: "A Beginner's Complete Guide to Microcontroller Programming with Ruby"
+  talk_description: ""
+  twitter: "https://twitter.com/hasumikin"
+  linkedin: ""
+  website: ""
+  url: "hitoshi-hasumi"
+
+- name: "Ceciliah Mbugua"
+  is_keynote: false
+  gender: female
+  bio: "Open source advocate"
+  details: "Open source advocate with experience fostering inclusive communities and driving engagement. I have led Rails Girls Nairobi, a program empowering women in tech. At PublicLab for 4 years, I built welcoming systems and increased participation as a community coordinator, Summer of Code mentor, and co-maintainer of 5 core projects."
+  image: "../images/2024/speakers/ceciliah_mbugua.jpeg"
+  talk_title: "Building a thriving open source community: how to attract and retain contributors"
+  talk_description: "TBA"
+  twitter: "https://x.com/cesswairimu254"
+  linkedin: "https://linkedin.com/in/ceciliah-mbugua-8878a0120"
+  website: ""
+  url: "ceciliah-mbugua"
+
+- name: "Abdullahi Mohamud"
+  is_keynote: false
+  gender: male
+  bio: "Technology Mentor at GLEAC"
+  details: "Abdullahi is a dynamic tech entrepreneur with a software engineering and biotechnology background, passionate about impactful technology solutions for desktop and mobile platforms. With expertise in AI technology and experience at companies like Microsoft, Amazon, GLEAC, and GERMAN X, Abdullahi has developed cutting-edge AI solutions in NLP, ML, and computer vision."
+  image: "../images/2024/speakers/abdullahi_mohamud.jpeg"
+  talk_title: "Unlocking the Potential of AI and Machine Learning with Ruby"
+  talk_description: "Discover how Ruby's simplicity is revolutionizing AI. Learn cutting-edge techniques, boost productivity, and turn ideas into reality."
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/abdullahi-mohamud-botan/"
+  website: ""
+  url: "abdullahi-mohamud"
+
+- name: "Caleb Muoki"
+  is_keynote: false
+  gender: male
+  bio: "DevOps Engineer"
+  details: "Muoki is an experienced DevOps Engineer with a background in Mathematics and Computer Science. As a tech polyglot, Muoki excels in multiple technologies and fields, demonstrating adaptability in the tech landscape."
+  image: "../images/2024/speakers/caleb_muoki.jpeg"
+  talk_title: "DevOps on a Budget: Maximizing Efficiency with Minimal Costs"
+  talk_description: "TBA"
+  twitter: "https://x.com/Muoki_Caleb"
+  linkedin: "https://linkedin.com/in/muokicaleb"
+  website: ""
+  url: "caleb-muoki"
+
+- name: "Harrison Kamau"
+  is_keynote: false
+  gender: male
+  bio: "Senior Software Engineer & Tech Lead at Vibes"
+  details: "Hey, I'm Harrison, an experienced full-stack software engineer with a decade technical of expertise in building robust backend APIs and delivering world-class solutions to clients."
+  image: "../images/2024/speakers/harrison_nene.jpeg"
+  talk_title: "Breaking the Storage Barrier: Running AWS Lambda Functions with Ruby"
+  talk_description: "In the world of serverless computing, AWS Lambda functions offer unparalleled scalability and flexibility. However, the ephemeral storage limit can pose challenges for data-intensive applications."
+  twitter: "https://x.com/chegeharrison"
+  linkedin: "https://www.linkedin.com/in/harrison-kamau-5a308291/"
+  website: ""
+  url: "harrison-kamau"
+
+- name: "Kariuki Gathitu"
+  is_keynote: false
+  gender: male
+  bio: "Founder - Quikk API platform"
+  details: "Kariuki Gathitu has been in the fintech industry for 10+ years. While working at Equity Bank, he built the first ever Mobile money API, enabling Mobile payments for E-commerce in Kenya."
+  image: "../images/2024/speakers/kariuki_gathitu.jpeg"
+  talk_title: "Quikk API Platform"
+  talk_description: ""
+  twitter: "https://x.com/gathitu"
+  linkedin: "https://www.linkedin.com/in/gathitu"
+  website: "https://quikk.dev/"
+  url: "kariuki-gathitu"
+
+- name: "Stephen Margheim"
+  is_keynote: false
+  gender: male
+  bio: "Rubyist, Web Developer, and Engineering Manager, Test IO"
+  details: "Stephen is a top-500 Rails contributor, open-source maintainer, and conference speaker. Based in Berlin, he has contributed to the sqlite3-ruby gem, Phlex, Litestack, and more."
+  image: "../images/2024/speakers/stephen_margheim.png"
+  talk_title: "The Rails Contributor Mindset"
+  talk_description: "TBA"
+  twitter: "https://twitter.com/fractaledmind"
+  linkedin: "https://www.linkedin.com/in/stephen-margheim-5aa25bb8"
+  website: "https://fractaledmind.github.io"
+  url: "stephen-margheim"
+
+- name: "Allan Ouma"
+  is_keynote: false
+  gender: male
+  bio: "Founder - Allantez Tech"
+  details: "Allan is an experienced Software Engineer with vast experience in various industries including banking, healthcare, construction, and manufacturing."
+  image: "../images/2024/speakers/allan_ouma.jpeg"
+  talk_title: "The Human Side of a Software Engineer"
+  talk_description: "TBA"
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/allantez/"
+  website: ""
+  url: "allan-ouma"
+
+- name: "Annette Mwende"
+  is_keynote: false
+  gender: female
+  bio: "Founder CREPTIE SCHOOL"
+  details: "Annette Mwende is a passionate STEM tutor specializing in Programming and Engineering, particularly in IoT. She excels in class management and adapts to diverse learning environments, thanks to her experience in coursework and content development."
+  image: "../images/2024/speakers/annette_mwende.jpeg"
+  talk_title: "STEM ROBOTICS"
+  talk_description: "TBA"
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/annette-mwende-a500bb151/"
+  website: "https://creptie.org/"
+  url: "annette-mwende"
+
+- name: "Dávid Halász"
+  is_keynote: false
+  gender: male
+  bio: "Principal Software Engineer at Red Hat."
+  details: "Principal Software Engineer at Red Hat by day, with 10+ years experience in Ruby. Researcher at Masaryk University by night, working on his PhD thesis about Trust, Safety, and Autonomous Ecosystems."
+  image: "../images/2024/speakers/oscal-big.jpeg"
+  talk_title: "One machine please, make it Turing"
+  talk_description: ""
+  twitter: "https://twitter.com/halaszdavid"
+  linkedin: ""
+  website: "http://www.skateman.eu"
+  url: "david-halasz"
+
+- name: "Joseph Njogu"
+  is_keynote: false
+  gender: male
+  bio: "Software & DevOps Engineer"
+  details: "Software & DevOps Engineer with 5+ years of experience in designing, implementing, and managing complex infrastructures. Proficient in multiple DevOps tools and techniques, including continuous integration and delivery (CI/CD), infrastructure as code (IaC), and containerization."
+  image: "../images/2024/speakers/joseph_njogu.jpeg"
+  talk_title: "Shipping it and Running it"
+  talk_description: "TBA"
+  twitter: "https://twitter.com/josephnjogu487"
+  linkedin: "https://www.linkedin.com/in/joseph-njogu-b39544182/"
+  website: ""
+  url: "joseph-njogu"
+
+- name: "Ken Mbuki"
+  is_keynote: false
+  gender: male
+  bio: "Business Intelligence Analyst at Moringa School"
+  details: "I am an expert in data analytics, data ethics, and evidence-based decision-making. I help organizations turn raw data into relevant and meaningful insights to make data-driven business decisions and accurate predictions."
+  image: "../images/2024/speakers/ken_mbuki.jpeg"
+  talk_title: "Ethical Considerations in Open Source Development and Agile Entrepreneurship"
+  talk_description: "TBA"
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/kenmbuki/"
+  website: ""
+  url: "ken-mbuki"
+
+- name: "Paul Oguda"
+  is_keynote: false
+  gender: male
+  bio: "Head of Tech at Zone01 Kisumu."
+  details: "I am Paul Oguda a software developer with over 7 years experience, I love Ruby, Open Source, and Creating tech communities."
+  image: "../images/2024/speakers/paul_oguda.jpeg"
+  talk_title: "Teacher don't teach me Nonsense."
+  talk_description: "Rethinking education and skill acquisition in readiness to the work place of the future."
+  twitter: "https://x.com/kamalogudah"
+  linkedin: "https://www.linkedin.com/in/oguda"
+  website: ""
+  url: "paul-oguda"
+
+- name: "Renen Watermeyer"
+  is_keynote: false
+  gender: male
+  bio: "CEO / CTO - SASA Finance"
+  details: "Over the past eight years, SASA Technologies has delivered financial solutions in nine African countries. Our cloud-based, full-featured solutions, such as loan and agricultural management, are built in Africa, by Africans, for Africans."
+  image: "../images/2024/speakers/renen_watermeyer.jpeg"
+  talk_title: "TBA"
+  talk_description: "TBA"
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/renen-watermeyer-43bb153"
+  website: "https://www.sasa.solutions/"
+  url: "renen-watermeyer"
+
+- name: "Sigu Magwa"
+  is_keynote: false
+  gender: male
+  bio: "Software Developer"
+  details: "Sigu is the Founder and CTO at Podii, a software company based in Kisumu Kenya. Previously, he worked remotely as a coach and software developer at the Swedish based company Craft Academy."
+  image: "../images/2024/speakers/sigu-magwa.jpg"
+  talk_title: "TBA"
+  talk_description: "TBA"
+  twitter: "https://x.com/s_igu"
+  linkedin: "https://www.linkedin.com/in/sigu/?originalSubdomain=ke"
+  website: ""
+  url: "sigu-magwa"
+
+- name: "Victor Turuthi"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, Finplus Group"
+  details: "Victor is a seasoned technology expert with over four years of hands-on experience in Ruby development. As a co-founder of Cyberaskari Ltd, he played a pivotal role in its success before joining Finplus Group."
+  image: "../images/2024/speakers/victor_turuthi.png"
+  talk_title: "Demystifying concurrency in Ruby"
+  talk_description: "We'll explore the GIL, threads, fibers, and ractors, and how to utilise concurrency to optimise and improve the responsiveness and performance of your Ruby applications."
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/victor-turuthi/"
+  website: ""
+  url: "victor-turuthi"

@@ -1,0 +1,233 @@
+- name: "Samuel Epodoi"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Samuel Epodoi loves turning ideas into reality through code. I am very enthusiastic about Artificial Intelligence, Algorithms and serial entrepreneurship. I love working with ruby/ruby on rails and I write a lot of PHP, Server-side and front-end code. I enjoy photography, Soccer, and Athletics."
+  image: "../images/2018/speakers/epodoi.png"
+  talk_title: "At 13, My Journey as a Software Developer"
+  talk_description: ""
+  twitter: "https://twitter.com/sam_epodoi"
+  linkedin: ""
+  website: "http://www.samhez.com/"
+  url: "epodoi"
+
+- name: "Caleb Thompson"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, Heroku"
+  details: "Speaker, developer, painter, gamer: an eccentric eclectic. Caleb is currently coding mostly in Ruby and Go. He's not a fan of the SPA. He has braved the wintry tundra of Alaska and the harsh deserts of Arizona."
+  image: "../images/2018/speakers/caleb.png"
+  talk_title: "How I built Software to Kill People"
+  talk_description: ""
+  twitter: "https://twitter.com/calebthompson"
+  linkedin: ""
+  website: "http://calebthompson.io/"
+  url: "caleb"
+
+- name: "PJ Hagerty"
+  is_keynote: false
+  gender: male
+  bio: "Founder, DevRelate.io"
+  details: "Developer, writer, speaker, musician, and founder of DevRelate.io, PJ is known to travel the world speaking about programming and the way people think and interact. He is also known for wearing hats."
+  image: "../images/2018/speakers/hagerty.png"
+  talk_title: "Rails? Still?!?"
+  talk_description: ""
+  twitter: "https://twitter.com/aspleenic"
+  linkedin: ""
+  website: "http://www.devrelate.io/"
+  url: "hagerty"
+
+- name: "Aaron Cruz"
+  is_keynote: false
+  gender: male
+  bio: "Ruby Developer"
+  details: "Aaron is building a more user friendly layer on top of block chain projects. He is an Elixir programmer and crypto mining farm manager. He loves nyama choma and wants to eat it right now."
+  image: "../images/2018/speakers/aaron_cruz.jpg"
+  talk_title: "Boom! Zap! PoW"
+  talk_description: ""
+  twitter: "https://x.com/mraaroncruz"
+  linkedin: ""
+  website: "https://github.com/pferdefleisch"
+  url: "aaron_cruz"
+
+- name: "Joannah Nanjekye"
+  is_keynote: false
+  gender: female
+  bio: "Software Engineer, FOSS Contributor, and Aspiring Aeronautical Engineer"
+  details: "Joannah Nanjekye is a Rails girls summer of code alumnae, Rails girls Kampala organizer and software engineer that has held two programming positions working on fintech solutions. She is currently pursuing Aeronautical engineering. She is a FOSS contributor and writes mostly python, ruby and golang code."
+  image: "../images/2018/speakers/joannah.png"
+  talk_title: "Ruby in containers"
+  talk_description: ""
+  twitter: "http://twitter.com/Captain_Joannah"
+  linkedin: ""
+  website: "http://github.com/nanjekyejoannah"
+  url: "joannah"
+
+- name: "Paul Stefan Ort"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Paul Stefan Ort is a software engineer at Def Method in New York City, currently building Dependable for automated dependency updates."
+  image: "../images/2018/speakers/stefan.jpeg"
+  talk_title: "Reflection in Ruby: Understanding the Implications of Loading Gems and Files"
+  talk_description: ""
+  twitter: "https://twitter.com/PaulStefanOrt"
+  linkedin: ""
+  website: "https://www.pso.io/"
+  url: "stefan"
+
+- name: "Tim Rogers"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, GoCardless"
+  details: "Tim is a Software Engineer at GoCardless, a fintech startup based in London building a global bank-to-bank payments network for the internet. Since joining GoCardless 6 years ago, Tim has worked across the business in a variety of roles."
+  image: "../images/2018/speakers/tim_rogers.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/timrogers"
+  linkedin: ""
+  website: "https://timrogers.co.uk/"
+  url: "tim-rogers"
+
+- name: "Brian Holt"
+  is_keynote: false
+  gender: male
+  bio: "Senior Cloud Developer Advocate, Microsoft"
+  details: "Brian is currently working as a senior cloud developer advocate at Microsoft and he's all about developers, developers, developers. Previously he was a JavaScript engineer at Netflix, LinkedIn and Reddit."
+  image: "../images/2018/speakers/holt.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/holtbt"
+  linkedin: ""
+  website: ""
+  url: "holt"
+
+- name: "Kirsten Westeinde"
+  is_keynote: false
+  gender: female
+  bio: "Senior Software Engineer, Shopify"
+  details: "Kirsten Westeinde is a technology enthusiast and a lifelong learner. She is a senior software engineer at Shopify, where she solves challenging web development problems every day. She has worked with Ruby on Rails for ~5 years, and is constantly adding new tools to her technology tool belt."
+  image: "../images/2018/speakers/kirsten.jpg"
+  talk_title: "Deconstructing the Monolith: designing software that maximizes developer productivity"
+  talk_description: ""
+  twitter: "https://twitter.com/kmkwesteinde"
+  linkedin: ""
+  website: ""
+  url: "kirsten"
+
+- name: "Sigu Magwa"
+  is_keynote: false
+  gender: male
+  bio: "Open Source Dev & Rails Enthusiast"
+  details: "An open source enthusiast who is a remote volunteer developer an open source community AgileVentures. Currently a member of Podii - software company based in Kisumu Kenya. Previously worked remotely as a coach and developer at the Swedish based academy and company Craft Academy."
+  image: "../images/2018/speakers/sigu.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/s_igu"
+  linkedin: ""
+  website: "http://podiihq.com/"
+  url: "sigu-magwa"
+
+- name: "Thaisaiyi Opati"
+  is_keynote: false
+  gender: male
+  bio: "Head of Department Riara School of Business"
+  details: "Thaisaiyi Opati is currently the Head of Department Riara School of Business. He holds a Bachelor Degree in Business Administration (Marketing) from Maseno University, an MBA from University Teknologi Mara-Malaysia and is currently pursuing PHD in Marketing at St. Paul's University."
+  image: "../images/2018/speakers/opati.jpg"
+  talk_title: "Stolen Strategies; What entrepreneurs can learn from Terrorist about Corporate Strategy"
+  talk_description: ""
+  twitter: "https://twitter.com/RiaraUniversity"
+  linkedin: ""
+  website: "http://www.riarauniversity.ac.ke/"
+  url: "opati"
+
+- name: "Ruberto Paulo"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, Prodigy Finance"
+  details: "Currently working at Prodigy Finance as a Software Engineer. Ruberto is passionate about all things Ruby. He is an organizer at the South African ruby conference 'RubyFuZa'. He spends much of his time on his Hobbies which he funds by selling old equipment from previous hobbies"
+  image: "../images/2018/speakers/ruberto_paulo.png"
+  talk_title: "A Practical Guide to Taming Wild Chatbots"
+  talk_description: ""
+  twitter: "https://twitter.com/rob_legend"
+  linkedin: ""
+  website: ""
+  url: "ruberto-paulo"
+
+- name: "William Wanyama"
+  is_keynote: false
+  gender: male
+  bio: "Electrical & Computer Engineer, Rubyist, and Open Source Contributor"
+  details: "With an Electrical and Computer Engineering background, William started his development career as a python developer in Sydney before joining the Nairobi startup scene as a Green Member at iHub. He's now a self proclaimed Rubyist and spends most of his time contributing to Open Source Software while building his startup."
+  image: "../images/2018/speakers/william.png"
+  talk_title: "Exploring Docker for Rubyists on Windows"
+  talk_description: ""
+  twitter: "https://twitter.com/wanyama_man"
+  linkedin: ""
+  website: "https://github.com/wanyamaman"
+  url: "wanyama-man"
+
+- name: "Yatish Mehta"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, Coupa Software"
+  details: "I am Yatish, Software Engineer at Coupa Software. NC State Graduate, I have been part of Fab.com and Sungard. Ruby is my first love and I am still committed to her. Recently, I have started to toy with Golang."
+  image: "../images/2018/speakers/yatish.png"
+  talk_title: "Taming the Rails Monolith Mammoth"
+  talk_description: "Ruby on Rails patterns are amazing for prototyping. While the general Rails practices are really useful for some apps, they are not apt for a large scale applications. You need super powers to tame such a monolith mammoth."
+  twitter: "https://twitter.com/yatish27"
+  linkedin: ""
+  website: "http://www.yatishmehta.com/"
+  url: "yatish"
+
+- name: "Anton Davydov"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "I'm Hanami core developer and an indie developer from Moscow. I work on different open source projects and builds Space-Rocket ships at night."
+  image: "../images/2018/speakers/anton.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/anton_davydov"
+  linkedin: ""
+  website: "http://davydovanton.com/"
+  url: "anton"
+
+- name: "Bernard Banta"
+  is_keynote: false
+  gender: male
+  bio: "founder of Banta Technologies (BT)"
+  details: "A Computer Scientist and true entrepreneur, he is the founder of Banta Technologies (BT). He has always been passionate about technology and how it can be used to leverage and transform Africa in the way we live, work, play and govern."
+  image: "../images/2018/speakers/banta.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/bantab"
+  linkedin: ""
+  website: "https://github.com/banta"
+  url: "banta"
+
+- name: "Michael Kimathi"
+  is_keynote: false
+  gender: male
+  bio: "Community Development Manager at C4DLab"
+  details: "Michael Kimathi has over 7 years experience working in innovative ecosystems and building solutions notably with BlackBerry Developer Community, Nairuby, Masomomoja, GDG, Unbound, University of Nairobi, StartupBlink, BantaMik and Atlassian."
+  image: "../images/2018/speakers/michael.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/mikekimmathi"
+  linkedin: ""
+  website: "https://github.com/iamleader"
+  url: "mike-kimathi"
+
+- name: "Paul Oguda"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, Tezza Business Solutions"
+  details: "Paul Oguda is a Spatial Planner with bias towards Smart Cities, an autodidact Programmer who loves Ruby but plays with Elixir/Erlang, Python, and Javascript at times. Furthermore, he loves GIS and Mapping and when not playing with computers he relaxes by watching local and international football."
+  image: "../images/2018/speakers/paul_o.png"
+  talk_title: "A Jedi Without A Master"
+  talk_description: ""
+  twitter: "http://twitter.com/kamalogudah"
+  linkedin: ""
+  website: "https://github.com/kamalogudah"
+  url: "paul-oguda"

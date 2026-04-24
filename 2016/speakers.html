@@ -1,64 +1,43 @@
 ---
-layout: archive_application
+layout: archive/application
 permalink: /2016/speakers
 title: "Speakers for Ruby Conf Africa 2016"
 description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2016.  Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
+year: "2016"
 ---
-
-<!--{% assign url_parts = page.url | split: '/' %}-->
-<!--{% assign year = url_parts[1] %}-->
-<!--{% assign speakers = site.data.archive_speakers[year].speakers %}-->
 
 <!-- Preloader -->
 <div class="preloader-new">
-  <!-- Logo -->
   <div class="preloader-logo-new"></div>
-
-  <!-- Animated Loading Text -->
   <div class="loader-new"></div>
 </div>
-<!--<section style="margin-top: 90px">-->
-<!--    <div-->
-<!--            class="container-fluid bg-danger banner-cfp text-white text-center mt-4 py-2"-->
-<!--    >-->
-<!--        <a-->
-<!--                href="https://www.papercall.io/rubyconfafrica2024"-->
-<!--                class="text-white d-block"-->
-<!--                style="text-decoration: none"-->
-<!--        >-->
-<!--            <h4>Submit CFP</h4>-->
-<!--        </a>-->
-<!--    </div>-->
-<!--</section>-->
+
 <section class="speakers-section-two" style="margin-top: 0">
   <div class="auto-container">
     <div class="sec-title text-center my-4">
-      <span class="display-4 text-danger font-weight-bold"
-        >Speakers for {{ year }}</span
-      >
+      <span class="display-4 text-danger font-weight-bold">Speakers for {{ page.year }}</span>
+    </div>
+
+    {% assign year_data = site.data.archive[page.year] %}
+
+    <div class="row top-pd-mobile">
+      {% assign keynote_speakers = year_data.speakers | where: "is_keynote", true %}
+      {% for speaker in keynote_speakers %}
+        {% include archive/components/speaker_block.liquid speaker=speaker designation="Keynote Speaker" year=page.year %}
+      {% endfor %}
+
+      {% assign female_speakers = year_data.speakers | where: "gender", "female" | where: "is_keynote", false %}
+      {% for speaker in female_speakers %}
+        {% include archive/components/speaker_block.liquid speaker=speaker designation="Speaker" year=page.year %}
+      {% endfor %}
     </div>
 
     <div class="row top-pd-mobile">
-      {% for speaker in site.speakers_2016 %} {% if speaker.is_keynote == true
-      %} {% include archive_speaker_block.liquid speaker=speaker
-      designation="Keynote Speaker " %} {% endif %} {% endfor %}
-      <!--        </div>-->
-
-      <!--        Display Female Speakers-->
-      <!--        <div class="row top-pd-mobile">-->
-      {% assign female_speakers = site.speakers_2016 | where: "gender", "female"
-      %} {% for speaker in female_speakers %} {% if speaker.is_keynote == false
-      %} {% include archive_speaker_block.liquid speaker=speaker
-      designation="Speaker" %} {% endif %} {% endfor %}
-    </div>
-
-    <!--        Display Male Speakers-->
-    <div class="row top-pd-mobile">
-      {% assign male_speakers = site.speakers_2016 | where: "gender", "male" %}
-      {% for speaker in male_speakers %} {% if speaker.is_keynote == false %} {%
-      include archive_speaker_block.liquid speaker=speaker designation="Speaker"
-      %} {% endif %} {% endfor %}
+      {% assign male_speakers = year_data.speakers | where: "gender", "male" | where: "is_keynote", false %}
+      {% for speaker in male_speakers %}
+        {% include archive/components/speaker_block.liquid speaker=speaker designation="Speaker" year=page.year %}
+      {% endfor %}
     </div>
   </div>
 </section>

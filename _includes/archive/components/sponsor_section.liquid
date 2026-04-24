@@ -1,4 +1,4 @@
-<!-- _includes/sponsor_section.liquid -->
+<!-- _includes/archive/components/sponsor_section.liquid -->
 <section class="clients-section">
     <div class="anim-icons">
         <span class="icon icon-dots-3 wow zoomIn"></span>
@@ -12,7 +12,8 @@
 
         <div class="sponsors-outer">
             <div class="row justify-content-center align-items-center">
-                {% for sponsor in site.data.new_remote.sponsors_2025 %}
+                {% assign year_data = site.data.archive[page.year] %}
+                {% for sponsor in year_data.sponsors %}
                     {% if sponsor.categories contains include.category %}
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center mb-4">
                             <a href="{{ sponsor.url }}" target="_blank" class="d-flex w-100 justify-content-center p-3">

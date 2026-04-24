@@ -1,0 +1,19 @@
+title: "Ruby Conf Africa 2019"
+dates: "July 25-27, 2019"
+venue: "iHub, 6th Floor, Senteu Plaza"
+location: "Nairobi, Kenya"
+about: |
+  Ruby Conference brings entrepreneurs, developers, open source contributors,
+  and conference speakers from all around the world for a 3-day conference.
+  We believe in a holistic approach — solving problems through entrepreneurship
+  and open source. This empowers everyone who attends with technology and
+  entrepreneurial methodology to reach their fullest potential and inspire the
+  rest of the world and their communities. Nairuby is a community organization
+  made of developers, entrepreneurs and freelancers focused on Ruby technologies
+  and frameworks, bringing you Ruby conference every year with different themes
+  to help spur innovation and growth in contribution to global economy.
+banners:
+  - image: "../images/compressed/nairobi.jpg"
+    alt: "Nairobi cityscape"
+  - image: "../images/compressed/nairobi2.jpg"
+    alt: "Nairobi cityscape 2"

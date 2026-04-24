@@ -1,0 +1,77 @@
+- name: "Kalebu Jordan"
+  is_keynote: false
+  gender: male
+  bio: "Mechatronic Engineer"
+  details: "Kalebu Gwalugano, scientist by passion, mechatronics engineer by profession, has recently found a new life in programming. It's like you're little lab where you create your own little world and make your own rules, it works like magic!"
+  image: "../images/2021/speakers/kalebu.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://kalebujordan.dev/"
+  linkedin: ""
+  website: "https://github.com/kalebu"
+  url: "kalebu"
+
+- name: "Promise Chukwuenyem"
+  is_keynote: false
+  gender: male
+  bio: "DevOps and Ruby on Rails Engineer, Venture Garden Group"
+  details: "Promise Chukwuenyem is a DevOps and Ruby on Rails Engineer at Venture Garden Group. He loves automating software delivery/deployment processes and finds joy building solutions using Ruby on Rails."
+  image: "../images/2021/speakers/promise.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/PromisePreston"
+  linkedin: ""
+  website: ""
+  url: "promise"
+
+- name: "Brooke Kuhlmann"
+  is_keynote: false
+  gender: male
+  bio: "SWE"
+  details: "Brooke Kuhlmann has been a software engineer for over two decades and enjoys sharing the love and craft of software engineering -- especially Ruby"
+  image: "../images/2021/speakers/brooke.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/bkuhlmann?lang=en"
+  linkedin: ""
+  website: "https://www.alchemists.io/"
+  url: "brooke"
+
+- name: "Marylene Sawyer"
+  is_keynote: false
+  gender: female
+  bio: "SWE"
+  details: "Mrs. Marylene Sawyer is a wife and mother who enjoys solving problems and building interesting solutions through coding whenever she finds time. Mrs. Sawyer is a professional full-stack software engineer currently based in South Africa. She recently completed the software development program at Microverse, a school for remote developers."
+  image: "../images/2021/speakers/marylene.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://www.marylene.tech/"
+  linkedin: ""
+  website: "https://github.com/Bluette1"
+  url: "marylene-sawyer"
+
+- name: "Clemence Sedem"
+  is_keynote: false
+  gender: male
+  bio: "Associate SWE at getINNOtized GmbH, Cyber Sec Researcher"
+  details: ""
+  image: "../images/2021/speakers/clement.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/efocoder"
+  linkedin: "https://gh.linkedin.com/in/clemsedem"
+  website: "https://github.com/clemsedem"
+  url: "clemsedem"
+
+- name: "Raphael Noriode"
+  is_keynote: false
+  gender: male
+  bio: "SWE"
+  details: "Raphael Noriode is a software engineer passionate about solving problems and creating value through impactful projects."
+  image: "../images/2021/speakers/raphael-noriode.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/raphael-noriode/"
+  website: ""
+  url: "raphael"

@@ -1,0 +1,27 @@
+# schedule.yml — Conference schedule for a single archive year
+# 'days' is a list of conference days, each with a list of time slots.
+# slot 'type' controls styling: 'talk', 'break', 'workshop', 'panel'
+
+days:
+  - label: "Friday, Day 1"             # Display label for the day
+    slots:
+      - time: "09:00 - 09:30"          # Time range string
+        title: "Registration"           # Session title
+        speaker_slug: ""               # Speaker URL slug (empty for non-talk slots)
+        speaker_name: ""               # Speaker display name (empty for non-talk slots)
+        speaker_image: ""              # Speaker image path (empty for non-talk slots)
+        type: "break"                  # Slot type: talk | break | workshop | panel
+      - time: "09:30 - 10:15"
+        title: "Keynote: Talk Title"
+        speaker_slug: "speaker-slug"
+        speaker_name: "Speaker Name"
+        speaker_image: "../images/YYYY/speakers/slug.jpg"
+        type: "talk"
+  - label: "Saturday, Day 2"
+    slots:
+      - time: "09:00 - 09:15"
+        title: "Opening Remarks"
+        speaker_slug: ""
+        speaker_name: ""
+        speaker_image: ""
+        type: "break"

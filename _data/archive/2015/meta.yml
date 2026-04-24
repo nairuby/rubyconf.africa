@@ -1,0 +1,16 @@
+title: "Ruby Conf Africa 2015"
+dates: "May 8-9, 2015"
+venue: "UoN, Chiromo Campus"
+location: "Nairobi, Kenya"
+about: |
+  ARC aims to unite entrepreneurs, developers, designers, and open-source
+  contributors to tackle various challenges. By embracing entrepreneurship and
+  open-source principles, ARC believes in offering comprehensive solutions to
+  numerous issues. Attendees are equipped with both technological tools and
+  entrepreneurial methodologies to maximize their potential and inspire others
+  in their communities and beyond.
+banners:
+  - image: "../images/2015/c4dlab.jpg"
+    alt: "C4DLab venue"
+  - image: "../images/2015/c4dlab2.jpg"
+    alt: "C4DLab venue 2"

@@ -1,0 +1,14 @@
+title: "Ruby Conf Africa 2025"
+dates: "July 18-19, 2025"
+venue: "Daystar University"
+location: "Nairobi, Kenya"
+about: |
+  This year's theme, "Beyond code: Innovating for the future", highlights how
+  Ruby and open-source technologies can shape tomorrow's world. Join us in Kenya
+  for a two-day experience that brings together thought leaders, innovators, and
+  entrepreneurs driven by a passion for Ruby and its power to spark meaningful
+  change. Dive into forward-thinking discussions, hands-on workshops, and
+  vibrant networking sessions that go beyond code — into the heart of innovation.
+banners:
+  - image: "../images/intro-landing.jpg"
+    alt: "Ruby Conf Africa 2025 banner"

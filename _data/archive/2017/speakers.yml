@@ -1,0 +1,207 @@
+- name: "Mike McQuaid"
+  is_keynote: false
+  gender: male
+  bio: "Senior Software Engineer at GitHub, Lead Maintainer of Homebrew"
+  details: "Mike McQuaid is a senior software engineer working on open source at GitHub based in Edinburgh. He is also the lead maintainer of the Homebrew MacOS package manager, author of Git in Practice (published with Manning) and has contributed to a wide array of open source projects."
+  image: "../images/2017/speakers/mike.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/MikeMcQuaid"
+  linkedin: ""
+  website: "http://mikemcquaid.com/"
+  url: "mike-mcquaid"
+
+- name: "Bozhidar Batsov"
+  is_keynote: false
+  gender: male
+  bio: "Creator of RuboCop, Ruby Stylist, and Emacs Enthusiast"
+  details: "Bozhidar is the author of RuboCop and the editor of the community Ruby and Rails style guides. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular."
+  image: "../images/2017/speakers/batzov.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/bbatsov"
+  linkedin: ""
+  website: "http://batsov.com/"
+  url: "batsov"
+
+- name: "Victor Shepelev"
+  is_keynote: false
+  gender: male
+  bio: "Ukrainian Programmer, Poet, and Toptal Developer with 15+ Years of Experience"
+  details: "Ukrainian programmer and poet with more than fifteen years of programming experience and ten years of Ruby programming. Working at Toptal, mentoring students (including Google Summer of Code-2016 & 2017, as a mentor for SciRuby organization), developing open source (Ruby Association Grant 2015)"
+  image: "../images/2017/speakers/victor_shepelev.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/zverok"
+  linkedin: ""
+  website: "http://zverok.github.io/"
+  url: "zverok"
+
+- name: "Ben Hughes"
+  is_keynote: false
+  gender: male
+  bio: "Tech Lead, Performance Engineering at Airbnb"
+  details: "Ben Hughes is the tech lead of the Performance Engineering team at Airbnb, where he works to understand and improve the performance and reliability of their systems. Prior to this, he was focused on scaling Airbnb's databases for over an order of magnitude of growth. Ben lives in New York City and enjoys skiing and travel."
+  image: "../images/2017/speakers/ben_hughes.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/schleyfox"
+  linkedin: ""
+  website: "https://github.com/schleyfox"
+  url: "ben-hughes"
+
+- name: "James Corey"
+  is_keynote: false
+  gender: male
+  bio: "Full Stack Developer Merging Technology, Business, and Humanitarianism"
+  details: "Based in Madison, Wisconsin, USA, James Corey is a full stack developer with over 2 years of experience in Ruby on Rails, Javascript and HTML/CSS. Since joining Bendyworks in June 2016, James has served as project lead for a Ruby on Rails application connecting at-risk youth with college athlete mentors."
+  image: "../images/2017/speakers/james_corey.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/jamesrcorey"
+  linkedin: ""
+  website: ""
+  url: "james-corey"
+
+- name: "Joannah Nanjekye"
+  is_keynote: false
+  gender: female
+  bio: "Software Engineer, FOSS Contributor, and Aspiring Aeronautical Engineer"
+  details: "Joannah Nanjekye is a Rails girls summer of code alumnae, Rails girls Kampala organizer and software engineer that has held two programming positions working on fintech solutions. She is currently pursuing Aeronautical engineering. She is a FOSS contributor and writes mostly python, ruby and golang code."
+  image: "../images/2017/speakers/joannah.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/Captain_Joannah"
+  linkedin: ""
+  website: "http://github.com/nanjekyejoannah"
+  url: "joannah"
+
+- name: "Bernard Banta"
+  is_keynote: false
+  gender: male
+  bio: "founder of Banta Technologies (BT)"
+  details: "A Computer Scientist and true entrepreneur, he is the founder of Banta Technologies (BT). He has always been passionate about technology and how it can be used to leverage and transform Africa in the way we live, work, play and govern. When it comes to building, his ultimate goal is to make the world a better place."
+  image: "../images/2017/speakers/banta.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/bantab"
+  linkedin: ""
+  website: "https://github.com/banta"
+  url: "banta"
+
+- name: "Angela Kihara"
+  is_keynote: false
+  gender: female
+  bio: "Software Engineer"
+  details: "Angela has a degree in BBIT from Strathmore University with an expertise in software and website creation. Together with a couple of friends, they run an IT Consultancy firm called 1809 LTD. She is currently pursuing a second degree in Law at Riara University."
+  image: "../images/2017/speakers/angela.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/utopian_fantasy"
+  linkedin: ""
+  website: "http://utopianfantasy.co.ke/"
+  url: "angela-kihara"
+
+- name: "Godfrey Njoroge"
+  is_keynote: false
+  gender: male
+  bio: "CS Student"
+  details: "I am a Bachelor of Science student taking Computer Science currently in 4th year. I am a versatile student who loves challenges since they make me grow."
+  image: "../images/2017/speakers/njoroge.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/godfreynjoroge1"
+  linkedin: ""
+  website: "https://github.com/godfrey123"
+  url: "godfrey-njoroge"
+
+- name: "Karagania Mwamlole"
+  is_keynote: false
+  gender: male
+  bio: "Co-Founder of Ummah.co.ke, TV Presenter at Horizon TV, and Computer Science Student"
+  details: "A free-speaking, problem-solving, ever-smiling, results-oriented student of Computer Science. Also co-founder of ummah.co.ke and TV presenter at Horizon TV."
+  image: "../images/2017/speakers/karagania.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/karagania_mlole"
+  linkedin: ""
+  website: "https://github.com/karagania"
+  url: "karagania"
+
+- name: "Michael Kimathi"
+  is_keynote: false
+  gender: male
+  bio: "Community Development Manager at C4DLab"
+  details: "Michael Kimathi has over 7 years experience working in innovative ecosystems and building solutions notably with BlackBerry Developer Community, Nairuby, Masomomoja, GDG, Unbound, University of Nairobi, StartupBlink, BantaMik and Atlassian."
+  image: "../images/2017/speakers/michael.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/mikekimmathi"
+  linkedin: ""
+  website: "https://github.com/iamleader"
+  url: "mike-kimathi"
+
+- name: "Paul Oguda"
+  is_keynote: false
+  gender: male
+  bio: "Spatial Planner, Smart Cities Advocate, and Autodidact Programmer"
+  details: "Paul Oguda is a Spatial Planner with bias towards Smart Cities, an autodidact Programmer who loves Ruby but plays with Elixir/Erlang, Python, and Javascript at times. Furthermore, he loves GIS and Mapping and when not playing with computers he relaxes by watching local and international football."
+  image: "../images/2017/speakers/paul_o.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/kamalogudah"
+  linkedin: ""
+  website: "https://github.com/kamalogudah"
+  url: "paul-oguda"
+
+- name: "Prof. Robert Gateru"
+  is_keynote: false
+  gender: male
+  bio: "Vice Chancellor of Riara University"
+  details: "Prof. Robert Gateru, Vice Chancellor of Riara University is holder of a PhD in Microelectronic Engineering & Semiconductor Device Physics from the University of Surrey (UK). He is a seasoned academic, with over 10 years teaching and administration experience in various universities."
+  image: "../images/2017/speakers/prof_gateru.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: ""
+  linkedin: ""
+  website: "http://www.riarauniversity.ac.ke/vc-prof-robert-gateru/"
+  url: "prof_gateru"
+
+- name: "Prof. Felix Musau"
+  is_keynote: false
+  gender: male
+  bio: "Founding Dean, Riara School of Computing Sciences & Expert in Cybersecurity and Innovation"
+  details: "Prof Felix Musau is the founding Dean, Riara School of Computing Sciences, and Former Director ICT Kenyatta University. He holds a PhD and MSc in Computer Science and Technology from the Central South University of Technology, P.R China."
+  image: "../images/2017/speakers/prof_musau.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: ""
+  linkedin: ""
+  website: "http://www.riarauniversity.ac.ke/prof-felix-musau/"
+  url: "prof_musau"
+
+- name: "Rishi Jain"
+  is_keynote: false
+  gender: male
+  bio: "Web Developer"
+  details: "I have been working as a web developer for the past 6 years. I like to talk at conferences as it gives me chance to make new friends and travel to places. I also like to indulge in sports."
+  image: "../images/2017/speakers/rishi.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/jainrishi15"
+  linkedin: ""
+  website: "https://github.com/rishijain"
+  url: "rishi"
+
+- name: "William Wanyama"
+  is_keynote: false
+  gender: male
+  bio: "Electrical & Computer Engineer, Rubyist, and Open Source Contributor"
+  details: "With an Electrical and Computer Engineering background, William started his development career as a python developer in Sydney before joining the Nairobi startup scene as a Green Member at iHub. He's now a self proclaimed Rubyist and spends most of his time contributing to Open Source Software while building his startup."
+  image: "../images/2017/speakers/william.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/wanyama_man"
+  linkedin: ""
+  website: "https://github.com/wanyamaman"
+  url: "wanyama-man"
