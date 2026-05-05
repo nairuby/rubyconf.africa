@@ -1,9 +1,10 @@
 ---
-layout: archive_application
+layout: archive/application
 permalink: /2025/schedule
 title: "Schedule for Ruby Conf Africa 2025"
 description: "Schedule for Ruby Conf Africa 2025. Join us in Nairobi, Kenya, on July 18-19, 2025, and connect with leading Ruby developers from around the world."
 image: "/images/logo/arc_logo_coloured.png"
+year: "2025"
 ---
 
 {% assign schedule_data = site.data.new_remote.schedule_2025 %}
@@ -77,7 +78,7 @@ image: "/images/logo/arc_logo_coloured.png"
                     <figure
                       class="thumb d-flex flex-column align-items-center m-1"
                     >
-                      <a href="/speakers/{{ speaker_trimmed | slugify }}">
+                      <a href="/2025/speakers/{{ speaker_trimmed | slugify }}">
                         <img
                           src="{{ event.image[forloop.index0] }}"
                           alt="{{ speaker_trimmed }}"

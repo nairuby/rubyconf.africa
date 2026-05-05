@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include archive_head.liquid %}
-<body class="cms-index-index cms-home-page">
-<div id="page">
+{% include archive/head.liquid %}
+<body>
+<div class="page-wrapper">
     <!-- Header and Navigation-->
-    {% include archive_home_navigation.liquid %}
+    {% include archive/navigation.liquid %}
 
     <!-- Content -->
-    {{ content }}
+    <div class="content-wrapper">
+        {{ content }}
+    </div>
 
     <!-- Footer -->
-    {% include archive_footer.liquid %}
+    {% include archive/footer.liquid %}
 </div>
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
-
 {% include js.liquid %}
 <!--<script src="{{ site.basesurl }}/assets/javascripts/application.js"></script>-->
 </body>

@@ -1,12 +1,12 @@
 ---
-layout: archive_application_home
+layout: archive/application_home
 title: "Ruby Conf Africa 2019 - Leading Ruby Developers Conference in Nairobi, Kenya"
 name: "Ruby Conf Africa 2019"
 description: "Join us on July 25-27, 2019, for Ruby Conference Africa in Nairobi, Kenya. Connect with leading Ruby
 developers, learn from insightful sessions, and explore the latest trends in Ruby development."
 image: "../images/logo/arc_logo_coloured.png"
 permalink: /2019/
-year: 2019
+year: "2019"
 ---
 
 <!--<div class="preloader"></div>-->
@@ -158,209 +158,12 @@ year: 2019
 </section>
 <!--End About Section -->
 
-<!-- Speakers -->
-<section class="speakers-section">
-  <div class="auto-container">
-    <div class="sec-title light text-center">
-      <h2>Speakers</h2>
-    </div>
-    <div class="outer-box">
-      <div class="row d-flex align-items-center justify-content-center">
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/denis-selly"
-                  ><img
-                    src="../images/2019/speakers/sellu.jpeg"
-                    alt="Denis Sellu"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/denis-selly">Denis Sellu</a>
-                </h4>
-                <span class="designation">SWE CookiesHQ</span>
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="https://twitter.com/TheCookiesHQ"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/laura-kirby"
-                  ><img
-                    src="../images/2019/speakers/laura.jpeg"
-                    alt="Laura Kirby"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/laura-kirby">Laura Kirby</a>
-                </h4>
-                <span class="designation">SWE, IBM Aspera</span>
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="https://twitter.com/kirby_laura"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/marvin-hosea"
-                  ><img
-                    src="../images/2019/speakers/marvin.jpeg"
-                    alt="Marvin Hosea"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name">
-                  <a href="speakers/marvin-hosea">Marvin Hosea</a>
-                </h4>
-                <span class="designation"
-                  >CEO and Founder, App:Lab Limited</span
-                >
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="https://x.com/marvin_hosea"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speaker Block -->
-        <div class="speaker-block col-lg-3 col-md-6 col-sm-12">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image">
-                <a href="speakers/purity"
-                  ><img
-                    src="../images/2019/speakers/purity.jpg"
-                    alt="Purity Maina"
-                /></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <div class="inner">
-                <h4 class="name"><a href="speakers/purity">Purity Maina</a></h4>
-                <span class="designation">Lead SWE, Lipalater</span>
-                <ul class="social-links social-icon-colored">
-                  <li>
-                    <a href="https://twitter.com/bantu_bytes"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Coming Soon -->
+{% include archive/components/speakers_section_home.liquid %}
 
 <!-- Startup Sponsor Section-->
-<section class="clients-section">
-  <div class="anim-icons">
-    <span class="icon icon-dots-3 wow zoomIn"></span>
-    <!-- <span class="icon icon-circle-blue wow zoomIn"></span> -->
-  </div>
-  <div class="auto-container">
-    <div class="sec-title" style="text-align: center">
-      <h2 style="color: #c11803">Startup Sponsors</h2>
-      <hr />
-      <span class="title">
-        These Startup Sponsors are making a big impact on our event! 💪
-      </span>
-    </div>
-
-    <div class="sponsors-outer">
-      <div class="row justify-content-center">
-        <!-- Sponsor Block -->
-        {% for sponsor in site.data.archive_sponsors.2019 %} {% if
-        sponsor.categories contains 'startup' %}
-        <div
-          class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
-        >
-          <figure class="">
-            <a href="{{ sponsor.url }}" target="_blank"
-              ><img
-                src="{{ sponsor.image }}"
-                class="lazyload"
-                alt="{{ sponsor.name }}"
-            /></a>
-          </figure>
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
+{% include archive/components/sponsor_section.liquid category="startup" title="Startup Sponsors" description="These Startup Sponsors are making a big impact on our event! 💪" %}
 <!--End Startup Sponsor Section-->
 
 <!--Partner Section-->
-<section class="clients-section">
-  <div class="anim-icons">
-    <span class="icon icon-dots-3 wow zoomIn"></span>
-  </div>
-  <div class="auto-container">
-    <div class="sec-title" style="text-align: center">
-      <h2 style="color: #c11803">Supporters</h2>
-      <hr />
-      <span class="title"> These supporters are all in for the event! 💪 </span>
-    </div>
-
-    <div class="sponsors-outer">
-      <div class="row justify-content-center">
-        <!-- Sponsor Block -->
-        {% for sponsor in site.data.archive_sponsors.2019 %} {% if
-        sponsor.categories contains 'supporters' %}
-        <div
-          class="client-block col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
-        >
-          <figure class="">
-            <a href="{{ sponsor.url }}"
-              ><img
-                src="{{ sponsor.image }}"
-                class="lazyload"
-                alt="{{ sponsor.name }}"
-            /></a>
-          </figure>
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
+{% include archive/components/sponsor_section.liquid category="supporters" title="Supporters" description="These supporters are all in for the event! 💪" %}
+<!--End of Partner Section-->

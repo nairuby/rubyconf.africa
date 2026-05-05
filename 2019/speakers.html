@@ -1,9 +1,10 @@
 ---
-layout: archive_application
+layout: archive/application
 permalink: /2019/speakers
 title: "Speakers for Ruby Conf Africa 2019"
 description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2019.  Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
+year: "2019"
 ---
 
 <!--{% assign url_parts = page.url | split: '/' %}-->
@@ -40,25 +41,10 @@ image: "/images/logo/arc_logo_coloured.png"
     </div>
 
     <div class="row top-pd-mobile">
-      {% for speaker in site.speakers_2019 %} {% if speaker.is_keynote == true
-      %} {% include archive_speaker_block.liquid speaker=speaker
-      designation="Keynote Speaker " %} {% endif %} {% endfor %}
-      <!--        </div>-->
-
-      <!--        Display Female Speakers-->
-      <!--        <div class="row top-pd-mobile">-->
-      {% assign female_speakers = site.speakers_2019 | where: "gender", "female"
-      %} {% for speaker in female_speakers %} {% if speaker.is_keynote == false
-      %} {% include archive_speaker_block.liquid speaker=speaker
-      designation="Speaker" %} {% endif %} {% endfor %}
-    </div>
-
-    <!--        Display Male Speakers-->
-    <div class="row top-pd-mobile">
-      {% assign male_speakers = site.speakers_2019 | where: "gender", "male" %}
-      {% for speaker in male_speakers %} {% if speaker.is_keynote == false %} {%
-      include archive_speaker_block.liquid speaker=speaker designation="Speaker"
-      %} {% endif %} {% endfor %}
+      {% assign year_data = site.data.archive[page.year] %}
+      {% for speaker in year_data.speakers %}
+        {% include archive/components/speaker_block.liquid speaker=speaker designation=speaker.bio year=page.year %}
+      {% endfor %}
     </div>
   </div>
 </section>

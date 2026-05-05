@@ -1,0 +1,16 @@
+# speakers.yml — Speaker list for a single archive year
+# Each entry represents one speaker. The 'url' field is the slug used for
+# the speaker detail page URL: /YYYY/speakers/SLUG.html
+
+- name: "Speaker Name"                  # Full display name
+  is_keynote: false                     # true for keynote speakers
+  gender: male                          # male / female / other (used for display)
+  bio: "Short one-line bio"             # Short bio shown on speaker cards
+  details: "Full bio paragraph"         # Full bio shown on speaker detail page
+  image: "../images/YYYY/speakers/slug.jpg"  # Speaker photo path
+  talk_title: "Talk Title"              # Title of the talk
+  talk_description: "Talk description"  # Description of the talk
+  twitter: "https://x.com/handle"      # Full Twitter/X URL (or empty string)
+  linkedin: ""                          # Full LinkedIn URL (or empty string)
+  website: ""                           # Personal website URL (or empty string)
+  url: "slug"                           # URL slug — must be unique within the year

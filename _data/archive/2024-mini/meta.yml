@@ -1,0 +1,15 @@
+title: "Ruby Mini Conf 2024"
+dates: "October 30, 2024"
+venue: "KCA University"
+location: "Nairobi, Kenya"
+about: |
+  This Mini-conference theme, "Innovate. Commercialize. Transform with Ruby,"
+  emphasizes our dedication to promoting an innovation and entrepreneurship
+  ecosystem in Kenya and beyond. The summit aims to unite stakeholders—students,
+  startups, and established companies—to showcase innovative ideas and
+  entrepreneurial skills that tackle local, national, and global challenges.
+banners:
+  - image: "../images/compressed/community.jpg"
+    alt: "Community gathering"
+  - image: "../images/compressed/nairobi3.jpg"
+    alt: "Nairobi cityscape"

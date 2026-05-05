@@ -1,0 +1,15 @@
+title: "Ruby Mini Conf Africa 2021"
+dates: "August 12, 2021"
+venue: "Virtual"
+location: "Online"
+about: |
+  This Mini-conference theme, "Innovate. Commercialize. Transform with Ruby,"
+  emphasizes our dedication to promoting an innovation and entrepreneurship
+  ecosystem in Kenya and beyond. The summit aims to unite stakeholders—students,
+  startups, and established companies—to showcase innovative ideas and
+  entrepreneurial skills that tackle local, national, and global challenges.
+banners:
+  - image: "../images/compressed/nairobi.jpg"
+    alt: "Nairobi cityscape"
+  - image: "../images/compressed/nairobi2.jpg"
+    alt: "Nairobi cityscape 2"

@@ -1,0 +1,168 @@
+- name: "Ray Hightower"
+  is_keynote: false
+  gender: male
+  bio: "Software Developer | Open Source Enthusiast | Founder of WisdomGroup | Organizer of ChicagoRuby"
+  details: "Ray Hightower is a software developer, open source hardware enthusiast, founder of WisdomGroup, and organizer of ChicagoRuby, WindyCityRails, & WindyCityThings. He has visited every state in the USA and most continents on planet Earth. He studied Computer Science and Engineering at the University of Illinois at Urbana-Champaign, and completed his Bachelors in Computer Science at the University of Illinois at Chicago."
+  image: "../images/2016/speakers/raymond.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/rayhightower"
+  linkedin: ""
+  website: "http://rayhightower.com/"
+  url: "raymond"
+
+- name: "Alvin Kato"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Introduced to programming by a close friend, Alvin abandoned an academic career as an Economist/Statistician for a keyboard and a black screen where he fell in love with ruby and the wonders of rails. His current mission is to transfer this same joy and enthusiasm for coding into the hearts of others."
+  image: "../images/2016/speakers/alvin_kato.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/alvinkatojr"
+  linkedin: ""
+  website: ""
+  url: "alvin_kato"
+
+- name: "Kelvin Mutuma"
+  is_keynote: false
+  gender: male
+  bio: "Ruby Developer and FOSS Enthusiast | FIFA Addict | GitLab Contributor"
+  details: "FIFA Addict, novel enthusiast, adept coder, reactive and natural, ruby && general FOSS enthusiast. Abacus | GitLab"
+  image: "../images/2016/speakers/mutuma.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/KelvinMutuma"
+  linkedin: ""
+  website: "http://kelvinmutuma.github.io/"
+  url: "mutuma"
+
+- name: "Kenneth Kinyanjui"
+  is_keynote: false
+  gender: male
+  bio: "CTO and Co-founder, Infinity Space Inc."
+  details: "Kenneth is a Software Engineer, Mentor and Entrepreneur. He is CTO and Co-founder of Infinity Space Inc, an African Company based in Kenya, France and Cameroon. He has also been a consultant for iHub Consulting in Nairobi. As a GDG country mentor, Kenneth has been helping build the Kenyan GDG Community across the country. An active developer and community manager, Kenneth loves contributing to open source projects, facilitating code labs on Google Cloud Platform and mentoring junior developers."
+  image: "../images/2016/speakers/ken.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/kenju254"
+  linkedin: "https://ke.linkedin.com/in/kennethkinyanjui"
+  website: ""
+  url: "ken"
+
+- name: "Dr. Kendi Muchugi"
+  is_keynote: false
+  gender: female
+  bio: "Computational Neuroscientist and Information Systems Specialist"
+  details: "Dr. Kendi is Computer Science graduate from ANU and a holder of masters degree in Information Systems from the University of Surrey. Her doctoral research is in the field of computational neuroscience and primarily involves computational representation of visual processing within the retina, whilst simulating involvement of retina lateral neurons and allowing the convergence of Rod and Cone systems for the purpose of informing the design and development of retinal prosthesis."
+  image: "../images/2016/speakers/kendi.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: ""
+  linkedin: ""
+  website: "https://github.com/kmuchungi"
+  url: "dr_kendi"
+
+- name: "Chencha Jacob"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Introduced to programming by a close friend, Alvin abandoned an academic career as an Economist/Statistician for a keyboard and a black screen where he fell in love with ruby and the wonders of rails. His current mission is to transfer this same joy and enthusiasm for coding into the hearts of others"
+  image: "../images/2016/speakers/chencha.jpeg"
+  talk_title: "The Estimation Process"
+  talk_description: ""
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/chenchajacob"
+  website: "https://github.com/prodeveloper"
+  url: "chencha"
+
+- name: "Bernard Banta"
+  is_keynote: false
+  gender: male
+  bio: "founder of Banta Technologies (BT)"
+  details: "A Computer Scientist and true entrepreneur, he is the founder of Banta Technologies (BT). He has always been passionate about technology and how it can be used to leverage and transform Africa in the way we live, work, play and govern. When it comes to building, his ultimate goal is to make the world a better place. Banta is an entrepreneur and an engineer on the bleeding edge of technology."
+  image: "../images/2016/speakers/banta.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "http://twitter.com/bantab"
+  linkedin: ""
+  website: "https://github.com/banta"
+  url: "banta"
+
+- name: "Manoj Changarampatt"
+  is_keynote: false
+  gender: male
+  bio: "Business Strategist and Consultant | Telecom, Tech, and Retail Expert | Entrepreneur and Startup Advisor"
+  details: "Manoj is a business visionary and an independent consultant specializing in building up brands, ecosystems and executing turn-arounds. He lives in Nairobi and he has experience across East & West Africa as well as the Middle East. Having previously worked with Samsung and Nokia, he has a bias towards telecom and technology ventures but can lend support to companies that require retail and distribution expertise as well. After 25 years of corporate experience, he has delved into entrepreneurship with ventures like SavannaByte.com whilst advising entrepreneurs and startups across Nairobi."
+  image: "../images/2016/speakers/manoj.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/changarampatt"
+  linkedin: ""
+  website: "http://www.nest.vc/?team=1089"
+  url: "manoj"
+
+- name: "Michael Kimathi"
+  is_keynote: false
+  gender: male
+  bio: "Community Development Manager at C4DLab"
+  details: "Michael Kimathi has over 7 years experience working in innovative ecosystems and building solutions notably with BlackBerry Developer Community, Nairuby, Masomomoja, GDG, Unbound, University of Nairobi, StartupBlink, BantaMik and Atlassian. Currently, he is an entrepreneur learning from his past failures and developing better solutions which will impact the world we are living in."
+  image: "../images/2016/speakers/michael.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/mikekimmathi"
+  linkedin: ""
+  website: "https://github.com/iamleader"
+  url: "mike"
+
+- name: "Eugene Mutai"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: "Eugene Mutai is currently the only Google Developer Expert in web technologies in Sub-Saharan Africa. He currently works as a software developer/consultant at Andela. He is also the lead of the JavaScript community."
+  image: "../images/2016/speakers/eugene.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/JheneKnights"
+  linkedin: ""
+  website: ""
+  url: "eugene_mutai"
+
+- name: "Ian Juma"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer"
+  details: ""
+  image: "../images/2016/speakers/ian-juma.jpg"
+  talk_title: "Using Africa's Talking Unified Mobile Communication APIs with Ruby"
+  talk_description: ""
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/ianjuma"
+  website: ""
+  url: "ian"
+
+- name: "Clement HabinShuttin"
+  is_keynote: false
+  gender: male
+  bio: "Computer Science student"
+  details: "Clement Habinshuti is a Computer Science student at the Africa Nazarene University, aspiring entrepreneur, software developer and, most importantly, a dreamer. Apart from writing code and learning new things in the field of Computer Science, he also enjoys playing guitar and drawing."
+  image: "../images/2016/speakers/habishuti.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/habyhabbes"
+  linkedin: ""
+  website: "http://github.com/habbes"
+  url: "habbes"
+
+- name: "Sawo"
+  is_keynote: false
+  gender: male
+  bio: "Developer, UI/UX designer"
+  details: "A tech enthusiast who is passionate about all technology-related things. Driven by the motivation to learn more and explore new fields which are constantly coming up. Developed an interest in programming while studying Computer Science at the University of Nairobi and can program in quite a few languages inclusive of Ruby."
+  image: "../images/2016/speakers/sawo.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/SawoFilush"
+  linkedin: ""
+  website: ""
+  url: "sawo"

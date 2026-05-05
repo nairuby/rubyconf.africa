@@ -1,0 +1,16 @@
+title: "Ruby Conf Africa 2016"
+dates: "May 5-7, 2016"
+venue: "African Nazarene University"
+location: "Ongata Rongai, Kenya"
+about: |
+  ARC aims to unite entrepreneurs, developers, designers, and open-source
+  contributors to tackle various challenges. By embracing entrepreneurship and
+  open-source principles, ARC believes in offering comprehensive solutions to
+  numerous issues. Attendees are equipped with both technological tools and
+  entrepreneurial methodologies to maximize their potential and inspire others
+  in their communities and beyond.
+banners:
+  - image: "../images/2016/bg.jpg"
+    alt: "Conference venue"
+  - image: "../images/compressed/nairobi.jpg"
+    alt: "Nairobi cityscape"

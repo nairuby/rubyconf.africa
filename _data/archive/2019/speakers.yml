@@ -1,0 +1,168 @@
+- name: "Bernard Banta"
+  is_keynote: false
+  gender: male
+  bio: "CTO and Co-founder, Finplus"
+  details: "Bernard Banta is currently the CTO and Co-founder of Finplus. Banta is a computer scientist and an entrepreneur. He is passionate about technology and how it can be used to leverage and transform Africa in the way we live, work, play and govern."
+  image: "../images/2019/speakers/banta.png"
+  talk_title: "Nairuby Community"
+  talk_description: "Opening Remarks"
+  twitter: "http://twitter.com/bantab"
+  linkedin: ""
+  website: "https://github.com/banta"
+  url: "banta"
+
+- name: "Laura Kirby"
+  is_keynote: true
+  gender: female
+  bio: "SWE, IBM Aspera"
+  details: "Laura is a software engineer at IBM Aspera. She is currently working on a full-stack web application that processes and manages big data. In her spare time, she volunteers for Bridge Foundry, a non-profit that aims to diversity the tech industry."
+  image: "../images/2019/speakers/laura.jpeg"
+  talk_title: "Impact of Contributing to Open Source"
+  talk_description: ""
+  twitter: "https://twitter.com/kirby_laura"
+  linkedin: ""
+  website: "https://twitter.com/kirby_laura"
+  url: "laura-kirby"
+
+- name: "Amr Abdelwahab"
+  is_keynote: false
+  gender: male
+  bio: "Cross-Continental Technologist and Tech-Community Advocate"
+  details: "An African Egyptian native who crossed continents to work with his passion in digital environments. Amr's interests span technology, tech-communities, politics and politics in tech, all enriched through various software engineering roles in Egypt, Hungary and Germany."
+  image: "../images/2019/speakers/abdelwahab.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/amrabdelwahab"
+  linkedin: ""
+  website: ""
+  url: "abdelwahab"
+
+- name: "Raounak Sharma"
+  is_keynote: false
+  gender: male
+  bio: "SWE, Namyata"
+  details: "I am in the field of Web-development from past 3 years and I am loving it. Currently, I am pursuing my undergraduation in Computer Science and working as a software developer in a company (Namyata). I provide services in Web-development and DevOps."
+  image: "../images/2019/speakers/raounak.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/Raounaksharma"
+  linkedin: ""
+  website: "http://raounak-sharma.herokuapp.com/"
+  url: "raounaksharma"
+
+- name: "Denis Sellu"
+  is_keynote: false
+  gender: male
+  bio: "SWE, CookiesHQ"
+  details: "I solve problems at CookiesHQ, a technical agency based in Bristol, UK. I'm a strategy game and fantasy fiction fan, and a coconut connoisseur. Coconut doesn't ask questions, coconut understands."
+  image: "../images/2019/speakers/sellu.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/TheCookiesHQ"
+  linkedin: ""
+  website: "https://www.cookieshq.co.uk/"
+  url: "denis-sellu"
+
+- name: "Purity Maina"
+  is_keynote: false
+  gender: female
+  bio: "Lead SWE, Lipalater"
+  details: "Purity Maina is a software engineer who has been building Fintech products for the African market for the past 4 years and loving the journey. She has worked with notable companies such as World Bank, Kenya Films Board and Kenya Tourism Board to build more inclusive products for the market."
+  image: "../images/2019/speakers/purity.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/bantu_bytes"
+  linkedin: "https://www.linkedin.com/in/puritymaina"
+  website: ""
+  url: "purity"
+
+- name: "Sigu Magwa"
+  is_keynote: false
+  gender: male
+  bio: "Open Source Dev & Rails Enthusiast"
+  details: "An open source enthusiast who is a remote volunteer developer an open source community AgileVentures. Currently a member of Podii - software company based in Kisumu Kenya. Previously worked remotely as a coach and developer at the Swedish based academy and company Craft Academy."
+  image: "../images/2019/speakers/sigu.jpg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/s_igu"
+  linkedin: ""
+  website: "http://podiihq.com/"
+  url: "sigu-magwa"
+
+- name: "Prathamesh Sonpatki"
+  is_keynote: false
+  gender: male
+  bio: "Senior Backend Consultant, Memory.ai"
+  details: "Prathamesh Sonpatki is senior backend consultant at Memory.ai. Previously he worked as Director at BigBinary, a distinguished web and mobile app development firm specializing in Ruby on Rails, React, and React Native. He blogs regularly on prathamesh.tech about topics related to Ruby, Rails and Emacs"
+  image: "../images/2019/speakers/Prathamesh.jpg"
+  talk_title: "State of the Art of Managing Assets in the New Rails"
+  talk_description: "With Rails 6 declaring that webpacker will be the default way of how the JavaScript should be written in new apps, we have lot of questions to answer. Why should one switch to Webpacker in the first place? What about my old code?"
+  twitter: "https://twitter.com/_cha1tanya"
+  linkedin: ""
+  website: "https://github.com/prathamesh-sonpatki"
+  url: "prathamesh-sonpatki"
+
+- name: "Itoyanagi Sakura"
+  is_keynote: false
+  gender: male
+  bio: "Ruby committer, RDoc main maintainer, and Ruby core tools contributor."
+  details: "Ruby committer, RDoc main maintainer, and Ruby core tools contributor."
+  image: "../images/2019/speakers/sakura.png"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/aycabta"
+  linkedin: ""
+  website: "https://github.com/aycabta"
+  url: "itoyanagi-sakura"
+
+- name: "Stella Maris"
+  is_keynote: false
+  gender: female
+  bio: "Backend Engineer, Sokowatch"
+  details: "Stella is backend engineer at sokowatch. She also enjoys contributing to open source projects and has been a contributor to organizations such AgileVentures EBWiki and PublicLab. She is a coach at Rails Girls and really enjoys sharing what she knows with young ladies eager to learn programming."
+  image: "../images/2019/speakers/stella.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://twitter.com/StlMaris"
+  linkedin: ""
+  website: "https://github.com/StlMaris123"
+  url: "stella"
+
+- name: "Marvin Hosea"
+  is_keynote: false
+  gender: male
+  bio: "CEO and Founder, App:Lab Limited"
+  details: "Marvin Collins Hosea is the CEO and Founder at Apps:Lab Limited. He studied Computer Science at Moi University and after working for six companies, he quitted his job to run Apps:Lab limited full time."
+  image: "../images/2019/speakers/marvin.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: "https://x.com/marvin_hosea"
+  linkedin: ""
+  website: "http://appslab.co.ke/"
+  url: "marvin-hosea"
+
+- name: "Paul Oguda"
+  is_keynote: false
+  gender: male
+  bio: "Software Engineer, Tezza Business Solutions"
+  details: "Paul Oguda is a Spatial Planner with bias towards Smart Cities, an autodidact Programmer who loves Ruby but plays with Elixir/Erlang, Python, and Javascript at times. Furthermore, he loves GIS and Mapping and when not playing with computers he relaxes by watching local and international football."
+  image: "../images/2019/speakers/paul_o.png"
+  talk_title: "A Jedi Without A Master"
+  talk_description: ""
+  twitter: "http://twitter.com/kamalogudah"
+  linkedin: ""
+  website: "https://github.com/kamalogudah"
+  url: "paul-oguda"
+
+- name: "Vishal Chandnani"
+  is_keynote: false
+  gender: male
+  bio: "Senior Software Engineer, Def Method"
+  details: "Vishal spent most of his childhood in Dubai, UAE. He earned his Bachelor's degree in Electronics and Telecommunications Engineering from Pune University (India) and his Master's degree in Electrical Engineering from Syracuse University."
+  image: "../images/2019/speakers/Vishal.jpeg"
+  talk_title: ""
+  talk_description: ""
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/vchandnani"
+  website: "https://github.com/vchandnani"
+  url: "vchandnani"

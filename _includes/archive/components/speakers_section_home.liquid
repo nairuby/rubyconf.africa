@@ -1,0 +1,42 @@
+{% assign year_data = site.data.archive[page.year] %}
+{% assign keynote_speakers = year_data.speakers | where: "is_keynote", true %}
+{% assign non_keynote_speakers = year_data.speakers | where: "is_keynote", false %}
+{% assign featured_speakers = non_keynote_speakers | slice: 0, 4 %}
+
+{% if keynote_speakers.size > 0 %}
+<!-- Keynote Speakers -->
+<section class="speakers-section">
+  <div class="auto-container">
+    <div class="sec-title light text-center">
+      <h2>Keynote Speakers</h2>
+    </div>
+    <div class="outer-box">
+      <div class="row d-flex align-items-center justify-content-center">
+        {% for speaker in keynote_speakers %}
+          {% include archive/components/speaker_block_home.liquid speaker=speaker designation=speaker.bio year=page.year col="col-lg-4" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Keynote Speakers -->
+{% endif %}
+
+{% if featured_speakers.size > 0 %}
+<!-- Speakers -->
+<section class="speakers-section">
+  <div class="auto-container">
+    <div class="sec-title light text-center">
+      <h2>Speakers</h2>
+    </div>
+    <div class="outer-box">
+      <div class="row d-flex align-items-center justify-content-center">
+        {% for speaker in featured_speakers %}
+          {% include archive/components/speaker_block_home.liquid speaker=speaker designation=speaker.bio year=page.year col="col-lg-3" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Speakers Section -->
+{% endif %}

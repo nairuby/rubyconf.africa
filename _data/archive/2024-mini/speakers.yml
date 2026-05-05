@@ -1,0 +1,51 @@
+- name: "Bernard Banta"
+  is_keynote: false
+  gender: male
+  bio: "Co-Founder Finplus"
+  details: ""
+  image: "../images/2024_mini/speakers/banta.jpg"
+  talk_title: "TBA"
+  talk_description: "TBA"
+  twitter: "https://twitter.com/Bantab"
+  linkedin: "https://www.linkedin.com/in/banta"
+  website: ""
+  url: "banta"
+
+- name: "Elvis Sitati"
+  is_keynote: false
+  gender: male
+  bio: "Founder and Chief Executive Officer at Uamuzi Foundation"
+  details: "Elvis Sitati is the Founder and CEO of Uamuzi Foundation, he leads a committed team focused on empowering marginalized communities—especially youth, women, and people with disabilities—by leveraging technology and real-time data to ensure their voices are represented in decision-making spaces."
+  image: "../images/2024_mini/speakers/elvis_sitati.jpeg"
+  talk_title: "Youth participation in decision making process"
+  talk_description: "TBA"
+  twitter: ""
+  linkedin: "https://www.linkedin.com/in/elvis-sitati-2a282b79/?originalSubdomain=ke"
+  website: ""
+  url: "elvis-sitati"
+
+- name: "Mama Tech"
+  is_keynote: false
+  gender: female
+  bio: "Product Engineer | Technical Product Manager | (DPG) Open Source Community Manager."
+  details: "Naijeria Towett is a driven 'Tech for Good' advocate focused on creating Digital Public Goods and advancing diversity in tech. With two years in product management and a recent advanced certificate, she leverages her strategic and analytical skills to develop innovative, market-ready products."
+  image: "../images/2024_mini/speakers/mamatech.jpeg"
+  talk_title: "Sustainable Femtech: Utilising Ruby on Rails and Academia to Transform Women's health solutions"
+  talk_description: "TBA"
+  twitter: "https://x.com/naijeriatoweett"
+  linkedin: "https://www.linkedin.com/in/naijeriatoweett/"
+  website: ""
+  url: "mama-tech"
+
+- name: "Kipngetich Ngeno"
+  is_keynote: false
+  gender: male
+  bio: "Fullstack Software Engineer"
+  details: "Kipngetich Ng'eno is an entrepreneur with over six years of experience as a full-stack software engineer, he has a proven track record working across a diverse tech stack, including Python, JavaScript, Ruby, Django, Flask, Frappe, Ruby on Rails, React, and Vue."
+  image: "../images/2024_mini/speakers/kip.jpeg"
+  talk_title: "Identifying entrepreneurship opportunities in tech"
+  talk_description: "TBA"
+  twitter: "https://x.com/vinnieSlain"
+  linkedin: "https://www.linkedin.com/in/kipngetich-ngeno-178451121/"
+  website: ""
+  url: "kip"

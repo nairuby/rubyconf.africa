@@ -1,0 +1,15 @@
+# meta.yml — Conference metadata for a single archive year
+# Required fields: title, dates, venue, location, about, banners
+
+title: "Ruby Conf Africa YYYY"          # Full conference name
+dates: "July 26-27, YYYY"               # Human-readable date range
+venue: "KCA University"                  # Venue name
+location: "Nairobi, Kenya"              # City, Country
+about: |                                 # Multi-line about text (shown on home page)
+  ARC aims to unite entrepreneurs, developers, designers, and open-source
+  contributors to tackle various challenges.
+banners:                                 # List of banner/hero images for the home page slider
+  - image: "../images/YYYY/banner1.jpg" # Relative path from the year folder
+    alt: "Conference venue"             # Alt text for accessibility
+  - image: "../images/YYYY/banner2.jpg"
+    alt: "Conference crowd"

@@ -1,9 +1,10 @@
 ---
-layout: archive_application
+layout: archive/application
 permalink: /2025/speakers
 title: "Speakers for Ruby Conf Africa 2025"
-description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2024.  Browse speaker profiles, session topics, and more."
+description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2025. Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
+year: "2025"
 ---
 
 <!-- Preloader -->
@@ -20,13 +21,11 @@ image: "/images/logo/arc_logo_coloured.png"
     <div class="sec-title text-center my-4">
       <span class="display-4 text-danger font-weight-bold">Speakers</span>
     </div>
-    {% assign all_speakers = site.data.new_remote.speakers_2025 %}
+    {% assign year_data = site.data.archive[page.year] %}
     <div class="row top-pd-mobile">
-      {% for speaker in all_speakers %} {% assign designation = "Speaker" %} {%
-      if speaker.is_keynote == "Yes" or speaker.is_keynote == true %} {% assign
-      designation = "Keynote Speaker" %} {% endif %} {% include
-      new_speaker_block.liquid speaker=speaker designation=designation %} {%
-      endfor %}
+      {% for speaker in year_data.speakers %}
+        {% include archive/components/speaker_block.liquid speaker=speaker designation=speaker.bio year=page.year %}
+      {% endfor %}
     </div>
   </div>
 </section>
