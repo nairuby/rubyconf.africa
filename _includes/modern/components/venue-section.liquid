@@ -16,13 +16,13 @@
     </div>
 
     <!-- Two-column grid: carousel (left) + info/map (right) -->
-    <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+    <div class="space-y-8">
 
       <!-- Left column: Photo Carousel -->
       <figure id="venue-carousel" class="rounded-lg shadow-lg overflow-hidden mb-8 lg:mb-0" aria-label="{{ t.gallery_label }}">
         {% assign venue_images = "sarit1.jpg,sarit2.jpg,sarit3.jpg,sarit4.jpg,sarit5.jpg" | split: "," %}
 
-        <div style="position: relative; width: 100%; padding-top: 75%;">
+        <div style="position: relative; width: 100%; padding-top: 50%;">
 
           <!-- Slides -->
           {% for img in venue_images %}
