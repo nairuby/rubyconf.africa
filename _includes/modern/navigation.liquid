@@ -35,6 +35,37 @@
                     {% include modern/components/translation-helper.liquid key="navigation.about" fallback="About" %}
                 </a>
 
+                <a href="{{ site.baseurl }}/speakers.html"
+                   class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                   {% if page.url contains "/speakers" %}aria-current="page"{% endif %}>
+                    {% include modern/components/translation-helper.liquid key="navigation.speakers" fallback="Speakers" %}
+                </a>
+
+
+                {% comment %}<div class="relative group">{% endcomment %}
+                {% comment %}<a href="{{ site.baseurl }}/speakers.html"{% endcomment %}
+                {% comment %}class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center"{% endcomment %}
+                {% comment %}{% if page.url contains "/speakers" %}aria-current="page"{% endif %}>{% endcomment %}
+                {% comment %}{% include modern/components/translation-helper.liquid key="navigation.speakers" fallback="Speakers" %}{% endcomment %}
+                {% comment %}<svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">{% endcomment %}
+                {% comment %}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"{% endcomment %}
+                {% comment %}d="M19 9l-7 7-7-7"></path>{% endcomment %}
+                {% comment %}</svg>{% endcomment %}
+                {% comment %}</a>{% endcomment %}
+                {% comment %}<div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200"{% endcomment %}
+                {% comment %}style="display: none">{% endcomment %}
+                {% comment %}<div class="py-1">{% endcomment %}
+                {% comment %}<a href="{{ site.baseurl }}/speakers.html"{% endcomment %}
+                {% comment %}class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">{% include modern/components/translation-helper.liquid key="speakers.all_speakers" fallback="All Speakers" %}</a>{% endcomment %}
+                {% comment %}<a href="https://papercall.io/ruby-conf-africa-2026" target="_blank"{% endcomment %}
+                {% comment %}rel="noopener noreferrer"{% endcomment %}
+                {% comment %}class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">Call{% endcomment %}
+                {% comment %}for Papers</a>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+                {% comment %}</div>{% endcomment %}
+
+
                 <a href="{{ site.baseurl }}/tickets.html"
                    class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                    {% if page.url contains "/tickets" %}aria-current="page"{% endif %}>
@@ -46,29 +77,6 @@
                    {% if page.url contains "/contact" %}aria-current="page"{% endif %}>
                     {% include modern/components/translation-helper.liquid key="navigation.contact" fallback="Contact" %}
                 </a>
-
-                <div class="relative group" style="display: none">
-                    <a href="{{ site.baseurl }}/speakers.html"
-                       class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center"
-                       {% if page.url contains "/speakers" %}aria-current="page"{% endif %}>
-                        {% include modern/components/translation-helper.liquid key="navigation.speakers" fallback="Speakers" %}
-                        <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </a>
-                    <div class="absolute left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200"
-                         style="display: none">
-                        <div class="py-1">
-                            <a href="{{ site.baseurl }}/speakers.html"
-                               class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">{% include modern/components/translation-helper.liquid key="speakers.all_speakers" fallback="All Speakers" %}</a>
-                            <a href="https://papercall.io/ruby-conf-africa-2026" target="_blank"
-                               rel="noopener noreferrer"
-                               class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">Call
-                                for Papers</a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="relative group">
                     <button class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center"
@@ -90,7 +98,7 @@
                 </div>
 
                 <!-- Archive Links - Only connection point between systems -->
-                <div class="relative group">
+                <div class="relative group" style="display: none">
                     <button class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center"
                             aria-expanded="false" aria-haspopup="true">
                         Past Events
@@ -102,8 +110,8 @@
                     <div class="absolute right-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200">
                         <div class="py-1">
                             {% for archive_year in site.data.conference.archive_years %}
-                            <a href="{{ site.baseurl }}{{ archive_year.path }}"
-                               class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">{{ archive_year.label }}</a>
+                                <a href="{{ site.baseurl }}{{ archive_year.path }}"
+                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">{{ archive_year.label }}</a>
                             {% endfor %}
                         </div>
                     </div>
@@ -162,7 +170,6 @@
 
             <a href="{{ site.baseurl }}/speakers.html"
                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-               style="display: none"
                {% if page.url contains "/speakers" %}aria-current="page"{% endif %}>
                 {% include modern/components/translation-helper.liquid key="navigation.speakers" fallback="Speakers" %}
             </a>
@@ -189,8 +196,8 @@
                 <div class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Past Events</div>
                 <div class="grid grid-cols-2 gap-1 px-3">
                     {% for archive_year in site.data.conference.archive_years %}
-                    <a href="{{ site.baseurl }}{{ archive_year.path }}"
-                       class="block px-2 py-1 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors duration-200">{{ archive_year.label }}</a>
+                        <a href="{{ site.baseurl }}{{ archive_year.path }}"
+                           class="block px-2 py-1 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors duration-200">{{ archive_year.label }}</a>
                     {% endfor %}
                 </div>
             </div>
