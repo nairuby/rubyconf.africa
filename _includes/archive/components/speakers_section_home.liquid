@@ -1,6 +1,11 @@
-{% assign year_data = site.data.archive[page.year] %}
-{% assign keynote_speakers = year_data.speakers | where: "is_keynote", true %}
-{% assign non_keynote_speakers = year_data.speakers | where: "is_keynote", false %}
+{% if page.year == "2025" %}
+  {% assign all_speakers = site.data.new_remote.speakers_2025 %}
+{% else %}
+  {% assign year_data = site.data.archive[page.year] %}
+  {% assign all_speakers = year_data.speakers %}
+{% endif %}
+{% assign keynote_speakers = all_speakers | where: "is_keynote", "Yes" %}
+{% assign non_keynote_speakers = all_speakers | where: "is_keynote", "No" %}
 {% assign featured_speakers = non_keynote_speakers | slice: 0, 4 %}
 
 {% if keynote_speakers.size > 0 %}

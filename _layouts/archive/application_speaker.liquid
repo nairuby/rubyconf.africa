@@ -11,6 +11,7 @@
         {% if content and content != "" %}
             {{ content }}
         {% else %}
+            {% assign speaker = page.speaker | default: page %}
             <!-- Speaker Detail -->
             <section class="speaker-detail">
               <div class="auto-container">
@@ -18,22 +19,22 @@
                   <div class="image-column col-lg-4 col-md-12 col-sm-12">
                     <div class="image-box">
                       <figure class="image">
-                        <img src="{{ page.speaker.image }}" alt="{{ page.speaker.name }}" />
+                        <img src="{{ speaker.image }}" alt="{{ speaker.name }}" />
                       </figure>
                       <ul class="social-icon-two social-icon-colored text-center">
-                        {% if page.speaker.twitter and page.speaker.twitter != "" %}
+                        {% if speaker.twitter and speaker.twitter != "" %}
                         <li>
-                          <a href="{{ page.speaker.twitter }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                          <a href="{{ speaker.twitter }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                         </li>
                         {% endif %}
-                        {% if page.speaker.linkedin and page.speaker.linkedin != "" %}
+                        {% if speaker.linkedin and speaker.linkedin != "" %}
                         <li>
-                          <a href="{{ page.speaker.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          <a href="{{ speaker.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </li>
                         {% endif %}
-                        {% if page.speaker.website and page.speaker.website != "" %}
+                        {% if speaker.website and speaker.website != "" %}
                         <li>
-                          <a href="{{ page.speaker.website }}" target="_blank"><i class="fab fa-sistrix"></i></a>
+                          <a href="{{ speaker.website }}" target="_blank"><i class="fab fa-sistrix"></i></a>
                         </li>
                         {% endif %}
                       </ul>
@@ -43,15 +44,15 @@
                   <div class="info-column col-lg-8 col-md-12 col-sm-12">
                     <div class="card shadow-sm">
                       <div class="card-body">
-                        <h3 class="card-title text-info-emphasis">{{ page.speaker.name }}</h3>
-                        <h5 class="text-secondary font-weight-bold">{{ page.speaker.bio }}</h5>
-                        <p class="card-text text-black">{{ page.speaker.details }}</p>
-                        {% if page.speaker.talk_title and page.speaker.talk_title != "" %}
-                        <h4 class="mt-4 text-info-emphasis">Talk by {{ page.speaker.name }}</h4>
+                        <h3 class="card-title text-info-emphasis">{{ speaker.name }}</h3>
+                        <h5 class="text-secondary font-weight-bold">{{ speaker.bio }}</h5>
+                        <p class="card-text text-black">{{ speaker.details }}</p>
+                        {% if speaker.talk_title and speaker.talk_title != "" %}
+                        <h4 class="mt-4 text-info-emphasis">Talk by {{ speaker.name }}</h4>
                         <div class="border p-3 bg-white rounded shadow-sm mt-2">
-                          <p class="font-weight-bold text-info-emphasis">{{ page.speaker.talk_title }}</p>
-                          {% if page.speaker.talk_description and page.speaker.talk_description != "" and page.speaker.talk_description != "TBA" %}
-                          <div class="text-info-emphasis">{{ page.speaker.talk_description }}</div>
+                          <p class="font-weight-bold text-info-emphasis">{{ speaker.talk_title }}</p>
+                          {% if speaker.talk_description and speaker.talk_description != "" and speaker.talk_description != "TBA" %}
+                          <div class="text-info-emphasis">{{ speaker.talk_description }}</div>
                           {% endif %}
                         </div>
                         {% endif %}

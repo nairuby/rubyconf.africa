@@ -37,17 +37,17 @@
 # in the templates via {{ site.myvariable }}.
 
 # The title of your site
-title: Rubyconf Africa 2025
+title: Rubyconf Africa 2026
 
 # The email address for site-related communication
 email: organisers@rubyconf.africa
 
 # A brief description of your site
 description: >- # this means to ignore newlines until "baseurl:"
-  <b>RubyConf Africa 2025</b> aims to connect together
+  <b>RubyConf Africa 2026</b> aims to connect together
                       Developers (Engineers), Designers and Entrepreneurs, from
                       across Africa to a <b>two day</b> conference from
-                      <b>18th to 19th July, 2025 in Nairobi, Kenya</b> to have
+                      <b>21st to 22th July, 2026 in Nairobi, Kenya</b> to have
                       conversations around the theme
                       <b>“Beyond code: Innovating for the future”</b>.
 
@@ -138,68 +138,23 @@ minifier:
     conservative_collapse: true
 
 page_gen:
+  - data: "new_remote.speakers_2025"
+    template: "new_archive_speaker"
+    name: "url"
+    dir: "2025/speakers"
+    extension: "html"
+    index_files: true
+    title: "name"
+    slugify: true
+    # page_data_prefix: "speaker" 
   - data: "new_remote.speakers"
     template: "modern/speaker"
     name: "name"
     dir: "speakers"
     extension: "html"
-    index_files: false
+    index_files: true
     title: "name"
     slugify: true
-    raw: false
-  - data: "archive.2015.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2015/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2016.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2016/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2017.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2017/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2018.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2018/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2019.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2019/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2021.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2021/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2024.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2024/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2024-mini.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2024-mini/speakers"
-    extension: "html"
-    page_data_prefix: "speaker"
-  - data: "archive.2025.speakers"
-    template: "archive/application_speaker"
-    name: "url"
-    dir: "2025/speakers"
-    extension: "html"
     page_data_prefix: "speaker"
 
 # Collections of content
@@ -260,7 +215,7 @@ collections:
     permalink: /2025/:path
   speakers_2025:
     output: true
-    permalink: /2025/speaker/:name/
+    permalink: /2025/speakers/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

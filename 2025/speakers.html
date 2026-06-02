@@ -21,9 +21,14 @@ year: "2025"
     <div class="sec-title text-center my-4">
       <span class="display-4 text-danger font-weight-bold">Speakers</span>
     </div>
-    {% assign year_data = site.data.archive[page.year] %}
+    {% if page.year == "2025" %}
+      {% assign speakers_list = site.data.new_remote.speakers_2025 %}
+    {% else %}
+      {% assign year_data = site.data.archive[page.year] %}
+      {% assign speakers_list = year_data.speakers %}
+    {% endif %}
     <div class="row top-pd-mobile">
-      {% for speaker in year_data.speakers %}
+      {% for speaker in speakers_list %}
         {% include archive/components/speaker_block.liquid speaker=speaker designation=speaker.bio year=page.year %}
       {% endfor %}
     </div>
