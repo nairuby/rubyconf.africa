@@ -11,14 +11,16 @@ class ModernNavigation {
     this.dropdownButtons = [];
     this.dropdowns = [];
     this.isMenuOpen = false;
-    
+
     this.init();
   }
 
   init() {
     // Wait for DOM to be ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => this.setupNavigation());
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () =>
+        this.setupNavigation(),
+      );
     } else {
       this.setupNavigation();
     }
@@ -34,27 +36,29 @@ class ModernNavigation {
   }
 
   setupMobileMenu() {
-    this.mobileMenuButton = document.getElementById('mobile-menu-button');
-    this.mobileMenu = document.getElementById('mobile-menu');
+    this.mobileMenuButton = document.getElementById("mobile-menu-button");
+    this.mobileMenu = document.getElementById("mobile-menu");
 
     if (this.mobileMenuButton && this.mobileMenu) {
-      this.mobileMenuButton.addEventListener('click', (e) => {
+      this.mobileMenuButton.addEventListener("click", (e) => {
         e.preventDefault();
         this.toggleMobileMenu();
       });
 
       // Close mobile menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (this.isMenuOpen && 
-            !this.mobileMenu.contains(e.target) && 
-            !this.mobileMenuButton.contains(e.target)) {
+      document.addEventListener("click", (e) => {
+        if (
+          this.isMenuOpen &&
+          !this.mobileMenu.contains(e.target) &&
+          !this.mobileMenuButton.contains(e.target)
+        ) {
           this.closeMobileMenu();
         }
       });
 
       // Close mobile menu on escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
           if (this.isMenuOpen) {
             this.closeMobileMenu();
           }
@@ -74,64 +78,66 @@ class ModernNavigation {
   }
 
   openMobileMenu() {
-    this.mobileMenu.classList.remove('hidden');
-    this.mobileMenu.classList.add('animate-fade-in');
-    this.mobileMenuButton.setAttribute('aria-expanded', 'true');
-    
+    this.mobileMenu.classList.remove("hidden");
+    this.mobileMenu.classList.add("animate-fade-in");
+    this.mobileMenuButton.setAttribute("aria-expanded", "true");
+
     // Update button icon - switch from hamburger to close
-    const hamburgerLine = this.mobileMenuButton.querySelector('.hamburger-line');
-    const closeLine = this.mobileMenuButton.querySelector('.close-line');
+    const hamburgerLine =
+      this.mobileMenuButton.querySelector(".hamburger-line");
+    const closeLine = this.mobileMenuButton.querySelector(".close-line");
     if (hamburgerLine && closeLine) {
-      hamburgerLine.classList.add('hidden');
-      closeLine.classList.remove('hidden');
+      hamburgerLine.classList.add("hidden");
+      closeLine.classList.remove("hidden");
     }
-    
+
     this.isMenuOpen = true;
-    
+
     // Focus first menu item for accessibility
-    const firstMenuItem = this.mobileMenu.querySelector('a');
+    const firstMenuItem = this.mobileMenu.querySelector("a");
     if (firstMenuItem) {
       firstMenuItem.focus();
     }
   }
 
   closeMobileMenu() {
-    this.mobileMenu.classList.add('hidden');
-    this.mobileMenu.classList.remove('animate-fade-in');
-    this.mobileMenuButton.setAttribute('aria-expanded', 'false');
-    
+    this.mobileMenu.classList.add("hidden");
+    this.mobileMenu.classList.remove("animate-fade-in");
+    this.mobileMenuButton.setAttribute("aria-expanded", "false");
+
     // Update button icon - switch from close to hamburger
-    const hamburgerLine = this.mobileMenuButton.querySelector('.hamburger-line');
-    const closeLine = this.mobileMenuButton.querySelector('.close-line');
+    const hamburgerLine =
+      this.mobileMenuButton.querySelector(".hamburger-line");
+    const closeLine = this.mobileMenuButton.querySelector(".close-line");
     if (hamburgerLine && closeLine) {
-      hamburgerLine.classList.remove('hidden');
-      closeLine.classList.add('hidden');
+      hamburgerLine.classList.remove("hidden");
+      closeLine.classList.add("hidden");
     }
-    
+
     this.isMenuOpen = false;
   }
 
   setupDropdowns() {
     // Setup desktop dropdown menus
-    const dropdownContainers = document.querySelectorAll('.group');
-    
-    dropdownContainers.forEach(container => {
-      const button = container.querySelector('button');
-      const dropdown = container.querySelector('.absolute');
-      
+    const dropdownContainers = document.querySelectorAll(".group");
+
+    dropdownContainers.forEach((container) => {
+      const button = container.querySelector("button");
+      const dropdown = container.querySelector(".absolute");
+
       if (button && dropdown) {
         // Mouse events
-        container.addEventListener('mouseenter', () => {
+        container.addEventListener("mouseenter", () => {
           this.openDropdown(dropdown);
         });
-        
-        container.addEventListener('mouseleave', () => {
+
+        container.addEventListener("mouseleave", () => {
           this.closeDropdown(dropdown);
         });
-        
+
         // Keyboard events
-        button.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+        button.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             this.toggleDropdown(dropdown);
           }
@@ -142,65 +148,65 @@ class ModernNavigation {
 
   setupLanguageSelector() {
     // Setup language selector dropdowns
-    const languageToggles = document.querySelectorAll('.language-toggle');
-    const languageDropdowns = document.querySelectorAll('.language-dropdown');
-    
+    const languageToggles = document.querySelectorAll(".language-toggle");
+    const languageDropdowns = document.querySelectorAll(".language-dropdown");
+
     languageToggles.forEach((toggle, index) => {
       const dropdown = languageDropdowns[index];
       if (toggle && dropdown) {
-        toggle.addEventListener('click', (e) => {
+        toggle.addEventListener("click", (e) => {
           e.stopPropagation();
-          const isHidden = dropdown.classList.contains('hidden');
-          
+          const isHidden = dropdown.classList.contains("hidden");
+
           // Close all language dropdowns first
           this.closeAllLanguageDropdowns();
-          
+
           if (isHidden) {
-            dropdown.classList.remove('hidden');
-            toggle.setAttribute('aria-expanded', 'true');
+            dropdown.classList.remove("hidden");
+            toggle.setAttribute("aria-expanded", "true");
           }
         });
       }
     });
-    
+
     // Close dropdowns when clicking outside
-    document.addEventListener('click', () => {
+    document.addEventListener("click", () => {
       this.closeAllLanguageDropdowns();
     });
-    
+
     // Prevent dropdown from closing when clicking inside
-    languageDropdowns.forEach(dropdown => {
-      dropdown.addEventListener('click', (e) => {
+    languageDropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", (e) => {
         e.stopPropagation();
       });
     });
   }
 
   closeAllLanguageDropdowns() {
-    const languageDropdowns = document.querySelectorAll('.language-dropdown');
-    const languageToggles = document.querySelectorAll('.language-toggle');
-    
-    languageDropdowns.forEach(dropdown => {
-      dropdown.classList.add('hidden');
+    const languageDropdowns = document.querySelectorAll(".language-dropdown");
+    const languageToggles = document.querySelectorAll(".language-toggle");
+
+    languageDropdowns.forEach((dropdown) => {
+      dropdown.classList.add("hidden");
     });
-    
-    languageToggles.forEach(toggle => {
-      toggle.setAttribute('aria-expanded', 'false');
+
+    languageToggles.forEach((toggle) => {
+      toggle.setAttribute("aria-expanded", "false");
     });
   }
 
   openDropdown(dropdown) {
-    dropdown.classList.remove('opacity-0', 'invisible');
-    dropdown.classList.add('opacity-100', 'visible');
+    dropdown.classList.remove("opacity-0", "invisible");
+    dropdown.classList.add("opacity-100", "visible");
   }
 
   closeDropdown(dropdown) {
-    dropdown.classList.remove('opacity-100', 'visible');
-    dropdown.classList.add('opacity-0', 'invisible');
+    dropdown.classList.remove("opacity-100", "visible");
+    dropdown.classList.add("opacity-0", "invisible");
   }
 
   toggleDropdown(dropdown) {
-    if (dropdown.classList.contains('opacity-100')) {
+    if (dropdown.classList.contains("opacity-100")) {
       this.closeDropdown(dropdown);
     } else {
       this.openDropdown(dropdown);
@@ -210,27 +216,27 @@ class ModernNavigation {
   setupSmoothScrolling() {
     // Add smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    
-    anchorLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href === '#') return;
-        
+
+    anchorLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+        if (href === "#") return;
+
         const target = document.querySelector(href);
         if (target) {
           e.preventDefault();
-          
+
           // Close mobile menu if open
           if (this.isMenuOpen) {
             this.closeMobileMenu();
           }
-          
+
           // Smooth scroll to target
           target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            behavior: "smooth",
+            block: "start",
           });
-          
+
           // Update URL without jumping
           history.pushState(null, null, href);
         }
@@ -241,51 +247,53 @@ class ModernNavigation {
   setupActiveStates() {
     // Set active states based on current page
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach((link) => {
       const linkPath = new URL(link.href).pathname;
-      
-      if (linkPath === currentPath || 
-          (currentPath === '/' && linkPath.endsWith('/index.html')) ||
-          (currentPath.endsWith('.html') && linkPath === currentPath.replace('.html', ''))) {
-        
-        link.classList.add('text-red-600', 'font-semibold');
-        link.classList.remove('text-gray-700');
-        link.setAttribute('aria-current', 'page');
+
+      if (
+        linkPath === currentPath ||
+        (currentPath === "/" && linkPath.endsWith("/index.html")) ||
+        (currentPath.endsWith(".html") &&
+          linkPath === currentPath.replace(".html", ""))
+      ) {
+        link.classList.add("text-red-600", "font-semibold");
+        link.classList.remove("text-gray-700");
+        link.setAttribute("aria-current", "page");
       }
     });
   }
 
   setupKeyboardNavigation() {
     // Improve keyboard navigation
-    const navLinks = document.querySelectorAll('nav a, nav button');
-    
+    const navLinks = document.querySelectorAll("nav a, nav button");
+
     navLinks.forEach((link, index) => {
-      link.addEventListener('keydown', (e) => {
+      link.addEventListener("keydown", (e) => {
         let targetIndex;
-        
+
         switch (e.key) {
-          case 'ArrowRight':
-          case 'ArrowDown':
+          case "ArrowRight":
+          case "ArrowDown":
             e.preventDefault();
             targetIndex = (index + 1) % navLinks.length;
             navLinks[targetIndex].focus();
             break;
-            
-          case 'ArrowLeft':
-          case 'ArrowUp':
+
+          case "ArrowLeft":
+          case "ArrowUp":
             e.preventDefault();
             targetIndex = (index - 1 + navLinks.length) % navLinks.length;
             navLinks[targetIndex].focus();
             break;
-            
-          case 'Home':
+
+          case "Home":
             e.preventDefault();
             navLinks[0].focus();
             break;
-            
-          case 'End':
+
+          case "End":
             e.preventDefault();
             navLinks[navLinks.length - 1].focus();
             break;
@@ -307,9 +315,9 @@ class ModernNavigation {
 const navigation = new ModernNavigation();
 
 // Handle window resize
-window.addEventListener('resize', () => navigation.handleResize());
+window.addEventListener("resize", () => navigation.handleResize());
 
 // Export for potential testing
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = ModernNavigation;
 }
