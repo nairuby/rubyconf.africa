@@ -1,4 +1,4 @@
-- name: "Yukihiro \"Matz\" Matsumoto"
+- name: 'Yukihiro "Matz" Matsumoto'
   is_keynote: true
   gender: male
   bio: "Creator of Ruby."

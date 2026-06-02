@@ -4312,7 +4312,6 @@
                 e && e.stop && e.stop.call(this, !0),
                 b = f.length;
               b--;
-
             )
               f[b].elem === this &&
                 f[b].queue === a &&

@@ -69,9 +69,9 @@ current_year: 2026
 # Internationalization settings
 languages: ["en", "fr", "sw"]
 default_lang: "en"
-exclude_from_localizations: ["javascript", "images", "css", "assets", "vendor", "node_modules"]
+exclude_from_localizations:
+  ["javascript", "images", "css", "assets", "vendor", "node_modules"]
 parallel_localization: true
-
 
 # Build settings
 markdown: kramdown
@@ -89,7 +89,7 @@ modern_assets:
   enabled: true
   css_path: "/assets/modern/css/main.css"
   js_path: "/assets/modern/js/bundle.js"
-  
+
 # Archive asset preservation
 archive_assets:
   preserve_original: true
@@ -101,7 +101,7 @@ tailwind:
   enabled: true
   purge_css: true
   config_file: "tailwind.config.js"
-  
+
 # Asset isolation settings
 archive_isolation:
   enabled: true
@@ -146,7 +146,7 @@ page_gen:
     index_files: true
     title: "name"
     slugify: true
-    # page_data_prefix: "speaker" 
+    # page_data_prefix: "speaker"
   - data: "new_remote.speakers"
     template: "modern/speaker"
     name: "name"
