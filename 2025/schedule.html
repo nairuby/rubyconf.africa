@@ -19,20 +19,6 @@ year: "2025"
       <ul class="tab-buttons clearfix">
         <li class="tab-btn active-btn" data-tab="#tab1">Friday, July 18</li>
         <li class="tab-btn" data-tab="#tab2">Saturday, July 19</li>
-        <!-- <li>
-                  <button
-                    class="btn schedule-pdf-btn-responsive d-flex align-items-center px-3 py-2 font-weight-bold"
-                    style="display: none"
-                  >
-                    <a
-                      href="/documents/schedule/RubyConf2025Schedule.pdf"
-                      class="text-info-emphasis text-decoration-none d-flex align-items-center"
-                      target="_blank"
-                    >
-                      Download Schedule <i class="bi bi-download ms-2" style="display : none" ></i>
-                    </a>
-                  </button>
-                </li> -->
       </ul>
 
       <div class="tabs-content">
@@ -69,16 +55,26 @@ year: "2025"
                     {% endif %}
                   </div>
 
-                  {% assign speakers = event.speaker | split: "," %}
+                  {% assign speakers = event.speaker | split: "," %} {% comment
+                  %} Parse clean url segments using the correct JSON key name {%
+                  endcomment %} {% assign archive_urls = event.url | split: ","
+                  %}
+
                   <div
                     class="d-flex justify-content-center flex-wrap gap-2 mt-2"
                   >
                     {% for speaker in speakers %} {% assign speaker_trimmed =
-                    speaker | strip %}
+                    speaker | strip %} {% comment %} Extract target slug mapping
+                    safely or fallback safely if index misses {% endcomment %}
+                    {% if archive_urls[forloop.index0] %} {% assign speaker_slug
+                    = archive_urls[forloop.index0] | strip %} {% else %} {%
+                    assign speaker_slug = speaker_trimmed | slugify %} {% endif
+                    %}
+
                     <figure
                       class="thumb d-flex flex-column align-items-center m-1"
                     >
-                      <a href="/2025/speakers/{{ speaker_trimmed | slugify }}">
+                      <a href="/2025/speakers/{{ speaker_slug }}">
                         <img
                           src="{{ event.image[forloop.index0] }}"
                           alt="{{ speaker_trimmed }}"
@@ -105,7 +101,6 @@ year: "2025"
                   </div>
                   {% else %} {{ event.topic }} {% endif %}
                 </td>
-
                 <td class="p-4"></td>
               </tr>
               {% endfor %}

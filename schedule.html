@@ -6,16 +6,18 @@ description: "Schedule for Ruby Conf Africa 2026. Join us in Nairobi, Kenya, on 
 image: "/images/logo/arc_logo_coloured.png"
 ---
 
-{% assign schedule_data = site.data.new_remote.schedule %}
-{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
-{% assign translations = site.data.translations[current_locale] %}
+{% assign schedule_data = site.data.new_remote.schedule %} {% assign
+current_locale = site.active_lang | default: site.default_lang | default: 'en'
+%} {% assign translations = site.data.translations[current_locale] %}
 
 <!-- Modern Schedule Section -->
 <section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{{ translations.schedule_page.conference_schedule }}</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        {{ translations.schedule_page.conference_schedule }}
+      </h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
         {{ translations.schedule_page.two_days_text }}
       </p>
@@ -33,19 +35,27 @@ image: "/images/logo/arc_logo_coloured.png"
       <!-- Tab Navigation -->
       <div class="border-b border-gray-200">
         <nav class="flex space-x-8 px-6" aria-label="Schedule Days">
-          <button 
+          <button
             class="schedule-tab-btn py-4 px-1 border-b-2 border-red-600 font-medium text-sm text-red-600 whitespace-nowrap active"
             data-tab="day-1"
           >
-            <span class="block font-bold text-lg">{{ translations.schedule_page.day_1 }}</span>
-            <span class="block text-xs text-gray-500">{{ translations.schedule_page.friday_aug_21 }}</span>
+            <span class="block font-bold text-lg"
+              >{{ translations.schedule_page.day_1 }}</span
+            >
+            <span class="block text-xs text-gray-500"
+              >{{ translations.schedule_page.friday_aug_21 }}</span
+            >
           </button>
-          <button 
+          <button
             class="schedule-tab-btn py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap"
             data-tab="day-2"
           >
-            <span class="block font-bold text-lg">{{ translations.schedule_page.day_2 }}</span>
-            <span class="block text-xs text-gray-400">{{ translations.schedule_page.saturday_aug_22 }}</span>
+            <span class="block font-bold text-lg"
+              >{{ translations.schedule_page.day_2 }}</span
+            >
+            <span class="block text-xs text-gray-400"
+              >{{ translations.schedule_page.saturday_aug_22 }}</span
+            >
           </button>
         </nav>
       </div>
@@ -55,260 +65,317 @@ image: "/images/logo/arc_logo_coloured.png"
         <!-- Day 1 Content -->
         <div id="day-1" class="schedule-tab-content">
           {% assign day_one_events = schedule_data | where: "day", "day_one" %}
-          {% assign sorted_day_one = day_one_events | sort: "start_time" %}
-          
-          {% if sorted_day_one.size > 0 %}
-            <div class="space-y-8">
-              {% for event in sorted_day_one %}
-                <div class="flex flex-col md:flex-row gap-6 group">
-                  <!-- Time Column -->
-                  <div class="md:w-32 flex-shrink-0">
-                    <div class="sticky top-32 text-right md:text-right text-left">
-                      <span class="text-lg font-bold text-gray-900 block">{{ event.start_time }}</span>
-                      {% if event.end_time %}
-                        <span class="text-sm text-gray-500">{{ event.end_time }}</span>
+          {% assign sorted_day_one = day_one_events | sort: "start_time" %} {%
+          if sorted_day_one.size > 0 %}
+          <div class="space-y-8">
+            {% for event in sorted_day_one %}
+            <div class="flex flex-col md:flex-row gap-6 group">
+              <!-- Time Column -->
+              <div class="md:w-32 flex-shrink-0">
+                <div class="sticky top-32 text-right md:text-right text-left">
+                  <span class="text-lg font-bold text-gray-900 block"
+                    >{{ event.start_time }}</span
+                  >
+                  {% if event.end_time %}
+                  <span class="text-sm text-gray-500"
+                    >{{ event.end_time }}</span
+                  >
+                  {% endif %}
+                </div>
+              </div>
+
+              <!-- Event Content -->
+              <div class="flex-grow relative">
+                {% if event.speaker %}
+                <!-- Speaker Session Card -->
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex-grow">
+                      <!-- Session Type Badge -->
+                      {% if event.topic contains "Keynote" %}
+                      <div class="flex items-center gap-3 mb-3">
+                        <span
+                          class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider"
+                        >
+                          <i class="fas fa-star mr-1"></i>{{
+                          translations.schedule_page.keynote }}
+                        </span>
+                      </div>
+                      {% endif %}
+
+                      <!-- Session Title -->
+                      <h3
+                        class="text-xl lg:text-2xl font-bold text-gray-900 mb-3 leading-tight"
+                      >
+                        {{ event.topic | replace: "(Keynote)", "" | replace:
+                        "*", "" | strip }}
+                      </h3>
+
+                      <!-- Speaker Info -->
+                      {% if event.speaker %} {% assign day1_speakers =
+                      event.speaker | split: "," %} {% assign day1_urls =
+                      event.url | split: "," %}
+
+                      <div class="flex flex-wrap gap-4 mt-4">
+                        {% for speaker in day1_speakers %} {% assign
+                        speaker_trimmed = speaker | strip %} {% comment %}
+                        Custom URL array logic with safety index fallback {%
+                        endcomment %} {% if day1_urls[forloop.index0] %} {%
+                        assign day1_url_slug = day1_urls[forloop.index0] | strip
+                        %} {% else %} {% assign day1_url_slug = speaker_trimmed
+                        | slugify %} {% endif %}
+
+                        <div class="flex items-center gap-3">
+                          {% if event.image[forloop.index0] %}
+                          <img
+                            src="{{ event.image[forloop.index0] }}"
+                            alt="{{ speaker_trimmed }}"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-gray-200"
+                          />
+                          {% endif %}
+                          <div>
+                            <a
+                              href="/speakers/{{ day1_url_slug }}"
+                              class="text-base font-bold text-gray-900 hover:text-red-600 transition-colors"
+                            >
+                              {{ speaker_trimmed }}
+                            </a>
+                          </div>
+                        </div>
+                        {% endfor %}
+                      </div>
                       {% endif %}
                     </div>
                   </div>
-                  
-                  <!-- Event Content -->
-                  <div class="flex-grow relative">
-                    {% if event.speaker %}
-                      <!-- Speaker Session Card -->
-                      <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
-                        <div class="flex flex-col lg:flex-row gap-6">
-                          <div class="flex-grow">
-                            <!-- Session Type Badge -->
-                            {% if event.topic contains "Keynote" %}
-                              <div class="flex items-center gap-3 mb-3">
-                                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider">
-                                  <i class="fas fa-star mr-1"></i>{{ translations.schedule_page.keynote }}
-                                </span>
-                              </div>
-                            {% endif %}
-                            
-                            <!-- Session Title -->
-                            <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-3 leading-tight">
-                              {{ event.topic | replace: "(Keynote)", "" | replace: "*", "" | strip }}
-                            </h3>
-                            
-                            <!-- Speaker Info -->
-                            {% if event.speaker %}
-                              {% assign speakers = event.speaker | split: "," %}
-                              <div class="flex flex-wrap gap-4 mt-4">
-                                {% for speaker in speakers %}
-                                  {% assign speaker_trimmed = speaker | strip %}
-                                  <div class="flex items-center gap-3">
-                                    {% if event.image[forloop.index0] %}
-                                      <img 
-                                        src="{{ event.image[forloop.index0] }}" 
-                                        alt="{{ speaker_trimmed }}"
-                                        class="w-12 h-12 rounded-full object-cover border-2 border-gray-200"
-                                      />
-                                    {% endif %}
-                                    <div>
-                                      <a 
-                                        href="/speakers/{{ speaker_trimmed | slugify }}"
-                                        class="text-base font-bold text-gray-900 hover:text-red-600 transition-colors"
-                                      >
-                                        {{ speaker_trimmed }}
-                                      </a>
-                                    </div>
-                                  </div>
-                                {% endfor %}
-                              </div>
-                            {% endif %}
-                          </div>
-                        </div>
-                      </div>
-                    {% else %}
-                      <!-- Non-speaker Event (Break, Registration, etc.) -->
-                      <div class="bg-gray-50 border-l-4 border-gray-300 rounded-lg p-6 shadow-sm">
-                        <div class="flex items-center gap-4">
-                          <div class="p-3 bg-gray-100 rounded-full text-gray-600">
-                            {% if event.topic contains "Registration" or event.topic contains "Door Opens" %}
-                              <i class="fas fa-door-open"></i>
-                            {% elsif event.topic contains "Coffee" or event.topic contains "Break" %}
-                              <i class="fas fa-coffee"></i>
-                            {% elsif event.topic contains "Lunch" %}
-                              <i class="fas fa-utensils"></i>
-                            {% elsif event.topic contains "Closing" %}
-                              <i class="fas fa-flag-checkered"></i>
-                            {% elsif event.topic contains "Welcome" %}
-                              <i class="fas fa-microphone"></i>
-                            {% elsif event.topic contains "Panel" %}
-                              <i class="fas fa-users"></i>
-                            {% elsif event.topic contains "Party" or event.topic contains "Networking" %}
-                              <i class="fas fa-glass-cheers"></i>
-                            {% else %}
-                              <i class="fas fa-calendar"></i>
-                            {% endif %}
-                          </div>
-                          <div>
-                            <h3 class="text-lg font-bold text-gray-900">{{ event.topic }}</h3>
-                          </div>
-                        </div>
-                      </div>
-                    {% endif %}
+                </div>
+                {% else %}
+                <!-- Non-speaker Event (Break, Registration, etc.) -->
+                <div
+                  class="bg-gray-50 border-l-4 border-gray-300 rounded-lg p-6 shadow-sm"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-3 bg-gray-100 rounded-full text-gray-600">
+                      {% if event.topic contains "Registration" or event.topic
+                      contains "Door Opens" %}
+                      <i class="fas fa-door-open"></i>
+                      {% elsif event.topic contains "Coffee" or event.topic
+                      contains "Break" %}
+                      <i class="fas fa-coffee"></i>
+                      {% elsif event.topic contains "Lunch" %}
+                      <i class="fas fa-utensils"></i>
+                      {% elsif event.topic contains "Closing" %}
+                      <i class="fas fa-flag-checkered"></i>
+                      {% elsif event.topic contains "Welcome" %}
+                      <i class="fas fa-microphone"></i>
+                      {% elsif event.topic contains "Panel" %}
+                      <i class="fas fa-users"></i>
+                      {% elsif event.topic contains "Party" or event.topic
+                      contains "Networking" %}
+                      <i class="fas fa-glass-cheers"></i>
+                      {% else %}
+                      <i class="fas fa-calendar"></i>
+                      {% endif %}
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">
+                        {{ event.topic }}
+                      </h3>
+                    </div>
                   </div>
                 </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% else %}
+          <!-- Placeholder for Day 1 -->
+          <div class="text-center py-12">
+            <div class="space-y-6">
+              {% for i in (1..6) %}
+              <div
+                class="flex flex-col md:flex-row md:items-center p-6 bg-gray-50 rounded-lg opacity-50"
+              >
+                <div class="md:w-32 flex-shrink-0 mb-4 md:mb-0">
+                  <div class="h-4 bg-gray-300 rounded w-16 mb-1"></div>
+                  <div class="h-3 bg-gray-200 rounded w-12"></div>
+                </div>
+                <div class="flex-1 md:ml-6">
+                  <div class="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-3"></div>
+                  <div class="flex space-x-3">
+                    <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                    <div class="h-4 bg-gray-200 rounded w-24"></div>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
             </div>
-          {% else %}
-            <!-- Placeholder for Day 1 -->
-            <div class="text-center py-12">
-              <div class="space-y-6">
-                {% for i in (1..6) %}
-                  <div class="flex flex-col md:flex-row md:items-center p-6 bg-gray-50 rounded-lg opacity-50">
-                    <div class="md:w-32 flex-shrink-0 mb-4 md:mb-0">
-                      <div class="h-4 bg-gray-300 rounded w-16 mb-1"></div>
-                      <div class="h-3 bg-gray-200 rounded w-12"></div>
-                    </div>
-                    <div class="flex-1 md:ml-6">
-                      <div class="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
-                      <div class="h-4 bg-gray-200 rounded w-full mb-3"></div>
-                      <div class="flex space-x-3">
-                        <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-                        <div class="h-4 bg-gray-200 rounded w-24"></div>
-                      </div>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-              <p class="text-gray-500 mt-8 text-lg">
-                {{ translations.schedule_page.schedule_coming_soon }}
-              </p>
-            </div>
+            <p class="text-gray-500 mt-8 text-lg">
+              {{ translations.schedule_page.schedule_coming_soon }}
+            </p>
+          </div>
           {% endif %}
         </div>
 
         <!-- Day 2 Content -->
         <div id="day-2" class="schedule-tab-content hidden">
           {% assign day_two_events = schedule_data | where: "day", "day_two" %}
-          {% assign sorted_day_two = day_two_events | sort: "start_time" %}
-          
-          {% if sorted_day_two.size > 0 %}
-            <div class="space-y-8">
-              {% for event in sorted_day_two %}
-                <div class="flex flex-col md:flex-row gap-6 group">
-                  <!-- Time Column -->
-                  <div class="md:w-32 flex-shrink-0">
-                    <div class="sticky top-32 text-right md:text-right text-left">
-                      <span class="text-lg font-bold text-gray-900 block">{{ event.start_time }}</span>
-                      {% if event.end_time %}
-                        <span class="text-sm text-gray-500">{{ event.end_time }}</span>
+          {% assign sorted_day_two = day_two_events | sort: "start_time" %} {%
+          if sorted_day_two.size > 0 %}
+          <div class="space-y-8">
+            {% for event in sorted_day_two %}
+            <div class="flex flex-col md:flex-row gap-6 group">
+              <!-- Time Column -->
+              <div class="md:w-32 flex-shrink-0">
+                <div class="sticky top-32 text-right md:text-right text-left">
+                  <span class="text-lg font-bold text-gray-900 block"
+                    >{{ event.start_time }}</span
+                  >
+                  {% if event.end_time %}
+                  <span class="text-sm text-gray-500"
+                    >{{ event.end_time }}</span
+                  >
+                  {% endif %}
+                </div>
+              </div>
+
+              <!-- Event Content -->
+              <div class="flex-grow relative">
+                {% if event.speaker %}
+                <!-- Speaker Session Card -->
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex-grow">
+                      <!-- Session Type Badge -->
+                      {% if event.topic contains "Keynote" %}
+                      <div class="flex items-center gap-3 mb-3">
+                        <span
+                          class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider"
+                        >
+                          <i class="fas fa-star mr-1"></i>{{
+                          translations.schedule_page.keynote }}
+                        </span>
+                      </div>
+                      {% endif %}
+
+                      <!-- Session Title -->
+                      <h3
+                        class="text-xl lg:text-2xl font-bold text-gray-900 mb-3 leading-tight"
+                      >
+                        {{ event.topic | replace: "(Keynote)", "" | replace:
+                        "*", "" | strip }}
+                      </h3>
+
+                      <!-- Speaker Info -->
+                      {% if event.speaker %} {% assign day2_speakers =
+                      event.speaker | split: "," %} {% assign day2_urls =
+                      event.url | split: "," %}
+
+                      <div class="flex flex-wrap gap-4 mt-4">
+                        {% for speaker in day2_speakers %} {% assign
+                        day2_speaker_trimmed = speaker | strip %} {% comment %}
+                        Custom URL array logic with safety index fallback {%
+                        endcomment %} {% if day2_urls[forloop.index0] %} {%
+                        assign day2_speaker_url = day2_urls[forloop.index0] |
+                        strip %} {% else %} {% assign day2_speaker_url =
+                        day2_speaker_trimmed | slugify %} {% endif %}
+
+                        <div class="flex items-center gap-3">
+                          {% if event.image[forloop.index0] %}
+                          <img
+                            src="{{ event.image[forloop.index0] }}"
+                            alt="{{ day2_speaker_trimmed }}"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-gray-200"
+                          />
+                          {% endif %}
+
+                          <div>
+                            <a
+                              href="/speakers/{{ day2_speaker_url }}"
+                              class="text-base font-bold text-gray-900 hover:text-red-600 transition-colors"
+                            >
+                              {{ day2_speaker_trimmed }}
+                            </a>
+                          </div>
+                        </div>
+                        {% endfor %}
+                      </div>
                       {% endif %}
                     </div>
                   </div>
-                  
-                  <!-- Event Content -->
-                  <div class="flex-grow relative">
-                    {% if event.speaker %}
-                      <!-- Speaker Session Card -->
-                      <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
-                        <div class="flex flex-col lg:flex-row gap-6">
-                          <div class="flex-grow">
-                            <!-- Session Type Badge -->
-                            {% if event.topic contains "Keynote" %}
-                              <div class="flex items-center gap-3 mb-3">
-                                <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider">
-                                  <i class="fas fa-star mr-1"></i>{{ translations.schedule_page.keynote }}
-                                </span>
-                              </div>
-                            {% endif %}
-                            
-                            <!-- Session Title -->
-                            <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-3 leading-tight">
-                              {{ event.topic | replace: "(Keynote)", "" | replace: "*", "" | strip }}
-                            </h3>
-                            
-                            <!-- Speaker Info -->
-                            {% if event.speaker %}
-                              {% assign speakers = event.speaker | split: "," %}
-                              <div class="flex flex-wrap gap-4 mt-4">
-                                {% for speaker in speakers %}
-                                  {% assign speaker_trimmed = speaker | strip %}
-                                  <div class="flex items-center gap-3">
-                                    {% if event.image[forloop.index0] %}
-                                      <img 
-                                        src="{{ event.image[forloop.index0] }}" 
-                                        alt="{{ speaker_trimmed }}"
-                                        class="w-12 h-12 rounded-full object-cover border-2 border-gray-200"
-                                      />
-                                    {% endif %}
-                                    <div>
-                                      <a 
-                                        href="/speakers/{{ speaker_trimmed | slugify }}"
-                                        class="text-base font-bold text-gray-900 hover:text-red-600 transition-colors"
-                                      >
-                                        {{ speaker_trimmed }}
-                                      </a>
-                                    </div>
-                                  </div>
-                                {% endfor %}
-                              </div>
-                            {% endif %}
-                          </div>
-                        </div>
-                      </div>
-                    {% else %}
-                      <!-- Non-speaker Event (Break, Registration, etc.) -->
-                      <div class="bg-gray-50 border-l-4 border-gray-300 rounded-lg p-6 shadow-sm">
-                        <div class="flex items-center gap-4">
-                          <div class="p-3 bg-gray-100 rounded-full text-gray-600">
-                            {% if event.topic contains "Registration" or event.topic contains "Door Opens" %}
-                              <i class="fas fa-door-open"></i>
-                            {% elsif event.topic contains "Coffee" or event.topic contains "Break" %}
-                              <i class="fas fa-coffee"></i>
-                            {% elsif event.topic contains "Lunch" %}
-                              <i class="fas fa-utensils"></i>
-                            {% elsif event.topic contains "Closing" %}
-                              <i class="fas fa-flag-checkered"></i>
-                            {% elsif event.topic contains "Welcome" %}
-                              <i class="fas fa-microphone"></i>
-                            {% elsif event.topic contains "Panel" %}
-                              <i class="fas fa-users"></i>
-                            {% elsif event.topic contains "Party" or event.topic contains "Networking" %}
-                              <i class="fas fa-glass-cheers"></i>
-                            {% else %}
-                              <i class="fas fa-calendar"></i>
-                            {% endif %}
-                          </div>
-                          <div>
-                            <h3 class="text-lg font-bold text-gray-900">{{ event.topic }}</h3>
-                          </div>
-                        </div>
-                      </div>
-                    {% endif %}
+                </div>
+                {% else %}
+                <!-- Non-speaker Event (Break, Registration, etc.) -->
+                <div
+                  class="bg-gray-50 border-l-4 border-gray-300 rounded-lg p-6 shadow-sm"
+                >
+                  <div class="flex items-center gap-4">
+                    <div class="p-3 bg-gray-100 rounded-full text-gray-600">
+                      {% if event.topic contains "Registration" or event.topic
+                      contains "Door Opens" %}
+                      <i class="fas fa-door-open"></i>
+                      {% elsif event.topic contains "Coffee" or event.topic
+                      contains "Break" %}
+                      <i class="fas fa-coffee"></i>
+                      {% elsif event.topic contains "Lunch" %}
+                      <i class="fas fa-utensils"></i>
+                      {% elsif event.topic contains "Closing" %}
+                      <i class="fas fa-flag-checkered"></i>
+                      {% elsif event.topic contains "Welcome" %}
+                      <i class="fas fa-microphone"></i>
+                      {% elsif event.topic contains "Panel" %}
+                      <i class="fas fa-users"></i>
+                      {% elsif event.topic contains "Party" or event.topic
+                      contains "Networking" %}
+                      <i class="fas fa-glass-cheers"></i>
+                      {% else %}
+                      <i class="fas fa-calendar"></i>
+                      {% endif %}
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">
+                        {{ event.topic }}
+                      </h3>
+                    </div>
                   </div>
                 </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% else %}
+          <!-- Placeholder for Day 2 -->
+          <div class="text-center py-12">
+            <div class="space-y-6">
+              {% for i in (1..6) %}
+              <div
+                class="flex flex-col md:flex-row md:items-center p-6 bg-gray-50 rounded-lg opacity-50"
+              >
+                <div class="md:w-32 flex-shrink-0 mb-4 md:mb-0">
+                  <div class="h-4 bg-gray-300 rounded w-16 mb-1"></div>
+                  <div class="h-3 bg-gray-200 rounded w-12"></div>
+                </div>
+                <div class="flex-1 md:ml-6">
+                  <div class="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-3"></div>
+                  <div class="flex space-x-3">
+                    <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                    <div class="h-4 bg-gray-200 rounded w-24"></div>
+                  </div>
+                </div>
+              </div>
               {% endfor %}
             </div>
-          {% else %}
-            <!-- Placeholder for Day 2 -->
-            <div class="text-center py-12">
-              <div class="space-y-6">
-                {% for i in (1..6) %}
-                  <div class="flex flex-col md:flex-row md:items-center p-6 bg-gray-50 rounded-lg opacity-50">
-                    <div class="md:w-32 flex-shrink-0 mb-4 md:mb-0">
-                      <div class="h-4 bg-gray-300 rounded w-16 mb-1"></div>
-                      <div class="h-3 bg-gray-200 rounded w-12"></div>
-                    </div>
-                    <div class="flex-1 md:ml-6">
-                      <div class="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
-                      <div class="h-4 bg-gray-200 rounded w-full mb-3"></div>
-                      <div class="flex space-x-3">
-                        <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-                        <div class="h-4 bg-gray-200 rounded w-24"></div>
-                      </div>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-              <p class="text-gray-500 mt-8 text-lg">
-                {{ translations.schedule_page.schedule_coming_soon }}
-              </p>
-            </div>
+            <p class="text-gray-500 mt-8 text-lg">
+              {{ translations.schedule_page.schedule_coming_soon }}
+            </p>
+          </div>
           {% endif %}
         </div>
       </div>
@@ -316,43 +383,60 @@ image: "/images/logo/arc_logo_coloured.png"
   </div>
 </section>
 
-<!-- JavaScript for Tab Functionality -->
+<!-- JavaScript for Tab Functionality with Refresh Persistence -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const tabButtons = document.querySelectorAll('.schedule-tab-btn');
-  const tabContents = document.querySelectorAll('.schedule-tab-content');
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".schedule-tab-btn");
+    const tabContents = document.querySelectorAll(".schedule-tab-content");
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const targetTab = this.getAttribute('data-tab');
+    // Function to switch tabs
+    function switchTab(targetTabId) {
+      const targetButton = document.querySelector(
+        `[data-tab="${targetTabId}"]`,
+      );
+      if (!targetButton) return;
 
       // Remove active classes from all buttons and contents
-      tabButtons.forEach(btn => {
-        btn.classList.remove('border-red-600', 'text-red-600', 'active');
-        btn.classList.add('border-transparent', 'text-gray-500');
-        // Update the day text color for inactive tabs
-        const daySpan = btn.querySelector('span:first-child');
-        const dateSpan = btn.querySelector('span:last-child');
-        if (daySpan) daySpan.classList.remove('text-red-600');
-        if (dateSpan) dateSpan.classList.add('text-gray-400');
-      });
-      
-      tabContents.forEach(content => {
-        content.classList.add('hidden');
+      tabButtons.forEach((btn) => {
+        btn.classList.remove("border-red-600", "text-red-600", "active");
+        btn.classList.add("border-transparent", "text-gray-500");
+
+        const daySpan = btn.querySelector("span:first-child");
+        const dateSpan = btn.querySelector("span:last-child");
+        if (daySpan) daySpan.classList.remove("text-red-600");
+        if (dateSpan) dateSpan.classList.add("text-gray-400");
       });
 
-      // Add active classes to clicked button and corresponding content
-      this.classList.remove('border-transparent', 'text-gray-500');
-      this.classList.add('border-red-600', 'text-red-600', 'active');
-      
-      // Update the day text color for active tab
-      const activeDaySpan = this.querySelector('span:first-child');
-      const activeDateSpan = this.querySelector('span:last-child');
-      if (activeDaySpan) activeDaySpan.classList.add('text-red-600');
-      if (activeDateSpan) activeDateSpan.classList.remove('text-gray-400');
-      
-      document.getElementById(targetTab).classList.remove('hidden');
+      tabContents.forEach((content) => {
+        content.classList.add("hidden");
+      });
+
+      // Add active classes to the target button
+      targetButton.classList.remove("border-transparent", "text-gray-500");
+      targetButton.classList.add("border-red-600", "text-red-600", "active");
+
+      const activeDaySpan = targetButton.querySelector("span:first-child");
+      const activeDateSpan = targetButton.querySelector("span:last-child");
+      if (activeDaySpan) activeDaySpan.classList.add("text-red-600");
+      if (activeDateSpan) activeDateSpan.classList.remove("text-gray-400");
+
+      // Show target content
+      document.getElementById(targetTabId).classList.remove("hidden");
+
+      // Save the selection to localStorage
+      localStorage.setItem("activeScheduleTab", targetTabId);
+    }
+
+    // Add click event listeners to buttons
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const targetTab = this.getAttribute("data-tab");
+        switchTab(targetTab);
+      });
     });
+
+    // Check for a saved tab on page load, fallback to 'day-1' if none exists
+    const savedTab = localStorage.getItem("activeScheduleTab") || "day-1";
+    switchTab(savedTab);
   });
-});
 </script>
