@@ -12,11 +12,11 @@ layout: modern/application
         <div class="lg:col-span-1">
           <div class="relative">
             <img
-              src="{{ page.image[0] | default: page.image | default: '/images/default-speaker.jpg' }}"
-              alt="{{ page.title }}"
+              src="{{ page.speaker.image[0] | default: page.speaker.image | default: page.image[0] | default: page.image | default: '/images/default-speaker.jpg' }}"
+              alt="{{ page.speaker.name | default: page.title }}"
               class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
             />
-            {% if page.is_keynote == true %}
+            {% if page.speaker.is_keynote == "Yes" or page.speaker.is_keynote == true or page.is_keynote == true %}
             <div
               class="absolute -top-4 -right-4 bg-yellow-400 text-red-800 px-4 py-2 rounded-full text-sm font-bold shadow-lg"
             >
@@ -29,19 +29,19 @@ layout: modern/application
 
         <!-- Speaker Info -->
         <div class="lg:col-span-2">
-          <h1 class="text-4xl lg:text-5xl font-bold mb-4">{{ page.title }}</h1>
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">{{ page.speaker.name | default: page.title }}</h1>
 
-          {% if page.bio %}
+          {% if page.speaker.bio %}
           <p class="text-xl text-red-100 mb-6 leading-relaxed">
-            {{ page.bio }}
+            {{ page.speaker.bio }}
           </p>
           {% endif %}
 
           <!-- Social Links -->
           <div class="flex flex-wrap gap-3 mb-8">
-            {% if page.github and page.github != "" %}
+            {% if page.speaker.github and page.speaker.github != "" %}
             <a
-              href="{{ page.github }}"
+              href="{{ page.speaker.github }}"
               class="bg-[#1f2937] hover:bg-[#111827] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
@@ -49,9 +49,9 @@ layout: modern/application
               <i class="fab fa-github mr-2 text-lg"></i>
               <span class="text-sm font-medium">GitHub</span>
             </a>
-            {% endif %} {% if page.linkedin and page.linkedin != "" %}
+            {% endif %} {% if page.speaker.linkedin and page.speaker.linkedin != "" %}
             <a
-              href="{{ page.linkedin }}"
+              href="{{ page.speaker.linkedin }}"
               class="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,9 +59,9 @@ layout: modern/application
               <i class="fab fa-linkedin mr-2 text-lg"></i>
               <span class="text-sm font-medium">LinkedIn</span>
             </a>
-            {% endif %} {% if page.website and page.website != "" %}
+            {% endif %} {% if page.speaker.website and page.speaker.website != "" %}
             <a
-              href="{{ page.website }}"
+              href="{{ page.speaker.website }}"
               class="bg-[#059669] hover:bg-[#047857] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
@@ -69,9 +69,9 @@ layout: modern/application
               <i class="fas fa-globe mr-2 text-lg"></i>
               <span class="text-sm font-medium">Website</span>
             </a>
-            {% endif %} {% if page.twitter and page.twitter != "" %}
+            {% endif %} {% if page.speaker.twitter and page.speaker.twitter != "" %}
             <a
-              href="{{ page.twitter }}"
+              href="{{ page.speaker.twitter }}"
               class="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
@@ -79,9 +79,9 @@ layout: modern/application
               <i class="fab fa-x-twitter mr-2 text-lg"></i>
               <span class="text-sm font-medium">Twitter</span>
             </a>
-            {% endif %} {% if page.youtube and page.youtube != "" %}
+            {% endif %} {% if page.speaker.youtube and page.speaker.youtube != "" %}
             <a
-              href="{{ page.youtube }}"
+              href="{{ page.speaker.youtube }}"
               class="bg-[#ff0000] hover:bg-[#cc0000] text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
@@ -111,7 +111,7 @@ layout: modern/application
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
         <div class="p-8">
           <!-- Talk Information -->
-          {% if page.talk_title %}
+          {% if page.speaker.talk_title %}
           <div class="mb-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
               <i class="fas fa-microphone text-red-600 mr-3"></i>
@@ -120,26 +120,26 @@ layout: modern/application
 
             <div class="bg-gray-50 rounded-lg p-6">
               <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                {{ page.talk_title }}
+                {{ page.speaker.talk_title }}
               </h3>
 
-              {% if page.talk_description and page.talk_description != "TBA" %}
+              {% if page.speaker.talk_description and page.speaker.talk_description != "TBA" %}
               <div class="prose prose-lg text-gray-700 mb-4">
-                {{ page.talk_description | markdownify }}
+                {{ page.speaker.talk_description | markdownify }}
               </div>
               {% endif %}
 
               <!-- Session Information -->
-              {% if page.session_day and page.session_time %}
+              {% if page.speaker.session_day and page.speaker.session_time %}
               <div class="border-t border-gray-200 pt-4">
                 <h4 class="text-lg font-semibold text-gray-900 mb-3">
                   Session Schedule
                 </h4>
                 <div class="flex items-center text-gray-600">
                   <i class="fas fa-calendar-alt mr-3 text-red-600"></i>
-                  <span class="font-medium">Day {{ page.session_day }}</span>
+                  <span class="font-medium">Day {{ page.speaker.session_day }}</span>
                   <span class="mx-2">•</span>
-                  <span>{{ page.session_time }}</span>
+                  <span>{{ page.speaker.session_time }}</span>
                 </div>
               </div>
               {% endif %}
@@ -148,15 +148,15 @@ layout: modern/application
           {% endif %}
 
           <!-- Speaker Bio -->
-          {% if page.details %}
+          {% if page.speaker.details %}
           <div class="mb-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
               <i class="fas fa-user text-red-600 mr-3"></i>
-              About {{ page.title | split: ' ' | first }}
+              About {{ page.speaker.name | default: page.title | split: ' ' | first }}
             </h2>
 
             <div class="prose prose-lg text-gray-700 max-w-none">
-              {{ page.details | markdownify }}
+              {{ page.speaker.details | markdownify }}
             </div>
           </div>
           {% endif %}
@@ -166,7 +166,7 @@ layout: modern/application
   </section>
 
   <!-- Recording Section -->
-  {% if page.recording %}
+  {% if page.speaker.recording or page.recording %}
   <section class="py-16 bg-white" style="display: none">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -175,10 +175,10 @@ layout: modern/application
             class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center"
           >
             <i class="fas fa-play-circle text-red-600 mr-3"></i>
-            Watch {{ page.title }}'s Talk
+            Watch {{ page.speaker.name | default: page.title }}'s Talk
           </h3>
           <a
-            href="{{ page.recording }}"
+            href="{{ page.speaker.recording | default: page.recording }}"
             target="_blank"
             class="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 mb-6"
           >
@@ -190,7 +190,7 @@ layout: modern/application
         <!-- Embedded Video -->
         <div class="aspect-w-16 aspect-h-9">
           <iframe
-            src="{{ page.recording | replace: 'watch?v=', 'embed/' }}"
+            src="{{ page.speaker.recording | default: page.recording | replace: 'watch?v=', 'embed/' }}"
             title="YouTube video"
             allowfullscreen
             class="w-full h-96"
@@ -213,8 +213,9 @@ layout: modern/application
         {% assign current_year = site.current_year | default: 2026 %} {% if
         current_year == 2025 %} {% assign all_speakers =
         site.data.new_remote.speakers_2025 %} {% else %} {% assign all_speakers
-        = site.data.new_remote.speakers %} {% endif %} {% assign other_speakers
-        = all_speakers | where_exp: "speaker", "speaker.name != page.title" |
+        = site.data.new_remote.speakers %} {% endif %} {% assign speaker_name = page.speaker.name | default: page.title %}
+        {% assign other_speakers
+        = all_speakers | where_exp: "speaker", "speaker.name != speaker_name" |
         sample: 3 %} {% for speaker in other_speakers %} {% assign designation =
         "Speaker" %} {% if speaker.is_keynote == "Yes" or speaker.is_keynote ==
         true %} {% assign designation = "Keynote Speaker" %} {% endif %} {%

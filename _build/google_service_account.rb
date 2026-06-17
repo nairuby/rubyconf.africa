@@ -54,18 +54,49 @@ end
 service = Google::Apis::SheetsV4::SheetsService.new
 service.authorization = authorize_google_sheets(CREDENTIALS_PATH, SERVICE_ACCOUNT_JSON)
 
+# SHEETS.each do |sheet|
+#   response = service.get_spreadsheet_values(SPREADSHEET_ID, sheet)
+#
+#   values = response.values
+#   headers = values.first
+#   data = values[1..-1].map { |row| headers.zip(row).to_h }
+#
+#   # Process images for every sheet (flat structure)
+#   data.each do |item|
+#     item["image"] = convert_gdrive_url(item["image"]) if item["image"]
+#   end
+#
+#   # Save as flat JSON array
+#   File.write("#{DATA_FOLDER}/#{sheet}.json", JSON.pretty_generate(data))
+# end
+
 SHEETS.each do |sheet|
-  response = service.get_spreadsheet_values(SPREADSHEET_ID, sheet)
+  # Check for errors when fetching data from sheets
+  begin
+    puts "Fetching #{sheet}..."
 
-  values = response.values
-  headers = values.first
-  data = values[1..-1].map { |row| headers.zip(row).to_h }
+    response = service.get_spreadsheet_values(
+      SPREADSHEET_ID,
+      sheet
+    )
 
-  # Process images for every sheet (flat structure)
-  data.each do |item|
-    item["image"] = convert_gdrive_url(item["image"]) if item["image"]
+    values = response.values
+    headers = values.first
+    data = values[1..-1].map { |row| headers.zip(row).to_h }
+
+    # Process images for every sheet (flat structure)
+    data.each do |item|
+      item["image"] = convert_gdrive_url(item["image"]) if item["image"]
+    end
+
+    # Save as flat JSON array
+    File.write("#{DATA_FOLDER}/#{sheet}.json", JSON.pretty_generate(data))
+
+    # Print out error
+  rescue Google::Apis::ClientError => e
+    puts "Google API Error:"
+    puts e.message
+    puts e.body if e.respond_to?(:body)
+    raise
   end
-
-  # Save as flat JSON array
-  File.write("#{DATA_FOLDER}/#{sheet}.json", JSON.pretty_generate(data))
 end
