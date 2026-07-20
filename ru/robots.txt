@@ -1,0 +1,1 @@
+Sitemap: https://rubyconf.africa/sitemap.xml
