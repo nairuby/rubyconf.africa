@@ -274,8 +274,11 @@ speakers_page:
   coming_soon_text: "Nous travaillons dur pour vous apporter une gamme incroyable d'experts Ruby. Restez à l'écoute pour les annonces de conférenciers !"
   get_notified: "Être notifié"
   back_home: "Retour à l'accueil"
+  want_to_attend: "Voulez-vous assister à la Ruby Conf Africa ?"
+  want_to_attend_text: "Nous sommes ravis d'accueillir des développeurs Ruby passionnés du monde entier pour apprendre, réseauter et grandir ensemble."
   want_to_speak: "Vous voulez parler à Ruby Conf Africa ?"
   want_to_speak_text: "Nous recherchons toujours des développeurs Ruby passionnés pour partager leurs connaissances et expériences."
+  buy_ticket: "Acheter des tickets →"
   submit_proposal: "Soumettre une proposition"
   code_of_conduct: "Code de conduite"
 

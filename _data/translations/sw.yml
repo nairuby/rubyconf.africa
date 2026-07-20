@@ -274,8 +274,11 @@ speakers_page:
   coming_soon_text: "Tunafanya kazi kwa bidii kukuletea safu ya ajabu ya wataalam wa Ruby. Subiri kwa matangazo ya wazungumzaji!"
   get_notified: "Pata arifa"
   back_home: "Rudi nyumbani"
+  want_to_attend: "Je, ungependa kuhudhuria Ruby Conf Africa?"
+  want_to_attend_text: "Unaweza kuhudhuria Ruby Conf Africa 2026 kwa ajili ya kushiriki maarifa na uzoefu wa Ruby. Tumia pamoja na wazungumzaji, watengenezaji na watu wengi kutoka ulimwenguni kote."
   want_to_speak: "Unataka kuzungumza katika Ruby Conf Africa?"
   want_to_speak_text: "Daima tunatafuta wasanidi programu wa Ruby wenye shauku kushiriki maarifa na uzoefu wao."
+  buy_ticket: "Nunua Tiketi →"
   submit_proposal: "Wasilisha pendekezo"
   code_of_conduct: "Kanuni za maadili"
 
