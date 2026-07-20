@@ -67,7 +67,7 @@ github_username: nairuby
 current_year: 2026
 
 # Internationalization settings
-languages: ["en", "fr", "sw"]
+languages: ["en", "fr", "sw", "ja", "ru"]
 default_lang: "en"
 exclude_from_localizations:
   ["javascript", "images", "css", "assets", "vendor", "node_modules"]

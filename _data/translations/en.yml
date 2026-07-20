@@ -244,8 +244,11 @@ speakers_page:
   coming_soon_text: "We're working hard to bring you an amazing lineup of Ruby experts. Stay tuned for speaker announcements!"
   get_notified: "Get Notified"
   back_home: "Back to Home"
+  want_to_attend: "Want to Attend?"
+  want_to_attend_text: "Join us for a day of inspiring talks, workshops, and networking opportunities."
   want_to_speak: "Want to Speak at Ruby Conf Africa?"
   want_to_speak_text: "We're always looking for passionate Ruby developers to share their knowledge and experiences."
+  buy_ticket: "Buy Tickets →"
   submit_proposal: "Submit a Proposal"
   code_of_conduct: "Code of Conduct"
 
