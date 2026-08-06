@@ -64,6 +64,16 @@
   url: https://www.wnb-rb.dev/
   categories: [partner, ticket]
 
+- name: Tech Sisters Kenya
+  image: ../images/2024/sponsors/tsk_logo.png
+  url: https://linktr.ee/techsisterskenya
+  categories: [partner]
+
+- name: Quikk API
+  image: ../images/2024/sponsors/quikk_api.jpg
+  url: https://quikk.dev/
+  categories: [partner]
+
 - name: Quikk API
   image: ../images/2024/sponsors/quikk_api.jpg
   url: https://quikk.dev/
