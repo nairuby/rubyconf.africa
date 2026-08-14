@@ -94,7 +94,7 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
                   <div class="flex flex-col lg:flex-row gap-6">
                     <div class="flex-grow">
                       <!-- Session Type Badge -->
-                      {% if event.topic contains "Keynote" %}
+                      {% if event.keynote == true %}
                       <div class="flex items-center gap-3 mb-3">
                         <span
                           class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider"
@@ -252,7 +252,7 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
                   <div class="flex flex-col lg:flex-row gap-6">
                     <div class="flex-grow">
                       <!-- Session Type Badge -->
-                      {% if event.topic contains "Keynote" %}
+                      {% if event.keynote == true %}
                       <div class="flex items-center gap-3 mb-3">
                         <span
                           class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider"
