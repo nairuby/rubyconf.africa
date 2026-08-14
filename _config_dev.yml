@@ -1,0 +1,13 @@
+# Dev overrides — speeds up local builds significantly
+# Usage: bundle exec jekyll serve --config _config.yml,_config_dev.yml
+
+# Only build English — skips the 4 extra polyglot passes
+languages: ["en"]
+
+# Disable minifier (biggest single time-saver in dev)
+plugins:
+  - jekyll-datapage-generator
+  - jekyll-polyglot
+
+# Disable Jekyll cache invalidation noise and enable incremental builds
+incremental: true

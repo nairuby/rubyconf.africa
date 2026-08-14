@@ -69,10 +69,10 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
           if sorted_day_one.size > 0 %}
           <div class="space-y-8">
             {% for event in sorted_day_one %}
-            <div class="flex flex-col md:flex-row gap-6 group">
+            <div class="flex flex-row gap-4 group">
               <!-- Time Column -->
-              <div class="md:w-32 flex-shrink-0">
-                <div class="sticky top-32 text-right md:text-right text-left">
+              <div class="w-20 md:w-32 flex-shrink-0">
+                <div class="sticky top-32 text-right">
                   <span class="text-lg font-bold text-gray-900 block"
                     >{{ event.start_time }}</span
                   >
@@ -94,7 +94,7 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
                   <div class="flex flex-col lg:flex-row gap-6">
                     <div class="flex-grow">
                       <!-- Session Type Badge -->
-                      {% if event.keynote == true %}
+                      {% if event.keynote == "yes" %}
                       <div class="flex items-center gap-3 mb-3">
                         <span
                           class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider"
@@ -227,10 +227,10 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
           if sorted_day_two.size > 0 %}
           <div class="space-y-8">
             {% for event in sorted_day_two %}
-            <div class="flex flex-col md:flex-row gap-6 group">
+            <div class="flex flex-row gap-4 group">
               <!-- Time Column -->
-              <div class="md:w-32 flex-shrink-0">
-                <div class="sticky top-32 text-right md:text-right text-left">
+              <div class="w-20 md:w-32 flex-shrink-0">
+                <div class="sticky top-32 text-right">
                   <span class="text-lg font-bold text-gray-900 block"
                     >{{ event.start_time }}</span
                   >
@@ -252,7 +252,7 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
                   <div class="flex flex-col lg:flex-row gap-6">
                     <div class="flex-grow">
                       <!-- Session Type Badge -->
-                      {% if event.keynote == true %}
+                      {% if event.keynote == "yes" %}
                       <div class="flex items-center gap-3 mb-3">
                         <span
                           class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider"
