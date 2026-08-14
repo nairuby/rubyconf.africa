@@ -36,7 +36,7 @@ sync:
 ## serve: Serve the Jekyll site locally for development
 .PHONY: serve
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --config _config.yml,_config_dev.yml
 
 ## build-js: Build modern JavaScript bundle
 .PHONY: build-js
