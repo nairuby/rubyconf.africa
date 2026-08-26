@@ -47,8 +47,8 @@
       <!-- Call to Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
         {% if include.primary_cta_text and include.primary_cta_link %}
-          <a href="{{ include.primary_cta_link }}" 
-             class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-red-700 bg-white hover:bg-red-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <a href="{{ include.primary_cta_link }}"
+             class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-red-700 bg-white hover:bg-red-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="display: none">
             {{ include.primary_cta_text }}
             <i class="fas fa-arrow-right ml-2"></i>
           </a>
