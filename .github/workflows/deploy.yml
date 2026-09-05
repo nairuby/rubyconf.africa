@@ -1,54 +1,55 @@
 name: Deploy site
 
 on:
-  schedule:
-    - cron: "0 6 * * *" # runs daily at 06:00 UTC
-  workflow_run:
-    workflows: ["Sync Google Sheet to Jekyll Data"]
-    types:
-      - completed
-  push:
-    branches:
-      - main
-    paths:
-      - "assets/**"
-      - "documents/**"
-      - "fonts/**"
-      - "images/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "tailwind.config.js"
-      - "postcss.config.js"
-      - "purgecss.*.config.js"
-      - "!README.md"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - "assets/**"
-      - "documents/**"
-      - "fonts/**"
-      - "images/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "tailwind.config.js"
-      - "postcss.config.js"
-      - "purgecss.*.config.js"
-      - "!README.md"
+  # Diable automated triggers
+  # schedule:
+  #   - cron: "0 6 * * *" # runs daily at 06:00 UTC
+  # workflow_run:
+  #   workflows: ["Sync Google Sheet to Jekyll Data"]
+  #   types:
+  #     - completed
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "assets/**"
+  #     - "documents/**"
+  #     - "fonts/**"
+  #     - "images/**"
+  #     - "**.html"
+  #     - "**.js"
+  #     - "**.liquid"
+  #     - "**/*.md"
+  #     - "**.yml"
+  #     - "Gemfile"
+  #     - "Gemfile.lock"
+  #     - "package.json"
+  #     - "pnpm-lock.yaml"
+  #     - "tailwind.config.js"
+  #     - "postcss.config.js"
+  #     - "purgecss.*.config.js"
+  #     - "!README.md"
+  # pull_request:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "assets/**"
+  #     - "documents/**"
+  #     - "fonts/**"
+  #     - "images/**"
+  #     - "**.html"
+  #     - "**.js"
+  #     - "**.liquid"
+  #     - "**/*.md"
+  #     - "**.yml"
+  #     - "Gemfile"
+  #     - "Gemfile.lock"
+  #     - "package.json"
+  #     - "pnpm-lock.yaml"
+  #     - "tailwind.config.js"
+  #     - "postcss.config.js"
+  #     - "purgecss.*.config.js"
+  #     - "!README.md"
   workflow_dispatch:
 
 permissions:
