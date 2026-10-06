@@ -106,7 +106,7 @@ tailwind:
 archive_isolation:
   enabled: true
   preserve_original_assets: true
-  archive_years: [2015, 2016, 2017, 2018, 2019, 2021, 2024, "2024-mini", 2025]
+  archive_years: [2015, 2016, 2017, 2018, 2019, 2021, 2024, "2024-mini", 2025] # TODO: Add 2025
 
 # Asset settings
 #assets:
@@ -138,6 +138,14 @@ minifier:
     conservative_collapse: true
 
 page_gen:
+  # - data: "new_remote.speakers_2026"
+  #   template: "modern_archive/speaker"
+  #   name: "url"
+  #   dir: "2026/speakers"
+  #   extension: "html"
+  #   index_files: true
+  #   title: "name"
+  #   slugify: true
   - data: "new_remote.speakers_2025"
     template: "new_archive_speaker"
     name: "url"
@@ -216,6 +224,12 @@ collections:
   speakers_2025:
     output: true
     permalink: /2025/speakers/:name/
+  # year-2026:
+  #   output: true
+  #   permalink: /2026/:path
+  # speakers_2026:
+  #   output: true
+  #   permalink: /2026/speakers/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
