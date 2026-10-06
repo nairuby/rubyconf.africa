@@ -240,6 +240,7 @@ collections:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - 2026/
   - 2017speakers/
   - fr/
   - sw/
