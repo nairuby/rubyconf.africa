@@ -1,0 +1,314 @@
+---
+layout: modern_archive/application
+permalink: /2026/practicalities
+title: "Practicalities for Ruby Conf Africa 2026"
+description: "Find all the practical information you need for attending Ruby Conf Africa 2026, including venue details, travel information, and accommodations."
+image: "/images/logo/arc_logo_coloured.png"
+---
+
+{% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
+
+<!-- Hero Section -->
+{% include modern/components/hero-section.liquid 
+   title=translations.practicalities.hero_title
+   subtitle=translations.practicalities.hero_subtitle
+   description=translations.practicalities.description
+   cta_text=translations.practicalities.download_guide
+   cta_link="/documents/hotel-recommendations/hotels.pdf"
+   background_image="/images/nairobi2.jpg"
+%}
+
+<!-- Main Content -->
+<div class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-red-50 border-l-4 border-red-600 p-6 mb-12 rounded-r-lg">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <i class="fas fa-info-circle text-red-600 text-xl"></i>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-red-700">
+              {{ translations.practicalities.intro_update }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.travel_auth_title }}</h2>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">
+          <i class="fas fa-passport mr-2 text-red-600"></i>
+          {{ translations.practicalities.travel_auth_subtitle }}
+        </h3>
+        
+        <p class="text-gray-700 mb-4">
+          {{ translations.practicalities.visa_text }}
+        </p>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4">
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-dollar-sign text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_fee_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 pl-6">
+              {{ translations.practicalities.faq_fee_a }}
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-users text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_who_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 space-y-3 pl-6">
+              <p>{{ translations.practicalities.faq_who_a_1 }}</p>
+              
+              <p>{{ translations.practicalities.faq_who_a_2 }}</p>
+              
+              <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                <p>{{ translations.practicalities.faq_who_note }}</p>
+              </div>
+              
+              <p class="italic">{{ translations.practicalities.faq_who_rec }}</p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-laptop text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_how_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 pl-6">
+              {{ translations.practicalities.faq_how_a }}
+              <a href="https://www.etakenya.go.ke/en" class="text-red-600 hover:text-red-700 underline font-medium">eTA Kenya</a>.
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-heartbeat text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_health_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 pl-6">
+              <p>{{ translations.practicalities.faq_health_a_1 }}</p>
+              <p>{{ translations.practicalities.faq_health_a_2 }} <a href="https://health.go.ke/incoming-travellers" class="text-red-600 hover:text-red-700 underline font-medium">{{ translations.practicalities.incoming_travellers }}</a> {{ translations.practicalities.requirements_details }}</p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+            <summary class="font-semibold text-gray-900 cursor-pointer hover:text-red-600 flex items-center">
+              <i class="fas fa-file-alt text-red-600 mr-2"></i>
+              {{ translations.practicalities.faq_docs_q }}
+            </summary>
+            <div class="mt-3 text-gray-700 space-y-3 pl-6">
+              <p>{{ translations.practicalities.faq_docs_intro }}</p>
+              
+              <ul class="space-y-3 ml-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_passport }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_photo }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_contact }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_travel_info }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_booking }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_payment }}</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+                  <span>{{ translations.practicalities.doc_invitation }}</span>
+                </li>
+              </ul>
+              
+              <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                <p class="italic">{{ translations.practicalities.doc_invitation_note }} 
+                <a href="https://forms.gle/rfHZmRHYPwbSFXFo7" class="text-blue-600 hover:text-blue-700 underline font-medium">{{ translations.practicalities.conference_letter_form }}</a> 
+                {{ translations.practicalities.to_provide_letter }}</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.speakers_guide_title }}</h2>
+      
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8 rounded-r-lg">
+        <div class="flex items-start">
+          <i class="fas fa-exclamation-triangle text-yellow-600 text-xl mr-3 mt-1"></i>
+          <p class="text-yellow-800">
+            {{ translations.practicalities.speakers_guide_text }}
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.hotel_title }}</h2>
+      
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <p class="text-gray-700 mb-4">
+          {{ translations.practicalities.hotel_text }}
+          <a href="mailto:organisers@rubyconf.africa" class="text-red-600 hover:text-red-700 underline">organisers@rubyconf.africa</a>.
+        </p>
+        
+        <div class="flex items-center">
+          <i class="fas fa-file-pdf text-red-600 mr-3 text-xl"></i>
+          <a href="/documents/hotel-recommendations/hotels_in_westlands.pdf"
+             target="_blank" 
+             class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200">
+            {{ translations.practicalities.hotel_button }}
+            <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">{{ translations.practicalities.attractions_title }}</h2>
+      <p class="text-xl text-gray-600 mb-8">{{ translations.practicalities.attractions_subtitle }}</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-paw text-red-600 mr-3 text-2xl"></i>
+            Wildlife in Nairobi and Beyond
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.nairobi_park }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.giraffe_centre }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.sheldrick_trust }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-landmark text-red-600 mr-3 text-2xl"></i>
+            Cultural Gems
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.museum }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.karen_blixen }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.bomas }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.uhuru_park }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-mountain text-red-600 mr-3 text-2xl"></i>
+            Beyond Nairobi
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.maasai_mara }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.amboseli }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.lake_nakuru }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+            <i class="fas fa-hiking text-red-600 mr-3 text-2xl"></i>
+            Additional Activities
+          </h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.karura }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.ngong_hills }}
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3 flex-shrink-0"></i>
+              <div>
+                {{ translations.practicalities.shopping }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-400 p-8 rounded-r-lg">
+        <div class="flex items-start">
+          <i class="fas fa-lightbulb text-green-600 text-2xl mr-4 mt-1"></i>
+          <div>
+            <h4 class="text-lg font-semibold text-green-800 mb-2">{{ translations.practicalities.final_note_title }}</h4>
+            <p class="text-green-800">
+              {{ translations.practicalities.final_note_text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
