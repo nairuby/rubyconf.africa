@@ -1,24 +1,16 @@
 <!-- Modern Speaker Card Component with Tailwind CSS -->
-{% assign sp_url_slug = include.speaker.url | default: (include.speaker.name | slugify) %}
-{% assign sp_year = include.year | default: page.year | default: "" %}
-{% if sp_year != "" and sp_year != null %}
-  {% assign sp_link = site.baseurl | append: "/" | append: sp_year | append: "/speakers/" | append: sp_url_slug %}
-{% else %}
-  {% assign sp_link = site.baseurl | append: "/speakers/" | append: sp_url_slug %}
-{% endif %}
-
 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
   <!-- Speaker Image -->
-  <a href="{{ sp_link }}">
+  <a href="/speakers/{{ include.speaker.name | slugify }}">
       <div class="relative overflow-hidden">
           <img
-                  src="{% if include.speaker.image.first %}{{ include.speaker.image.first }}{% else %}{{ include.speaker.image | default: '/images/default-speaker.jpg' }}{% endif %}"
+                  src="{{ include.speaker.image | default: '/images/default-speaker.jpg' }}"
                   alt="{{ include.speaker.name }}"
                   class="w-full h-64 object-cover object-center rounded-t-lg group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
           />
           {% if include.speaker.is_keynote == true or include.speaker.is_keynote == "Yes" %}
-              <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
+              <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   <i class="fas fa-star mr-1"></i>
                   Keynote
               </div>
@@ -29,7 +21,7 @@
   <!-- Speaker Info -->
   <div class="p-6">
     <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-200">
-      <a href="{{ sp_link }}" class="hover:underline">
+      <a href="/speakers/{{ include.speaker.name | slugify }}" class="hover:underline">
         {{ include.speaker.name }}
       </a>
     </h3>

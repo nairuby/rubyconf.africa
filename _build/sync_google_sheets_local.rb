@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 require 'google/apis/sheets_v4'
 require 'googleauth'
 require 'yaml'
 require 'fileutils'
 require_relative './env_helper'
 
-puts 'Starting Google Sheets sync...'
+puts "Starting Google Sheets sync..."
 load_env_if_available
 
 puts "SHEET1_FILENAME: #{ENV['SHEET1_FILENAME']}"
@@ -14,12 +12,13 @@ puts "SHEET1_NAME: #{ENV['SHEET1_NAME']}"
 puts "SHEET2_FILENAME: #{ENV['SHEET2_FILENAME']}"
 puts "SHEET2_NAME: #{ENV['SHEET2_NAME']}"
 
+
 # Folder to store remote sheet data
-DATA_FOLDER = '_data/new_remote'
+DATA_FOLDER = "_data/new_remote"
 FileUtils.mkdir_p(DATA_FOLDER)
 
 # Path to your service account JSON file
-CREDENTIALS_PATH = ENV['CREDENTIALS_PATH'] || '../service_acc.json'
+CREDENTIALS_PATH = ENV['CREDENTIALS_PATH'] || "../service_acc.json"
 APPLICATION_NAME = ENV['APPLICATION_NAME'] || 'GoogleSheetsSync'
 SPREADSHEET_ID = ENV['SPREADSHEET_ID']
 
@@ -30,7 +29,7 @@ sheets_config = {
 }.reject { |key, value| key.nil? || value.nil? }
 
 if sheets_config.empty?
-  puts '⚠️ No valid sheets configured. Please set SHEET1_FILENAME and SHEET2_FILENAME in .env'
+  puts "⚠️ No valid sheets configured. Please set SHEET1_FILENAME and SHEET2_FILENAME in .env"
   exit(1)
 end
 
@@ -39,14 +38,16 @@ SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS_READONLY
 
 # Function to authorize using the service account
 def authorize
-  Google::Auth::ServiceAccountCredentials.make_creds(
-    json_key_io: File.open(CREDENTIALS_PATH),
-    scope: SCOPE
-  )
-rescue Errno::ENOENT
-  puts "❌ Error: Credentials file not found at #{CREDENTIALS_PATH}."
-  puts '  Please ensure the file exists or set the CREDENTIALS_PATH environment variable.'
-  exit(1)
+  begin
+    Google::Auth::ServiceAccountCredentials.make_creds(
+      json_key_io: File.open(CREDENTIALS_PATH),
+      scope: SCOPE
+    )
+  rescue Errno::ENOENT
+    puts "❌ Error: Credentials file not found at #{CREDENTIALS_PATH}."
+    puts "  Please ensure the file exists or set the CREDENTIALS_PATH environment variable."
+    exit(1)
+  end
 end
 
 # Initialize the GOOGLE Sheets API service
@@ -82,6 +83,7 @@ sheets_config.each do |filename, sheet_name|
     output_path = File.join(DATA_FOLDER, "#{safe_filename}.yml")
     File.write(output_path, data.to_yaml)
     puts "✅ Saved '#{filename}' to #{output_path}"
+
   rescue Google::Apis::ClientError => e
     puts "❌ Unexpected error for '#{filename}': #{e.message}"
   rescue StandardError => e
@@ -89,4 +91,4 @@ sheets_config.each do |filename, sheet_name|
   end
 end
 
-puts '🎉 All sheets processed!'
+puts "🎉 All sheets processed!"

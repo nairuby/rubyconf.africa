@@ -1,18 +1,9 @@
 <!-- Modern Tailwind Sponsor Section Component -->
 {% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
 
-{% assign sponsors_data = include.sponsors_data %}
-{% if sponsors_data == nil or sponsors_data == empty %}
-  {% if page.year == "2026" or page.year == 2026 %}
-    {% assign sponsors_data = site.data.new_remote.sponsors_2026 %}
-  {% else %}
-    {% assign sponsors_data = site.data.new_remote.sponsors %}
-  {% endif %}
-{% endif %}
-
 <!-- Check if sponsors exist for this category -->
 {% assign sponsors_found = false %}
-{% for sponsor in sponsors_data %}
+{% for sponsor in site.data.new_remote.sponsors %}
   {% if sponsor.categories contains include.category %}
     {% assign sponsors_found = true %}
     {% break %}
@@ -33,7 +24,7 @@
     <!-- Sponsors Grid -->
     <div class="sponsors-grid">
       <div class="flex flex-wrap justify-center gap-8 items-center">
-        {% for sponsor in sponsors_data %}
+        {% for sponsor in site.data.new_remote.sponsors %}
           {% if sponsor.categories contains include.category %}
             <div class="sponsor-item group w-48">
               <a 

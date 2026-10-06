@@ -15,27 +15,27 @@ class ModernJsBundler
   end
 
   def build
-    puts '🔨 Building modern JavaScript bundle...'
-
+    puts "🔨 Building modern JavaScript bundle..."
+    
     begin
       # Read navigation.js first (it needs to be loaded before main.js)
       navigation_js = read_file('navigation.js')
-
+      
       # Read main.js
       main_js = read_file('main.js')
-
+      
       # Remove the import statement from main.js since we're bundling
-      main_js_without_import = main_js.gsub(%r{import\s+['"]\./navigation\.js['"];?\s*}, '')
-
+      main_js_without_import = main_js.gsub(/import\s+['"]\.\/navigation\.js['"];?\s*/, '')
+      
       # Combine files into bundle
       bundle_content = build_bundle_content(navigation_js, main_js_without_import)
-
+      
       # Write bundle file
       File.write(OUTPUT_FILE, bundle_content)
-
+      
       puts "✅ Modern JavaScript bundle created successfully at #{OUTPUT_FILE}"
-    rescue StandardError => e
-      puts "❌ Error building modern JavaScript: #{e.message}"
+    rescue => error
+      puts "❌ Error building modern JavaScript: #{error.message}"
       exit 1
     end
   end
@@ -44,9 +44,11 @@ class ModernJsBundler
 
   def read_file(filename)
     file_path = File.join(MODERN_JS_DIR, filename)
-
-    raise "File not found: #{file_path}" unless File.exist?(file_path)
-
+    
+    unless File.exist?(file_path)
+      raise "File not found: #{file_path}"
+    end
+    
     File.read(file_path)
   end
 
@@ -64,4 +66,6 @@ class ModernJsBundler
 end
 
 # Run the bundler if this script is executed directly
-ModernJsBundler.build if __FILE__ == $PROGRAM_NAME
+if __FILE__ == $0
+  ModernJsBundler.build
+end
