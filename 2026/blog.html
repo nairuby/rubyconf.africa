@@ -1,0 +1,44 @@
+---
+layout: modern_archive/application
+permalink: /2026/blog
+title: "Blog — Ruby Conf Africa 2026 Archive"
+description: "News, insights, and updates from Ruby Conf Africa 2026."
+image: "/images/logo/arc_logo_coloured.png"
+year: "2026"
+---
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-red-600 to-red-800 text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">2026 Blog & News</h1>
+    <p class="text-xl text-red-100 max-w-2xl mx-auto">
+      Insights and updates around Ruby Conf Africa 2026.
+    </p>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    {% for blog in site.data.blogs %}
+      <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+        <span class="text-sm font-semibold text-red-600 uppercase tracking-wider mb-2 block">
+          {{ blog.date | default: "Post" }}
+        </span>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          <a href="{{ blog.url | default: '#' }}" target="_blank" class="hover:text-red-600 transition-colors">
+            {{ blog.title }}
+          </a>
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          {{ blog.description }}
+        </p>
+        {% if blog.url %}
+        <a href="{{ blog.url }}" target="_blank" class="inline-flex items-center text-red-600 font-bold hover:underline">
+          Read Full Post <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+        </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

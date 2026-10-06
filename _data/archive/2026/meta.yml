@@ -1,0 +1,14 @@
+title: "Ruby Conf Africa 2026"
+dates: "August 21-22, 2026"
+venue: "Nairobi, Kenya"
+location: "Nairobi, Kenya"
+about: |
+  RubyConf Africa 2026 united developers, designers, and entrepreneurs from
+  across Africa for a two-day conference around the theme
+  "Beyond code: Innovating for the future". Speakers explored how Ruby and
+  open-source technologies power real-world innovation, from distributed
+  systems and AI to community building and the future of African software
+  engineering.
+banners:
+  - image: "../images/intro-landing.jpg"
+    alt: "Ruby Conf Africa 2026 banner"

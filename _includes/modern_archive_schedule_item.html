@@ -1,0 +1,54 @@
+<div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6 border border-gray-100 flex flex-col md:flex-row md:items-center justify-between gap-6 {% if include.event.speaker %}border-l-4 border-l-red-600{% endif %}">
+  <!-- Time Slot -->
+  <div class="md:w-36 flex-shrink-0">
+    <span class="inline-flex items-center px-3 py-1 bg-red-50 text-red-700 rounded-md font-bold text-sm">
+      <i class="far fa-clock mr-1.5 text-xs"></i>
+      {{ include.event.start_time }} - {{ include.event.end_time }}
+    </span>
+  </div>
+
+  <!-- Session Details -->
+  <div class="flex-grow">
+    <h3 class="text-xl font-bold text-gray-900 mb-2">
+      {{ include.event.topic }}
+    </h3>
+    {% if include.event.description %}
+      <p class="text-gray-600 text-sm mb-3 leading-relaxed">{{ include.event.description }}</p>
+    {% endif %}
+
+    {% if include.event.speaker %}
+      {% assign speakers = include.event.speaker | split: "," %}
+      {% assign archive_urls = include.event.url | split: "," %}
+      
+      <div class="flex flex-wrap gap-4 mt-3 pt-3 border-t border-gray-100 items-center">
+        {% for speaker in speakers %}
+          {% assign speaker_trimmed = speaker | strip %}
+          {% if archive_urls[forloop.index0] %}
+            {% assign speaker_slug = archive_urls[forloop.index0] | strip %}
+          {% else %}
+            {% assign speaker_slug = speaker_trimmed | slugify %}
+          {% endif %}
+
+          <a href="{{ site.baseurl }}/2026/speakers/{{ speaker_slug }}" class="flex items-center space-x-2 group">
+            {% if include.event.image[forloop.index0] %}
+              <img src="{{ include.event.image[forloop.index0] }}" alt="{{ speaker_trimmed }}" class="w-10 h-10 rounded-full object-cover border border-red-200 group-hover:border-red-600 transition-colors">
+            {% else %}
+              <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 font-bold flex items-center justify-center text-sm">
+                {{ speaker_trimmed | slice: 0, 1 }}
+              </div>
+            {% endif %}
+            <span class="text-sm font-semibold text-gray-800 group-hover:text-red-600 transition-colors">
+              {{ speaker_trimmed }}
+            </span>
+          </a>
+        {% endfor %}
+
+        {% if include.event.recording and include.event.recording != "" %}
+          <a href="{{ include.event.recording }}" target="_blank" rel="noopener noreferrer" class="ml-auto inline-flex items-center text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-full transition-colors">
+            <i class="fab fa-youtube text-base mr-1.5"></i> Watch Recording
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
