@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Not in use
 
 require 'sprockets'
@@ -20,7 +22,7 @@ environment.css_compressor = :sassc
 
 # Create directories if they do not exist
 # FileUtils.mkdir_p project_root+'/assets/javascripts'
-FileUtils.mkdir_p project_root+'/assets/stylesheets'
+FileUtils.mkdir_p "#{project_root}/assets/stylesheets"
 
 # Write minifies JS & CSS into files
 File.open(app_css_file, 'w') { |f| f.write environment['application.css'].to_s }

@@ -100,3 +100,7 @@ To build the site for deployment, you can run:
 ```bash
 bundle exec jekyll build -d public
 ```
+
+> If make sync does not work, try running: `bundle exec _build/google_service_account.rb`
+
+TODO: Archive 2026 content. ['speakers_2026', 'sponsors_2026', 'schedule_2026'] - add to the sheets array.
