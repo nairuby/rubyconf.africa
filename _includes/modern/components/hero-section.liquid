@@ -25,6 +25,17 @@
         </p>
       {% endif %}
 
+      {% if include.image %}
+        <div class="relative z-10 mx-auto mt-14 max-w-6xl overflow-hidden rounded-xl border border-white/20 shadow-2xl">
+          <img
+            src="{{ include.image | relative_url }}"
+            alt="{{ include.image_alt | default: include.title }}"
+            class="aspect-video w-full object-cover object-center"
+            loading="eager"
+          />
+        </div>
+      {% endif %}
+
       <!-- Date and Location -->
       {% if include.date or include.location %}
         <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12 text-red-100">
