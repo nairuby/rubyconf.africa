@@ -7,7 +7,7 @@ image: "/images/logo/arc_logo_coloured.png"
 year: "2026"
 ---
 
-{% assign schedule_data = site.data.new_remote.schedule_2026 %} {% assign
+{% assign schedule_data = site.data.new_remote.schedule %} {% assign
 current_locale = site.active_lang | default: site.default_lang | default: 'en'
 %} {% assign translations = site.data.translations[current_locale] %}
 
@@ -194,33 +194,6 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
             </div>
             {% endfor %}
           </div>
-          {% else %}
-          <!-- Placeholder for Day 1 -->
-          <div class="text-center py-12">
-            <div class="space-y-6">
-              {% for i in (1..6) %}
-              <div
-                class="flex flex-col md:flex-row md:items-center p-6 bg-gray-50 rounded-lg opacity-50"
-              >
-                <div class="md:w-32 flex-shrink-0 mb-4 md:mb-0">
-                  <div class="h-4 bg-gray-300 rounded w-16 mb-1"></div>
-                  <div class="h-3 bg-gray-200 rounded w-12"></div>
-                </div>
-                <div class="flex-1 md:ml-6">
-                  <div class="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
-                  <div class="h-4 bg-gray-200 rounded w-full mb-3"></div>
-                  <div class="flex space-x-3">
-                    <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-                    <div class="h-4 bg-gray-200 rounded w-24"></div>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-            <p class="text-gray-500 mt-8 text-lg">
-              {{ translations.schedule_page.schedule_coming_soon }}
-            </p>
-          </div>
           {% endif %}
         </div>
 
@@ -355,33 +328,6 @@ current_locale = site.active_lang | default: site.default_lang | default: 'en'
               </div>
             </div>
             {% endfor %}
-          </div>
-          {% else %}
-          <!-- Placeholder for Day 2 -->
-          <div class="text-center py-12">
-            <div class="space-y-6">
-              {% for i in (1..6) %}
-              <div
-                class="flex flex-col md:flex-row md:items-center p-6 bg-gray-50 rounded-lg opacity-50"
-              >
-                <div class="md:w-32 flex-shrink-0 mb-4 md:mb-0">
-                  <div class="h-4 bg-gray-300 rounded w-16 mb-1"></div>
-                  <div class="h-3 bg-gray-200 rounded w-12"></div>
-                </div>
-                <div class="flex-1 md:ml-6">
-                  <div class="h-5 bg-gray-300 rounded w-3/4 mb-2"></div>
-                  <div class="h-4 bg-gray-200 rounded w-full mb-3"></div>
-                  <div class="flex space-x-3">
-                    <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-                    <div class="h-4 bg-gray-200 rounded w-24"></div>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-            <p class="text-gray-500 mt-8 text-lg">
-              {{ translations.schedule_page.schedule_coming_soon }}
-            </p>
           </div>
           {% endif %}
         </div>
