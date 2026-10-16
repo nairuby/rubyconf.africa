@@ -4,7 +4,7 @@
 {% assign sponsors_data = include.sponsors_data %}
 {% if sponsors_data == nil or sponsors_data == empty %}
   {% if page.year == "2026" or page.year == 2026 %}
-    {% assign sponsors_data = site.data.new_remote.sponsors_2026 %}
+    {% assign sponsors_data = site.data.new_remote.sponsors_2026 | default: site.data.archive["2026"].sponsors | default: site.data.new_remote.sponsors %}
   {% else %}
     {% assign sponsors_data = site.data.new_remote.sponsors %}
   {% endif %}
