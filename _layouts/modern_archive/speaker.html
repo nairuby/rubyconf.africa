@@ -18,6 +18,8 @@ layout: modern_archive/application
 {% assign sp_website = page.speaker.website | default: page.website %}
 {% assign sp_recording = page.speaker.recording | default: page.recording %}
 
+<!--Current active template-->
+
 <!-- Modern Speaker Detail Page for 2026 Archive -->
 <div class="min-h-screen bg-gray-50">
     <!-- Speaker Hero Section -->
@@ -223,7 +225,7 @@ layout: modern_archive/application
                 </div>
 
                 <!-- Embedded Video -->
-                <div class="aspect-w-16 aspect-h-9">
+                <div class="aspect-w-16 aspect-h-9" style="display: none">
                     <iframe
                             src="{{ sp_recording | replace: 'watch?v=', 'embed/' }}"
                             title="YouTube video"
