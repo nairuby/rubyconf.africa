@@ -1,5 +1,5 @@
 <!-- Modern Hero Section Component with Tailwind CSS and Internationalization -->
-{% assign current_locale = site.locale | default: site.default_locale | default: 'en' %}
+{% assign current_locale = site.active_lang | default: site.locale | default: site.default_locale | default: 'en' %}
 {% assign translations = site.data.translations[current_locale] %}
 
 <section class="relative bg-gradient-to-br from-red-600 via-red-700 to-red-800 dark:from-red-800 dark:via-red-900 dark:to-red-950 overflow-hidden theme-transition">

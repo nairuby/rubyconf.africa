@@ -1,9 +1,11 @@
 <!-- Modern Speaker Card Component with Tailwind CSS -->
-{% assign sp_url_slug = include.speaker.url | default: (include.speaker.name | slugify) %}
-{% assign sp_year = include.year | default: page.year | default: "" %}
-{% if sp_year != "" and sp_year != null %}
+{% assign current_conf_year = site.current_year | default: 2027 | append: "" %}
+{% assign sp_year = include.year | default: page.year | default: "" | append: "" %}
+{% if sp_year != "" and sp_year != current_conf_year %}
+  {% assign sp_url_slug = include.speaker.url | default: (include.speaker.name | slugify) %}
   {% assign sp_link = site.baseurl | append: "/" | append: sp_year | append: "/speakers/" | append: sp_url_slug %}
 {% else %}
+  {% assign sp_url_slug = include.speaker.name | slugify %}
   {% assign sp_link = site.baseurl | append: "/speakers/" | append: sp_url_slug %}
 {% endif %}
 
@@ -44,7 +46,7 @@
       </p>
     {% endif %}
 
-    {% if include.speaker.talk_title and include.speaker.talk_title != "" and include.speaker.talk_title != emptly %}
+    {% if include.speaker.talk_title and include.speaker.talk_title != "" and include.speaker.talk_title != empty %}
       <div class="mb-4">
         <h4 class="text-sm font-semibold text-gray-900 mb-1">Talk:</h4>
         <p class="text-sm text-gray-700">{{ include.speaker.talk_title }}</p>

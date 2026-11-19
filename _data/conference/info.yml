@@ -1,19 +1,21 @@
-# Conference information for 2026
+# Conference information for 2027
 conference:
-  name: "Ruby Conf Africa 2026"
-  dates: "August 21-22, 2026"
+  name: "Ruby Conf Africa 2027"
+  dates: "May 21-22, 2027"
   location: "Nairobi, Kenya"
-  venue: "TBA"
+  venue: "Sarit Expo Centre"
   announcements:
-    - "Call for Papers now open!"
-    - "Early bird tickets available"
-    - "Venue announcement coming soon"
+    - "Kilifi Bootcamp & MiniConf: 8th May 2027"
+    - "Kisumu MiniConf: 15th May 2027"
+    - "Ruby Conf Africa: 21st - 22nd May 2027"
+    - "Call for Papers coming soon!"
+    - "Early bird tickets coming soon"
   status: "active" # active, planning, past
   theme: "Beyond code: Innovating for the future"
   description: >-
-    RubyConf Africa 2026 aims to connect together
+    RubyConf Africa 2027 aims to connect together
     Developers (Engineers), Designers and Entrepreneurs, from
     across Africa to a two day conference from
-    21st to 22nd August, 2026 in Nairobi, Kenya to have
+    21st to 22nd May, 2027 in Nairobi, Kenya to have
     conversations around the theme
     "Beyond code: Innovating for the future".

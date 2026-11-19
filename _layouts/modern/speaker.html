@@ -167,7 +167,7 @@ layout: modern/application
 
   <!-- Recording Section -->
   {% if page.speaker.recording or page.recording %}
-  <section class="py-16 bg-white" style="display: none">
+  <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
         <div class="p-8 text-center">
@@ -210,7 +210,7 @@ layout: modern/application
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% assign current_year = site.current_year | default: 2026 %} {% if
+        {% assign current_year = site.current_year | default: 2027 %} {% if
         current_year == 2025 %} {% assign all_speakers =
         site.data.new_remote.speakers_2025 %} {% else %} {% assign all_speakers
         = site.data.new_remote.speakers %} {% endif %} {% assign speaker_name = page.speaker.name | default: page.title %}
