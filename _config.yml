@@ -37,17 +37,17 @@
 # in the templates via {{ site.myvariable }}.
 
 # The title of your site
-title: Rubyconf Africa 2026
+title: Rubyconf Africa 2027
 
 # The email address for site-related communication
 email: organisers@rubyconf.africa
 
 # A brief description of your site
 description: >- # this means to ignore newlines until "baseurl:"
-  <b>RubyConf Africa 2026</b> aims to connect together
+  <b>RubyConf Africa 2027</b> aims to connect together
                       Developers (Engineers), Designers and Entrepreneurs, from
                       across Africa to a <b>two day</b> conference from
-                      <b>21st to 22th July, 2026 in Nairobi, Kenya</b> to have
+                      <b>21st to 22nd May, 2027 in Nairobi, Kenya</b> to have
                       conversations around the theme
                       <b>“Beyond code: Innovating for the future”</b>.
 
@@ -64,7 +64,7 @@ gitlab_username: nairuby
 github_username: nairuby
 
 # The current year
-current_year: 2026
+current_year: 2027
 
 # Internationalization settings
 languages: ["en", "fr", "sw", "ja", "ru"]
@@ -106,7 +106,7 @@ tailwind:
 archive_isolation:
   enabled: true
   preserve_original_assets: true
-  archive_years: [2015, 2016, 2017, 2018, 2019, 2021, 2024, "2024-mini", 2025] # TODO: Add 2025
+  archive_years: [2015, 2016, 2017, 2018, 2019, 2021, 2024, "2024-mini", 2025, 2026] # TODO: Add 2025
 
 # Asset settings
 #assets:
@@ -138,14 +138,14 @@ minifier:
     conservative_collapse: true
 
 page_gen:
-  # - data: "new_remote.speakers_2026"
-  #   template: "modern_archive/speaker"
-  #   name: "url"
-  #   dir: "2026/speakers"
-  #   extension: "html"
-  #   index_files: true
-  #   title: "name"
-  #   slugify: true
+  - data: "new_remote.speakers_2026"
+    template: "modern_archive/speaker"
+    name: "url"
+    dir: "2026/speakers"
+    extension: "html"
+    index_files: true
+    title: "name"
+    slugify: true
   - data: "new_remote.speakers_2025"
     template: "new_archive_speaker"
     name: "url"
@@ -224,12 +224,12 @@ collections:
   speakers_2025:
     output: true
     permalink: /2025/speakers/:name/
-  # year-2026:
-  #   output: true
-  #   permalink: /2026/:path
-  # speakers_2026:
-  #   output: true
-  #   permalink: /2026/speakers/:name/
+  year-2026:
+    output: true
+    permalink: /2026/:path
+  speakers_2026:
+    output: true
+    permalink: /2026/speakers/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

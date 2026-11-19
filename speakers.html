@@ -1,10 +1,9 @@
 ---
 layout: modern/application
 permalink: /speakers
-title: "Speakers for Ruby Conf Africa 2026"
-description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2026. Browse speaker profiles, session topics, and more."
+title: "Speakers for Ruby Conf Africa 2027"
+description: "Meet the incredible lineup of Ruby experts sharing their knowledge at Ruby Conf Africa 2027. Browse speaker profiles, session topics, and more."
 image: "/images/logo/arc_logo_coloured.png"
-year: 2026
 ---
 
 {% assign current_locale = site.active_lang | default: site.default_lang | default: 'en' %}
@@ -23,7 +22,7 @@ year: 2026
     </section>
 
     <!-- Speakers Grid -->
-    {% assign current_year = site.current_year | default: 2026 %}
+    {% assign current_year = site.current_year | default: 2027 %}
     {% if current_year == 2025 %}
     {% assign all_speakers = site.data.new_remote.speakers_2025 %}
     {% else %}

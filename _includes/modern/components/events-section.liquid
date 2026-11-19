@@ -1,0 +1,95 @@
+<!-- Modern Events & Key Dates Section Component -->
+{% assign current_locale = site.active_lang | default: site.locale | default: site.default_lang | default: 'en' %}
+{% assign translations = site.data.translations[current_locale] %}
+
+<section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                {{ translations.home.events_title | default: "Upcoming Events & Key Dates" }}
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                {{ translations.home.events_subtitle | default: "Join us across Kenya on the road to Ruby Conf Africa 2027" }}
+            </p>
+        </div>
+
+        <!-- Parent grid: make sure it stretches items (don't use items-start / items-center) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <!-- Event 1: Kilifi Bootcamp & MiniConf -->
+            <div class="group relative bg-gray-50 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col overflow-hidden" style="height:100%;">
+                <div class="relative" style="height:240px; width:100%; overflow:hidden; flex-shrink:0;">
+                    <img
+                            src="https://res.cloudinary.com/dzhhyyc8a/image/upload/v1795117068/arc-conf/venues/kilifi.jpg"
+                            alt="Kilifi venue"
+                            loading="lazy"
+                            class="group-hover:scale-105 transition-transform duration-300"
+                            style="display:block; width:100%; height:100%; object-fit:cover;"
+                    >
+                    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);"></div>
+                    <div class="bg-white text-red-600 rounded-xl flex items-center justify-center text-xl shadow-md" style="position:absolute; bottom:16px; left:16px; width:48px; height:48px;">
+                        {% comment %}<i class="fas fa-laptop-code"></i>{% endcomment %}
+                    </div>
+                </div>
+
+                <div class="p-8 flex flex-col" style="flex:1;">
+                    <div>
+            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-red-700 bg-red-50 rounded-full mb-3">
+                Bootcamp &amp; MiniConf
+            </span>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4" style="min-height:66px;">
+                            {{ translations.home.kilifi_title | default: "Kilifi Bootcamp & MiniConf" }}
+                        </h3>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-gray-200/60 text-gray-700" style="margin-top:auto;">
+                        <div class="flex items-center text-lg">
+                            <i class="fas fa-calendar-alt text-red-600 w-5 mr-2"></i>
+                            <span class="font-medium">{{ translations.home.kilifi_date | default: "8th May 2027" }}</span>
+                        </div>
+                        <div class="flex items-center text-lg">
+                            <i class="fas fa-map-marker-alt text-red-600 w-5 mr-2"></i>
+                            <span>{{ translations.home.kilifi_location | default: "Kilifi, Kenya" }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2: Kisumu MiniConf -->
+            <div class="group relative bg-gray-50 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col overflow-hidden" style="height:100%;">
+                <div class="relative" style="height:240px; width:100%; overflow:hidden; flex-shrink:0;">
+                    <img
+                            src="https://res.cloudinary.com/dzhhyyc8a/image/upload/v1795117068/arc-conf/venues/kisumu-city.jpg"
+                            alt="Kisumu city venue"
+                            loading="lazy"
+                            class="group-hover:scale-105 transition-transform duration-300"
+                            style="display:block; width:100%; height:100%; object-fit:cover;"
+                    >
+                    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);"></div>
+                    <div class="bg-white text-red-600 rounded-xl flex items-center justify-center text-xl shadow-md" style="position:absolute; bottom:16px; left:16px; width:48px; height:48px;">
+                        {% comment %}<i class="fas fa-code-branch"></i>{% endcomment %}
+                    </div>
+                </div>
+
+                <div class="p-8 flex flex-col" style="flex:1;">
+                    <div>
+            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-red-700 bg-red-50 rounded-full mb-3">
+                MiniConf
+            </span>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4" style="min-height:66px;">
+                            {{ translations.home.kisumu_title | default: "Kisumu MiniConf" }}
+                        </h3>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-gray-200/60 text-gray-700" style="margin-top:auto;">
+                        <div class="flex items-center text-lg">
+                            <i class="fas fa-calendar-alt text-red-600 w-5 mr-2"></i>
+                            <span class="font-medium">{{ translations.home.kisumu_date | default: "15th May 2027" }}</span>
+                        </div>
+                        <div class="flex items-center text-lg">
+                            <i class="fas fa-map-marker-alt text-red-600 w-5 mr-2"></i>
+                            <span>{{ translations.home.kisumu_location | default: "Kisumu, Kenya" }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

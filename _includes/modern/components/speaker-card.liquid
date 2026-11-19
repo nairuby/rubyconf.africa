@@ -1,9 +1,11 @@
 <!-- Modern Speaker Card Component with Tailwind CSS -->
-{% assign sp_url_slug = include.speaker.url | default: (include.speaker.name | slugify) %}
-{% assign sp_year = include.year | default: page.year | default: "" %}
-{% if sp_year != "" and sp_year != null %}
+{% assign current_conf_year = site.current_year | default: 2027 | append: "" %}
+{% assign sp_year = include.year | default: page.year | default: "" | append: "" %}
+{% if sp_year != "" and sp_year != current_conf_year %}
+  {% assign sp_url_slug = include.speaker.url | default: (include.speaker.name | slugify) %}
   {% assign sp_link = site.baseurl | append: "/" | append: sp_year | append: "/speakers/" | append: sp_url_slug %}
 {% else %}
+  {% assign sp_url_slug = include.speaker.name | slugify %}
   {% assign sp_link = site.baseurl | append: "/speakers/" | append: sp_url_slug %}
 {% endif %}
 
@@ -33,18 +35,18 @@
         {{ include.speaker.name }}
       </a>
     </h3>
-    
-    <p class="text-gray-600 text-sm mb-3 font-medium">
-      {{ include.designation | default: "Speaker" }}
-    </p>
-    
+
+    {% comment %}<p class="text-gray-600 text-sm mb-3 font-medium">{% endcomment %}
+      {% comment %}{{ include.designation | default: "Speaker" }}{% endcomment %}
+    {% comment %}</p>{% endcomment %}
+
     {% if include.speaker.bio %}
       <p class="text-gray-700 text-sm mb-4 line-clamp-3">
         {{ include.speaker.bio }}
       </p>
     {% endif %}
 
-    {% if include.speaker.talk_title and include.speaker.talk_title != "" and include.speaker.talk_title != emptly %}
+    {% if include.speaker.talk_title and include.speaker.talk_title != "" and include.speaker.talk_title != empty %}
       <div class="mb-4">
         <h4 class="text-sm font-semibold text-gray-900 mb-1">Talk:</h4>
         <p class="text-sm text-gray-700">{{ include.speaker.talk_title }}</p>
@@ -54,39 +56,39 @@
     <!-- Social Links -->
     <div class="flex space-x-3 pt-4 border-t border-gray-100">
       {% if include.speaker.github and include.speaker.github != "" %}
-        <a href="{{ include.speaker.github }}" 
+        <a href="{{ include.speaker.github }}"
            class="text-gray-400 hover:text-gray-900 transition-colors duration-200"
            target="_blank" rel="noopener noreferrer">
           <i class="fab fa-github text-lg"></i>
         </a>
       {% endif %}
-      
+
       {% if include.speaker.linkedin and include.speaker.linkedin != "" %}
-        <a href="{{ include.speaker.linkedin }}" 
+        <a href="{{ include.speaker.linkedin }}"
            class="text-gray-400 hover:text-blue-700 transition-colors duration-200"
            target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin text-lg"></i>
         </a>
       {% endif %}
-      
+
       {% if include.speaker.website and include.speaker.website != "" %}
-        <a href="{{ include.speaker.website }}" 
+        <a href="{{ include.speaker.website }}"
            class="text-gray-400 hover:text-green-600 transition-colors duration-200"
            target="_blank" rel="noopener noreferrer">
           <i class="fas fa-globe text-lg"></i>
         </a>
       {% endif %}
-      
+
       {% if include.speaker.twitter and include.speaker.twitter != "" %}
-        <a href="{{ include.speaker.twitter }}" 
+        <a href="{{ include.speaker.twitter }}"
            class="text-gray-400 hover:text-blue-500 transition-colors duration-200"
            target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-x-twitter text-lg"></i>
         </a>
       {% endif %}
-      
+
       {% if include.speaker.youtube and include.speaker.youtube != "" %}
-        <a href="{{ include.speaker.youtube }}" 
+        <a href="{{ include.speaker.youtube }}"
            class="text-gray-400 hover:text-red-600 transition-colors duration-200"
            target="_blank" rel="noopener noreferrer">
           <i class="fab fa-youtube text-lg"></i>

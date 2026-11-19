@@ -27,7 +27,7 @@ year: 2026
     {% if current_year == 2026 %}
     {% assign all_speakers = site.data.new_remote.speakers_2026 %}
     {% else %}
-    {% assign all_speakers = site.data.new_remote.speakers %}
+    {% assign all_speakers = site.data.new_remote.speakers_2026 %}
     {% endif %}
 
     {% if all_speakers.size > 0 %}
